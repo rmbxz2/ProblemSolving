@@ -96,3 +96,4 @@ public class ValidParentheses19 {
 		System.out.println("the message is " + isValidSolutin2(message));
 	}
 }
+

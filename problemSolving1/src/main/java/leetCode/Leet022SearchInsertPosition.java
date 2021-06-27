@@ -50,6 +50,27 @@ public class Leet022SearchInsertPosition {
 
 	/**
 	 * 
+	 * @param nums
+	 * @param target
+	 * @return
+	*/
+	public int searchInsert4(int[] nums, int target) {
+		int left = 0;
+		int right = nums.length - 1;
+		while (left <= right) {
+			int mid = (left + right) >>> 1; // x/2 must positive
+			if (target > nums[mid])
+				left = mid + 1;
+			else if (target < nums[mid])
+				right = mid - 1;
+			else if (target == nums[mid])
+				return mid;
+		}
+		return left;
+	}
+
+	/**
+	 * 
 	 * @param args
 	*/
 	public static void main(String[] args) {
@@ -57,7 +78,7 @@ public class Leet022SearchInsertPosition {
 		int[] nums = { 1, 3, 5, 7, 9 };
 		Leet022SearchInsertPosition t1 = new Leet022SearchInsertPosition();
 		System.out.println("==========");
-   		System.out.println(t1.searchInsert3(nums, 11));
+		System.out.println(t1.searchInsert4(nums, 11));
 
 		//              test 1
 		//		System.out.println(searchInsert2(nums, 0));

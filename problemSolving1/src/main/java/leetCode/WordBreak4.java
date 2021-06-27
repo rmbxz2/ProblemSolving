@@ -123,9 +123,7 @@ public class WordBreak4 {
 			for (int i = 1; i <= m.groupCount(); i++) { // m.groupCount() == 0 
 				System.out.println("Group " + i + ": " + m.group(i));
 			}
-
 		}
-
 	}
 
 	/**
