@@ -78,5 +78,6 @@ public class Leet022SearchInsertPosition {
 		//		System.out.println("10 ==> "+ searchInsert2(nums, 10));
 		//		System.out.println("11 ==> "+ searchInsert2(nums, 11));
 		//		System.out.println("11 ==> "+ searchInsert2(nums, 12));
+		// command line
 	}
 }
