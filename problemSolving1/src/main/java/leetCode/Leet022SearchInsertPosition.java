@@ -35,7 +35,7 @@ public class Leet022SearchInsertPosition {
 		int high = nums.length - 1;
 
 		while (low <= high) {
-			int mid = (low + high) >>> 1; // divide x / pow(2,1) ;;
+			int mid = (low + high) >>> 1; // my divide x / pow(2,1) 
 			int midVal = nums[mid];
 
 			if (midVal < target)
