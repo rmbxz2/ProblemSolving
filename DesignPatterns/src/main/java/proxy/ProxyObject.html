@@ -1,0 +1,46 @@
+@startuml
+'scale 3.0
+
+title proxy pattern
+
+skinparam BackgroundColor LightSkyblue
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+
+package myProxy {
+
+Main -->Proxy
+Proxy -->car
+
+
+
+
+object  car {
++void drive(int age){"print driven now by age"}
+
+} 
+
+object Proxy {
+ CarIF = car
++ void drive(int age){ car.drive(int age)}
+} 
+
+object Main{
+CarIF=Proxy
+}
+
+}
+
+@enduml
+
+

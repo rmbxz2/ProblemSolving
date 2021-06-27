@@ -1,0 +1,4 @@
+run the rmiregistry in the target classes package like this 
+1- ahmad@zinko:/home/myLSP/lspWorkspace/DesignPatterns/target/classes$ rmiregistry
+2- run the server
+3- run the client 

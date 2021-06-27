@@ -1,0 +1,211 @@
+package untitled15;
+
+import javax.swing.*;
+import java.awt.event.*; // WindowAdapter, ActionListener
+import java.awt.*;
+
+
+public class asn1Frame extends JInternalFrame
+{
+  private static final int DefaultMode = 0;
+  private static final int InsertingNode = 1;
+  private static final int ModifyingNode = 2;
+  private static final int DeletingNode = 3;
+  private static final int MovingNode = 4;
+  private static final int LinkingNode = 5;
+
+  private JLabel statusLabel; // informs user about what is happening
+  private DGraphMenuBar MainMenu; // the menu for the program
+  private DGraph TheGraph; // the graph being edited
+  private int EditingMode;
+  private MyPanel GraphDisplayPanel;
+
+
+   public asn1Frame()
+   {
+      super("Directed Graph Editor");
+
+      MainMenu = new DGraphMenuBar(this);
+      GraphDisplayPanel = new MyPanel(this);
+      TheGraph = new DGraph(GraphDisplayPanel);
+
+      GraphDisplayPanel.setGraphToDisplay(TheGraph);
+      setJMenuBar(MainMenu); // add the menubar to the frame
+      JToolBar tbDown = new JToolBar();
+
+      statusLabel = new JLabel("Welcome to my Directed Graph Editor");
+      tbDown.add(statusLabel);
+      tbDown.setFloatable(false);
+
+      Container C = getContentPane();
+      C.setLayout(new BorderLayout());
+      C.add(GraphDisplayPanel,BorderLayout.CENTER);
+
+      C.add(tbDown,BorderLayout.SOUTH);
+
+      EditingMode = InsertingNode;
+
+  /*    addWindowListener(
+         new WindowAdapter()
+        {
+             public void windowClosing(WindowEvent e)
+             {
+                 System.exit(0); // exit the application
+
+             } // end windowClosing
+        } // end inner class definition
+      ); // end call to addWindowListener
+*/
+      setSize(300,300); // set dimensinos of the frame
+      show(); // show the frame
+
+   } // end constructor
+   protected void MouseDragging(MouseEvent e)
+   {
+    int x,y;
+      x = (int)e.getX();
+      y = (int)e.getY();
+      if (EditingMode==MovingNode)
+      {
+           TheGraph.MoveNodeTo(x,y);
+           // System.out.println("Mouse moving in moving mode... ");
+
+      } // end if
+      else if (EditingMode==LinkingNode)
+      {
+         TheGraph.DrawLinkTo(GraphDisplayPanel.getGraphics(),x,y);
+      }
+
+   }
+
+   protected void MouseMoving(MouseEvent e)
+   // purpose: dealing with what happens when the mouse is moving
+   {
+
+   } // end MouseMoving
+
+   protected void MouseReleased(MouseEvent e)
+   // purpose:
+   {
+     int x,y;
+      x = (int)e.getX();
+      y = (int)e.getY();
+      if (EditingMode==LinkingNode)
+      {
+         TheGraph.LinkNodeTo(x,y);
+      }
+      if (EditingMode!=DefaultMode) // if not using popups
+         TheGraph.DeactivateNode();
+
+   } // end MouseReleased
+
+   protected void MousePressed(MouseEvent e)
+   // purpose: dealing with what happens when the mouse is pressed
+   {
+     int x,y;
+      x = (int)e.getX();
+      y = (int)e.getY();
+
+      switch (EditingMode)
+      {
+        case DefaultMode:
+              // do nothing
+              TheGraph.ClickPoint(x,y);
+          break;
+
+        case InsertingNode:
+              // insert a new node to the graph
+              TheGraph.InsertOrSelfLoopNode(x,y);
+              break;
+
+        case ModifyingNode:
+              TheGraph.ClickPoint(x,y);
+              break;
+
+        case DeletingNode:
+              if (!TheGraph.DeleteNode(x,y))
+                 TheGraph.DeleteLink(x,y);
+
+              break;
+
+        case MovingNode: // moving a node
+        case LinkingNode: // linking a node
+
+              TheGraph.SelectActionNode(x,y);
+              break;
+
+        default:
+              System.out.println("unknown editing mode, "+EditingMode);
+
+      } // end switch
+
+   } // end MousePressed
+
+   public void UserInsertNodes()
+   // purpose: preparing for inserting a new node
+   {
+      EditingMode = InsertingNode;
+      statusLabel.setText("Click display to insert nodes");
+
+   } // end UserInsertNode
+
+   public void UserDeleteNodes()
+   // purpose: preparing for deleting nodes
+   {
+      EditingMode = DeletingNode;
+      statusLabel.setText("Click nodes to delete or between nodes to delete links");
+
+   } // end UserDeleteNode
+
+   public void UserMoveNodes()
+   // purpose: preparing for moving nodes
+   {
+      EditingMode = MovingNode;
+      statusLabel.setText("Drag nodes to move them around");
+
+   } // end UserMoveNode
+
+   public void UserLinkNodes()
+   {
+       EditingMode = LinkingNode;
+       statusLabel.setText("Click and drag links to connect nodes");
+   }
+
+   public void PutInDefaultMode()
+   {
+      EditingMode = DefaultMode;
+      statusLabel.setText("Click nodes to see popup menu");
+
+   } // end PutInDefaultMode
+
+   public void CheckForWeakConnection()
+   {
+             String s;
+               if (!TheGraph.isWeaklyConnected())
+                  s = "not ";
+               else
+                   s = "";
+
+               JOptionPane.showMessageDialog(this,"The graph is "+s+"weakly connected.");
+
+   } // end CheckForWeakConnection
+
+   public void CheckForStrongConnection()
+   {
+             String s;
+               if (!TheGraph.isStronglyConnected())
+                  s = "not ";
+               else
+                   s = "";
+
+               JOptionPane.showMessageDialog(this,"The graph is "+s+"strongly connected.");
+
+   } // end CheckForStrongConnection
+
+   public static void main(String a[])
+   {
+      asn1Frame f = new asn1Frame();
+
+   } // end main
+
+} // end class

@@ -1,0 +1,64 @@
+@startuml 
+
+'scale 3.0
+
+title Abstract Factory
+
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+package absFactory {
+
+Main   ..> Win
+Main   ..> Linux
+Win   ..> OracleWin
+Win   ..> MySqlWin
+Linux ..> OracleLinux
+Linux ..> MySqlLinux
+
+Object Main{
+Factory1= win
+Factory2= Linux
+}
+
+object  Win {
+Oracle = OracleWin() 
+MySql = MySqlWin()
+} 
+
+object  Linux {
+Oracle = OracleLinux 
+MySql = MySqlLinux 
+} 
+
+
+object  MySqlLinux {
+description() ="MySql Linux"
+} 
+
+
+object  MySqlWin {
+description() ="MySql Win"
+} 
+
+
+object  OracleWin {
+description() ="Oracle Win"
+
+} 
+
+object  OracleLinux {
+description() ="Oracle Linux"
+
+} 
+
+}
+@enduml

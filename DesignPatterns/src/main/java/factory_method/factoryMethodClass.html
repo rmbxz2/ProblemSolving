@@ -1,0 +1,73 @@
+@startuml
+'scale 1.5
+
+title factory method
+
+'skinparam BackgroundColor  LightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+package myFactory{
+
+class Creator1 {
+	+ProductIF factoryMethod(){return new Product1()}
+ }
+
+class Creator2 {
+	+ProductIF factoryMethod(){return new Product2()}
+ }
+
+class Creator3 {
+	+ProductIF factoryMethod(){return new Product3()}
+ }
+
+
+class Product1 {
+	+void action("product 1 action called")
+}
+
+class Product2 {
+	+void action("product 2 action called")
+}
+
+class Product3 {
+	+void action("product 3 action called")
+}
+
+
+interface CreatorIF {
+ProductIF factoryMethod();
+
+}
+' end of interface CreatorIF
+
+
+interface ProductIF {
+void action();
+}
+' end of interface ProductIF
+
+CreatorIF <|.down. Creator1
+CreatorIF <|.down. Creator2
+CreatorIF <|.down. Creator3
+
+Product1 <.down. Creator1
+Product2 <.down. Creator2
+Product3 <.down. Creator3
+
+ProductIF <|.up. Product1
+ProductIF <|.up. Product2
+ProductIF <|.up. Product3
+
+}
+
+@enduml

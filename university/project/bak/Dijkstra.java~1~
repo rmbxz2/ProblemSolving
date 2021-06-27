@@ -1,0 +1,423 @@
+import java.io.*;
+import java.util.*;
+
+public class Dijkstra {
+
+	//vertice inicial
+	private static String u;
+	//conjunto auxiliar T de vertices
+	private static ArrayList T = new ArrayList();
+	//infinito
+	private static final double infi = Double.MAX_VALUE;
+	//conjunto V de vertices
+	private static ArrayList V = new ArrayList();
+	//Matriz de adjacencia [lin][col] , -1 senao existe aresta e > -1 = peso
+	private static double mAdj[][];
+	//distancia de u a v, L[] sincronizado com V
+	private static double L[];
+    private static double mymadj[][];
+    private static String my2d[][];
+    private static String myshort[];
+    
+	//---------------------------------------------------------------
+
+	public static void main(String args[]) throws Exception {
+	System.out.println("enter the source of this network ");
+		BufferedReader var=new BufferedReader(new InputStreamReader(System.in));
+		String s=var.readLine();
+	
+		
+			readFile("g1.txt");
+		    //printMAdj();
+			run(s, true);
+			shortPath();
+		   // printLT();
+	}
+
+	//---------------------------------------------------------------
+
+	private static void readFile(String fname)   {
+
+			try{
+
+					RandomAccessFile raf = new RandomAccessFile(fname, "r");
+					byte[] b = new byte[(int)raf.length()];
+					raf.read(b);
+				    raf.close();
+				    //arquivo todo lido pra dentro de s
+					String s = new String(b);
+					//vertices A, B, C ...
+					String Vert = s.substring(0, s.indexOf("/")-1).trim();
+					//preenche V
+					parseV(Vert);
+					//arestas AB, AC, ...
+					String Edges = s.substring(s.indexOf("/")+1).trim();
+					//preenche matriz de adjacencias
+					parseE(Edges);
+
+		    }
+		     catch (Exception e){
+			  System.out.println("Erorr int the Net");
+		
+
+
+	}}
+
+	//---------------------------------------------------------------
+
+	//recebe string de vertices e seta V
+	private static void parseV(String vert) {
+
+		int i=0;
+		String aux = new String("");
+		while (i < vert.length()) {
+
+			if (vert.charAt(i) != ',')
+				aux += vert.charAt(i);
+			else {
+				V.add(aux.trim());
+				aux = "";
+			}
+
+			i++;
+		}
+
+   	V.add(aux.trim());
+	}
+
+	//---------------------------------------------------------------
+
+	//recebe string de arestas e seta matriz de adj
+	private static void parseE(String arestas) {
+
+		//inicializa matriz de adjacencias com dimensao nxn
+		mAdj = new double[V.size()][V.size()];
+
+		//inicializa
+		for (int x=0; x < V.size(); x++)
+			for (int y=0; y < V.size(); y++)
+					mAdj[x][y] = infi;
+
+		int i=0;
+		String aux = new String("");
+		int r, s;
+		 double p;
+
+		while (i < arestas.length()) {
+
+			if (arestas.charAt(i) != '\n')
+				aux += arestas.charAt(i);
+			else{
+				//aux contem "v1-v2=p"
+				aux = aux.trim();
+				//posicao de v1 em V
+				r = V.indexOf(aux.substring(0, aux.indexOf('-')).trim());
+				//posicao de v2 em V
+				s = V.indexOf(aux.substring(aux.indexOf('-')+1, aux.indexOf('=')).trim());
+				//peso p de v1 para v2
+				p = Double.parseDouble(aux.substring(aux.indexOf('=')+1).trim());
+				//marca aresta (v1, v2) em mAdj
+				mAdj[r][s] = p;
+				aux = "";
+			}
+
+			i++;
+		}
+
+			aux = aux.trim();
+			//posicao de v1 em V
+			r = V.indexOf(aux.substring(0, aux.indexOf('-')).trim());
+			//posicao de v2 em V
+			s = V.indexOf(aux.substring(aux.indexOf('-')+1, aux.indexOf('=')).trim());
+			//peso p de v1 para v2
+			p = Double.parseDouble(aux.substring(aux.indexOf('=')+1).trim());
+			//marca aresta (v1, v2) em mAdj
+			mAdj[r][s] = p;
+
+	
+	
+	}
+
+
+	//---------------------------------------------------------------
+
+	//imprime a matriz de adj
+	private static void printMAdj(){
+			for (int i=0; i < V.size(); i++) {
+				System.out.println('\n');
+				for (int j=0; j < V.size(); j++)
+					if (mAdj[i][j] != infi)
+						System.out.print(" " + mAdj[i][j]);
+					else
+						System.out.print(" " + "-");
+			}
+ 
+			System.out.print("\n");
+	}			
+
+
+	//---------------------------------------------------------------
+
+	//calcula o L(v)
+	private static boolean buildL() {
+
+		try {
+		//posicao de u na matriz de adj
+		int pos = V.indexOf(u);
+		//L tem dimensao n
+		L = new double[V.size()];
+
+		for (int i=0; i < V.size(); i++)
+					L[i] = mAdj[pos][i];
+
+		//L(u)
+		L[pos] = 0;
+		}
+		catch (IndexOutOfBoundsException e) {
+			System.out.println("the source ( "+ u + " )is not exist ");
+			return false;
+		}
+
+		return true;
+
+	}
+
+	//---------------------------------------------------------------
+
+
+	//imprime L(v)
+	private static void printL() {
+		System.out.print("\n");
+		for (int i=0; i < V.size(); i++) {
+			if (L[i] != infi)
+				System.out.print(" " + L[i]);
+			else
+				System.out.print(" -");
+		}
+	}
+
+	//imprime L(v)
+	private static void printL2() {
+		System.out.print("\n");
+			for (int i=0; i < V.size(); i++)
+				if (L[i] != infi)
+					System.out.println("L(" + V.get(i) + ")= " + L[i]);
+				else
+					System.out.println("L(" + V.get(i) + ")= infi");
+	}
+
+	//---------------------------------------------------------------
+
+	//executa o algo de dijkstra
+	private static void run(String vInicial, boolean debug) {
+
+	
+
+		u = vInicial;
+
+		//constroi L(v)
+		if (!buildL()) return;
+
+		T.add(u); // T <- {u}
+
+		if (debug)
+			for (int k=0; k < V.size(); k++)
+				System.out.print(" " + V.get(k));
+
+
+		while (!T.containsAll(V)) {
+			if (debug) printL();
+			String vLinha = findMinL();
+		
+			T.add(vLinha);
+	//		 	System.out.println(" my path = "+T.toString());
+			updateL(vLinha);
+		}
+
+		if (debug)
+			System.out.println("\nfim");
+		else
+			printL2();
+
+
+	}
+
+	//---------------------------------------------------------------
+
+	private static void printV() {
+		System.out.print("\n");
+		for (int k=0; k < V.size(); k++)
+			System.out.print(" " + V.get(k));
+
+	}
+
+	private static void printT() {
+		System.out.print("\n");
+		for (int k=0; k < T.size(); k++)
+			System.out.print(" " + T.get(k));
+	}
+
+
+	//---------------------------------------------------------------
+
+	private static void updateL(String vLinha) {
+
+		int i;
+		//V2 = V
+		ArrayList V2 = new ArrayList(V);
+
+		//remove T de V = V2
+		for (i=0; i < T.size(); i++)
+			V2.remove(V2.indexOf(T.get(i)));
+
+
+		for (i=0; i < V2.size(); i++) {
+			String vaux = (String)V2.get(i);
+			double w = L[V.indexOf(vLinha)] + mAdj[V.indexOf(vLinha)][V.indexOf(vaux)];
+
+			if  (w < L[V.indexOf(vaux)])
+				L[V.indexOf(vaux)] = w;
+		}
+
+	}
+
+
+
+	//---------------------------------------------------------------
+	//retorna v nao pertencente a T tal que L(v) é minimo
+	private static String findMinL() {
+
+		int i;
+		//V2 = V
+		ArrayList V2 = new ArrayList(V);
+
+		//remove T de V = V2
+		for (i=0; i < T.size(); i++)
+			V2.remove(V2.indexOf(T.get(i)));
+
+
+		double pmin = infi;
+		String v = "";
+
+		//procuro em V2 o L(v) minimo
+		for (i=0; i < V2.size(); i++) {
+
+			String vaux = (String)V2.get(i);
+
+			if (L[V.indexOf(vaux)] <= pmin) {
+				v = vaux;
+				pmin = L[V.indexOf(vaux)];
+			}
+
+		}
+
+
+		return v;
+	}
+
+
+
+public static void shortPath()
+{
+		mymadj = new double[V.size()][V.size()];
+
+		//clone 
+		for (int x=0; x < V.size(); x++)
+			for (int y=0; y < V.size(); y++)
+				mymadj[x][y]=mAdj[x][y] ;
+
+  
+		for (int x=0; x < V.size(); x++)
+			for (int y=0; y < V.size(); y++)
+    			if( mymadj[x][y] != (L[y]-L[x]) )
+			       mymadj[x][y]=infi;
+			   
+			   
+	my2d = new String[V.size()*V.size()/2][2];		   
+
+
+
+		for (int x=0; x < my2d.length; x++)
+			for (int y=0; y < my2d[0].length; y++)
+    			my2d[x][y]="_";
+			    			   
+
+
+         int mycounter=0;
+		for (int x=0; x < V.size(); x++)
+			for (int y=0; y < V.size(); y++)
+    			if( mymadj[x][y] != infi )
+			        { 
+			      
+                 my2d[mycounter][0] = (V.get(x)).toString() ;                      			        
+                 my2d[mycounter][1] = (V.get(y)).toString() ;                   			        
+                 mycounter++;
+			        	
+		        	}
+
+ 
+     myshort =new String[V.size()*4];
+     for(int i=0;i<myshort.length;i++)
+         myshort[i]=" ";
+         
+    
+	   
+	     for(int y=0; y<my2d.length; y++)
+	       if((my2d[y][0]).equals(((T.get(0)))))
+	        {
+                myshort[y] =my2d[y][0] ;
+                myshort[y] +="  "+my2d[y][1];
+
+	       	}
+         
+         
+	
+	   for(int x=1;x<T.size();x++)
+	     for(int y=0; y<my2d.length; y++)
+	     {
+	       if((my2d[y][1]).equals(((T.get(x)))))
+	        {
+            for( int n=0 ; n < myshort.length ;n++)
+              if(myshort[n].endsWith(my2d[y][0]))
+              {
+                   
+                for( int m=0 ; m < myshort.length ;m++)
+                   if((myshort[m]).equals(" "))
+                   {
+                          myshort[m]=myshort[n];
+                          myshort[m]+="  "+T.get(x); 
+                          break;
+                        
+                   }
+               }
+	      
+	       }
+         }
+   
+	           System.out.println("++++++++++++++");
+	       for(int i=0;i<myshort.length;i++ )
+	           System.out.println( myshort[i]  );
+	       
+   
+
+
+	
+	}
+public static void printLT()
+{
+	System.out.print("\n T[] = ");
+    for (int i=0; i < T.size(); i++) 
+    System.out.print("  "+(T.get(i)).toString()+" ");
+    
+       System.out.print("\n\n");
+    
+    System.out.print(" L[] = ");
+	 for (int j=0; j < L.length ; j++)
+	  System.out.print(" "+L[j]);
+	
+	   System.out.print("\n");
+
+	
+	}
+
+}

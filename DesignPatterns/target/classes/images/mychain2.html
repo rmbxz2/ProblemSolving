@@ -1,0 +1,65 @@
+@startuml
+'scale 3.0
+
+title Design pattern
+left to right direction
+skinparam classFontColor red
+skinparam classFontSize 25
+
+' ========= end of UML package ==============
+
+
+class Handler {
+	-Handler successor
+	+void handle(String person)
+	#boolean canHandle(String person, String job)
+	~Handler getSuccessor()
+	~void setSuccessor(Handler successor)
+}
+
+
+class Teacher {
+	+Teacher(Handler successor)
+	+void handle(String person)
+}
+
+
+
+class Manager {
+	+Manager(Handler successor)
+	+void handle(String person)
+}
+
+
+
+class Minister {
+	+Minister(Handler successor)
+	+void handle(String person)
+}
+
+	     
+
+
+class King {
+	+void handle(String person)
+}
+
+
+
+
+class ChainOfResponsibility {
+	+void main(String[] args)
+}
+
+
+
+
+Handler <|-- King
+Handler <|-- Minister
+Handler <|-- Manager
+Handler <|-- Teacher
+
+
+
+
+@enduml

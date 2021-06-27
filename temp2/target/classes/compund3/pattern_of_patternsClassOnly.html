@@ -1,0 +1,183 @@
+@startuml pattern_of_patternsClassOnly
+'scale 1.5
+
+
+title patterns of patterns
+
+skinparam classFontColor #CC0000
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+'left to right direction
+'show Observable members
+hide members
+
+
+package "pattern_of_patternsClassOnly" {
+
+Quackable           <..  DuckSimulator
+Quackable           <..  Flock
+Quackable           <|.. Flock
+Quackable           <|.up. MallaredDuck
+Quackable           <|.up. RedheadDuck
+Quackable           <|.up. RubberDuck
+Quackable           <|.up. DuckCall
+Quackable           <|.up. GooseAdapter
+Quackable           <|.. QuackCounter
+Quackable           <--  QuackCounter
+Observable          <--  GooseAdapter
+Observable          <--  MallaredDuck
+Observable          <--  RedheadDuck
+Observable          <--  RubberDuck
+Observable          <--  DuckCall
+QuackObservable     <|-- Quackable
+QuackObservable     <--  Observable
+QuackObservable     <|.. Observable
+AbstractDuckFactory <..  DuckSimulator
+AbstractDuckFactory <|-- CountingDuckFactory
+AbstractDuckFactory <|-- DuckFactory
+Observer            <|.. Quackologist
+Observer            <..  Observable
+Observer            .right.   QuackObservable
+Goose               <--  GooseAdapter
+
+}
+
+
+interface Quackable {
+public abstract void  quack();
+}
+
+
+class  MallaredDuck {
+- Observable observable;
++ MallaredDuck(){observable =new Observable(this)}
++ void quack(){print("Quack"); notifyObservers();}
++ void registerObserver(Observer observer){observable.registerObserver(observer) }
++ void notifyObservers(){observable.notifyObservers()}
+} 
+
+
+interface Observer{
++ void update(QuackObservable duck);
+}
+
+
+class RedheadDuck {
+~Observable observable
++RedheadDuck()
++void quack(){print("Quack")}
++void notifyObservers()
++void registerObserver(Observer observer)
++String toString()
+}
+
+
+class  RubberDuck {
+~Observable observable
++RubberDuck()
++void quack(){print("Squack")}
++void notifyObservers()
++void registerObserver(Observer observer)
++String toString()
+} 
+
+
+class  DuckCall {
+~Observable observable
++DuckCall()
++void quack(){print("kwak")}
++void notifyObservers()
++void registerObserver(Observer observer)
++String toString()
+} 
+
+
+class  Goose {
++void honk(){print("honk")}
+} 
+
+
+class  GooseAdapter {
+- Goose goose;
+-Observable observable
++ GooseAdapter(Goose goose){this.goose=goose;}
++ void quack(){goose.honk()}
++void notifyObservers()
++void registerObserver(Observer observer)
++String toString()
+} 
+
+
+class  QuackCounter {
+- Quackable duck;
+- {static} int numberOFQuacks;
++ QuackCouter(Quackable duck){this.duck=duck}
++ void quack(){duck.quack; numberOFQuacks++}
++ {static} int getQuacks(){return numberOFQuacks}
++void notifyObservers()
++void registerObserver(Observer observer)
+} 
+
+abstract class AbstractDuckFactory {
++{abstract} Quackable createMallaredDuck();
++{abstract} Quackable createRedheadDuck();
++{abstract} Quackable createDuckCall();
++{abstract} Quackable createRubberDuck();
+} 
+
+class  DuckFactory {
++Quackable createMallaredDuck(return new MallaredDuck());
++Quackable createRedheadDuck(return new RedheadDuck());
++Quackable createDuckCall(return new DuckCall();
++Quackable createRubberDuck(return new RubberDuck());
+} 
+
+
+class  Flock {
+-ArrayList<Quackable> quackers =new ArrayList<Quackable>();
+    +void add(Quackable quacker){ quackers.add(quacker) }
+    +void quack(){ for(Quackable quacker: quackers){quacker.quack()} } 
+    +void notifyObservers()
+    +void registerObserver(Observer observer)
+    } 
+
+
+    class  DuckSimulator {
+    +void main(String[] args)
+    +void simulate(AbstractDuckFactory duckFactory){ }
+    +void simulate(Quackable duck){duck.quack() }
+    } 
+
+
+    interface QuackObservable {
+    +void registerObserver(Observer observer);
+    +void notifyObservers();
+    }
+
+    class  Observable {
+    - ArrayList <Observer> observers =new ArrayList <Observer>();
+    - QuackObservable duck;
+    + Observable(QuackObservable duck){this.duck=duck}
+    + void registerObserver(Observer observer){observers.add(observer)}
+    + void notifyObservers(for(QuackObservable observer: observers){observer.updat(duck)}); 
+    } 
+
+
+    class  Quackologist {
+    +  void update(QuackObservable duck){print duck}
+    } 
+
+
+    class  CountingDuckFactory {
+    + Quackable createMallardDuck(){return new QuackCounter(new MallardDuck()) }
+    + Quackable createRedheadDuck(){return new QuackCounter(new RedheadDuck()) }
+    + Quackable createDuckCall()   {return new QuackCounter(new    DuckCall()) }
+    + Quackable createRubberDuck() {return new QuackCounter(new  RubberDuck()) }
+    } 
+
+    @enduml

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+    <action-mappings>
+	<!-- /html/addLeague  *.do actions -->
+	<!-- Declare the Registration actions -->
+	<action path="/html/addLeague"
+		type="webServlet.control.AddLeagueAction">
+	    <forward name="success" path="/html/succeedLeague.html"/>
+	    <forward name="error" path="/html/addLeague.html"/>
+	</action>
+	
+    </action-mappings>
+</struts-config>

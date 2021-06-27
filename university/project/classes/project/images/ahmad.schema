@@ -1,0 +1,9 @@
+[]
+FILETYPE = VARYING
+FILEFORMAT = Encoded
+ENCODING = Cp1252
+DELIMITER = "
+SEPARATOR = 0x9
+FIELD0 = From,Variant.STRING,-1,-1,
+FIELD1 = To,Variant.STRING,-1,-1,
+FIELD2 = edge,Variant.DOUBLE,-1,-1,

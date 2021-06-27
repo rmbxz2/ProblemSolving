@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="488px" preserveAspectRatio="none" style="width:544px;height:488px;" version="1.1" viewBox="0 0 544 488" width="544px" zoomAndPan="magnify"><defs/><g><rect fill="#FEFECE" height="37.6094" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="6" y="433.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="16.5" y="446.6387">adjust0</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="73" y1="451.4688" y2="451.4688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="56" x="12" y="464.751">Node  head</text><rect fill="#FEFECE" height="37.6094" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="6" y="349.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="16.5" y="362.6387">adjust1</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="73" y1="367.4688" y2="367.4688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="56" x="12" y="380.751">Node  head</text><rect fill="#FEFECE" height="37.6094" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="6" y="265.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="16.5" y="278.6387">adjust2</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="73" y1="283.4688" y2="283.4688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="56" x="12" y="296.751">Node  head</text><rect fill="#FEFECE" height="37.6094" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="6" y="181.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="16.5" y="194.6387">adjust3</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="73" y1="199.4688" y2="199.4688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="56" x="12" y="212.751">Node  head</text><rect fill="#FEFECE" height="37.6094" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="6" y="97.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="16.5" y="110.6387">adjust4</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="73" y1="115.4688" y2="115.4688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="56" x="12" y="128.751">Node  head</text><rect fill="#FEFECE" height="37.6094" style="stroke: #A80036; stroke-width: 1.5;" width="68" x="6" y="13.5"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="47" x="16.5" y="26.6387">adjust5</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="73" y1="31.4688" y2="31.4688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="56" x="12" y="44.751">Node  head</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="141" y="344"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="160" y="357.1387">Node0</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="142" x2="219" y1="361.9688" y2="361.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="147" y="375.251">int  value = 0;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="51" x="147" y="386.8916">Node next</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="141" y="260"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="156" y="273.1387">Node00</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="142" x2="219" y1="277.9688" y2="277.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="147" y="291.251">int  value = 0;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="51" x="147" y="302.8916">Node next</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="141" y="428"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="160" y="441.1387">Node1</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="142" x2="219" y1="445.9688" y2="445.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="147" y="459.251">int  value = 1;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="51" x="147" y="470.8916">Node next</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="134" y="176"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="156" y="189.1387">Node11</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="135" x2="226" y1="193.9688" y2="193.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="140" y="207.251">int  value = 1;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="140" y="218.8916">Node next = null</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="134" y="92"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="57" x="152" y="105.1387">Node111</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="135" x2="226" y1="109.9688" y2="109.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="140" y="123.251">int  value = 1;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="140" y="134.8916">Node next = null</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="287" y="428"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="313" y="441.1387">Node2</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="288" x2="379" y1="445.9688" y2="445.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="293" y="459.251">int  value = 2;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="293" y="470.8916">Node next = null</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="134" y="8"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="49" x="156" y="21.1387">Node22</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="135" x2="226" y1="25.9688" y2="25.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="140" y="39.251">int  value = 2;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="140" y="50.8916">Node next = null</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="79" x="294" y="344"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="313" y="357.1387">Node3</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="295" x2="372" y1="361.9688" y2="361.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="300" y="375.251">int  value = 3;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="51" x="300" y="386.8916">Node next</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="440" y="344"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="466" y="357.1387">Node4</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="441" x2="532" y1="361.9688" y2="361.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="446" y="375.251">int  value = 4;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="446" y="386.8916">Node next = null</text><rect fill="#FEFECE" height="49.25" style="stroke: #A80036; stroke-width: 1.5;" width="93" x="287" y="260"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="41" x="313" y="273.1387">Node5</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="288" x2="379" y1="277.9688" y2="277.9688"/><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="67" x="293" y="291.251">int  value = 5;</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="81" x="293" y="302.8916">Node next = null</text><!--link adjust0 to Node1--><path d="M74.17,452.5 C88.14,452.5 104.82,452.5 120.75,452.5 " fill="none" id="adjust0-Node1" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="120.95,445.5,140.95,452.5,120.95,459.5,120.95,445.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Node1 to Node2--><path d="M220.39,452.5 C234.48,452.5 250.82,452.5 266.6,452.5 " fill="none" id="Node1-Node2" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="266.77,445.5,286.77,452.5,266.77,459.5,266.77,445.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link adjust1 to Node0--><path d="M74.17,368.5 C88.14,368.5 104.82,368.5 120.75,368.5 " fill="none" id="adjust1-Node0" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="120.95,361.5,140.95,368.5,120.95,375.5,120.95,361.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Node0 to Node3--><path d="M220.39,368.5 C236.59,368.5 255.76,368.5 273.63,368.5 " fill="none" id="Node0-Node3" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="273.75,361.5,293.75,368.5,273.75,375.5,273.75,361.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Node3 to Node4--><path d="M373.39,368.5 C387.48,368.5 403.82,368.5 419.6,368.5 " fill="none" id="Node3-Node4" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="419.77,361.5,439.77,368.5,419.77,375.5,419.77,361.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link adjust2 to Node00--><path d="M74.17,284.5 C88.14,284.5 104.82,284.5 120.75,284.5 " fill="none" id="adjust2-Node00" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="120.95,277.5,140.95,284.5,120.95,291.5,120.95,277.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link Node00 to Node5--><path d="M220.39,284.5 C234.48,284.5 250.82,284.5 266.6,284.5 " fill="none" id="Node00-Node5" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="266.77,277.5,286.77,284.5,266.77,291.5,266.77,277.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link adjust3 to Node11--><path d="M74.17,200.5 C86.03,200.5 99.83,200.5 113.47,200.5 " fill="none" id="adjust3-Node11" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="113.77,193.5,133.77,200.5,113.77,207.5,113.77,193.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link adjust4 to Node111--><path d="M74.17,116.5 C86.03,116.5 99.83,116.5 113.47,116.5 " fill="none" id="adjust4-Node111" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="113.77,109.5,133.77,116.5,113.77,123.5,113.77,109.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--link adjust5 to Node22--><path d="M74.17,32.5 C86.03,32.5 99.83,32.5 113.47,32.5 " fill="none" id="adjust5-Node22" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="none" points="113.77,25.5,133.77,32.5,113.77,39.5,113.77,25.5" style="stroke: #A80036; stroke-width: 1.0;"/><!--
+@startuml
+left to right direction
+skinparam shadowing false
+
+skinparam linetype polyline
+
+
+object adjust0{
+Node  head
+}
+
+
+object adjust1{
+Node  head
+}
+
+
+object adjust2{
+Node  head
+}
+
+
+object adjust3{
+Node  head
+}
+
+
+object adjust4{
+Node  head
+}
+
+
+object adjust5{
+Node  head 
+}
+
+
+object Node0{
+int  value = 0;
+Node next
+}
+
+
+object Node00{
+int  value = 0;
+Node next
+}
+
+
+object Node1{
+int  value = 1;
+Node next
+}
+
+
+object Node11{
+int  value = 1;
+Node next = null
+}
+
+object Node111{
+int  value = 1;
+Node next = null
+}
+
+
+object Node2{
+int  value = 2;
+Node next = null
+}
+
+object Node22{
+int  value = 2;
+Node next = null 
+}
+
+
+object Node3{
+int  value = 3;
+Node next 
+}
+
+
+object Node4{
+int  value = 4;
+Node next = null
+}
+
+
+object Node5{
+int  value = 5;
+Node next = null
+}
+
+
+
+adjust0 - -|> Node1
+             Node1 - -|> Node2
+           
+
+adjust1 - -|> Node0 
+	     Node0 - -|> Node3 
+	                Node3 - -|> Node4
+
+adjust2 - -|> Node00
+	     Node00 - -|> Node5 
+
+adjust3 - -|> Node11
+
+adjust4 - -|> Node111
+adjust5 - -|> Node22
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 20:02:59 EEST 2018)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-post-Ubuntu-0ubuntu120.04
+Operating System: Linux
+OS Version: 5.4.0-26-generic
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

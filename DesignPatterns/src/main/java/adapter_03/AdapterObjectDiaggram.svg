@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="231px" preserveAspectRatio="none" style="width:653px;height:231px;background:#87CEFA;" version="1.1" viewBox="0 0 653 231" width="653px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="141" x="260" y="16.708">Adapter Objects</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="179" x="31.5" y="37.4531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="112" x="65" y="54.3047">MainAdapter</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="32.5" x2="209.5" y1="60.0781" y2="60.0781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="167" x="37.5" y="78.0015">fullName= FullName</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="37.5" y="95.4624">adapter =Adapter</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="177" x="245.5" y="46.4531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="298.5" y="63.3047">Adapter</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="246.5" x2="421.5" y1="69.0781" y2="69.0781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="165" x="251.5" y="87.0015">sp=SeperatedName</text><rect fill="#FEFECE" height="83.0078" style="stroke: #A80036; stroke-width: 1.5;" width="185" x="457.5" y="28.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="142" x="479" y="45.8047">SeperatedName</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="458.5" x2="641.5" y1="51.5781" y2="51.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="173" x="463.5" y="69.5015">firstName="ahmad";</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="146" x="463.5" y="86.9624">secondName"ali";</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="164" x="463.5" y="104.4233">thirdName="omar";</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="230" x="6" y="171.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="79" x="81.5" y="188.8047">FullName</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="235" y1="194.5781" y2="194.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="218" x="12" y="212.5015">name ="ahmad ali omar" ;</text><!--link MainAdapter to Adapter--><path d="M210.8594,70.4531 C220.6902,70.4531 230.521,70.4531 240.3518,70.4531 " fill="none" id="MainAdapter-Adapter" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="245.4927,70.4531,236.4927,66.4531,240.4927,70.4531,236.4927,74.4531,245.4927,70.4531" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Adapter to SeperatedName--><path d="M422.5938,70.4531 C432.4826,70.4531 442.3714,70.4531 452.2602,70.4531 " fill="none" id="Adapter-SeperatedName" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="457.4314,70.4531,448.4314,66.4531,452.4314,70.4531,448.4314,74.4531,457.4314,70.4531" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link MainAdapter to FullName--><path d="M121,103.7553 C121,123.27 121,147.6989 121,166.5072 " fill="none" id="MainAdapter-FullName" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="121,171.6543,125,162.6543,121,166.6543,117,162.6543,121,171.6543" style="stroke: #0000FF; stroke-width: 1.0;"/><!--
+@startuml
+
+title Adapter Objects
+
+skinparam backgroundColor lightSkyBlue
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+
+MainAdapter-> Adapter
+Adapter -> SeperatedName
+MainAdapter - -> FullName
+
+
+
+Object MainAdapter{
+fullName= FullName
+adapter =Adapter
+}
+
+Object  FullName {
+name ="ahmad ali omar" ;
+} 
+
+
+Object  Adapter {
+sp=SeperatedName
+}
+
+Object  SeperatedName {
+firstName="ahmad";
+secondName"ali";
+thirdName="omar";
+} 
+
+
+
+
+
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 20:02:59 EEST 2018)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.2+9-Debian-3
+Operating System: Linux
+OS Version: 4.19.0-kali1-amd64
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

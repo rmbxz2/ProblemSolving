@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="555px" preserveAspectRatio="none" style="width:930px;height:555px;background:#87CEFA;" version="1.1" viewBox="0 0 930 555" width="930px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="125" x="396" y="16.708">observer class</text><!--MD5=[dcdb002971b952dcce956387e5415482]
+cluster observer_04--><polygon fill="#87CEFA" points="16,26.9531,121,26.9531,128,49.25,913,49.25,913,548.9531,16,548.9531,16,26.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="16" x2="128" y1="49.25" y2="49.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="99" x="20" y="41.9482">observer_04</text><!--MD5=[3b8871acc4dd4183a0e1954ce9c8634c]
+class Archiver--><rect codeLine="24" fill="#FEFECE" height="65.4609" id="Archiver" style="stroke: #A80036; stroke-width: 1.5;" width="385" x="487.5" y="467.4531"/><ellipse cx="638.75" cy="483.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M641.7188,489.0938 Q641.1406,489.3906 640.5,489.5313 Q639.8594,489.6875 639.1563,489.6875 Q636.6563,489.6875 635.3281,488.0469 Q634.0156,486.3906 634.0156,483.2656 Q634.0156,480.1406 635.3281,478.4844 Q636.6563,476.8281 639.1563,476.8281 Q639.8594,476.8281 640.5,476.9844 Q641.1563,477.1406 641.7188,477.4375 L641.7188,480.1563 Q641.0938,479.5781 640.5,479.3125 Q639.9063,479.0313 639.2813,479.0313 Q637.9375,479.0313 637.25,480.1094 Q636.5625,481.1719 636.5625,483.2656 Q636.5625,485.3594 637.25,486.4375 Q637.9375,487.5 639.2813,487.5 Q639.9063,487.5 640.5,487.2344 Q641.0938,486.9531 641.7188,486.375 L641.7188,489.0938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74" x="659.25" y="488.9922">Archiver</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="488.5" x2="871.5" y1="499.4531" y2="499.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="488.5" x2="871.5" y1="507.4531" y2="507.4531"/><ellipse cx="498.5" cy="518.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="507.5" y="525.3765">void update(String operation, String record)</text><!--MD5=[d40932010816485ec57b44b6eea2392a]
+class Observer--><rect codeLine="58" fill="#FEFECE" height="65.4609" id="Observer" style="stroke: #A80036; stroke-width: 1.5;" width="371" x="32" y="333.4531"/><ellipse cx="171.75" cy="349.4531" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M167.6719,345.2188 L167.6719,343.0625 L175.0625,343.0625 L175.0625,345.2188 L172.5938,345.2188 L172.5938,353.2969 L175.0625,353.2969 L175.0625,355.4531 L167.6719,355.4531 L167.6719,353.2969 L170.1406,353.2969 L170.1406,345.2188 L167.6719,345.2188 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="83" x="192.25" y="354.9922">Observer</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="33" x2="402" y1="365.4531" y2="365.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="33" x2="402" y1="373.4531" y2="373.4531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="38" y="391.3765">void update(String operation, String record)</text><!--MD5=[50cdb932a9a3968e2a6da4b7868254f5]
+class Boss--><rect codeLine="30" fill="#FEFECE" height="65.4609" id="Boss" style="stroke: #A80036; stroke-width: 1.5;" width="385" x="487.5" y="367.4531"/><ellipse cx="654.25" cy="383.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M657.2188,389.0938 Q656.6406,389.3906 656,389.5313 Q655.3594,389.6875 654.6563,389.6875 Q652.1563,389.6875 650.8281,388.0469 Q649.5156,386.3906 649.5156,383.2656 Q649.5156,380.1406 650.8281,378.4844 Q652.1563,376.8281 654.6563,376.8281 Q655.3594,376.8281 656,376.9844 Q656.6563,377.1406 657.2188,377.4375 L657.2188,380.1563 Q656.5938,379.5781 656,379.3125 Q655.4063,379.0313 654.7813,379.0313 Q653.4375,379.0313 652.75,380.1094 Q652.0625,381.1719 652.0625,383.2656 Q652.0625,385.3594 652.75,386.4375 Q653.4375,387.5 654.7813,387.5 Q655.4063,387.5 656,387.2344 Q656.5938,386.9531 657.2188,386.375 L657.2188,389.0938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="43" x="674.75" y="388.9922">Boss</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="488.5" x2="871.5" y1="399.4531" y2="399.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="488.5" x2="871.5" y1="407.4531" y2="407.4531"/><ellipse cx="498.5" cy="418.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="507.5" y="425.3765">void update(String operation, String record)</text><!--MD5=[ed6624c6556d5e7b1bd23032162d20b7]
+class Client--><rect codeLine="36" fill="#FEFECE" height="65.4609" id="Client" style="stroke: #A80036; stroke-width: 1.5;" width="385" x="487.5" y="267.4531"/><ellipse cx="650.75" cy="283.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M653.7188,289.0938 Q653.1406,289.3906 652.5,289.5313 Q651.8594,289.6875 651.1563,289.6875 Q648.6563,289.6875 647.3281,288.0469 Q646.0156,286.3906 646.0156,283.2656 Q646.0156,280.1406 647.3281,278.4844 Q648.6563,276.8281 651.1563,276.8281 Q651.8594,276.8281 652.5,276.9844 Q653.1563,277.1406 653.7188,277.4375 L653.7188,280.1563 Q653.0938,279.5781 652.5,279.3125 Q651.9063,279.0313 651.2813,279.0313 Q649.9375,279.0313 649.25,280.1094 Q648.5625,281.1719 648.5625,283.2656 Q648.5625,285.3594 649.25,286.4375 Q649.9375,287.5 651.2813,287.5 Q651.9063,287.5 652.5,287.2344 Q653.0938,286.9531 653.7188,286.375 L653.7188,289.0938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="671.25" y="288.9922">Client</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="488.5" x2="871.5" y1="299.4531" y2="299.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="488.5" x2="871.5" y1="307.4531" y2="307.4531"/><ellipse cx="498.5" cy="318.4531" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="507.5" y="325.3765">void update(String operation, String record)</text><!--MD5=[9abf5990bba225142516606028c7738c]
+class DBobserver--><rect codeLine="41" fill="#FEFECE" height="170.2266" id="DBobserver" style="stroke: #A80036; stroke-width: 1.5;" width="434" x="463" y="61.9531"/><ellipse cx="623.25" cy="77.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M626.2188,83.5938 Q625.6406,83.8906 625,84.0313 Q624.3594,84.1875 623.6563,84.1875 Q621.1563,84.1875 619.8281,82.5469 Q618.5156,80.8906 618.5156,77.7656 Q618.5156,74.6406 619.8281,72.9844 Q621.1563,71.3281 623.6563,71.3281 Q624.3594,71.3281 625,71.4844 Q625.6563,71.6406 626.2188,71.9375 L626.2188,74.6563 Q625.5938,74.0781 625,73.8125 Q624.4063,73.5313 623.7813,73.5313 Q622.4375,73.5313 621.75,74.6094 Q621.0625,75.6719 621.0625,77.7656 Q621.0625,79.8594 621.75,80.9375 Q622.4375,82 623.7813,82 Q624.4063,82 625,81.7344 Q625.5938,81.4531 626.2188,80.875 L626.2188,83.5938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="105" x="643.75" y="83.4922">DBobserver</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="464" x2="896" y1="93.9531" y2="93.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="471" y="101.9531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="107" x="483" y="111.8765">String record</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="471" y="119.4141"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="132" x="483" y="129.3374">String operation</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="471" y="136.875"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="210" x="483" y="146.7983">ArrayList&lt;Observer&gt; obs</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="464" x2="896" y1="154.3359" y2="154.3359"/><ellipse cx="474" cy="165.3359" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="309" x="483" y="172.2593">void addObserver(Observer observer)</text><ellipse cx="474" cy="182.7969" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="184" x="483" y="189.7202">void notifyObservers()</text><ellipse cx="474" cy="200.2578" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="341" x="483" y="207.1812">void removeObserver(Observer observer)</text><ellipse cx="474" cy="217.7188" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="408" x="483" y="224.6421">void editObserver(String operation, String record)</text><!--MD5=[d0da0a299942266ebd64acf2b2e95fa4]
+class Subject--><rect codeLine="52" fill="#FEFECE" height="100.3828" id="Subject" style="stroke: #A80036; stroke-width: 1.5;" width="353" x="41" y="130.9531"/><ellipse cx="179.75" cy="146.9531" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M175.6719,142.7188 L175.6719,140.5625 L183.0625,140.5625 L183.0625,142.7188 L180.5938,142.7188 L180.5938,150.7969 L183.0625,150.7969 L183.0625,152.9531 L175.6719,152.9531 L175.6719,150.7969 L178.1406,150.7969 L178.1406,142.7188 L175.6719,142.7188 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="67" x="200.25" y="152.4922">Subject</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="42" x2="393" y1="162.9531" y2="162.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="42" x2="393" y1="170.9531" y2="170.9531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="309" x="47" y="188.8765">void addObserver(Observer observer)</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="341" x="47" y="206.3374">void removeObserver(Observer observer)</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="184" x="47" y="223.7983">void notifyObservers()</text><!--MD5=[d3bca85455aedeeb88e16159ed8c27ff]
+reverse link Subject to DBobserver--><path codeLine="62" d="M414.43,166.4831 C430.49,165.3031 446.78,164.1031 462.97,162.9031 " fill="none" id="Subject-backto-DBobserver" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="414.7,173.4831,394.24,167.9731,413.67,159.5231,414.7,173.4831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[6376b075ddcd13ddc41e24bdcfc5ea03]
+reverse link Observer to Subject--><path codeLine="63" d="M217.5,328.2331 C217.5,295.8131 217.5,263.4031 217.5,230.9831 " fill="none" id="Observer-backto-Subject" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="217.5,333.4331,221.5,324.4331,217.5,328.4331,213.5,324.4331,217.5,333.4331" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[4412e42ac95719bafe1d082f4b6c4330]
+reverse link Observer to Client--><path codeLine="64" d="M423.05,336.6331 C444.37,333.5831 465.99,330.4831 487.16,327.4531 " fill="none" id="Observer-backto-Client" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="423.94,343.5831,403.15,339.4931,421.95,329.7231,423.94,343.5831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[27189cbe85ce937e826b7b6ebefc85e1]
+reverse link Observer to Boss--><path codeLine="65" d="M423.38,381.0831 C444.59,382.6431 466.09,384.2331 487.16,385.7931 " fill="none" id="Observer-backto-Boss" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="422.58,388.0431,403.15,379.5831,423.61,374.0731,422.58,388.0431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[b46a849b9df8ce396c75978bbbcea472]
+reverse link Observer to Archiver--><path codeLine="66" d="M325.1,405.2531 C367.68,420.2531 417.35,436.8631 463,449.9531 C484.28,456.0531 506.89,461.9331 529.17,467.3931 " fill="none" id="Observer-backto-Archiver" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="322.58,411.7931,306.07,398.5031,327.26,398.5931,322.58,411.7931" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[96cf9092954ab158528f168ff4d41230]
+@startuml
+  !include ObserverClass.html
+  '!include ObserverObject.html
+@enduml
+
+@startuml
+
+title observer class
+
+skinparam BackgroundColor  LightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+
+
+
+
+left to right direction 
+package observer_04{
+
+class Archiver {
++void update(String operation, String record)
+}
+ interface Observer  {
+}
+
+class Boss {
++void update(String operation, String record)
+}
+
+
+
+class Client {
+	+void update(String operation, String record)
+}
+
+
+class DBobserver {
+	-String record
+	-String operation
+	-ArrayList<Observer> obs
+	+void addObserver(Observer observer)
+	+void notifyObservers()
+	+void removeObserver(Observer observer)
+	+void editObserver(String operation, String record)
+}
+interface Subject {
+}
+interface Subject {
+	void addObserver(Observer observer)
+	void removeObserver(Observer observer)
+	void notifyObservers()
+}
+
+interface Observer {
+	void update(String operation, String record)
+}
+
+Subject  <|.. DBobserver
+Observer <.  Subject
+Observer <|.. Client
+Observer <|.. Boss
+Observer <|.. Archiver
+
+}
+@enduml
+
+PlantUML version 1.2020.18(Wed Sep 30 22:40:44 EEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

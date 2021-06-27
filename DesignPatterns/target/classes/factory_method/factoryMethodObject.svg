@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="382px" preserveAspectRatio="none" style="width:954px;height:382px;" version="1.1" viewBox="0 0 954 382" width="954px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="136" x="411" y="16.708">factory method</text><!--cluster myFactory--><polygon fill="#FFFFFF" points="14,36.9531,102,36.9531,109,59.25,932,59.25,932,370.9531,14,370.9531,14,36.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="14" x2="109" y1="59.25" y2="59.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="18" y="51.9482">myFactory</text><rect fill="#FEFECE" height="83.0078" style="stroke: #A80036; stroke-width: 1.5;" width="201" x="372.5" y="63.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="41" x="452.5" y="80.8047">Main</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="373.5" x2="572.5" y1="86.5781" y2="86.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="189" x="378.5" y="104.5015">CreatorIF1 = Creator1;</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="189" x="378.5" y="121.9624">CreatorIF2 = Creator2;</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="189" x="378.5" y="139.4233">CreatorIF3 = Creator3;</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="189" x="110.5" y="206.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="79" x="165.5" y="223.8047">Creator1</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="111.5" x2="298.5" y1="229.5781" y2="229.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="177" x="116.5" y="247.5015">ProductIF = Product1</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="189" x="378.5" y="206.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="79" x="433.5" y="223.8047">Creator2</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="379.5" x2="566.5" y1="229.5781" y2="229.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="177" x="384.5" y="247.5015">ProductIF = Product2</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="189" x="646.5" y="206.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="79" x="701.5" y="223.8047">Creator3</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="647.5" x2="834.5" y1="229.5781" y2="229.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="177" x="652.5" y="247.5015">ProductIF = Product3</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="277" x="22.5" y="314.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="120" y="331.8047">Product1</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="23.5" x2="298.5" y1="337.5781" y2="337.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="265" x="28.5" y="355.5015">action("product 1 action called")</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="277" x="334.5" y="314.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="432" y="331.8047">Product2</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="335.5" x2="610.5" y1="337.5781" y2="337.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="265" x="340.5" y="355.5015">action("product 2 action called")</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="277" x="646.5" y="314.9531"/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="82" x="744" y="331.8047">Product3</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="647.5" x2="922.5" y1="337.5781" y2="337.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="265" x="652.5" y="355.5015">action("product 3 action called")</text><!--link Main to Creator1--><path d="M384.1321,147.0685 C343.594,166.0518 296.8162,187.9571 261.2298,204.6216 " fill="none" id="Main-Creator1" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="256.5058,206.8338,266.3527,206.6392,261.0338,204.7132,262.9598,199.3943,256.5058,206.8338" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Creator1 to Product1--><path d="M195.1255,255.1904 C188.5018,271.4486 179.7455,292.9413 172.7612,310.0847 " fill="none" id="Creator1-Product1" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="170.8415,314.7967,177.9417,307.9712,172.7281,310.1663,170.533,304.9527,170.8415,314.7967" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Main to Creator2--><path d="M473,147.2428 C473,165.0523 473,185.4067 473,201.5849 " fill="none" id="Main-Creator2" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="473,206.9016,477,197.9016,473,201.9016,469,197.9016,473,206.9016" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Creator2 to Product2--><path d="M473,255.1904 C473,271.3096 473,292.5743 473,309.6442 " fill="none" id="Creator2-Product2" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="473,314.7967,477,305.7967,473,309.7967,469,305.7967,473,314.7967" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Main to Creator3--><path d="M561.8679,147.0685 C602.406,166.0518 649.1838,187.9571 684.7702,204.6216 " fill="none" id="Main-Creator3" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="689.4942,206.8338,683.0402,199.3943,684.9662,204.7132,679.6473,206.6392,689.4942,206.8338" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Creator3 to Product3--><path d="M750.8745,255.1904 C757.4982,271.4486 766.2545,292.9413 773.2388,310.0847 " fill="none" id="Creator3-Product3" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="775.1585,314.7967,775.467,304.9527,773.2719,310.1663,768.0583,307.9712,775.1585,314.7967" style="stroke: #0000FF; stroke-width: 1.0;"/><!--
+@startuml
+
+title factory method
+
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+
+package myFactory{
+
+
+object Main{
+CreatorIF1 = Creator1;
+CreatorIF2 = Creator2;
+CreatorIF3 = Creator3;
+
+}
+
+object Creator1 {
+ProductIF = Product1
+}
+
+object Creator2 {
+ProductIF = Product2
+}
+
+object Creator3 {
+ProductIF = Product3
+}
+
+
+object Product1 {
+action("product 1 action called")
+}
+
+object Product2 {
+action("product 2 action called")
+}
+
+object Product3 {
+action("product 3 action called")
+}
+
+
+
+
+Main..> Creator1 
+        Creator1..> Product1
+
+
+Main ..> Creator2 
+         Creator2..> Product2
+
+
+Main..> Creator3 
+        Creator3..> Product3
+
+}
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 20:02:59 EEST 2018)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.2+9-Debian-3
+Operating System: Linux
+OS Version: 4.19.0-kali1-amd64
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,21 @@
+@startuml
+'scale 3.0
+
+title Singleton
+
+skinparam classFontColor red
+skinparam classFontSize 25
+left to right direction
+skinparam classAttributeFontSize 16
+skinparam classAttributeFontStyle bold
+
+class Singleton {
+	-Singleton singleton
+	-String name
+	-Singleton(String name)
+	+Singleton getSingleton(String name)
+	+String toString()
+}
+
+
+@enduml

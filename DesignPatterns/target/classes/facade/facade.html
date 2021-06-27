@@ -1,0 +1,45 @@
+@startuml
+'scale 3.0
+
+title facade
+
+'skinparam BackgroundColor  LightSkyBlue
+skinparam classFontColor red
+skinparam classFontSize 25
+'left to right direction
+skinparam classAttributeFontSize 16
+skinparam classAttributeFontStyle bold
+
+package myFacade{
+
+class Difficult {
+	-char[] charName
+	+Difficult()
+	+void setChar1(char char)
+	+void setChar2(char char)
+	+void setChar3(char char)
+	+void setChar4(char char)
+	+void setChar5(char char)
+	+void setChar6(char char)
+	+void setChar7(char char)
+	+void setChar8(char char)
+	+void setChar9(char char)
+	+void setChar10(char char)
+	+String getName()
+}
+
+class Facade {
+	~Difficult difficult
+	-char[] charName
+	+Facade()
+	+void setName(String name)
+	+String getName()
+}
+
+Facade --> Difficult
+
+}
+@enduml
+
+
+

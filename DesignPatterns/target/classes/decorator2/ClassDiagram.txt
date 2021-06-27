@@ -1,0 +1,19 @@
+@startuml
+abstract class decorator3.Computer
+abstract class decorator3.Decorator
+class decorator3.CD
+class decorator3.ComputerIBM
+class decorator3.ComputerMac
+class decorator3.HD
+class decorator3.MainDecorator
+class decorator3.Monitor
+decorator3.Decorator --|> decorator3.Computer
+decorator3.ComputerIBM --|> decorator3.Computer
+decorator3.ComputerMac --|> decorator3.Computer
+decorator3.CD --|> decorator3.Decorator
+decorator3.CD --> decorator3.Computer
+decorator3.HD --|> decorator3.Decorator
+decorator3.HD --> decorator3.Computer
+decorator3.Monitor --|> decorator3.Decorator
+decorator3.Monitor --> decorator3.Computer
+@enduml

@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1163px" preserveAspectRatio="none" style="width:1563px;height:1163px;" version="1.1" viewBox="0 0 1563 1163" width="1563px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="231" x="659.5" y="16.708">compound pattern objects</text><!--MD5=[25cfc487e2c8b8e765063ebf0c9947c3]
+cluster compundPatternObject--><polygon fill="#FFFFFF" points="16,26.9531,204,26.9531,211,49.25,1546,49.25,1546,1156.9531,16,1156.9531,16,26.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="16" x2="211" y1="49.25" y2="49.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="182" x="20" y="41.9482">compundPatternObject</text><rect fill="#FEFECE" height="38.625" style="stroke: #A80036; stroke-width: 1.5;" width="227" x="1091.5" y="66.4531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="213" x="1098.5" y="83.3047">CountingDuckFactory20</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1092.5" x2="1317.5" y1="89.0781" y2="89.0781"/><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="212" x="1302" y="356.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="150" x="1333" y="373.8047">QuackCounter23</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1303" x2="1513" y1="379.5781" y2="379.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="200" x="1308" y="397.5015">duck = RedheadDuck29;</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="236" x="1294" y="499.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="144" x="1340" y="516.8047">RedheadDuck29</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1295" x2="1529" y1="522.5781" y2="522.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="224" x="1300" y="540.5015">observable = Observable31</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="211" x="1318.5" y="633.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="122" x="1363" y="650.8047">Observable31</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1319.5" x2="1528.5" y1="656.5781" y2="656.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="184" x="1324.5" y="674.5015">duck=RedheadDuck29</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="199" x="1324.5" y="691.9624">observers = ArrayList33</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="1392" y="876.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="102" x="1410" y="893.8047">ArrayList33</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1393" x2="1529" y1="899.5781" y2="899.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="1398" y="917.5015">Quackologist91</text><rect fill="#FEFECE" height="38.625" style="stroke: #A80036; stroke-width: 1.5;" width="151" x="636.5" y="1101.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="137" x="643.5" y="1118.8047">Quackologist91</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="637.5" x2="786.5" y1="1124.5781" y2="1124.5781"/><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="164" x="857" y="356.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="150" x="864" y="373.8047">QuackCounter27</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="858" x2="1020" y1="379.5781" y2="379.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="152" x="863" y="397.5015">duck = DuckCall46</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="236" x="986" y="499.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="97" x="1055.5" y="516.8047">DuckCall46</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="987" x2="1221" y1="522.5781" y2="522.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="224" x="992" y="540.5015">observable = Observable48</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="206" x="1056" y="347.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="122" x="1098" y="364.8047">Observable48</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1057" x2="1261" y1="370.5781" y2="370.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="152" x="1062" y="388.5015">duck = DuckCall46</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="194" x="1062" y="405.9624">observers= ArrayList49</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="1219" y="876.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="102" x="1237" y="893.8047">ArrayList49</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1220" x2="1356" y1="899.5781" y2="899.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="1225" y="917.5015">Quackologist91</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="183" x="81.5" y="356.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="150" x="98" y="373.8047">QuackCounter28</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="82.5" x2="263.5" y1="379.5781" y2="379.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="171" x="87.5" y="397.5015">duck=RubberDuck51</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="246" x="32" y="499.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="131" x="89.5" y="516.8047">RubberDuck51</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="33" x2="277" y1="522.5781" y2="522.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="234" x="38" y="540.5015">observable = Observable109</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="221" x="31.5" y="633.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="133" x="75.5" y="650.8047">Observable109</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="32.5" x2="251.5" y1="656.5781" y2="656.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="181" x="37.5" y="674.5015">duck = RubberDuck51</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="209" x="37.5" y="691.9624">observers = ArrayList112</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="32" y="759.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="44.5" y="776.8047">ArrayList112</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="33" x2="169" y1="782.5781" y2="782.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="38" y="800.5015">Quackologist91</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="246" x="309" y="347.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="149" x="357.5" y="364.8047">GooseAdapter53</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="310" x2="554" y1="370.5781" y2="370.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="153" x="315" y="388.5015">goose = Goose121</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="234" x="315" y="405.9624">observable = Observable123</text><!--MD5=[bcde1b765f6edbd637b2c73a54664800]
+class Goose121--><rect fill="#FEFECE" height="48" id="Goose121" style="stroke: #A80036; stroke-width: 1.5;" width="96" x="570" y="499.9531"/><ellipse cx="585" cy="515.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M587.9688,521.5938 Q587.3906,521.8906 586.75,522.0313 Q586.1094,522.1875 585.4063,522.1875 Q582.9063,522.1875 581.5781,520.5469 Q580.2656,518.8906 580.2656,515.7656 Q580.2656,512.6406 581.5781,510.9844 Q582.9063,509.3281 585.4063,509.3281 Q586.1094,509.3281 586.75,509.4844 Q587.4063,509.6406 587.9688,509.9375 L587.9688,512.6563 Q587.3438,512.0781 586.75,511.8125 Q586.1563,511.5313 585.5313,511.5313 Q584.1875,511.5313 583.5,512.6094 Q582.8125,513.6719 582.8125,515.7656 Q582.8125,517.8594 583.5,518.9375 Q584.1875,520 585.5313,520 Q586.1563,520 586.75,519.7344 Q587.3438,519.4531 587.9688,518.875 L587.9688,521.5938 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="64" x="599" y="520.1074">Goose121</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="571" x2="665" y1="531.9531" y2="531.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="571" x2="665" y1="539.9531" y2="539.9531"/><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="221" x="313.5" y="490.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="133" x="357.5" y="507.8047">Observable123</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="314.5" x2="533.5" y1="513.5781" y2="513.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="198" x="319.5" y="531.5015">duck = GooseAdapter53</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="209" x="319.5" y="548.9624">observers = ArrayList124</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="181" y="993.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="193.5" y="1010.8047">ArrayList124</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="182" x2="318" y1="1016.5781" y2="1016.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="187" y="1034.5015">Quackologist91</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="215" x="606.5" y="61.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="68" x="680" y="78.8047">Flock98</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="607.5" x2="820.5" y1="84.5781" y2="84.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="203" x="612.5" y="102.5015">quackers = ArrayList130</text><rect fill="#FEFECE" height="117.9297" style="stroke: #A80036; stroke-width: 1.5;" width="149" x="639.5" y="169.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="657.5" y="186.8047">ArrayList130</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="640.5" x2="787.5" y1="192.5781" y2="192.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="137" x="645.5" y="210.5015">QuackCounter23</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="137" x="645.5" y="227.9624">QuackCounter27</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="137" x="645.5" y="245.4233">QuackCounter28</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="136" x="645.5" y="262.8843">GooseAdapter53</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="73" x="645.5" y="280.3452">Flock100</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="215" x="606.5" y="356.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="79" x="674.5" y="373.8047">Flock100</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="607.5" x2="820.5" y1="379.5781" y2="379.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="203" x="612.5" y="397.5015">quackers = ArrayList190</text><rect fill="#FEFECE" height="100.4688" style="stroke: #A80036; stroke-width: 1.5;" width="159" x="701.5" y="473.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="724.5" y="490.8047">ArrayList190</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="702.5" x2="859.5" y1="496.5781" y2="496.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="707.5" y="514.5015">QuackCounter101</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="707.5" y="531.9624">QuackCounter102</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="707.5" y="549.4233">QuackCounter139</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="147" x="707.5" y="566.8843">QuackCounter141</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="204" x="564" y="642.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="161" x="585.5" y="659.8047">QuackCounter101</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="565" x2="767" y1="665.5781" y2="665.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="570" y="683.5015">duck = MallardDuck194</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="204" x="803" y="642.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="161" x="824.5" y="659.8047">QuackCounter102</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="804" x2="1006" y1="665.5781" y2="665.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="809" y="683.5015">duck = MallardDuck211</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="204" x="1042" y="642.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="161" x="1063.5" y="659.8047">QuackCounter139</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1043" x2="1245" y1="665.5781" y2="665.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="1048" y="683.5015">duck = MallardDuck224</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="204" x="325" y="642.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="161" x="346.5" y="659.8047">QuackCounter141</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="326" x2="528" y1="665.5781" y2="665.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="331" y="683.5015">duck = MallardDuck234</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="246" x="523" y="759.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="141" x="575.5" y="776.8047">MallardDuck194</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="524" x2="768" y1="782.5781" y2="782.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="234" x="529" y="800.5015">observable = Observable198</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="221" x="434.5" y="867.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="133" x="478.5" y="884.8047">Observable198</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="435.5" x2="654.5" y1="890.5781" y2="890.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="440.5" y="908.5015">duck = MallardDuck194</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="209" x="440.5" y="925.9624">observers = ArrayList200</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="236" x="804" y="759.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="141" x="851.5" y="776.8047">MallardDuck211</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="805" x2="1039" y1="782.5781" y2="782.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="224" x="810" y="800.5015">observable=Observable214</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="237" x="690.5" y="867.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="133" x="742.5" y="884.8047">Observable214</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="691.5" x2="926.5" y1="890.5781" y2="890.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="57" x="696.5" y="908.5015">duck =</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="130" x="776.5" y="908.5015">MallardDuck211</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="99" x="696.5" y="925.9624">observers =</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="105" x="816.5" y="925.9624">ArrayList215</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="735" y="993.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="747.5" y="1010.8047">ArrayList215</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="736" x2="872" y1="1016.5781" y2="1016.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="741" y="1034.5015">Quackologist91</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="246" x="1075" y="759.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="141" x="1127.5" y="776.8047">MallardDuck224</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="1076" x2="1320" y1="782.5781" y2="782.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="234" x="1081" y="800.5015">observable = Observable226</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="221" x="962.5" y="867.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="133" x="1006.5" y="884.8047">Observable226</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="963.5" x2="1182.5" y1="890.5781" y2="890.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="968.5" y="908.5015">duck = MallardDuck224</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="209" x="968.5" y="925.9624">observers = ArrayList227</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="959" y="993.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="971.5" y="1010.8047">ArrayList227</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="960" x2="1096" y1="1016.5781" y2="1016.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="965" y="1034.5015">Quackologist91</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="246" x="242" y="759.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="141" x="294.5" y="776.8047">MallardDuck234</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="243" x2="487" y1="782.5781" y2="782.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="234" x="248" y="800.5015">observable = Observable237</text><rect fill="#FEFECE" height="65.5469" style="stroke: #A80036; stroke-width: 1.5;" width="221" x="178.5" y="867.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="133" x="222.5" y="884.8047">Observable237</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="179.5" x2="398.5" y1="890.5781" y2="890.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="192" x="184.5" y="908.5015">duck = MallardDuck234</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="209" x="184.5" y="925.9624">observers = ArrayList238</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="375" y="993.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="387.5" y="1010.8047">ArrayList238</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="376" x2="512" y1="1016.5781" y2="1016.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="381" y="1034.5015">Quackologist91</text><rect fill="#FEFECE" height="48.0859" style="stroke: #A80036; stroke-width: 1.5;" width="138" x="552" y="993.9531"/><text fill="#DD0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="113" x="564.5" y="1010.8047">ArrayList200</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="553" x2="689" y1="1016.5781" y2="1016.5781"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="558" y="1034.5015">Quackologist91</text><!--MD5=[8a4b985f264b381cc44330295da585ae]
+link QuackCounter23 to RedheadDuck29--><path codeLine="65" d="M1408.66,405.2331 C1409.36,429.7331 1410.45,468.2931 1411.19,494.5531 " fill="none" id="QuackCounter23-to-RedheadDuck29" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1411.34,499.6331,1415.0813,490.5226,1411.1972,494.6352,1407.0846,490.751,1411.34,499.6331" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[84f67b5d4c50a1efc2ed02830e161135]
+link RedheadDuck29 to Observable31--><path codeLine="70" d="M1404.22,548.2331 C1402.74,570.1631 1405.03,603.3631 1409.47,628.9231 " fill="none" id="RedheadDuck29-to-Observable31" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1410.39,633.9231,1412.7033,624.3498,1409.4893,629.0049,1404.8341,625.7909,1410.39,633.9231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[b35c09ba2e62c4a80753bcb4bc5a4c58]
+link Observable31 to RedheadDuck29--><path codeLine="76" d="M1432.8,633.9231 C1433.51,609.6731 1430.55,576.6631 1425.5,553.3531 " fill="none" id="Observable31-to-RedheadDuck29" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1424.31,548.2331,1422.4445,557.9037,1425.4385,553.1041,1430.238,556.0981,1424.31,548.2331" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[e2e0203933715881659d3934fa696af7]
+link Observable31 to ArrayList33--><path codeLine="77" d="M1429.14,700.2131 C1436.41,745.7931 1449.58,828.3231 1456.49,871.6531 " fill="none" id="Observable31-to-ArrayList33" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1457.3,876.7331,1459.8375,867.2168,1456.5151,871.7951,1451.9367,868.4727,1457.3,876.7331" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[a9a91c64ce859e0a2b2409e5673c85d9]
+link ArrayList33 to Quackologist91--><path codeLine="82" d="M1420.5,924.9831 C1363.96,956.1531 1257.32,1011.3731 1160,1041.9531 C1034.87,1081.2631 883.5,1102.6131 792.63,1112.7531 " fill="none" id="ArrayList33-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="787.54,1113.3231,796.9295,1116.2959,792.5089,1112.7663,796.0385,1108.3457,787.54,1113.3231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[5e22577b98665dcb1fbe3eee126cb08c]
+link QuackCounter27 to DuckCall46--><path codeLine="91" d="M966.25,405.2331 C995.59,430.3131 1042.2,470.1431 1072.95,496.4131 " fill="none" id="QuackCounter27-to-DuckCall46" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1076.99,499.8731,1072.7406,490.9882,1073.1867,496.6274,1067.5474,497.0735,1076.99,499.8731" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[a850d08ba312a1a82dfdeb90cf99d98e]
+link DuckCall46 to Observable48--><path codeLine="96" d="M1123.48,499.5531 C1135.51,477.7131 1148.94,444.7631 1156.51,419.2931 " fill="none" id="DuckCall46-to-Observable48" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1157.94,414.3031,1151.6007,421.8406,1156.5532,419.1069,1159.2868,424.0595,1157.94,414.3031" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[bce351dae80f6770c1e3c423ba8dfc36]
+link Observable48 to DuckCall46--><path codeLine="102" d="M1135.46,414.3031 C1123.45,438.4931 1110.81,471.2531 1104.64,494.4531 " fill="none" id="Observable48-to-DuckCall46" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1103.35,499.5531,1109.4403,491.8131,1104.5795,494.7066,1101.6859,489.8459,1103.35,499.5531" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[d75f2e0a226d2d19615ae39b43610a30]
+link Observable48 to ArrayList49--><path codeLine="103" d="M1193.88,414.0431 C1209.98,430.5531 1228.12,451.8331 1240,473.9531 C1289.22,565.6131 1259.14,604.7031 1301,699.9531 C1313.7,728.8531 1330.21,729.6331 1339,759.9531 C1344.94,780.4431 1344.34,787.3031 1339,807.9531 C1332.97,831.2631 1319.63,854.9631 1308.1,872.4631 " fill="none" id="Observable48-to-ArrayList49" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1305.22,876.7831,1313.5405,871.5135,1307.9935,872.6229,1306.8841,867.0759,1305.22,876.7831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[0a58b8ce59daeac37005198a392eed98]
+link ArrayList49 to Quackologist91--><path codeLine="109" d="M1266.71,925.1931 C1236.29,956.8731 1177.15,1012.9631 1115,1041.9531 C1010.44,1090.7131 876.99,1109.2031 792.99,1116.1931 " fill="none" id="ArrayList49-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="787.78,1116.6231,797.0711,1119.8906,792.764,1116.2233,796.4313,1111.9162,787.78,1116.6231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[92d0b0989df2ad6f2ea5303f2dbe9794]
+link QuackCounter28 to RubberDuck51--><path codeLine="114" d="M170.03,405.2331 C166.9,429.7331 161.98,468.2931 158.63,494.5531 " fill="none" id="QuackCounter28-to-RubberDuck51" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="157.98,499.6331,163.0773,491.206,158.6072,494.6726,155.1405,490.2025,157.98,499.6331" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[2a5f04cd7212267c8ca1e35c31a7b940]
+link RubberDuck51 to Observable109--><path codeLine="119" d="M143.09,548.2331 C137.73,570.1631 134.13,603.3631 134.04,628.9231 " fill="none" id="RubberDuck51-to-Observable109" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="134.07,633.9231,137.9927,624.8892,134.0271,628.9233,129.993,624.9577,134.07,633.9231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[7f76f8a0ac41f33f896bd69a1521e544]
+link Observable109 to RubberDuck51--><path codeLine="125" d="M156.48,633.9231 C161.49,609.6731 164.38,576.6631 163.46,553.3531 " fill="none" id="Observable109-to-RubberDuck51" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="163.19,548.2331,159.6852,557.4373,163.4618,553.2257,167.6733,557.0024,163.19,548.2331" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[5ffbb6517caf058efee37a502625640f]
+link Observable109 to ArrayList112--><path codeLine="126" d="M130.58,699.9831 C124.44,717.2131 116.93,738.2631 111.02,754.8431 " fill="none" id="Observable109-to-ArrayList112" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="109.24,759.8431,116.0175,752.6971,110.9108,755.1306,108.4774,750.0238,109.24,759.8431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[4253ba4149576d2d4d922720d8c893c6]
+link ArrayList112 to Quackologist91--><path codeLine="131" d="M98.75,808.1831 C95.24,859.3031 94.9,981.7431 164,1041.9531 C232.14,1101.3331 495.95,1115.8331 631.14,1119.3431 " fill="none" id="ArrayList112-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="636.29,1119.4731,627.3958,1115.2431,631.2917,1119.3446,627.1902,1123.2405,636.29,1119.4731" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[e0ce5d60c488d27f6e9a9e15c9f70c27]
+link GooseAdapter53 to Goose121--><path codeLine="138" d="M474.67,414.3031 C507.62,439.2831 552.63,473.4031 583.37,496.7031 " fill="none" id="GooseAdapter53-to-Goose121" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="587.42,499.7731,582.6545,491.154,583.432,496.7571,577.8289,497.5347,587.42,499.7731" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[2c755e4a88fbbec083f22c54ac5c7d19]
+link GooseAdapter53 to Observable123--><path codeLine="139" d="M419.25,414.3031 C415.78,435.5231 414.03,463.3531 414.71,485.5331 " fill="none" id="GooseAdapter53-to-Observable123" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="414.92,490.7531,418.5571,481.6004,414.7202,485.7571,410.5635,481.9202,414.92,490.7531" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[612f7378228bb3d1d44cee9630dd39cb]
+link Observable123 to GooseAdapter53--><path codeLine="145" d="M437.37,490.7531 C440.98,469.5631 442.74,441.7331 441.96,419.5231 " fill="none" id="Observable123-to-GooseAdapter53" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="441.73,414.3031,438.1464,423.4769,441.959,419.2979,446.138,423.1105,441.73,414.3031" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[f1ecfe72920f9fca43545e330088ec9c]
+link Observable123 to ArrayList124--><path codeLine="146" d="M384.38,557.0031 C360.54,577.4731 330.55,605.4531 308,633.9531 C287,660.4931 288.63,671.6931 270,699.9531 C251.65,727.7831 243.52,732.2431 225,759.9531 C193.99,806.3431 175.75,814.1431 161,867.9531 C153.25,896.2431 149.3,907.0531 161,933.9531 C170.95,956.8331 190.65,976.2631 208.99,990.5531 " fill="none" id="Observable123-to-ArrayList124" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="213.13,993.7131,208.4037,985.0724,209.1558,990.679,203.5492,991.4312,213.13,993.7131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[626a699c522268df80e65f3c29b48809]
+link ArrayList124 to Quackologist91--><path codeLine="152" d="M319.17,1034.1531 C402.67,1052.4931 542.87,1083.2931 631.25,1102.7131 " fill="none" id="ArrayList124-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="636.21,1103.8031,628.2793,1097.9632,631.3267,1102.7291,626.5609,1105.7765,636.21,1103.8031" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[5893df5f20fcc1d7edcaf5e68beab3f9]
+link Flock98 to ArrayList130--><path codeLine="157" d="M714,110.2331 C714,125.1031 714,145.1631 714,164.5131 " fill="none" id="Flock98-to-ArrayList130" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="714,169.9431,718,160.9431,714,164.9431,710,160.9431,714,169.9431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[8cfbd9de670d7f679827532725f0ee4b]
+link ArrayList130 to QuackCounter23--><path codeLine="167" d="M788.83,244.5731 C897.35,266.0031 1104.62,307.7631 1280,347.9531 C1290.55,350.3731 1301.57,352.9831 1312.52,355.6431 " fill="none" id="ArrayList130-to-QuackCounter23" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1317.55,356.8731,1309.7554,350.8529,1312.6926,355.6874,1307.8581,358.6246,1317.55,356.8731" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[87f25ba593c2687f20836aa8e9ccd6f9]
+link ArrayList130 to QuackCounter27--><path codeLine="168" d="M788.61,279.6931 C825.8,304.4831 869.24,333.4431 899.84,353.8431 " fill="none" id="ArrayList130-to-QuackCounter27" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="904.26,356.7931,898.9903,348.4726,900.0997,354.0196,894.5527,355.129,904.26,356.7931" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[cd3721bb2cd4b4c3225464cbf38f6be6]
+link ArrayList130 to QuackCounter28--><path codeLine="169" d="M639.34,250.6531 C540.48,278.0631 366.37,326.3331 261.15,355.5131 " fill="none" id="ArrayList130-to-QuackCounter28" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="256.19,356.8831,265.9298,358.3448,261.0098,355.553,263.8016,350.6331,256.19,356.8831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[2dc89f73c448663e0f33eb85363160b3]
+link ArrayList130 to GooseAdapter53--><path codeLine="170" d="M639.17,269.7531 C594.93,293.2831 539.45,322.7931 497.04,345.3531 " fill="none" id="ArrayList130-to-GooseAdapter53" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="492.46,347.7931,502.2832,347.0823,496.8706,345.438,498.5149,340.0254,492.46,347.7931" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[71adfa8f149365b115c47ae8c9ac8d16]
+link ArrayList130 to Flock100--><path codeLine="171" d="M714,288.3731 C714,309.9931 714,333.5531 714,351.3531 " fill="none" id="ArrayList130-to-Flock100" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="714,356.6831,718,347.6831,714,351.6831,710,347.6831,714,356.6831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[66a3a792ef23fc0dae1c2e4227b85a2d]
+link Flock100 to ArrayList190--><path codeLine="176" d="M725.06,405.2331 C733.32,422.6131 744.95,447.0831 755.46,469.2131 " fill="none" id="Flock100-to-ArrayList190" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="757.69,473.8931,757.4441,464.0473,755.5459,469.3762,750.217,467.4779,757.69,473.8931" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[22eeba0d377f240f87fb0e6348de4a24]
+link ArrayList190 to QuackCounter101--><path codeLine="184" d="M740.78,574.2631 C723.07,595.9731 702.96,620.6331 688.06,638.9131 " fill="none" id="ArrayList190-to-QuackCounter101" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="684.77,642.9431,693.5498,638.4805,687.923,639.0626,687.3409,633.4357,684.77,642.9431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[7be950d61cd6b44092b83a88c338b93f]
+link ArrayList190 to QuackCounter102--><path codeLine="185" d="M824.37,574.2631 C843.46,595.9731 865.15,620.6331 881.22,638.9131 " fill="none" id="ArrayList190-to-QuackCounter102" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="884.76,642.9431,881.8083,633.547,881.4533,639.1927,875.8076,638.8377,884.76,642.9431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[5aa2e6b128f36e4cb924f5d1090c9207]
+link ArrayList190 to QuackCounter139--><path codeLine="186" d="M860.66,555.8931 C926.46,581.4531 1018.67,617.2731 1079.8,641.0131 " fill="none" id="ArrayList190-to-QuackCounter139" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1084.52,642.8531,1077.5786,635.8662,1079.8592,641.043,1074.6824,643.3235,1084.52,642.8531" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[a5cdda4d00daf0a721058fc6ce126fb7]
+link ArrayList190 to QuackCounter141--><path codeLine="187" d="M701.44,566.1231 C695.58,568.8531 689.72,571.4931 684,573.9531 C624.52,599.5031 555.35,623.9831 503.76,641.2531 " fill="none" id="ArrayList190-to-QuackCounter141" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="498.82,642.9031,508.6239,643.843,503.562,641.3177,506.0872,636.2558,498.82,642.9031" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[0a0eea02d2b0d702840ca343a59f4cb9]
+link MallardDuck194 to Observable198--><path codeLine="193" d="M615.08,808.2231 C598.74,824.0931 579.51,845.4231 565.04,863.5131 " fill="none" id="MallardDuck194-to-Observable198" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="561.84,867.5631,570.5552,862.9757,564.9373,863.638,564.275,858.02,561.84,867.5631" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[42f008042545497da015f360345f25a7]
+link Observable198 to MallardDuck194--><path codeLine="254" d="M585.73,867.5631 C602.82,850.1531 621.28,828.9131 633.65,812.3331 " fill="none" id="Observable198-to-MallardDuck194" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="636.66,808.2231,628.1181,813.1258,633.7081,812.2588,634.5752,817.8488,636.66,808.2231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[5dc2adc82de81a2b849d22aa9ccc60ac]
+link MallardDuck211 to Observable214--><path codeLine="202" d="M888.65,808.2231 C870.66,824.0931 849.21,845.4231 832.84,863.5131 " fill="none" id="MallardDuck211-to-Observable214" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="829.22,867.5631,838.1976,863.5131,832.5498,863.8332,832.2297,858.1854,829.22,867.5631" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[070258b035bc409cd58f94d9d33bbb4f]
+link Observable214 to MallardDuck211--><path codeLine="208" d="M853.11,867.5631 C872.02,850.1531 892.69,828.9131 906.79,812.3331 " fill="none" id="Observable214-to-MallardDuck211" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="910.23,808.2231,901.3796,812.544,907.015,812.0525,907.5066,817.688,910.23,808.2231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[f84f3417a7f3eee08b9192427a824c4a]
+link Observable214 to ArrayList215--><path codeLine="209" d="M807.61,933.9831 C806.86,951.0631 805.96,971.8931 805.24,988.4131 " fill="none" id="Observable214-to-ArrayList215" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="805,993.8431,809.4068,985.0352,805.2283,988.8483,801.4152,984.6698,805,993.8431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[3a6fab7004a8fed173eab5684f8057ce]
+link MallardDuck224 to Observable226--><path codeLine="216" d="M1162.22,808.2231 C1142.41,824.2231 1118.5,845.7831 1100.19,863.9731 " fill="none" id="MallardDuck224-to-Observable226" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1096.6,867.5631,1105.7924,864.0276,1100.1355,864.0276,1100.1355,858.3707,1096.6,867.5631" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[505544e328f93711ddd5dc32d5e88c60]
+link Observable226 to MallardDuck224--><path codeLine="222" d="M1120.23,867.7831 C1141.19,850.1831 1164.41,828.6331 1180.32,811.9331 " fill="none" id="Observable226-to-MallardDuck224" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1183.8,808.2231,1174.7269,812.0544,1180.3808,811.8713,1180.5639,817.5251,1183.8,808.2231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[bca97ed8ab301566948699e6a0ff82af]
+link Observable226 to ArrayList227--><path codeLine="223" d="M1060.46,933.9831 C1053.72,951.2131 1045.49,972.2631 1039,988.8431 " fill="none" id="Observable226-to-ArrayList227" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1037.04,993.8431,1044.0526,986.9276,1038.8674,989.189,1036.606,984.0038,1037.04,993.8431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[48fee350dad88a1193f37e744a308570]
+link MallardDuck234 to Observable237--><path codeLine="230" d="M339.14,808.2231 C326.36,823.9531 311.9,845.0631 301.39,863.0631 " fill="none" id="MallardDuck234-to-Observable237" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="298.8,867.5631,306.7567,861.7588,301.2945,863.2298,299.8235,857.7676,298.8,867.5631" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[b98e0d28bfe46a75e2004bbc84702144]
+link Observable237 to MallardDuck234--><path codeLine="236" d="M322.69,867.5631 C335.88,850.3031 349.6,829.2731 358.38,812.7531 " fill="none" id="Observable237-to-MallardDuck234" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="360.72,808.2231,353.0302,814.3767,358.4213,812.6634,360.1346,818.0546,360.72,808.2231" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[fdfa2bc584e1f351424ed880975eca5a]
+link Observable237 to ArrayList238--><path codeLine="237" d="M332.18,933.9831 C356.29,951.8831 385.97,973.8931 408.69,990.7531 " fill="none" id="Observable237-to-ArrayList238" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="412.85,993.8431,407.996,985.2735,408.8312,990.8684,403.2363,991.7036,412.85,993.8431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[38d644e2936225dc0f397db37c73a5ef]
+link ArrayList238 to Quackologist91--><path codeLine="242" d="M504.81,1041.9831 C551.01,1059.4831 613.93,1083.3131 658.28,1100.1131 " fill="none" id="ArrayList238-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="663.05,1101.9131,656.053,1094.9819,658.3748,1100.1403,653.2165,1102.4621,663.05,1101.9131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[f6b4ef24377f2248627dfd24a32d158d]
+link QuackCounter101 to MallardDuck194--><path codeLine="247" d="M661.95,691.2231 C658.78,709.4631 654.35,734.9231 650.97,754.3931 " fill="none" id="QuackCounter101-to-MallardDuck194" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="650.04,759.7131,655.5229,751.5316,650.8967,754.7871,647.6412,750.1609,650.04,759.7131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[8abdf95277380df20a13ccbfc06d5697]
+link Observable198 to ArrayList200--><path codeLine="255" d="M566.17,933.9831 C577.65,951.3631 591.7,972.6231 602.71,989.2731 " fill="none" id="Observable198-to-ArrayList200" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="605.72,993.8431,604.0944,984.1294,602.963,989.6719,597.4204,988.5405,605.72,993.8431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[02495a22263df686177922c6fc15f85c]
+link ArrayList200 to Quackologist91--><path codeLine="260" d="M641.65,1041.9831 C656.64,1058.7031 676.81,1081.2031 691.71,1097.8231 " fill="none" id="ArrayList200-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="695.38,1101.9131,692.3504,1092.5418,692.0423,1098.1903,686.3938,1097.8822,695.38,1101.9131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[84e1c1433846ba90b870c1bbeb46acb6]
+link QuackCounter102 to MallardDuck211--><path codeLine="265" d="M908.44,691.2231 C911.14,709.4631 914.9,734.9231 917.78,754.3931 " fill="none" id="QuackCounter102-to-MallardDuck211" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="918.56,759.7131,921.2048,750.226,917.8309,754.7666,913.2903,751.3926,918.56,759.7131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[6119871e09aaa74e53cd441f93811cbc]
+link ArrayList215 to Quackologist91--><path codeLine="272" d="M783.12,1041.9831 C767.97,1058.7031 747.58,1081.2031 732.51,1097.8231 " fill="none" id="ArrayList215-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="728.8,1101.9131,737.8024,1097.9184,732.1527,1098.2038,731.8674,1092.5541,728.8,1101.9131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[3da991570e034c3c5b866e1b8b3fef44]
+link QuackCounter139 to MallardDuck224--><path codeLine="277" d="M1154.93,691.2231 C1163.56,709.6231 1175.65,735.3631 1184.82,754.8931 " fill="none" id="QuackCounter139-to-MallardDuck224" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="1187.09,759.7131,1186.8816,749.8665,1184.9631,755.1881,1179.6415,753.2695,1187.09,759.7131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[433234c6ebf839fdbdc081cc7dd2cfc2]
+link ArrayList227 to Quackologist91--><path codeLine="283" d="M958.65,1041.2231 C903.83,1058.8331 827.95,1083.2131 774.88,1100.2531 " fill="none" id="ArrayList227-to-Quackologist91" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="769.81,1101.8831,779.6013,1102.9466,774.5716,1100.3577,777.1606,1095.3281,769.81,1101.8831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[4fe03d1c7fabea90fe9752e47eaf03ef]
+link QuackCounter141 to MallardDuck234--><path codeLine="288" d="M414.45,691.2231 C404.54,709.6231 390.66,735.3631 380.13,754.8931 " fill="none" id="QuackCounter141-to-MallardDuck234" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="377.53,759.7131,385.3211,753.6883,379.9022,755.3117,378.2788,749.8928,377.53,759.7131" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[81be4c18582044504a52f5b710241978]
+@startuml  compundPatternObject
+'scale 3.0
+
+title compound pattern objects
+
+skinparam objectFontColor #DD0000
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' show MallaredDuck members
+
+package "compundPatternObject" {
+
+
+
+'Object DuckSimulator19{
+'duckFactory     = CountingDuckFactory20	
+'redheadDuck     = QuackCounter23	
+'duckCall        = QuackCounter27	
+'gooseDuck       = GooseAdapter53	
+'rubberDuck      = QuackCounter28	
+'flockOfDucks	= Flock98	
+'flockOfMallards = Flock100	
+'mallardOne	    = QuackCounter101	
+'mallardTwo	    = QuackCounter102	
+'mallardThree	= QuackCounter139	
+'mallardfour	    = QuackCounter141	
+'quackologist	= Quackologist91	
+'}
+
+'DuckSimulator19 - -> CountingDuckFactory20	
+'DuckSimulator19 - -> QuackCounter23	
+'DuckSimulator19 - -> QuackCounter27	
+'DuckSimulator19 - -> GooseAdapter53	
+'DuckSimulator19 - -> QuackCounter28	
+'DuckSimulator19 - -> Flock98	
+'DuckSimulator19 - -> Flock100	
+'DuckSimulator19 - -> QuackCounter101	
+'DuckSimulator19 - -> QuackCounter102	
+'DuckSimulator19 - -> QuackCounter139	
+'DuckSimulator19 - -> QuackCounter141	
+'DuckSimulator19 - -> Quackologist91	
+
+object  CountingDuckFactory20 {
+
+} 
+'CountingDuckFactory20 ..> QuackCounter23	
+'CountingDuckFactory20 ..> QuackCounter27	
+'CountingDuckFactory20 ..> GooseAdapter53	
+'CountingDuckFactory20 ..> QuackCounter28	
+'CountingDuckFactory20 ..> QuackCounter101	
+'CountingDuckFactory20 ..> QuackCounter102	
+'CountingDuckFactory20 ..> QuackCounter139	
+'CountingDuckFactory20 ..> QuackCounter141	
+
+
+
+object  QuackCounter23 {
+duck = RedheadDuck29;	
+} 
+QuackCounter23 - -> RedheadDuck29
+
+object  RedheadDuck29 {
+observable = Observable31	
+} 
+RedheadDuck29- -> Observable31
+
+object  Observable31 {
+duck=RedheadDuck29	
+observers = ArrayList33	
+} 
+Observable31- -> RedheadDuck29
+Observable31- -> ArrayList33
+
+object  ArrayList33 {
+Quackologist91
+} 
+ArrayList33- -> Quackologist91
+
+object  Quackologist91 {
+
+} 
+
+object  QuackCounter27 {
+duck = DuckCall46	
+} 
+QuackCounter27 - -> DuckCall46
+
+object  DuckCall46{
+observable = Observable48	
+} 
+DuckCall46- ->Observable48
+
+object  Observable48 {
+duck = DuckCall46	
+observers= ArrayList49	
+} 
+Observable48- -> DuckCall46
+Observable48- -> ArrayList49
+
+
+object ArrayList49{
+Quackologist91	
+}
+ArrayList49- -> Quackologist91
+
+object  QuackCounter28 {
+duck=RubberDuck51	
+} 
+QuackCounter28- ->RubberDuck51
+
+object  RubberDuck51 {
+observable = Observable109	
+} 
+RubberDuck51- ->Observable109
+
+object  Observable109 {
+duck = RubberDuck51	
+observers = ArrayList112	
+} 
+Observable109- ->RubberDuck51
+Observable109- ->ArrayList112
+
+object  ArrayList112 {
+Quackologist91
+} 
+ArrayList112- ->Quackologist91
+
+
+object	GooseAdapter53 {	
+ goose = Goose121	
+ observable = Observable123	
+}
+GooseAdapter53- ->Goose121
+GooseAdapter53- ->Observable123
+
+object	Observable123 {
+ duck = GooseAdapter53	
+ observers = ArrayList124	
+}	
+Observable123- ->GooseAdapter53
+Observable123- ->ArrayList124
+	
+	
+object  ArrayList124{
+Quackologist91	
+} 
+ArrayList124- ->Quackologist91
+
+object  Flock98 {
+quackers = ArrayList130	
+} 
+Flock98- ->ArrayList130
+
+
+object  ArrayList130 {
+QuackCounter23	
+QuackCounter27	
+QuackCounter28	
+GooseAdapter53	
+Flock100	
+} 
+ArrayList130- ->QuackCounter23
+ArrayList130- ->QuackCounter27
+ArrayList130- ->QuackCounter28
+ArrayList130- ->GooseAdapter53
+ArrayList130- ->Flock100
+
+object  Flock100 {
+quackers = ArrayList190	
+} 
+Flock100 - -> ArrayList190
+
+object  ArrayList190 {
+QuackCounter101	
+QuackCounter102	
+QuackCounter139	
+QuackCounter141	
+} 
+ArrayList190 - -> QuackCounter101
+ArrayList190 - -> QuackCounter102
+ArrayList190 - -> QuackCounter139
+ArrayList190 - -> QuackCounter141
+
+
+object  MallardDuck194{
+observable = Observable198	
+} 
+MallardDuck194 - -> Observable198
+
+
+
+	
+
+object  MallardDuck211{
+observable=Observable214	
+} 
+MallardDuck211 - -> Observable214
+
+object  Observable214{
+duck =	MallardDuck211	
+observers =	ArrayList215	
+} 
+Observable214- ->MallardDuck211
+Observable214- ->ArrayList215
+	
+
+
+object  MallardDuck224{
+observable = Observable226	
+} 
+MallardDuck224- ->Observable226
+
+object  Observable226{
+duck = MallardDuck224	
+observers = ArrayList227	
+} 
+Observable226- ->MallardDuck224
+Observable226- ->ArrayList227
+
+
+
+object  MallardDuck234{
+observable = Observable237 	
+} 
+MallardDuck234- ->Observable237
+
+object  Observable237 {
+duck = MallardDuck234	
+observers = ArrayList238	
+} 
+Observable237- ->MallardDuck234
+Observable237- ->ArrayList238
+
+object  ArrayList238{
+Quackologist91	
+} 
+ArrayList238- ->Quackologist91
+
+object  QuackCounter101{
+duck = MallardDuck194	
+} 
+QuackCounter101- ->MallardDuck194
+
+
+object  Observable198{
+duck = MallardDuck194	
+observers = ArrayList200
+} 
+Observable198- ->MallardDuck194
+Observable198- ->ArrayList200
+
+object  ArrayList200{
+Quackologist91	
+} 
+ArrayList200- ->Quackologist91
+
+object  QuackCounter102{
+duck = MallardDuck211	
+} 
+QuackCounter102- -> MallardDuck211
+
+
+
+object  ArrayList215{
+Quackologist91	
+} 
+ArrayList215- ->Quackologist91
+
+object  QuackCounter139{
+duck = MallardDuck224	
+} 
+QuackCounter139- ->MallardDuck224
+
+
+object  ArrayList227{
+Quackologist91	
+} 
+ArrayList227- -> Quackologist91
+
+object  QuackCounter141{
+duck = MallardDuck234	
+} 
+QuackCounter141- -> MallardDuck234
+
+}
+
+@enduml
+
+@startuml  compundPatternObject
+
+title compound pattern objects
+
+skinparam objectFontColor #DD0000
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+
+package "compundPatternObject" {
+
+
+
+
+
+object  CountingDuckFactory20 {
+
+} 
+
+
+
+object  QuackCounter23 {
+duck = RedheadDuck29;	
+} 
+QuackCounter23 - -> RedheadDuck29
+
+object  RedheadDuck29 {
+observable = Observable31	
+} 
+RedheadDuck29- -> Observable31
+
+object  Observable31 {
+duck=RedheadDuck29	
+observers = ArrayList33	
+} 
+Observable31- -> RedheadDuck29
+Observable31- -> ArrayList33
+
+object  ArrayList33 {
+Quackologist91
+} 
+ArrayList33- -> Quackologist91
+
+object  Quackologist91 {
+
+} 
+
+object  QuackCounter27 {
+duck = DuckCall46	
+} 
+QuackCounter27 - -> DuckCall46
+
+object  DuckCall46{
+observable = Observable48	
+} 
+DuckCall46- ->Observable48
+
+object  Observable48 {
+duck = DuckCall46	
+observers= ArrayList49	
+} 
+Observable48- -> DuckCall46
+Observable48- -> ArrayList49
+
+
+object ArrayList49{
+Quackologist91	
+}
+ArrayList49- -> Quackologist91
+
+object  QuackCounter28 {
+duck=RubberDuck51	
+} 
+QuackCounter28- ->RubberDuck51
+
+object  RubberDuck51 {
+observable = Observable109	
+} 
+RubberDuck51- ->Observable109
+
+object  Observable109 {
+duck = RubberDuck51	
+observers = ArrayList112	
+} 
+Observable109- ->RubberDuck51
+Observable109- ->ArrayList112
+
+object  ArrayList112 {
+Quackologist91
+} 
+ArrayList112- ->Quackologist91
+
+
+object	GooseAdapter53 {	
+ goose = Goose121	
+ observable = Observable123	
+}
+GooseAdapter53- ->Goose121
+GooseAdapter53- ->Observable123
+
+object	Observable123 {
+ duck = GooseAdapter53	
+ observers = ArrayList124	
+}	
+Observable123- ->GooseAdapter53
+Observable123- ->ArrayList124
+	
+	
+object  ArrayList124{
+Quackologist91	
+} 
+ArrayList124- ->Quackologist91
+
+object  Flock98 {
+quackers = ArrayList130	
+} 
+Flock98- ->ArrayList130
+
+
+object  ArrayList130 {
+QuackCounter23	
+QuackCounter27	
+QuackCounter28	
+GooseAdapter53	
+Flock100	
+} 
+ArrayList130- ->QuackCounter23
+ArrayList130- ->QuackCounter27
+ArrayList130- ->QuackCounter28
+ArrayList130- ->GooseAdapter53
+ArrayList130- ->Flock100
+
+object  Flock100 {
+quackers = ArrayList190	
+} 
+Flock100 - -> ArrayList190
+
+object  ArrayList190 {
+QuackCounter101	
+QuackCounter102	
+QuackCounter139	
+QuackCounter141	
+} 
+ArrayList190 - -> QuackCounter101
+ArrayList190 - -> QuackCounter102
+ArrayList190 - -> QuackCounter139
+ArrayList190 - -> QuackCounter141
+
+
+object  MallardDuck194{
+observable = Observable198	
+} 
+MallardDuck194 - -> Observable198
+
+
+
+	
+
+object  MallardDuck211{
+observable=Observable214	
+} 
+MallardDuck211 - -> Observable214
+
+object  Observable214{
+duck =	MallardDuck211	
+observers =	ArrayList215	
+} 
+Observable214- ->MallardDuck211
+Observable214- ->ArrayList215
+	
+
+
+object  MallardDuck224{
+observable = Observable226	
+} 
+MallardDuck224- ->Observable226
+
+object  Observable226{
+duck = MallardDuck224	
+observers = ArrayList227	
+} 
+Observable226- ->MallardDuck224
+Observable226- ->ArrayList227
+
+
+
+object  MallardDuck234{
+observable = Observable237 	
+} 
+MallardDuck234- ->Observable237
+
+object  Observable237 {
+duck = MallardDuck234	
+observers = ArrayList238	
+} 
+Observable237- ->MallardDuck234
+Observable237- ->ArrayList238
+
+object  ArrayList238{
+Quackologist91	
+} 
+ArrayList238- ->Quackologist91
+
+object  QuackCounter101{
+duck = MallardDuck194	
+} 
+QuackCounter101- ->MallardDuck194
+
+
+object  Observable198{
+duck = MallardDuck194	
+observers = ArrayList200
+} 
+Observable198- ->MallardDuck194
+Observable198- ->ArrayList200
+
+object  ArrayList200{
+Quackologist91	
+} 
+ArrayList200- ->Quackologist91
+
+object  QuackCounter102{
+duck = MallardDuck211	
+} 
+QuackCounter102- -> MallardDuck211
+
+
+
+object  ArrayList215{
+Quackologist91	
+} 
+ArrayList215- ->Quackologist91
+
+object  QuackCounter139{
+duck = MallardDuck224	
+} 
+QuackCounter139- ->MallardDuck224
+
+
+object  ArrayList227{
+Quackologist91	
+} 
+ArrayList227- -> Quackologist91
+
+object  QuackCounter141{
+duck = MallardDuck234	
+} 
+QuackCounter141- -> MallardDuck234
+
+}
+
+@enduml
+
+PlantUML version 1.2020.18(Wed Sep 30 22:40:44 EEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

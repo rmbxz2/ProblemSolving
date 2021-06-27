@@ -1,0 +1,31 @@
+package untitled15;
+
+import java.awt.*;
+import javax.swing.*;
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2000</p>
+ * <p>Company: </p>
+ * @author unascribed
+ * @version 1.0
+ */
+
+public class Net extends JInternalFrame {
+  private JScrollPane jScrollPane1 = new JScrollPane();
+  private Panel jPanel1 = new Panel();
+
+  public Net() {
+    try {
+      jbInit();
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+  private void jbInit() throws Exception {
+    this.getContentPane().add(jScrollPane1, BorderLayout.CENTER);
+    jScrollPane1.getViewport().add(jPanel1, null);
+  }
+}

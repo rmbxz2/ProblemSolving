@@ -1,0 +1,12 @@
+@startuml
+class com.company.command.Executor
+class com.company.command.MediaPlayer
+class com.company.command.Receiver
+class com.company.command.RemoteControl
+class com.company.command.Television
+class com.company.command.TurnOffTelevision
+class com.company.command.TurnOnTelevision
+interface com.company.command.Command
+com.company.command.TurnOffTelevision --|> com.company.command.Command
+com.company.command.TurnOnTelevision --|> com.company.command.Command
+@enduml

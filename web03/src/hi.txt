@@ -1,0 +1,29 @@
+  (expand-file-name "")  ==> "/home/myLSP/lspWorkspace/web03/src"
+
+
+  (message (format "/home/myLSP/lspWorkspace/%s"  (replace-regexp-in-string  "/.*" ""  (replace-regexp-in-string "/home/myLSP/lspWorkspace/"  "" (expand-file-name "")))))
+
+  (message (format "%s"    (replace-regexp-in-string "/src/.*"  "" (expand-file-name ""))))
+  (message (format "%s"    (replace-regexp-in-string "/home/myLSP/lspWorkspace/"  "" (expand-file-name "")))) "web03/src"
+  (message (format "%s"    (replace-regexp-in-string  "/.*" ""  (replace-regexp-in-string "/home/myLSP/lspWorkspace/"  "" (expand-file-name ""))    )   ))  "web03/src"
+
+
+(defun my-lsp-find-in-project-as-grep ()
+"search inside all files in project like this 
+ /home/myLSP/lspWorkspace/web03/
+ in grep use wildcards 
+ "
+(interactive)
+ (let (
+  ;; find '/home/myLSP/lspWorkspace/web03' -iname '*'  -type f -exec grep  --color  -nHi -e 'leagueList' {} +
+
+  ;; "/home/myLSP/lspWorkspace/web03/"  
+    (my-lsp-project-name-for-search (format "/home/myLSP/lspWorkspace/%s"  (replace-regexp-in-string  "/.*" ""  (replace-regexp-in-string "/home/myLSP/lspWorkspace/"  "" (expand-file-name "")))))
+
+  (my-lsp-project-search-for-word-as-grep (format "%s" (read-string "find as grep : ")))  
+  ) ;; end of let definition
+  (find-grep (format "find '%s' -iname '*'  -type f -exec grep  --color  -nHi -e '%s' {} +" my-lsp-project-name-for-search   my-lsp-project-search-for-word-as-grep))
+  ) ;; end of let
+ ) ;; end of my-lsp-generate-javadoc-html
+
+(global-set-key (kbd "C-c C-d C-f")   'my-lsp-find-in-project-as-grep)

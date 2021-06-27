@@ -1,0 +1,23 @@
+@startuml
+annotation java.lang.Override
+class command3.CommandTVOFF
+class command3.CommandTVON
+class command3.CommandVLCoff
+class command3.CommandVLCon
+class command3.MainCommand
+class command3.NOCommand
+class command3.RemoteControl
+class command3.TV
+class command3.VLC
+interface command3.Command
+command3.CommandTVOFF ..> java.lang.Override
+command3.CommandTVOFF --|> command3.Command
+command3.CommandTVON ..> java.lang.Override
+command3.CommandTVON --|> command3.Command
+command3.CommandVLCoff ..> java.lang.Override
+command3.CommandVLCoff --|> command3.Command
+command3.CommandVLCon ..> java.lang.Override
+command3.CommandVLCon --|> command3.Command
+command3.NOCommand ..> java.lang.Override
+command3.NOCommand --|> command3.Command
+@enduml

@@ -1,0 +1,85 @@
+@startuml
+'scale 3.0
+
+title Composite Tree
+
+
+skinparam backGroundColor LightSkyBlue
+skinparam ObjectFontColor red
+skinparam ObjectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+        trunk-->branch1
+	 	trunk-->branch2
+	 	branch2 --> branch4
+	 	branch4--> branch3
+      	branch1 --> leaf1
+	 	branch1 --> leaf2
+	 	branch3--> leaf4
+	 	branch3--> leaf5
+	 	branch3--> leaf6
+
+Object leaf1{
+name=leaf1
+}
+
+Object leaf2{
+name=leaf2
+}
+
+Object leaf4{
+name=leaf4
+}
+
+Object leaf5{
+name=leaf5
+}
+
+Object leaf6{
+name=leaf6
+}
+
+
+
+Object trunk{
+name="trunk"
+children=ArrayList{branch1,branch2}
+
+}
+
+
+Object branch1{
+name="branch1"
+children=ArrayList{leaf1,leaf2}
+
+}
+
+
+Object branch2{
+name="branch2"
+children=ArrayList{branch4}
+
+}
+
+Object branch4{
+name="branch4"
+children=ArrayList{branch3}
+
+}
+
+Object branch3{
+name="branch3"
+children=ArrayList{leaf4,leaf5,leaf6}
+
+}
+
+
+@enduml

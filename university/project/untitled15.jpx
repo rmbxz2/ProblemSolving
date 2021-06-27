@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--JBuilder XML Project-->
+<project>
+  <property category="idl" name="ProcessIDL" value="false"/>
+  <property category="optimize.0" name="BuildTargetOnOptimize" value="com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make"/>
+  <property category="optimize.0" name="OptimizableType" value="com.borland.jbuilder.optimize.IntroOptimizeitProfiler"/>
+  <property category="runtime" name="DefaultConfiguration" value="-1"/>
+  <property category="runtime.0" name="ConfigurationName" value="Application1"/>
+  <property category="runtime.0" name="RunnableType" value="com.borland.jbuilder.runtime.ApplicationRunner"/>
+  <property category="runtime.0" name="application.class" value="untitled15.Application1"/>
+  <property category="serverservices" name="single.server.name" value="Tomcat 4.0"/>
+  <property category="sys" name="AuthorLabel" value="@author"/>
+  <property category="sys" name="BackupPath" value="bak"/>
+  <property category="sys" name="BeansInstantiate" value="false"/>
+  <property category="sys" name="BraceStyle" value="1"/>
+  <property category="sys" name="CheckStable" value="1"/>
+  <property category="sys" name="Company" value=""/>
+  <property category="sys" name="CompanyLabel" value="Company:"/>
+  <property category="sys" name="Copyright" value="Copyright (c) 2000"/>
+  <property category="sys" name="CopyrightLabel" value="Copyright:"/>
+  <property category="sys" name="DefaultPath" value="src"/>
+  <property category="sys" name="Description" value=""/>
+  <property category="sys" name="DescriptionLabel" value="Description:"/>
+  <property category="sys" name="DmColumns" value="Column columnName dataType preferredOrdinal editMask default"/>
+  <property category="sys" name="DocPath" value="doc"/>
+  <property category="sys" name="EventMatch" value="false"/>
+  <property category="sys" name="EventStyle" value="1"/>
+  <property category="sys" name="ExcludeClassEnabled" value="0"/>
+  <property category="sys" name="IncludeTestPath" value="1"/>
+  <property category="sys" name="InstanceVisibility" value="2"/>
+  <property category="sys" name="JDK" value="java 1.3.1-b24"/>
+  <property category="sys" name="LastTag" value="0"/>
+  <property category="sys" name="Libraries" value="JBCL;dbSwing"/>
+  <property category="sys" name="MakeStable" value="0"/>
+  <property category="sys" name="OutPath" value="classes"/>
+  <property category="sys" name="SourcePath" value="src;test"/>
+  <property category="sys" name="TestPath" value="test"/>
+  <property category="sys" name="Title" value=""/>
+  <property category="sys" name="TitleLabel" value="Title:"/>
+  <property category="sys" name="Version" value="1.0"/>
+  <property category="sys" name="VersionLabel" value="@version"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="sys" name="uidesign.size.untitled15.JEditor" value="483,353"/>
+  <property category="sys" name="uidesign.size.untitled15.MyGraph" value="400,306"/>
+  <property category="sys" name="uidesign.size.untitled15.MyResult" value="400,430"/>
+  <file path="classes/untitled15/a1.gif"/>
+  <file path="src/untitled15/a2.gif"/>
+  <file path="src/untitled15/images/about.gif"/>
+  <file path="src/untitled15/Analysis.java"/>
+  <file path="src/untitled15/Application1.java"/>
+  <file path="src/untitled15/images/bold.gif"/>
+  <file path="src/untitled15/closeFile.gif"/>
+  <file path="src/untitled15/images/compile.gif"/>
+  <file path="src/untitled15/images/copy.gif"/>
+  <file path="src/untitled15/images/cut.gif"/>
+  <file path="src/untitled15/images/delete.gif"/>
+  <file path="src/untitled15/Dijkstra.java"/>
+  <file path="src/untitled15/images/dining.gif"/>
+  <file path="src/untitled15/images/file.gif"/>
+  <file path="src/untitled15/images/find.gif"/>
+  <file path="src/untitled15/Frame1_AboutBox.java"/>
+  <file path="src/untitled15/Frame1.java"/>
+  <file path="src/untitled15/Frame2.java"/>
+  <file path="src/untitled15/GraphByHand_AboutBox.java"/>
+  <file path="src/untitled15/GraphByHand.java"/>
+  <file path="src/untitled15/Head.java"/>
+  <file path="src/untitled15/help.gif"/>
+  <file path="src/untitled15/images/history.gif"/>
+  <file path="src/untitled15/images/icon.gif"/>
+  <file path="src/untitled15/images/import.gif"/>
+  <file path="src/untitled15/images/indent.gif"/>
+  <file path="src/untitled15/images/italic.gif"/>
+  <file path="src/untitled15/JEditor.java"/>
+  <file path="src/untitled15/lolo.gif"/>
+  <file path="src/untitled15/MyGraph.java"/>
+  <file path="src/untitled15/MyLabel.java"/>
+  <file path="src/untitled15/MyLabelVertex.java"/>
+  <file path="src/untitled15/MyResult.java"/>
+  <file path="src/untitled15/images/new.gif"/>
+  <file path="src/untitled15/images/noidea.gif"/>
+  <file path="src/untitled15/images/open.gif"/>
+  <file path="src/untitled15/openFile.gif"/>
+  <file path="src/untitled15/Panel1.java"/>
+  <file path="src/untitled15/PanelByHand.java"/>
+  <file path="src/untitled15/images/paste.gif"/>
+  <file path="src/untitled15/images/redo.gif"/>
+  <file path="src/untitled15/images/run.gif"/>
+  <file path="src/untitled15/images/runapplet.gif"/>
+  <file path="src/untitled15/images/save.gif"/>
+  <file path="src/untitled15/images/saveas.gif"/>
+  <file path="src/untitled15/images/stop.gif"/>
+  <file path="src/untitled15/text19.gif"/>
+  <file path="src/untitled15/images/tipOftheDay.gif"/>
+  <file path="src/untitled15/images/undent.gif"/>
+  <file path="src/untitled15/images/undo.gif"/>
+</project>

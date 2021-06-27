@@ -1,0 +1,54 @@
+@startuml
+'scale 3.0
+
+title proxy pattern
+
+skinparam BackgroundColor LightSkyblue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+
+
+class  Car {
++void drive(int age){"print driven now by age"}
+
+} 
+' end of class Car
+
+
+interface CarIF {
++void drive(int age);
+}
+' end of interface CarIF
+
+class Proxy {
+- CarIF car=new Car();
++ void drive(int age){ car.drive(int age)}
+} 
+' end of class Proxy 
+
+
+CarIF <|..Car
+CarIF <|..Proxy
+Car   <-right- Proxy
+
+
+
+@enduml
+
+  
+
+  
+
+ 
+ 
+ 

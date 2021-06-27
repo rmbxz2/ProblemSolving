@@ -1,0 +1,25 @@
+package untitled15;
+
+import javax.swing.UIManager;
+import java.awt.*;
+
+public class Application1
+{
+  private boolean packFrame = false;
+
+  //Construct the application
+  public Application1()
+  {
+
+
+    Frame2 frame2 = new Frame2();
+           frame2.setSize(250,350);
+           frame2.setVisible(true);
+  }
+
+  //Main method
+  public static void main(String[] args)
+  {
+        new Application1();
+  }
+}

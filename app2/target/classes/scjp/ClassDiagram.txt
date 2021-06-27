@@ -1,0 +1,30 @@
+@startuml
+'skinparam BackgroundColor LightSkyblue
+ abstract class scjp.exam.stuff.Car
+' class java.awt.event.ActionListener
+' class java.lang.Integer
+' class java.lang.System
+' class java.util.EventListener
+' class scjp.Java1
+' class scjp.cert.Beverage
+' class scjp.cert.TestMyAge
+' class scjp.exam.Xcar
+' class scjp.exam.YCar
+' class scjp.exam.Zcar
+' class scjp.exam.stuff.Coffee
+' class scjp.exam.stuff.SmallTea
+' class scjp.exam.stuff.Tea
+' class scjp.exam.stuff.Tea2
+' enum scjp.exam.stuff.CoffeSize
+' enum scjp.exam.stuff.CoffeeSizeOk
+' interface scjp.exam.stuff.Callable
+scjp.Java1 --|> scjp.exam.stuff.SmallTea
+scjp.cert.Beverage --|> scjp.exam.stuff.Car
+scjp.cert.TestMyAge --|> scjp.cert.Beverage
+scjp.exam.Xcar --|> scjp.exam.stuff.Car
+scjp.exam.YCar --|> scjp.exam.Xcar
+scjp.exam.stuff.SmallTea --|> scjp.exam.stuff.Tea
+scjp.exam.stuff.Tea --|> scjp.cert.Beverage
+scjp.exam.stuff.Tea2 --|> scjp.exam.stuff.Car
+scjp.exam.stuff.Tea2 --|> scjp.exam.stuff.Callable
+@enduml

@@ -1,0 +1,52 @@
+@startuml
+'scale 3.0
+
+title state pattern
+
+
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+object Main{
+Switch = Switch
+}
+
+
+object  State1 {
+void handle(){print " state 1"}
+} 
+
+
+object  State2 {
+void handle(){print " state 2"}
+} 
+
+object  State3 {
+void handle(){print " state 3"}
+} 
+
+
+
+object Switch {
+	-state=State1  2  3
+	+void changeState(int x){ swith(x){case s1: state=state1 }}
+}
+
+Main   --> Switch
+Switch --> "only one of three state will work"State1
+Switch -->"not exist" State2
+Switch -->"not exist" State3
+
+
+
+@enduml

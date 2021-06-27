@@ -1,0 +1,114 @@
+@startuml
+left to right direction
+skinparam shadowing false
+
+'skinparam linetype ortho
+skinparam linetype polyline
+
+
+object adjust0{
+Node  head
+}
+
+
+object adjust1{
+Node  head
+}
+
+
+object adjust2{
+Node  head
+}
+
+
+object adjust3{
+Node  head
+}
+
+
+object adjust4{
+Node  head
+}
+
+
+object adjust5{
+Node  head 
+}
+
+
+object Node0{
+int  value = 0;
+Node next
+}
+
+
+object Node00{
+int  value = 0;
+Node next
+}
+
+
+object Node1{
+int  value = 1;
+Node next
+}
+
+
+object Node11{
+int  value = 1;
+Node next = null
+}
+
+object Node111{
+int  value = 1;
+Node next = null
+}
+
+
+object Node2{
+int  value = 2;
+Node next = null
+}
+
+object Node22{
+int  value = 2;
+Node next = null 
+}
+
+
+object Node3{
+int  value = 3;
+Node next 
+}
+
+
+object Node4{
+int  value = 4;
+Node next = null
+}
+
+
+object Node5{
+int  value = 5;
+Node next = null
+}
+
+
+
+adjust0 --|> Node1
+             Node1 --|> Node2
+           
+
+adjust1 --|> Node0 
+	     Node0 --|> Node3 
+	                Node3 --|> Node4
+
+adjust2 --|> Node00
+	     Node00 --|> Node5 
+
+adjust3 --|> Node11
+
+adjust4 --|> Node111
+adjust5 --|> Node22
+
+@enduml

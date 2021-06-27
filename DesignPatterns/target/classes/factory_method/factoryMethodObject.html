@@ -1,0 +1,70 @@
+@startuml
+'scale 3.0
+
+title factory method
+
+'skinparam BackgroundColor  LightSkyBlue
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+package myFactory{
+
+
+object Main{
+CreatorIF1 = Creator1;
+CreatorIF2 = Creator2;
+CreatorIF3 = Creator3;
+
+}
+
+object Creator1 {
+ProductIF = Product1
+}
+
+object Creator2 {
+ProductIF = Product2
+}
+
+object Creator3 {
+ProductIF = Product3
+}
+
+
+object Product1 {
+action("product 1 action called")
+}
+
+object Product2 {
+action("product 2 action called")
+}
+
+object Product3 {
+action("product 3 action called")
+}
+
+
+
+
+Main..> Creator1 
+        Creator1..> Product1
+
+
+Main ..> Creator2 
+         Creator2..> Product2
+
+
+Main..> Creator3 
+        Creator3..> Product3
+
+}
+
+@enduml

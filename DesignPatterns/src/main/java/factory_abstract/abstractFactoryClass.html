@@ -1,0 +1,88 @@
+@startuml 
+'scale 3.0
+
+title Design pattern
+
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+package factory{
+
+interface FactoryIF {
+public Oracle createOracle();
+public MySql createMySql();
+}
+' end of FactoryIF
+
+interface ConnectionIF {
+public String description();
+}
+' end of ConnectionIF
+
+interface MySqlIF {
+}
+' end of MySqlIF
+
+interface OracleIF {
+}
+' end of OracleIF
+
+class  MySqlLinux {
+} 
+' end of MySqlLinux
+
+class  MySqlWin {
+} 
+' end of MySqlWin
+
+class  OracleWin {
+} 
+' end of OracleWin
+
+class  OracleLinux {
+} 
+' end of OracleLinux
+
+class  Win {
+public Oracle createOracle{ return new OracleWin(); }
+public MySql createMySql{ return new MySqlWin();}
+} 
+' end of Win
+
+class  Linux {
+public Oracle createOracle{ return new OracleLinux(); }
+public MySql createMySql{ return new MySqlLinux();}
+
+} 
+' end of Linux
+
+
+ConnectionIF <|-- OracleIF
+                  OracleIF <|.. OracleLinux
+ 				  OracleIF <|.. OracleWin
+                       	
+ConnectionIF <|-- MySqlIF
+				  MySqlIF <|.. MySqlLinux
+				  MySqlIF <|.. MySqlWin
+
+FactoryIF <|.. Win
+FactoryIF <|.. Linux
+
+ConnectionIF <.right. FactoryIF
+
+}
+' ========= end of factory package ==============
+
+
+
+
+@enduml

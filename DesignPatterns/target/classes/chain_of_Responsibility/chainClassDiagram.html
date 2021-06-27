@@ -1,0 +1,74 @@
+@startuml
+'scale 3.0
+
+title Chain responsibility
+
+
+'skinparam backGroundColor LightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+
+package MyResposibality {
+
+'HelpIF Student Teacher Manager Minister King
+
+HelpIF <|.. Student 
+HelpIF <--  Student 
+HelpIF <|.. Teacher 
+HelpIF <--  Teacher 
+HelpIF <|.. Manager 
+HelpIF <--  Manager 
+HelpIF <|.l. Minister 
+HelpIF <-l-  Minister 
+HelpIF <|.r. King
+HelpIF <-r-  King
+
+interface HelpIF {
+
+int STUDENT_NUMBER  = 1;
+int TEACHER_NUMBER  = 2;
+int MANAGER_NUMBER  = 3;
+int MINISTER_NUMBER = 4;
+int KING_NUMBER     = 5;
+void retour(int help_number);
+}
+
+class Student {
+private HelpIF help;
+public Student(HelpIF help){ this.help=help;}
+}
+
+
+class Teacher {
+private HelpIF help;
+public Teacher(HelpIF help){ this.help=help;}
+}
+
+class Manager {
+private HelpIF help;
+public Manager(HelpIF help){ this.help=help;}
+}
+
+class Minister {
+private HelpIF help;
+public Minister(HelpIF help){ this.help=help;}
+}
+
+class King{
+private HelpIF help;
+public King(HelpIF help){ this.help=help;}
+}
+
+}
+    
+@enduml

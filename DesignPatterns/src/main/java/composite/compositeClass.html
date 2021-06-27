@@ -1,0 +1,49 @@
+@startuml
+'scale 3.0
+
+title Design pattern
+
+skinparam BackgroundColor LightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+package composite{
+
+abstract class Root {
+public abstract void display();
+public void add(Root root){}
+public void remove(Root root){}
+public Root getChild(String name){return null;}
+public String getName(){return null;}
+} 
+' end of Root
+
+class  Branch {
+private String name;
+private ArrayList<Root>  children;
+public Branch(String name){this.name=name;}
+} 
+' end of Branch
+
+class  Leaf {
+private String name;
+public Leaf(String name){this.name=name;}
+} 
+' end of Leaf
+
+Root <|-- Branch
+Root <|-- Leaf
+Root <-- Branch
+
+}
+
+@enduml

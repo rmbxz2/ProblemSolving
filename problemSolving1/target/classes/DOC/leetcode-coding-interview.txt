@@ -1,0 +1,329 @@
+1 Rotate Array in Java 7
+  https://www.youtube.com/watch?v=5D9OrHsw3M0
+2 Evaluate Reverse Polish Notation 9
+  https://www.youtube.com/watch?v=MJ23yC-1tVw
+3 Solution of Longest Palindromic Substring in Java 11
+  https://www.youtube.com/watch?v=ZJUGtWObroc
+  https://www.youtube.com/watch?v=UflHuQj6MVA
+  https://www.youtube.com/watch?v=XYQecbcd6_c
+4 Solution Word Break 15
+  https://www.youtube.com/watch?v=LPs6Qo5qlJM
+  https://www.youtube.com/watch?v=Sx9NNgInc3A
+5 Word Break II 18
+  https://www.youtube.com/watch?v=9-grHHGUVls
+  https://www.youtube.com/watch?v=jQJyWcRPEpE
+6 Word Ladder 20
+  https://www.youtube.com/watch?v=ZVJ3asMoZ18
+  https://www.youtube.com/watch?v=5iFZP-f40iI
+7 Median of Two Sorted Arrays Java 23
+  https://www.youtube.com/watch?v=lLFDQCDzfpI
+  https://www.youtube.com/watch?v=q6IEA26hvXc
+  https://www.youtube.com/watch?v=1LkOrc-Le-Y
+8 Regular Expression Matching in Java 25
+  https://www.youtube.com/watch?v=HAA8mgxlov8
+  https://www.youtube.com/watch?v=pHXmEPQaonY
+9 Merge Intervals 27
+  https://www.youtube.com/watch?v=hK_qN5UAAo4
+  https://www.youtube.com/watch?v=44H3cEC2fFM
+  https://www.youtube.com/watch?v=QZG8ep54-Lc
+10 Insert Interval 29
+  https://www.youtube.com/watch?v=FuLfL_WhUHI
+  https://www.youtube.com/watch?v=NWM4e4yda0w
+11 Two Sum 31
+  https://www.youtube.com/watch?v=VbVQJRKXxBA
+  https://www.youtube.com/watch?v=KLlXCFG5TnA
+12 Two Sum II Input array is sorted 32
+  https://www.youtube.com/watch?v=cQ1Oz4ckceM
+  https://www.youtube.com/watch?v=1ZuD-3OxXgo
+13 Two Sum III Data structure design 33
+  https://www.youtube.com/watch?v=WfLu0Oyr_ek
+14 3Sum 34
+  https://www.youtube.com/watch?v=Ca7k53qcTic
+  https://www.youtube.com/watch?v=jzZsG8n2R9A
+15 4Sum 36
+  https://www.youtube.com/watch?v=8ViERnSgPKs
+  https://www.youtube.com/watch?v=bixvM1-28us
+  https://www.youtube.com/watch?v=XHlA0KdvQBc
+16 3Sum Closest 38
+  https://www.youtube.com/watch?v=bDjcWbHQvJE
+  https://www.youtube.com/watch?v=wrXTw96G3G4
+17 String to Integer (atoi) 39
+  https://www.youtube.com/watch?v=2I9XO8jwZCA
+  https://www.youtube.com/watch?v=qxIprnPrVZA
+18 Merge Sorted Array 40
+  https://www.youtube.com/watch?v=P1Ic85RarKY
+  https://www.youtube.com/watch?v=YXOBpf75R0Y
+  https://www.youtube.com/watch?v=C4oBXLr3zos
+  https://www.youtube.com/watch?v=NWMcj5QFW74
+19 Valid Parentheses 42
+  https://www.youtube.com/watch?v=WTzjTskDFMg
+  https://www.youtube.com/watch?v=KuE_Cn3xhxI
+  https://www.youtube.com/watch?v=VdQuwtEd10M
+  https://www.youtube.com/watch?v=hUOkKDqVlig
+20 Implement strStr() 43
+  https://www.youtube.com/watch?v=bzoCm_w8yx0
+21 Set Matrix Zeroes 44
+  https://www.youtube.com/watch?v=T41rL0L3Pnw
+  https://www.youtube.com/watch?v=M65xBewcqcI
+22 Search Insert Position 46
+  https://www.youtube.com/watch?v=0A40XJH_VvE
+  https://www.youtube.com/watch?v=K-RYzDZkzCI
+  https://www.youtube.com/watch?v=MAxFNkxf_wg
+23 Longest Consecutive Sequence Java 47
+  https://www.youtube.com/watch?v=P6RZZMu_maU
+  https://www.youtube.com/watch?v=qgizvmgeyUM
+  https://www.youtube.com/watch?v=xdMyL--dOqE
+24 Valid Palindrome 49
+  https://www.youtube.com/watch?v=028pTf2kBFI
+  https://www.youtube.com/watch?v=XdMau9kwUvU
+  https://www.youtube.com/watch?v=3jjptAxlivQ
+25 Spiral Matrix 52
+  https://www.youtube.com/watch?v=BJnMZNwUk1M
+  https://www.youtube.com/watch?v=1ZGJzvkcLsA
+26 Search a 2D Matrix 55
+  https://www.youtube.com/watch?v=eWnpX-nRqdM
+  https://www.youtube.com/watch?v=9KSU-SxoIEg
+  https://www.youtube.com/watch?v=ZYpYur0znng
+27 Rotate Image 56
+  https://www.youtube.com/watch?v=fMSJSS7eO1w
+  https://www.youtube.com/watch?v=bW_9pjcXP_4
+  https://www.youtube.com/watch?v=Y72QeX0Efxw
+  https://www.youtube.com/watch?v=kd5u3GEQkPY
+28 Triangle 58
+  https://www.youtube.com/watch?v=OM1MTokvxs4
+  https://www.youtube.com/watch?v=O2eaAdBpZBQ
+29 Distinct Subsequences Total 60
+  https://www.youtube.com/watch?v=-RDzMJ33nx8
+  https://www.youtube.com/watch?v=9yV6Elqvblw
+30 Maximum Subarray 62
+  https://www.youtube.com/watch?v=5WZl3MMT0Eg
+  https://www.youtube.com/watch?v=u202zgM7Fqk
+  https://www.youtube.com/watch?v=gwUGDXO5gHU
+31 Maximum Product Subarray 63
+  https://www.youtube.com/watch?v=lXVy6YWFcRM
+  https://www.youtube.com/watch?v=hJ_Uy2DzE08
+32 Remove Duplicates from Sorted Array 64
+  https://www.youtube.com/watch?v=rlfsnRY0S9k
+33 Remove Duplicates from Sorted Array II 67
+  https://www.youtube.com/watch?v=Zh0Lzs-ObQI
+  https://www.youtube.com/watch?v=OZaADxYTfD4
+34 Longest Substring Without Repeating Characters 69
+  https://www.youtube.com/watch?v=wiGpQwVHdE0
+  https://www.youtube.com/watch?v=WKTgajDkVcA
+  https://www.youtube.com/watch?v=qtVh-XEpsJo
+35 Longest Substring Which Contains 2 Unique Characters 71
+  https://www.youtube.com/watch?v=2vW_Q8ToSAU
+  https://www.youtube.com/watch?v=gj1Y-enAlXM
+36 Palindrome Partitioning 73
+  https://www.youtube.com/watch?v=3jvWodd7ht0
+  https://www.youtube.com/watch?v=uJeS6FmbSjM
+  https://www.youtube.com/watch?v=d9F1aO_idyE
+  https://www.youtube.com/watch?v=WBgsABoClE0
+37 Reverse Words in a String 75
+  https://www.youtube.com/watch?v=vhnRAaJybpA
+  https://www.youtube.com/watch?v=hQFr4p1OKpk
+38 Find Minimum in Rotated Sorted Array 76
+  https://www.youtube.com/watch?v=OXkLNPalfRs
+  https://www.youtube.com/watch?v=U8XENwh8Oy8
+39 Find Minimum in Rotated Sorted Array II 77
+  https://www.youtube.com/watch?v=K0PjrikGKK4
+  https://www.youtube.com/watch?v=QneygmiFf8I
+40 Find Peak Element 78
+  https://www.youtube.com/watch?v=a7D77DdhlFc
+  https://www.youtube.com/watch?v=r7U0N2EE_l8
+  https://www.youtube.com/watch?v=2Y_0_IyZtHM
+  https://www.youtube.com/watch?v=dVXy6hmE_0U
+41 Min Stack 79
+  https://www.youtube.com/watch?v=8UegNFCUQks
+  https://www.youtube.com/watch?v=mEU5YFgTIEM
+  https://www.youtube.com/watch?v=wvsEGZFSkjc
+42 Majority Element 80
+  https://www.youtube.com/watch?v=n5QY3x_GNDg
+  https://www.youtube.com/watch?v=bg6r_fgtpMQ
+  https://www.youtube.com/watch?v=AoX3BPWNnoE
+43 Combination Sum 82
+  https://www.youtube.com/watch?v=yFfv03AE_vA
+  https://www.youtube.com/watch?v=MTI2wc8s0BY
+44 Best Time to Buy and Sell Stock 83
+  https://www.youtube.com/watch?v=1pkOgXD63yU
+  https://www.youtube.com/watch?v=mmIMpgh67vg
+45 Best Time to Buy and Sell Stock II 84
+  https://www.youtube.com/watch?v=K8iHi8AW1ls
+  https://www.youtube.com/watch?v=3SJ3pUkPQMc
+  https://www.youtube.com/watch?v=Q-8JkdUliVM
+46 Best Time to Buy and Sell Stock III 85
+  https://www.youtube.com/watch?v=37s1_xBiqH0
+  https://www.youtube.com/watch?v=0FKn0FSIQYE
+47 Best Time to Buy and Sell Stock IV 86
+  https://www.youtube.com/watch?v=6928FkPhGUA
+  https://www.youtube.com/watch?v=Z_6KmNGK_eY
+48 Longest Common Prefix 88
+  https://www.youtube.com/watch?v=fhyIORFDD0k
+  https://www.youtube.com/watch?v=g5kH8EX4l-U
+  https://www.youtube.com/watch?v=5nug0L9y1h4
+49 Largest Number 89
+  https://www.youtube.com/watch?v=qEIGhVtZ-sg
+  https://www.youtube.com/watch?v=q_biivSGbV0
+50 Combinations 90
+  https://www.youtube.com/watch?v=7IQHYbmuoVU
+  https://www.youtube.com/watch?v=_Zi39oGz4qs
+51 Compare Version Numbers 92
+  https://www.youtube.com/watch?v=Nk0D58HRxfw
+  https://www.youtube.com/watch?v=MTSetP6kcRI
+52 Gas Station 93
+  https://www.youtube.com/watch?v=xmJZSYSvgfE
+  https://www.youtube.com/watch?v=lJwbPZGo05A
+53 Candy 95
+  https://www.youtube.com/watch?v=h6_lIwZYHQw
+  https://www.youtube.com/watch?v=xb-NsJtPI-8
+54 Jump Game 96
+  https://www.youtube.com/watch?v=Yan0cv2cLy8
+  https://www.youtube.com/watch?v=muDPTDrpS28
+  https://www.youtube.com/watch?v=2HnlGToCdCc
+55 Pascal’s Triangle 97
+  https://www.youtube.com/watch?v=IWXZAvBIuyE
+  https://www.youtube.com/watch?v=7pOzP9m_bX8
+56 Container With Most Water 98
+  https://www.youtube.com/watch?v=UuiTKBwPgAo
+  https://www.youtube.com/watch?v=2DjZ8AHcofE
+57 Count and Say 99
+  https://www.youtube.com/watch?v=qGMq-Zi8MVg
+  https://www.youtube.com/watch?v=1YUqtoT9YoE
+58 Repeated DNA Sequences 100
+  https://www.youtube.com/watch?v=V2VrBK5FjoY
+  https://www.youtube.com/watch?v=97_vofsFauU
+59 Add Two Numbers 101
+  https://www.youtube.com/watch?v=wgFPrzTjm7s
+  https://www.youtube.com/watch?v=1Spw7DEtB14
+60 Reorder List 105
+  https://www.youtube.com/watch?v=meOY1wajrnw
+  https://www.youtube.com/watch?v=rEYm4yLHSHQ
+61 Linked List Cycle 109
+  https://www.youtube.com/watch?v=sMqEwkpvJvQ
+  https://www.youtube.com/watch?v=UUuzLysODD0
+62 Copy List with Random Pointer 111
+  https://www.youtube.com/watch?v=5Y2EiZST97Y
+  https://www.youtube.com/watch?v=Jo4Oko5Y6Tg
+  https://www.youtube.com/watch?v=xmQb5y1D8gU
+63 Merge Two Sorted Lists 114
+  https://www.youtube.com/watch?v=XIdigk956u0
+  https://www.youtube.com/watch?v=yn6kTAkf9Mc
+64 Merge k Sorted Lists 116
+  https://www.youtube.com/watch?v=kpCesr9VXDA
+  https://www.youtube.com/watch?v=q5a5OiGbT6Q
+  https://www.youtube.com/watch?v=3yvecsuv3iQ
+65 Remove Duplicates from Sorted List 117
+  https://www.youtube.com/watch?v=iv2RAR61-wM
+  https://www.youtube.com/watch?v=gfgJjrkR-W4
+  https://www.youtube.com/watch?v=R6-PnHODewY
+66 Partition List 119
+  https://www.youtube.com/watch?v=KT1iUciJr4g
+  https://www.youtube.com/watch?v=b4FeEwAGDtU
+67 LRU Cache 121
+  https://www.youtube.com/watch?v=7ABFKPK2hD4
+  https://www.youtube.com/watch?v=akFRa58Svug
+  https://www.youtube.com/watch?v=UudCSLREm08
+68 Intersection of Two Linked Lists 124
+  https://www.youtube.com/watch?v=8qi8a2ph71o
+  https://www.youtube.com/watch?v=c7dOI-hDa2Q
+69 Java PriorityQueue Class Example 125
+  https://www.youtube.com/watch?v=wptevk0bshY
+70 Solution for Binary Tree Preorder Traversal in Java 127
+  https://www.youtube.com/watch?v=367McfIeBDM
+71 Solution of Binary Tree Inorder Traversal in Java 128
+  https://www.youtube.com/watch?v=WLvU5EQVZqY
+  https://www.youtube.com/watch?v=5y_j0OqD7v8
+  https://www.youtube.com/watch?v=K2ybI-GEHSY
+72 Solution of Iterative Binary Tree Postorder Traversal in Java 130
+  https://www.youtube.com/watch?v=k21VKEM8OFY
+73 Validate Binary Search Tree 131
+  https://www.youtube.com/watch?v=s6ATEkipzow
+  https://www.youtube.com/watch?v=TKvbwPIOGCM
+74 Flatten Binary Tree to Linked List 133
+  https://www.youtube.com/watch?v=NOKVBiJwkD0
+  https://www.youtube.com/watch?v=pCtXQ9XI7As
+75 Path Sum 134
+  https://www.youtube.com/watch?v=UYiOUI19iHE
+  https://www.youtube.com/watch?v=gDa6el92G9g
+76 Construct Binary Tree from Inorder and Postorder Traversal 136
+  https://www.youtube.com/watch?v=bw0o6v1lQYs
+  https://www.youtube.com/watch?v=ihj4IQGZ2zc
+77 Convert Sorted Array to Binary Search Tree 137
+  https://www.youtube.com/watch?v=0K0uCMYq5ng
+78 Convert Sorted List to Binary Search Tree 138
+  https://www.youtube.com/watch?v=XsWPrkDqmtM
+  https://www.youtube.com/watch?v=5IQF13nNq6A
+79 Minimum Depth of Binary Tree 140
+  https://www.youtube.com/watch?v=z2LEbk5l_gg
+  https://www.youtube.com/watch?v=6aChG_3jMAQ
+80 Binary Tree Maximum Path Sum 142
+  https://www.youtube.com/watch?v=TO5zsKtc1Ic
+  https://www.youtube.com/watch?v=j_e3RLtOZXg
+81 Balanced Binary Tree 143
+  https://www.youtube.com/watch?v=OgdYyBT8iU8
+  https://www.youtube.com/watch?v=icxndJkKUuc
+  https://www.youtube.com/watch?v=_pP1UaL-Xi8
+82 Symmetric Tree 145
+  https://www.youtube.com/watch?v=CS3c0oz9d44
+  https://www.youtube.com/watch?v=nLTUFIdift0
+  https://www.youtube.com/watch?v=3iIpnouY-bg
+  https://www.youtube.com/watch?v=qNH6fFdb6Hs
+83 Clone Graph Java 146
+  https://www.youtube.com/watch?v=f2EfGComRKM
+  https://www.youtube.com/watch?v=mQeF6bN8hMk
+  https://www.youtube.com/watch?v=S931KMpiKmQ
+84 How Developers Sort in Java? 149
+  https://www.youtube.com/watch?v=JUOyKSZScW0
+85 Solution Merge Sort LinkedList in Java 151
+  https://www.youtube.com/watch?v=TGveA1oFhrc
+  https://www.youtube.com/watch?v=Lay55DGfyhA
+86 Quicksort Array in Java 154
+  https://www.youtube.com/watch?v=Fiot5yuwPAg
+  https://www.youtube.com/watch?v=lOB2TIwBiX8
+87 Solution Sort a linked list using insertion sort in Java 156
+  https://www.youtube.com/watch?v=CPAWcc78IB4
+  https://www.youtube.com/watch?v=MP_Of5rZ6sQ
+  https://www.youtube.com/watch?v=gAkRfdtDOaA
+88 Maximum Gap 158
+  https://www.youtube.com/watch?v=21XhR6r5jU8
+89 Iteration vs. Recursion in Java 160
+90 Edit Distance in Java 163
+  https://www.youtube.com/watch?v=ZkgBinDx9Kg
+  https://www.youtube.com/watch?v=XYi2-LPrwm4
+  https://www.youtube.com/watch?v=AuYujVj646Q
+91 Single Number 165
+  https://www.youtube.com/watch?v=krgK0UlfNYY
+  https://www.youtube.com/watch?v=m8QvwmfJwvA
+92 Single Number II 166
+  https://www.youtube.com/watch?v=cOFAmaMBVps
+  https://www.youtube.com/watch?v=ZbTXZ2_YAgI
+93 Twitter Codility Problem Max Binary Gap 166
+  https://www.youtube.com/watch?v=DKlu-KCQU3Q
+94 Number of 1 Bits 167
+  https://www.youtube.com/watch?v=wLHhAHkID9M
+95 Reverse Bits 168
+  https://www.youtube.com/watch?v=ZW7st_pN05w
+  https://www.youtube.com/watch?v=3H4qPEx8r68
+96 Permutations 169
+  https://www.youtube.com/watch?v=s7AvT7cGdSo
+  https://www.youtube.com/watch?v=1Rox5gt51b0
+  https://www.youtube.com/watch?v=Nabbpl7y4Lo
+97 Permutations II 171
+  https://www.youtube.com/watch?v=qhBVWf0YafA
+  https://www.youtube.com/watch?v=iCIrAwn2d1g
+98 Permutation Sequence 173
+  https://www.youtube.com/watch?v=knTd0fgAo-0
+  https://www.youtube.com/watch?v=W9SIlE2jhBQ
+  https://www.youtube.com/watch?v=V0lJzGtiAB8
+99 Generate Parentheses 175
+  https://www.youtube.com/watch?v=s9fokUqJ76A
+100 Reverse Integer 176
+  https://www.youtube.com/watch?v=XpvNcex-rc0
+101 Palindrome Number 178
+  https://www.youtube.com/watch?v=gnwFjlUXN1o
+  https://www.youtube.com/watch?v=UPdSViixmDs
+102 Pow(x, n) 179
+  https://www.youtube.com/watch?v=snOaKR2xgZg
+  https://www.youtube.com/watch?v=l0YC3876qxg
+  https://www.youtube.com/watch?v=CYCw1t7ryh0
+

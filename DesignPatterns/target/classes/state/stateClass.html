@@ -1,0 +1,62 @@
+@startuml
+scale 1.5
+
+title state pattern
+
+
+ skinparam BackgroundColor  LightSkyBlue
+ skinparam classFontColor red
+ skinparam classFontStyle bold
+ skinparam classFontSize 16
+ skinparam classAttributeFontSize 15
+ skinparam classAttributeFontStyle bold
+ skinparam classArrowColor red
+ skinparam shadowing false
+
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+package myState {
+
+interface StateIF {
+void handle();
+}
+
+class  State1 {
+void handle(){print " state 1"}
+} 
+' end of class State1 
+
+class  State2 {
+void handle(){print " state 2"}
+} 
+' end of class State2 
+
+
+
+class Switch {
+	~int s1
+	~int s2
+	~int s3
+	~int s4
+	-StateIF state
+	-StateIF state1
+	-StateIF state2
+	-StateIF state3
+	-StateIF state4
+	+Switch()
+	+void handle()
+	+void changeState(int x){ swith(x){case s1: state=state1 }}
+}
+
+
+
+
+StateIF <|.. State1
+StateIF <|.. State2
+StateIF <-right- Switch
+}
+
+@enduml

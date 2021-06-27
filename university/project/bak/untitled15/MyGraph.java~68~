@@ -1,0 +1,163 @@
+package untitled15;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import com.borland.jbcl.layout.*;
+import javax.swing.event.*;
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2000</p>
+ * <p>Company: </p>
+ * @author unascribed
+ * @version 1.0
+ */
+
+public class MyGraph extends JInternalFrame {
+  private JPanel contentPane;
+  private JScrollPane jScrollPane1 = new JScrollPane();
+  private Panel1 jpanel = new Panel1();
+  private FlowLayout flowLayout1 = new FlowLayout();
+
+  //Construct the frame
+  public MyGraph() {
+  super.setTitle("Graph");
+  super.setClosable(true);
+  super.setIconifiable(true);
+
+
+    try {
+      jbInit();
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+  //Component initialization
+  private void jbInit() throws Exception  {
+    //setIconImage(Toolkit.getDefaultToolkit().createImage(Frame1.class.getResource("[Your Icon]")));
+    contentPane = (JPanel) this.getContentPane();
+
+    this.setSize(new Dimension(400, 300));
+    this.setTitle("Frame Title");
+
+    jpanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+      public void mouseDragged(MouseEvent e) {
+        jpanel_mouseDragged(e);
+      }
+    });
+    jpanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+      public void mouseDragged(MouseEvent e) {
+        jpanel_mouseDragged(e);
+      }
+    });
+    jpanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+      public void mouseDragged(MouseEvent e) {
+        jpanel_mouseDragged(e);
+      }
+    });
+    jpanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+      public void mouseDragged(MouseEvent e) {
+        jpanel_mouseDragged(e);
+      }
+      public void mouseMoved(MouseEvent e) {
+        jpanel_mouseMoved(e);
+      }
+    });
+    jScrollPane1.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+    jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+    jScrollPane1.setDoubleBuffered(true);
+    jScrollPane1.setPreferredSize(new Dimension(580, 400));
+    jScrollPane1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+      public void mouseMoved(MouseEvent e) {
+        jScrollPane1_mouseMoved(e);
+      }
+    });
+    contentPane.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+      public void mouseMoved(MouseEvent e) {
+        contentPane_mouseMoved(e);
+      }
+    });
+    contentPane.setLayout(flowLayout1);
+
+    contentPane.add(jScrollPane1, null);
+    jScrollPane1.getViewport().add(jpanel, null);
+
+
+
+///////////////////////////////
+
+    // Listen for value changes in the scroll pane's scrollbars
+
+    jScrollPane1.getHorizontalScrollBar().addAdjustmentListener(new AdjustmentListener()
+    {
+    public void adjustmentValueChanged(AdjustmentEvent evt)
+    {
+    Hscroll(evt);
+    }
+    }
+     );
+
+     jScrollPane1.getVerticalScrollBar().addAdjustmentListener(new AdjustmentListener()
+    {
+      public void adjustmentValueChanged(AdjustmentEvent evt)
+        {
+      Hscroll(evt);
+         }
+          }
+     );
+
+
+
+
+  }
+  //Overridden so we can exit when window is closed
+  protected void processWindowEvent(WindowEvent e) {
+
+    if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+      System.exit(0);
+    }
+  }
+
+  void jLabel1_mouseMoved(MouseEvent e) {
+System.exit(0);
+  }
+
+
+
+  void jpanel_mouseDragged(MouseEvent e) {
+
+
+  }
+
+  void jpanel_mouseMoved(MouseEvent e) {
+
+//jpanel.repaint();
+//jpanel.setSize(800,800);
+
+  }
+
+
+  void contentPane_mouseDragged(MouseEvent e) {
+
+  }
+
+  void contentPane_mouseMoved(MouseEvent e) {
+
+  }
+
+  void jScrollPane1_mouseMoved(MouseEvent e) {
+
+  }
+
+ void Hscroll(AdjustmentEvent evt)
+ {
+jpanel.repaint();
+ }
+
+
+}
+
+

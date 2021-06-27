@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!--  
+     http://localhost:8080/web4           /User      /Login.action
+  /home/myLSP/lspWorkspace/web4/WebContent/User/pages/login.jsp 
+
+     http://localhost:8080/web4           /User      /Welcome                                                     
+  /home/myLSP/lspWorkspace/web4/WebContent/User/pages/welcome_user.jsp
+
+     http://localhost:8080/web4           /User      /Welcome                                                     
+  /home/myLSP/lspWorkspace/web4/WebContent/User/pages/error.jsp
+
+<struts>
+	<package name="user" namespace="/User" extends="struts-default">
+		<action name="Login">
+			<result>pages/login.jsp</result>
+		</action>
+		<action name="Welcome" class="com.mkyong.user.action.WelcomeUserAction">
+			<result name="SUCCESS">pages/welcome_user.jsp</result>
+			<result name="ERROR">pages/error.jsp</result>
+  		</action>
+	</package>
+</struts>
+ -->
+
+
+
+
+
+<!-- 
+
+  http://localhost:8080/web03/User/pages/index.html
+  http://localhost:8080/web03/User/pages/Login.action
+
+/home/myLSP/lspWorkspace/web03/WebContent/User/pages/listLeagues.jsp
+
+   http://localhost:8080/web03           /User/pages/addLeague.html
+   http://localhost:8080/web03           /User/pages/addLeague
+/home/myLSP/lspWorkspace/web03/WebContent/User/pages/addLeague.jsp
+
+http://localhost:8080/web03/User/pages/addLeague?year=2009&title=hi&season=Spring
+Message No result defined for action webServlet.control.AddLeagueAction and result success
+
+http://localhost:8080/web03/User/pages/addLeague?year=2009&title=hi&season=Spring
+
+		<action name="Welcome" class="com.mkyong.user.action.WelcomeUserAction">
+			<result name="SUCCESS">pages/welcome_user.jsp</result>
+			<result name="ERROR">pages/error.jsp</result>
+  		</action>
+
+
+
+#  http://localhost:8080/web03/User/Login.action
+#  http://localhost:8080/web03/User/Welcome
+
+#  http://localhost:8080/web03/User/Login2.action
+#  http://localhost:8080/web03/User/addLeague
+
+
+[work]
+[work]
+[work]
+
+              http://localhost:8080/web03/User/pages/index.html
+/home/myLSP/lspWorkspace/web03/WebContent/User/pages/addLeague.jsp
+              http://localhost:8080/web03/User/pages/addLeague?year=2008&title=hi&season=Spring
+
+         <package name="user" namespace="/User" extends="struts-default">
+		<action name="addLeague" class="webServlet.control.AddLeagueAction">
+               		        <result name="SUCCESS">succeedLeague.jsp</result>
+;;/home/myLSP/lspWorkspace/web03/WebContent/User/pages/succeedLeague.jsp
+         		        <result name="ERROR">addLeague.html</result>
+  		</action>
+
+ -->
+
+<struts>
+	<package name="user" namespace="/User" extends="struts-default">
+		<action name="Login">
+			<result>pages/login.jsp</result>
+		</action>
+		<action name="Welcome" class="com.mkyong.user.action.WelcomeUserAction">
+			<result name="SUCCESS">pages/welcome_user.jsp</result>
+			<result name="ERROR">pages/error.jsp</result>
+  		</action>
+		<action name="Login2">
+			<result>pages/addLeague.jsp</result>
+		</action>
+
+
+		<action name="addLeague" class="webServlet.control.AddLeagueAction">
+			<result name="SUCCESS">succeedLeague.jsp</result>
+			<result name="ERROR">addLeague.html</result>
+  		</action>
+
+	</package>
+</struts>
+ 

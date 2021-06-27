@@ -1,0 +1,19 @@
+@startuml
+scale 2
+class upDownCast.A1
+class upDownCast.A2
+class upDownCast.A3
+class upDownCast.A4
+class upDownCast.MainA
+class upDownCast.MyAnimal
+class upDownCast.MyCat
+class upDownCast.MyDog
+class upDownCast.MyObject
+class upDownCast.MyTest
+upDownCast.A2 --|> upDownCast.A1
+upDownCast.A3 --|> upDownCast.A2
+upDownCast.A4 --|> upDownCast.A3
+upDownCast.MyAnimal --|> upDownCast.MyObject
+upDownCast.MyCat --|> upDownCast.MyDog
+upDownCast.MyDog --|> upDownCast.MyAnimal
+@enduml

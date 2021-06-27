@@ -1,0 +1,19 @@
+@startuml
+class ch2.Animal
+class ch2.Dog
+class ch2.Fib
+class ch2.Test
+class java.util.Arrays
+class java.util.Collections
+class java.util.Enumeration
+class java.util.Hashtable
+class java.util.LinkedList
+class java.util.ListIterator
+ch2.Dog --|> ch2.Animal
+ch2.Fib ..> java.util.Arrays
+ch2.Fib ..> java.util.Collections
+ch2.Fib ..> java.util.Enumeration
+ch2.Fib ..> java.util.Hashtable
+ch2.Fib ..> java.util.LinkedList
+ch2.Fib ..> java.util.ListIterator
+@enduml

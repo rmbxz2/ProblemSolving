@@ -1,0 +1,58 @@
+@startuml
+'scale 3.0
+
+title Design pattern
+
+'skinparam BackGroundColor LightSkyBlue
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam noteFontSize 20
+skinparam shadowing false
+
+ 'left to right direction
+ 'hide members
+ 'show Quackable members
+ 'show QuackObservable members
+
+'note top of decorator
+'  cp= new HD(new Monitor(new Mouse(cp)));
+'end note
+
+package myDecorator{
+
+
+object  computer {
+public String description( ){ return "computer";}
+} 
+
+object  mouse{
+computer=computer
+public String description( ){ return "mouse"+computer.description();}
+} 
+
+object  monitor{
+computer=mouse
+public String description( ){ return "Monitor"+mouse.description();}
+}
+
+
+object  hd{
+computer=monitor
+public String description( ){ return "HD"+monitor.description();}
+} 
+
+ computer --> hd
+ hd--> monitor
+ monitor --> mouse
+ ' mouse-->computer  
+
+
+}
+'  ========= end of decorator package ==============
+
+
+@enduml

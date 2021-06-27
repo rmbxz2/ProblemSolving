@@ -1,0 +1,78 @@
+@startuml aaa.png
+'scale 1.5
+
+
+title patterns of patterns objects
+
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+ 'left to right direction
+ 'show Observable members
+ 'hide members
+ 'show QuackCounter members
+
+
+
+
+object  QuackCounter23 {
+ duck=RedHeadDuck55;
+} 
+
+
+object  RedHeadDuck55{
+ observable=Observable83;
+} 
+
+
+object  Observable83{
+ duck=RedHeadDuck55;
+ observers=ArrayList88
+} 
+
+
+object  QuackCounter27 {
+ duck=DuckCall58;
+} 
+
+object Observable189{
+duck = DuckCall58
+observers = ArruList214
+}
+
+
+
+
+
+
+
+object  QuackCounter28 {
+ duck=RubberDuck61;
+} 
+
+
+object  GooseAdapter29{
+ goose=Goose64;
+ observable=Observable66
+ } 
+
+
+object  Observable66{
+ duck=GooseAdapter29;
+ observers=ArrayList194
+ } 
+ 
+
+object  ArrayList149{
+ fisrstElement Quackolosist38
+  } 
+ 
+ 
+
+
+@enduml

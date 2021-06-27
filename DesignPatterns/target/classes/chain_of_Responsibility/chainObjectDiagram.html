@@ -1,0 +1,52 @@
+@startuml
+'scale 3.0
+
+
+title chain of resposibality
+
+
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+skinparam NoteFontSize 20
+skinparam NoteAttributeFontStyle bold
+
+package MyResposibality {
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+note top of  MainChain
+Help help = new Teacher(new Manager(new Minister(new King())));
+end note
+
+
+
+object MainChain{
+help = Teacher19
+}
+
+object Teacher19{
+help = Manager22
+}
+
+object Manager22{
+help = Minister26
+}
+
+object Minister26{
+help = King30
+}
+
+MainChain ->Teacher19
+Teacher19->Manager22
+Manager22->Minister26
+Minister26->King30
+
+}
+
+@enduml

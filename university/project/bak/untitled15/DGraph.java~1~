@@ -1,0 +1,464 @@
+package untitled15;
+
+import java.awt.*; // Graphics
+import java.awt.event.*; // ActionListener
+import java.util.*; // LinkedList
+import javax.swing.*; // JFrame
+
+public class DGraph
+{
+  private JPanel DisplayPanel; // frame the graph is displayed in
+  private LinkedList GraphNodes;
+   // a list for storing all nodes in the graph
+  private DGraphNode ActiveNode;
+    // a special node of interest(ie. one being moved)
+  private JPopupMenu pm;
+  private JMenuItem ChangeNameItem;
+  private JMenuItem HideMenu;
+
+  public DGraph(JPanel DPanel)
+  {
+    DisplayPanel = DPanel;
+    GraphNodes = new LinkedList();
+     // start with no nodes
+
+     ChangeNameItem = new JMenuItem("Select Name");
+     HideMenu = new JMenuItem("Hide menu");
+
+     pm = new JPopupMenu("Node Menu");
+     pm.add(ChangeNameItem);
+     pm.add(HideMenu);
+
+     ChangeNameItem.addActionListener(
+       new ActionListener()
+       {
+          public void actionPerformed(ActionEvent a)
+          {
+             SetNameFromUser();
+             pm.setVisible(false); // hide the popup menu
+          } // end actionPerformed
+       } // end inner class
+      ); // end call
+    HideMenu.addActionListener(
+     new ActionListener()
+     {
+       public void actionPerformed(ActionEvent A)
+       {
+          pm.setVisible(false); // hide the popup menu
+       }
+     }
+    );
+  } // end constructor
+
+  public void InsertNewNode(int x, int y, String name)
+  // purpose: inserting a new node into the DGraph
+  {
+    DGraphNode newNode = new DGraphNode(x,y,name);
+    try
+    {
+      Object o = GraphNodes.getLast();
+       if (o instanceof DGraphNode)
+       {
+          ((DGraphNode)o).LinkTo(newNode);
+           // link last node to the new one
+       }
+    }
+    catch (NoSuchElementException NSE)
+    {} // caught when list is empty
+
+     GraphNodes.add(newNode);
+
+     if (DisplayPanel!=null)
+         repaintDisplay();
+
+  } // end InsertNewNode
+
+  public void InsertOrSelfLoopNode(int x, int y)
+  // purpose: inserting a new node into the DGraph
+  {
+          try
+          {
+      DGraphNode n = getNodeAtPoint(x,y);
+
+      if (n==null)
+         InsertNewNode(x,y,getUniqueName());
+
+      else // if node already at the point
+      {
+          n.LinkTo(n);
+          repaintDisplay();
+      }
+    }
+    catch (Exception e)
+    {
+       System.out.println("Exception caught in InsertOrSelfLoopNode\n"+e.getMessage());
+    }
+  } // end InsertNewNode
+
+  public DGraphNode getNodeNameMatch(String name)
+   // purpose: getting the node with the same name
+  {
+     Iterator I = GraphNodes.iterator();
+
+       while (I.hasNext())
+       {
+          Object o = I.next();
+          if (o instanceof DGraphNode)
+          {
+             DGraphNode n = (DGraphNode)o;
+             if (n.getName().equals(name))
+                return n;
+
+          }
+          else
+              System.out.println(
+              "in getNodeNameMatch, invalid type discovered in GraphNode list");
+
+       } // end while loop
+       return null; // indicate not found
+
+  } // end getNodeNameMatch
+
+  private String getUniqueName()
+  // purpose: finding a unique name
+  {
+    String newName;
+
+     // loop through names to get the next unique one
+     for (int n = 1;;n++)
+     {
+        newName = "N"+n;
+        if (getNodeNameMatch(newName)==null)
+          return newName;
+
+     } // end for
+
+  } // end getUniqueName
+
+  private void SetNameFromUser()
+  // purpose: trying to rename the active node
+  {
+     if (ActiveNode!=null)
+     {
+        String newName="";
+        DGraphNode n;
+        do
+        {
+            newName =
+            JOptionPane.showInputDialog(
+               "What name would you like to use?");
+               n = getNodeNameMatch(newName);
+
+            if ((n!=null)||(newName==null)||(newName.length()<1))
+            { // not found or cancelled box
+              JOptionPane.showMessageDialog(null,
+                "The name, \""+newName+
+                "\" is either already in the graph or too short.");
+              newName = ""; // avoid anymore problems
+            }
+            else // found
+            {
+               ActiveNode.setName(newName);
+               repaintDisplay();
+                 // display needs updating
+            }
+
+        } while ((!newName.equals(""))&&(n!=null));
+     }
+     else
+          System.out.println("ActiveNode is null.");
+
+  } // end SetNameFromUser
+
+  public void paint(Graphics g)
+  // purpose: painting this directed graph on any Graphics object
+  {
+    Iterator I = GraphNodes.iterator();
+    Object o;
+    try
+    {
+
+    g.setColor(Color.white);
+    g.fillRect(0,0,10000,10000);
+    g.setColor(Color.black);
+
+    while (I.hasNext())
+    // loop through nodes in linked list
+    {
+       // call paint on each
+       o = I.next();
+       if (o instanceof DGraphNode)
+       {
+          DGraphNode n = (DGraphNode)o;
+          n.paint(g); // paint the node
+       }
+       else // error
+           System.out.println(
+             "error: in DGraph paint, wrong type in list");
+
+    } // end while
+    if (ActiveNode!=null) // if there is an active node
+        ActiveNode.paint(g,Color.red);
+    }
+    catch (Exception e)
+    {
+      System.out.println("exception caught in paint\n"+e.getMessage());
+    }
+  } // end paint
+
+  public void SelectActionNode(int x, int y)
+  // purpose: selecting a node for an action
+  {
+    DGraphNode n = getNodeAtPoint(x,y);
+
+       if (n!=null) // if node found
+       {
+         ActiveNode = n;
+
+       } // end for
+
+  } // end SelectActionNode
+
+  public void DeactivateNode()
+  // purpose: deactivating node
+  {
+     ActiveNode = null;
+
+  } // end DeactivateNode
+
+  private void repaintDisplay(Graphics g)
+  {
+     if (DisplayPanel!=null)
+        paint(g);
+  }
+
+  private void repaintDisplay()
+  {
+     this.repaintDisplay(DisplayPanel.getGraphics());
+  }
+
+  private void RemoveLinksTo(DGraphNode n)
+  // purpose: removing links to a given node
+  {
+    Iterator I = GraphNodes.iterator();
+
+     while (I.hasNext())
+     // loop through all nodes
+     {
+        Object o = I.next();
+
+         if (o instanceof DGraphNode)
+         {
+            DGraphNode CurN = (DGraphNode)o;
+            CurN.RemoveLinkTo(n); // remove any possible links to the node
+         }
+
+     } // end while-loop
+
+  } // end RemoveLinksTo
+
+  public void MoveNodeTo(int x,int y)
+  // purpose: moving the active node to point (x,y)
+  {
+     if (ActiveNode!=null)
+     {
+        ActiveNode.MoveTo(x,y);
+        repaintDisplay();
+
+     }
+
+  } // end MoveNodeTo
+
+  public void LinkNodeTo(int x,int y)
+  {
+     DGraphNode n = getNodeAtPoint(x,y);
+        if (ActiveNode!=null)
+        {
+           ActiveNode.LinkTo(n);
+           repaintDisplay();
+        }
+  }
+
+  public void DeleteNode(DGraphNode n)
+  // purpose: deleting a specified node
+  {
+      RemoveLinksTo(n);
+      GraphNodes.remove(n);
+      repaintDisplay();
+
+  } // end DeleteNode
+
+  public boolean DeleteNode(int x, int y)
+  // purpose: deleting a node at the point
+  {
+    DGraphNode n = getNodeAtPoint(x,y);
+
+     if (n!=null)
+     {
+       DeleteNode(n);
+       return true;
+     }
+
+     return false;
+
+  } // end DeleteNode
+
+  public void DeleteLink(DGraphNode n,DGraphNode ToNode)
+  // purpose: deleting a link between 2 specified nodes
+  {
+
+          n.RemoveLinkTo(ToNode);
+
+  } // end DeleteLink
+
+  public void DeleteLink(int x,int y)
+  // purpose: deleting a link to a point
+  {
+          Iterator I = GraphNodes.iterator();
+          while (I.hasNext())
+          // loop through all nodes in graph
+          {
+      Object o = I.next();
+      if (o instanceof DGraphNode)
+      {
+               DGraphNode n = (DGraphNode)o;
+               DGraphNode ToNode = n.getToNodeLink(x,y);
+         if (ToNode!=null)
+               // if any have a link near the point(x,y)
+               {
+                 // call DeleteLink and return
+           DeleteLink(n,ToNode);
+           repaintDisplay();
+           return;
+
+         } // end if
+
+      } // end if DGraphNode
+    } // end while
+
+  } // end DeleteLink
+
+  private DGraphNode getNodeAtPoint(int x, int y)
+  // purpose: getting the node that has been clicked
+  {
+    Iterator I = GraphNodes.iterator();
+
+     while (I.hasNext())
+     // loop through nodes
+     {
+       Object o = I.next(); // get next element from list
+       if (o instanceof DGraphNode)
+       {
+         DGraphNode n = (DGraphNode)o;
+         if (n.isInRegion(x,y)) // if in region
+         {
+            return n;
+
+         } // end if
+     } // end if
+     else
+     {
+           System.out.println("invalid type in list detected in getNodeAtPoint");
+     }
+
+     } // end while
+     return null;
+
+  } // end getNodeAtPoint
+
+  public boolean isWeaklyConnected()
+  // purpose: checking if the graph is weakly connected
+  /*
+   A digraph is weakly connected if for any ordered pair of nodes,
+  there exists a path in its underlying undirected graph.
+  */
+  {
+           // define container for storing all nodes weakly connected with the first
+           LinkedList WeaklyConnectedNodes;
+           Iterator I = GraphNodes.iterator();
+           if (GraphNodes.size()<1) // if graph is empty
+              return true;
+
+           Object o = GraphNodes.getFirst();
+           if (!(o instanceof DGraphNode))
+           {
+              System.out.println("invalid datatype for first node in graph");
+              return false;
+           }
+           DGraphNode n = (DGraphNode)o;
+           DGraphNode StartNode = (DGraphNode)GraphNodes.getFirst();
+           WeaklyConnectedNodes = StartNode.getAllWeaklyConnectedNodes();
+
+     if (WeaklyConnectedNodes.size()==GraphNodes.size())
+        return true;
+     else
+        return false;
+
+  } // end isWeaklyConnected
+
+  public boolean isStronglyConnected()
+  // purpose: checking the graph to ensure that every node is strongly connected
+  {
+  /*
+    A digraph is strongly connected if there exists a path for
+    any ordered pair of nodes.
+
+    algorithm could be made more efficient
+  */
+     Iterator I = GraphNodes.iterator();
+     int numNodes = GraphNodes.size();
+
+     while (I.hasNext())
+     // loop through all nodes in the graph
+     {
+       // for each node, check to see if it is connected to all other nodes in the graph
+       Object o = I.next();
+       if (o instanceof DGraphNode)
+       {
+          LinkedList StronglyConnectedNodes = ((DGraphNode)o).getStronglyConnectedNodes();
+          int NumConnectedNodes = StronglyConnectedNodes.size();
+
+          if (NumConnectedNodes<numNodes)
+          // if not connected to all nodes in the graph,
+            return false; // it is not strongly connected
+       }
+       else
+       {
+           System.out.println("invalid datatype found in list of DGraphNode in isStronglyConnect method");
+       }
+
+     }
+    return true;
+
+  } // end isStronglyConnected
+
+
+  public void DrawLinkTo(Graphics g, int x,int y)
+  {
+     if (ActiveNode!=null)
+     {
+        repaintDisplay(g);
+        DGraphNode n = getNodeAtPoint(x,y);
+        if (n==null)
+           ActiveNode.DrawLinkTo(g,x,y);
+        else
+           ActiveNode.DrawLinkTo(g,n);
+     }
+  }
+
+  public void ClickPoint(int x, int y)
+  // purpose: doing anything that should happen when clicking (x,y)
+  {
+     DGraphNode n = getNodeAtPoint(x,y);
+        if (n!=null)
+        {
+           ActiveNode = n;
+           Point p = DisplayPanel.getLocationOnScreen();
+           pm.setLocation((int)(p.getX()+x),(int)(p.getY()+y));
+           pm.setVisible(true); // show the popup menu
+           repaintDisplay();
+        } // end if
+
+  } // end ClickPoint
+
+} // end DGraph body

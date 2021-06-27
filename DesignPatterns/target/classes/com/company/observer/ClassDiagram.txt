@@ -1,0 +1,16 @@
+@startuml
+annotation java.lang.Override
+class com.company.observer.Course
+class com.company.observer.Executor
+class com.company.observer.Student
+class java.util.ArrayList
+class java.util.List
+interface com.company.observer.Observer
+interface com.company.observer.Subject
+com.company.observer.Course ..> java.lang.Override
+com.company.observer.Course ..> java.util.ArrayList
+com.company.observer.Course ..> java.util.List
+com.company.observer.Course --|> com.company.observer.Subject
+com.company.observer.Student ..> java.lang.Override
+com.company.observer.Student --|> com.company.observer.Observer
+@enduml

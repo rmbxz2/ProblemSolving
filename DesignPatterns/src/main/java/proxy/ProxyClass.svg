@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="247px" preserveAspectRatio="none" style="width:799px;height:247px;background:#87CEFA;" version="1.1" viewBox="0 0 799 247" width="799px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="123" x="342" y="16.708">proxy pattern</text><!--class Car--><rect fill="#FEFECE" height="65.4609" id="Car" style="stroke: #A80036; stroke-width: 1.5;" width="404" x="384.5" y="162.9531"/><ellipse cx="567.25" cy="178.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M570.2188,184.5938 Q569.6406,184.8906 569,185.0313 Q568.3594,185.1875 567.6563,185.1875 Q565.1563,185.1875 563.8281,183.5469 Q562.5156,181.8906 562.5156,178.7656 Q562.5156,175.6406 563.8281,173.9844 Q565.1563,172.3281 567.6563,172.3281 Q568.3594,172.3281 569,172.4844 Q569.6563,172.6406 570.2188,172.9375 L570.2188,175.6563 Q569.5938,175.0781 569,174.8125 Q568.4063,174.5313 567.7813,174.5313 Q566.4375,174.5313 565.75,175.6094 Q565.0625,176.6719 565.0625,178.7656 Q565.0625,180.8594 565.75,181.9375 Q566.4375,183 567.7813,183 Q568.4063,183 569,182.7344 Q569.5938,182.4531 570.2188,181.875 L570.2188,184.5938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="30" x="587.75" y="184.4922">Car</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="385.5" x2="787.5" y1="194.9531" y2="194.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="385.5" x2="787.5" y1="202.9531" y2="202.9531"/><ellipse cx="395.5" cy="217.1836" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="378" x="404.5" y="220.8765">void drive(int age){"print driven now by age"}</text><!--class CarIF--><rect fill="#FEFECE" height="65.4609" id="CarIF" style="stroke: #A80036; stroke-width: 1.5;" width="180" x="291.5" y="28.9531"/><ellipse cx="353.25" cy="44.9531" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M349.1719,40.7188 L349.1719,38.5625 L356.5625,38.5625 L356.5625,40.7188 L354.0938,40.7188 L354.0938,48.7969 L356.5625,48.7969 L356.5625,50.9531 L349.1719,50.9531 L349.1719,48.7969 L351.6406,48.7969 L351.6406,40.7188 L349.1719,40.7188 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="48" x="373.75" y="50.4922">CarIF</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="292.5" x2="470.5" y1="60.9531" y2="60.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="292.5" x2="470.5" y1="68.9531" y2="68.9531"/><ellipse cx="302.5" cy="83.1836" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="154" x="311.5" y="86.8765">void drive(int age);</text><!--class Proxy--><rect fill="#FEFECE" height="82.9219" id="Proxy" style="stroke: #A80036; stroke-width: 1.5;" width="343" x="6" y="153.9531"/><ellipse cx="147.75" cy="169.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M150.7188,175.5938 Q150.1406,175.8906 149.5,176.0313 Q148.8594,176.1875 148.1563,176.1875 Q145.6563,176.1875 144.3281,174.5469 Q143.0156,172.8906 143.0156,169.7656 Q143.0156,166.6406 144.3281,164.9844 Q145.6563,163.3281 148.1563,163.3281 Q148.8594,163.3281 149.5,163.4844 Q150.1563,163.6406 150.7188,163.9375 L150.7188,166.6563 Q150.0938,166.0781 149.5,165.8125 Q148.9063,165.5313 148.2813,165.5313 Q146.9375,165.5313 146.25,166.6094 Q145.5625,167.6719 145.5625,169.7656 Q145.5625,171.8594 146.25,172.9375 Q146.9375,174 148.2813,174 Q148.9063,174 149.5,173.7344 Q150.0938,173.4531 150.7188,172.875 L150.7188,175.5938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="51" x="168.25" y="175.4922">Proxy</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="348" y1="185.9531" y2="185.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="348" y1="193.9531" y2="193.9531"/><rect fill="#F24D5C" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="14" y="205.1836"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="175" x="26" y="211.8765">CarIF car=new Car();</text><ellipse cx="17" cy="225.6445" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="317" x="26" y="229.3374">void drive(int age){ car.drive(int age)}</text><!--link CarIF to Car--><path d="M447.64,105.0431 C476.83,123.8331 510.55,145.5431 537.44,162.8631 " fill="none" id="CarIF-Car" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="443.63,110.7831,430.6,94.0731,451.21,99.0131,443.63,110.7831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link CarIF to Proxy--><path d="M315.67,105.0531 C291.48,120.7031 264.18,138.3631 240.27,153.8431 " fill="none" id="CarIF-Proxy" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="312.04,99.0631,332.64,94.0731,319.65,110.8131,312.04,99.0631" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Proxy to Car--><path d="M349.25,195.4531 C359.24,195.4531 369.24,195.4531 379.24,195.4531 " fill="none" id="Proxy-Car" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="384.47,195.4531,375.47,191.4531,379.47,195.4531,375.47,199.4531,384.47,195.4531" style="stroke: #0000FF; stroke-width: 1.0;"/><!--
+@startuml
+
+title proxy pattern
+
+skinparam BackgroundColor LightSkyblue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+
+
+
+class  Car {
++void drive(int age){"print driven now by age"}
+
+} 
+
+
+interface CarIF {
++void drive(int age);
+}
+
+class Proxy {
+- CarIF car=new Car();
++ void drive(int age){ car.drive(int age)}
+} 
+
+
+CarIF <|..Car
+CarIF <|..Proxy
+Car   <-right- Proxy
+
+
+
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 13:02:59 EDT 2018)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-post-Debian-1
+Operating System: Linux
+OS Version: 5.6.0-kali2-amd64
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

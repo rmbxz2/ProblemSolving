@@ -1,0 +1,37 @@
+@startuml
+abstract class pattern_OF_Patterns.AbstractDuckFactory
+annotation java.lang.Override
+class java.util.ArrayList
+class pattern_OF_Patterns.CountingDuckFactory
+class pattern_OF_Patterns.DuckCall
+class pattern_OF_Patterns.DuckFactory
+class pattern_OF_Patterns.DuckSimulator
+class pattern_OF_Patterns.Flock
+class pattern_OF_Patterns.Goose
+class pattern_OF_Patterns.GooseAdapter
+class pattern_OF_Patterns.MallardDuck
+class pattern_OF_Patterns.Observable
+class pattern_OF_Patterns.QuackCounter
+class pattern_OF_Patterns.Quackologist
+class pattern_OF_Patterns.RedheadDuck
+class pattern_OF_Patterns.RubberDuck
+interface pattern_OF_Patterns.Observer
+interface pattern_OF_Patterns.QuackObservable
+interface pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.CountingDuckFactory --|> pattern_OF_Patterns.AbstractDuckFactory
+pattern_OF_Patterns.CountingDuckFactory ..> java.lang.Override
+pattern_OF_Patterns.DuckCall --|> pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.DuckFactory --|> pattern_OF_Patterns.AbstractDuckFactory
+pattern_OF_Patterns.DuckFactory ..> java.lang.Override
+pattern_OF_Patterns.Flock ..> java.util.ArrayList
+pattern_OF_Patterns.Flock --|> pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.GooseAdapter --|> pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.MallardDuck --|> pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.Observable ..> java.util.ArrayList
+pattern_OF_Patterns.Observable --|> pattern_OF_Patterns.QuackObservable
+pattern_OF_Patterns.QuackCounter --|> pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.Quackologist --|> pattern_OF_Patterns.Observer
+pattern_OF_Patterns.RedheadDuck --|> pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.RubberDuck --|> pattern_OF_Patterns.Quackable
+pattern_OF_Patterns.Quackable --|> pattern_OF_Patterns.QuackObservable
+@enduml

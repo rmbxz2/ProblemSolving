@@ -1,0 +1,48 @@
+@startuml
+'scale 3.0
+
+title Template
+
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+package myPackage {
+
+
+abstract class Template {
++void go(String string)
++void start(String string)
++void getParts()
++void assemble()
++void test()
++void additional()
++void stop(String string)
+}
+
+class Tea {
++void test()
+}
+
+class Coffe {
++void getParts()
++void assemble()
++void additional()
++void test()
+}
+
+
+Template <|-- Coffe
+Template <|-- Tea
+
+}
+
+@enduml

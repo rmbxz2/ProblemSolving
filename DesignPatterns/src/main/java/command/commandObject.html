@@ -1,0 +1,93 @@
+@startuml
+'scale 3.0
+
+title Command pattern
+
+'skinparam BackGroundColor LightSkyBlue
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam noteFontSize 20
+skinparam shadowing false
+
+'left to right direction
+'hide members
+'show Quackable members
+'show QuackObservable members
+
+'note top of decorator
+'  cp= new HD(new Monitor(new Mouse(cp)));
+'end note
+
+package CommandPattern{
+
+
+object  remoteControl {
+private Command[] onCommand;
+private Command[] offCommand;
+
+public void addCommand(int slot, Command onCommand, Command offCommand) 
+public void onButtonPressed(int slot){    onCommand[slot].execute();}
+public void offButtonPressed(int slot) {  offCommand[slot].execute();}
+
+} 
+
+object  Television{
+public void turnOn()
+public void turnOff()
+} 
+
+object  commandTVon{
+private Television tv;
+public void execute() {tv.turnOn();}
+}
+
+object MediaPlayer{
+public void turnOn()
+public void turnOff()
+} 
+
+
+object  commandTVoff{
+private Television tv;
+public void execute() { tv.turnOff(); }
+} 
+
+object  CommandMediaPlayerON{
+private  MediaPlayer mp;
+public void execute() {mp.turnOn();}
+}
+
+
+object  CommandMediaPlayerOFF{
+private  MediaPlayer mp;
+public void execute() {mp.turnOff();}
+}
+
+
+
+
+
+remoteControl --> CommandMediaPlayerON  : onCommand[0]
+remoteControl --> CommandMediaPlayerOFF : offCommand[0]
+CommandMediaPlayerOFF --> MediaPlayer
+CommandMediaPlayerON --> MediaPlayer
+
+
+
+remoteControl --> commandTVon : onCommand[1]
+remoteControl --> commandTVoff : offCommand[1]
+commandTVon --> Television
+commandTVoff --> Television
+
+' mouse--> computer  
+
+
+}
+'  ========= end of command package ==============
+
+
+@enduml

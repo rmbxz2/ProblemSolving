@@ -1,0 +1,13 @@
+@startuml
+class com.company.factory.CheeseBurger
+class com.company.factory.ChickenBurger
+class com.company.factory.Executor
+class com.company.factory.NullBurger
+class com.company.factory.Sandwich
+class com.company.factory.SandwichFactory
+interface com.company.factory.AbstractFactory
+com.company.factory.CheeseBurger --|> com.company.factory.Sandwich
+com.company.factory.ChickenBurger --|> com.company.factory.Sandwich
+com.company.factory.NullBurger --|> com.company.factory.Sandwich
+com.company.factory.SandwichFactory --|> com.company.factory.AbstractFactory
+@enduml

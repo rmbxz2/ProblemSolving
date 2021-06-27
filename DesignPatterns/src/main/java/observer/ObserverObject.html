@@ -1,0 +1,54 @@
+@startuml
+'scale 3.0
+
+title observer object
+
+skinparam objectFontColor red
+skinparam objectFontStyle bold
+skinparam objectFontSize 16
+skinparam objectAttributeFontSize 15
+skinparam objectAttributeFontStyle bold
+skinparam objectArrowColor blue
+skinparam shadowing false
+
+' left to right direction
+' hide members
+' show MallaredDuck members
+' left to right direction
+' hide members
+' show MallaredDuck members
+
+
+object Client {
+	+void update(String operation, String record)
+}
+
+
+object Boss {
++void update(String operation, String record)
+}
+
+
+
+object Archiver {
++void update(String operation, String record)
+}
+
+
+object DBobserver {
+	-ArrayList<Observer> {Client,Boss,Archiver}
+	}
+
+
+Object Main{
+Subject=DBobserver
+
+}
+
+Main       --> DBobserver
+DBobserver --> Boss
+DBobserver --> Archiver 
+DBobserver --> Client 
+
+
+@enduml

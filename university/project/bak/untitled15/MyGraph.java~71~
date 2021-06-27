@@ -1,0 +1,64 @@
+package untitled15;
+
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2000</p>
+ * <p>Company: </p>
+ * @author unascribed
+ * @version 1.0
+ */
+
+public class MyGraph extends JInternalFrame
+{
+  private JScrollPane jScrollPane1 = new JScrollPane();
+  private Panel1 jPanel1 ;
+  private JToolBar jToolBar1 = new JToolBar();
+  private MenuBar menuBar1 = new MenuBar();
+  private Menu menu1 = new Menu();
+  private CheckboxMenuItem checkboxMenuItem1 = new CheckboxMenuItem();
+  private CheckboxMenuItem checkboxMenuItem2 = new CheckboxMenuItem();
+
+  public MyGraph(String ss2) {
+    super.setClosable(true);
+    super.setMaximizable(true);
+    super.setIconifiable(true);
+    super.setResizable(true);
+   jPanel1 = new Panel1(ss2);
+    try {
+      jbInit();
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+  private void jbInit() throws Exception {
+    menu1.setLabel("Add");
+    checkboxMenuItem1.addActionListener(new MyGraph_checkboxMenuItem1_actionAdapter(this));
+    this.getContentPane().add(jScrollPane1, BorderLayout.CENTER);
+    this.getContentPane().add(jToolBar1, BorderLayout.NORTH);
+    jScrollPane1.getViewport().add(jPanel1, null);
+    menuBar1.add(menu1);
+    menu1.add(checkboxMenuItem1);
+    menu1.add(checkboxMenuItem2);
+  }
+
+  void checkboxMenuItem1_actionPerformed(ActionEvent e) {
+
+  }
+}
+
+class MyGraph_checkboxMenuItem1_actionAdapter implements java.awt.event.ActionListener {
+  private MyGraph adaptee;
+
+  MyGraph_checkboxMenuItem1_actionAdapter(MyGraph adaptee) {
+    this.adaptee = adaptee;
+  }
+  public void actionPerformed(ActionEvent e) {
+    adaptee.checkboxMenuItem1_actionPerformed(e);
+  }
+}

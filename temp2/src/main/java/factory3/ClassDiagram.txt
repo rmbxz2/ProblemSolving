@@ -1,0 +1,22 @@
+@startuml
+annotation java.lang.Override
+class factory3.CheesePizza
+class factory3.CheeseSandwich
+class factory3.ChickenSandwich
+class factory3.ClamPizza
+class factory3.Factory
+class factory3.MainFactory
+interface factory3.AbstractFactory
+interface factory3.Pizza
+interface factory3.Sandwich
+factory3.CheesePizza ..> java.lang.Override
+factory3.CheesePizza --|> factory3.Pizza
+factory3.CheeseSandwich ..> java.lang.Override
+factory3.CheeseSandwich --|> factory3.Sandwich
+factory3.ChickenSandwich ..> java.lang.Override
+factory3.ChickenSandwich --|> factory3.Sandwich
+factory3.ClamPizza ..> java.lang.Override
+factory3.ClamPizza --|> factory3.Pizza
+factory3.Factory ..> java.lang.Override
+factory3.Factory --|> factory3.AbstractFactory
+@enduml

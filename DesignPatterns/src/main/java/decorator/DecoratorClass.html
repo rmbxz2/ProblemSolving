@@ -1,0 +1,48 @@
+@startuml 
+'scale 3.0
+
+title Design pattern
+
+'skinparam BackGroundColor LightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+ 'left to right direction
+ 'hide members
+ 'show Quackable members
+ 'show QuackObservable members
+
+
+package myDecorator{
+
+
+class  Computer {
+public String description( ){ return "computer";}
+public int account( ){ return 1;}
+} 
+' end of class Computer
+
+abstract class  Decorator {
+public String description( );
+public int account( );
+} 
+' end of class Decorator
+
+Computer <|-- Decorator
+Computer <-- CD
+Computer <-- HD
+Computer <-- Monitor
+Computer <-- Mouse
+Decorator <|-- CD
+Decorator <|-- HD
+Decorator <|-- Monitor
+Decorator <|-- Mouse
+
+}
+'  ========= end of decorator package ==============
+@enduml

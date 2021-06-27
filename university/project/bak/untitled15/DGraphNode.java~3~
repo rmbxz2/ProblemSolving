@@ -1,0 +1,360 @@
+package untitled15;
+
+/*
+author: Josh Greig
+date: January 24, 2005
+purpose:
+  providing a datastructure that can store information about a node in a
+directed graph
+  - also having methods for editing that node
+
+*/
+
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class DGraphNode
+{
+ private static final int size = 18;
+ private static final int edgeThickness = 10;
+ private int x; // x-coordinate of node
+ private int y; // y-coordinate of node in pixels
+ private String Title; // name of the node
+
+ private LinkedList UndirectedLinks;
+   // list of nodes this noe has undirected links with
+
+ private LinkedList nextNodes;
+   // list of next nodes to go to (all should be of type DGraphNode)
+
+  public DGraphNode(int x, int y,String name)
+  {
+     this.x = x;
+     this.y = y;
+     Title = name;
+     nextNodes = new LinkedList();
+      // pointing to no other nodes yet
+     UndirectedLinks = new LinkedList();
+
+  } // end constructor
+
+  public void LinkUndirectedTo(DGraphNode n)
+  // purpose: providing an undirected link to n
+  {
+          try
+          {
+
+      if (n!=null)
+      {
+        if (!UndirectedLinks.contains(n)) // if not already in list
+        {
+               UndirectedLinks.add(n);
+               n.LinkUndirectedTo(this);
+
+        } // end if
+      } // end if
+    }
+    catch (Exception e)
+    {
+       System.out.println("Exception caught in LinkUndirectedTo\n"+e.getMessage());
+    }
+  }
+
+  public void LinkTo(DGraphNode n)
+  // purpose: linking to another node
+  {
+    if (n!=null)
+    {
+      if (!nextNodes.contains(n)) // if not already in list
+      {
+         nextNodes.add(n);  // link to the node
+             n.LinkUndirectedTo(this);
+
+      } // end if
+    } // end if
+  } // end LinkTo
+
+  public boolean isInRegion(int x, int y)
+  // purpose: checking if point(x,y) is close to this node
+  {
+      if (
+      (x<size*2+this.x)&&(x>this.x-size*2)&&
+       (y<size*2+this.y)&&(y>this.y-size*2))
+      {
+        return true;
+      }
+      else
+         return false;
+
+  } // end isInRegion
+
+  public String getName()
+  {
+     return Title;
+
+  } // end getName
+
+  public void setName(String newName)
+  // purpose: setting new name for node
+  {
+     Title = newName;
+  } // end setName
+
+  public void MoveTo(int x, int y)
+  // purpose: moving the node to a point (x,y)
+  {
+     this.x = x;
+     this.y = y;
+
+  } // end MoveTo
+
+  public void DrawLinkTo(Graphics g,int ex, int ey)
+  // purpose: drawing a link to any given point
+  {
+
+
+    int sx,sy; // start coordinates
+    double angle = 120*Math.PI/180 + Math.atan2(y-ey,x-ex);
+    int ArrowSize = 15;
+         sx = x+(int)(size*Math.cos(angle));
+         sy = y+(int)(size*Math.sin(angle));
+         g.drawLine(sx,sy,ex,ey);
+         g.setColor(Color.red);
+
+         angle = angle+270*Math.PI/180;
+         g.drawLine(ex,ey,
+           ex+(int)(Math.cos(angle)*ArrowSize),
+           ey+(int)(Math.sin(angle)*ArrowSize));
+
+         angle = angle-40*Math.PI/180;
+
+         g.drawLine(ex,ey,
+           ex+(int)(Math.cos(angle)*ArrowSize),
+           ey+(int)(Math.sin(angle)*ArrowSize));
+         g.setColor(Color.black);
+
+  }
+
+  public void DrawLinkTo(Graphics g,DGraphNode n)
+  {
+          if (n==null) return;
+    int sx,sy; // start coordinates
+    int ex,ey; // end coordinates
+    double angle = 60*Math.PI/180 + Math.atan2(y-n.y,x-n.x);
+
+         ex = n.x+(int)(size*Math.cos(angle));
+         ey = n.y+(int)(size*Math.sin(angle));
+
+             g.setColor(Color.yellow); // barely visible
+        // g.drawLine(x,y,n.x,n.y);
+         g.setColor(Color.black);
+         DrawLinkTo(g,ex, ey);
+
+  } // end DrawLinkTo
+
+  public void paint(Graphics g,Color outline)
+  // purpose: painting the node onto a Graphics object
+  {
+     // draw the oval
+     g.setColor(Color.yellow);
+     g.fillOval(x-size,y-size,size*2,size*2);
+
+     g.setColor(outline);
+
+     g.drawOval(x-size,y-size,size*2,size*2);
+     g.drawString(Title, x, y+20); // draw label
+
+     g.setColor(Color.black);
+     // draw all arrows to next nodes
+     Iterator I = nextNodes.iterator();
+
+    try
+    {
+     while (I.hasNext())
+     {
+        Object o = I.next();
+         if (o instanceof DGraphNode)
+         {
+           DGraphNode n = (DGraphNode) o;
+             // draw line to other node
+
+         if (n==this) // if self loop
+               g.drawOval(x-size*2,y-size*5,size*4,size*4);
+         else
+         {
+            DrawLinkTo(g,n);
+             }
+         }
+         else
+              throw new Exception("invalid datatype in linked list");
+
+     } // end while-loop
+    }
+    catch (Exception e)
+    {
+        System.out.println("Exception caught in DGraphNode paint");
+        System.out.println(e.getMessage());
+    }
+
+  } // end paint
+
+  public void paint(Graphics g)
+  {
+    this.paint(g,Color.black);
+
+  }
+
+  public DGraphNode getToNodeLink(int x, int y)
+  // purpose: finding the node to witch has a link near point(x,y)
+  // returns null, if not found
+  {
+           Iterator I = nextNodes.iterator();
+
+           while (I.hasNext())
+           // loop through links
+           {
+        Object o = I.next();
+        if (o instanceof DGraphNode)
+              {
+               DGraphNode n = (DGraphNode)o;
+               double distance = LinePointDistance(x,y,this.x,this.y,n.x,n.y);
+               if (distance<edgeThickness)
+               // if any are on a link
+                  return n;
+
+              } // end if
+              else
+                  System.out.println("invalid datatype found in list of links in getToNodeLink:\n"+o.toString());
+
+           } // end while
+
+           return null; // indicate point not on a link
+
+  } // end isOnALink
+
+  public void getAllWeaklyConnectedNodes(LinkedList CurrentConnections)
+  {
+          Iterator I = UndirectedLinks.iterator();
+
+          while (I.hasNext())
+          // loop through all nodes this has an underlying connection with
+          {
+            Object o = I.next();
+            if (o instanceof DGraphNode)
+              if (!CurrentConnections.contains(o))
+        // if it is not already in the graph, call recursively
+        {
+           CurrentConnections.add(o);
+           ((DGraphNode)o).getAllWeaklyConnectedNodes(CurrentConnections);
+        }
+
+          } // end while
+  }
+
+  public LinkedList getAllWeaklyConnectedNodes()
+  // purpose: getting list of all nodes that have an underlying connection with this one
+  {
+           LinkedList LL = new LinkedList();
+           LL.add(this);
+     getAllWeaklyConnectedNodes(LL);
+     return LL;
+  }
+
+  public void RemoveLinkTo(DGraphNode n)
+  // purpose: removing possible link to the node
+  {
+     nextNodes.remove(n);
+     UndirectedLinks.remove(n);
+
+  } // end RemoveLinkTo
+
+
+  public LinkedList getStronglyConnectedNodes(LinkedList StronglyConnectedNodes)
+  // purpose: adding to a list of strongly connected nodes
+  {
+          // this algorithm is needlessly time-expensive and inefficient but I don't care.
+          // complexity of this is O(n^2) where n = number of nodes in graph
+          // loops through all nodes and for each, loops through all nodes in list to see if it is already there
+
+
+    Iterator I = nextNodes.iterator();
+
+    while (I.hasNext())
+    // loop through all nodes this one links to
+    {
+       Object o = I.next();
+       if (o instanceof DGraphNode) // simple check to be safe
+       {
+         DGraphNode n = (DGraphNode)o;
+         if (!StronglyConnectedNodes.contains(n))
+         // if not already in list
+         {
+
+           StronglyConnectedNodes.add(n);
+           //   for ()
+           StronglyConnectedNodes=n.getStronglyConnectedNodes(StronglyConnectedNodes);
+         }
+       }
+    }
+    return StronglyConnectedNodes;
+
+  } // end getStronglyConnectedNodes
+
+  public LinkedList getStronglyConnectedNodes()
+    // purpose: getting a list of all strongly connected nodes
+  {
+          LinkedList LL = new LinkedList();
+           LL.add(this); // at this node to the list
+           return getStronglyConnectedNodes(LL);
+  }
+
+
+
+// -------- math for nearby link detection ----------
+
+  public static double sqr(double n)
+  // purpose: squaring a number n
+  {
+     return n*n;
+  }
+
+  public static double LinePointDistance(int x,int y,int Lx1,int Ly1, int Lx2,int Ly2)
+  /*
+   purpose: calculating the distance between a line segment with end points (Lx1,Ly1), and (Lx2, Ly2)
+      and the point (x,y)
+  */
+  {
+     // translate the coordinates of the other end point and the point to which the distance is calculated
+      x -= Lx1;
+      y -= Ly1;
+
+      Lx2 -= Lx1;
+      Ly2 -= Ly1;
+
+      double Len = Math.sqrt(Lx2*Lx2 + Ly2*Ly2);
+       // calculate length of line segment
+
+      if ((Lx2==0)&&(Ly2==0)) // if points have the same coordinates
+         return 999; // avoid division by zero
+
+      // calculate distance of point in direction of vector using projection
+      double distance = (x*Lx2+y*Ly2) / Len;
+
+      if (distance<0) // if behind start of line segment
+         return Math.sqrt(x*x+y*y); // return distance to start of line segment
+      else if (distance>Len)
+         return Math.sqrt(sqr(Lx2-x)+sqr(Ly2-y));
+          // return distance to end of line segment
+
+      Len = sqr(x)+sqr(y) - sqr(distance);
+      if (Len<=0)
+        return 0; // avoid any possibility of taking a square root of a negative value
+      else
+          return Math.sqrt(Len);
+
+  } // end LinePointDistance
+
+
+} // end DGraphNode

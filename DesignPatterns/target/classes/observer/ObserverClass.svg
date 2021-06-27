@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="578px" preserveAspectRatio="none" style="width:941px;height:578px;background:#87CEFA;" version="1.1" viewBox="0 0 941 578" width="941px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="125" x="414" y="16.708">observer class</text><!--cluster observer_04--><polygon fill="#87CEFA" points="22,44.9531,127,44.9531,134,67.25,919,67.25,919,566.9531,22,566.9531,22,44.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="22" x2="134" y1="67.25" y2="67.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="99" x="26" y="59.9482">observer_04</text><!--class Archiver--><rect fill="#FEFECE" height="65.4609" id="Archiver" style="stroke: #A80036; stroke-width: 1.5;" width="385" x="493.5" y="485.4531"/><ellipse cx="644.75" cy="501.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M647.7188,507.0938 Q647.1406,507.3906 646.5,507.5313 Q645.8594,507.6875 645.1563,507.6875 Q642.6563,507.6875 641.3281,506.0469 Q640.0156,504.3906 640.0156,501.2656 Q640.0156,498.1406 641.3281,496.4844 Q642.6563,494.8281 645.1563,494.8281 Q645.8594,494.8281 646.5,494.9844 Q647.1563,495.1406 647.7188,495.4375 L647.7188,498.1563 Q647.0938,497.5781 646.5,497.3125 Q645.9063,497.0313 645.2813,497.0313 Q643.9375,497.0313 643.25,498.1094 Q642.5625,499.1719 642.5625,501.2656 Q642.5625,503.3594 643.25,504.4375 Q643.9375,505.5 645.2813,505.5 Q645.9063,505.5 646.5,505.2344 Q647.0938,504.9531 647.7188,504.375 L647.7188,507.0938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74" x="665.25" y="506.9922">Archiver</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="494.5" x2="877.5" y1="517.4531" y2="517.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="494.5" x2="877.5" y1="525.4531" y2="525.4531"/><ellipse cx="504.5" cy="539.6836" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="513.5" y="543.3765">void update(String operation, String record)</text><!--class Observer--><rect fill="#FEFECE" height="65.4609" id="Observer" style="stroke: #A80036; stroke-width: 1.5;" width="371" x="38" y="351.4531"/><ellipse cx="177.75" cy="367.4531" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M173.6719,363.2188 L173.6719,361.0625 L181.0625,361.0625 L181.0625,363.2188 L178.5938,363.2188 L178.5938,371.2969 L181.0625,371.2969 L181.0625,373.4531 L173.6719,373.4531 L173.6719,371.2969 L176.1406,371.2969 L176.1406,363.2188 L173.6719,363.2188 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="83" x="198.25" y="372.9922">Observer</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="39" x2="408" y1="383.4531" y2="383.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="39" x2="408" y1="391.4531" y2="391.4531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="44" y="409.3765">void update(String operation, String record)</text><!--class Boss--><rect fill="#FEFECE" height="65.4609" id="Boss" style="stroke: #A80036; stroke-width: 1.5;" width="385" x="493.5" y="385.4531"/><ellipse cx="660.25" cy="401.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M663.2188,407.0938 Q662.6406,407.3906 662,407.5313 Q661.3594,407.6875 660.6563,407.6875 Q658.1563,407.6875 656.8281,406.0469 Q655.5156,404.3906 655.5156,401.2656 Q655.5156,398.1406 656.8281,396.4844 Q658.1563,394.8281 660.6563,394.8281 Q661.3594,394.8281 662,394.9844 Q662.6563,395.1406 663.2188,395.4375 L663.2188,398.1563 Q662.5938,397.5781 662,397.3125 Q661.4063,397.0313 660.7813,397.0313 Q659.4375,397.0313 658.75,398.1094 Q658.0625,399.1719 658.0625,401.2656 Q658.0625,403.3594 658.75,404.4375 Q659.4375,405.5 660.7813,405.5 Q661.4063,405.5 662,405.2344 Q662.5938,404.9531 663.2188,404.375 L663.2188,407.0938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="43" x="680.75" y="406.9922">Boss</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="494.5" x2="877.5" y1="417.4531" y2="417.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="494.5" x2="877.5" y1="425.4531" y2="425.4531"/><ellipse cx="504.5" cy="439.6836" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="513.5" y="443.3765">void update(String operation, String record)</text><!--class Client--><rect fill="#FEFECE" height="65.4609" id="Client" style="stroke: #A80036; stroke-width: 1.5;" width="385" x="493.5" y="285.4531"/><ellipse cx="656.75" cy="301.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M659.7188,307.0938 Q659.1406,307.3906 658.5,307.5313 Q657.8594,307.6875 657.1563,307.6875 Q654.6563,307.6875 653.3281,306.0469 Q652.0156,304.3906 652.0156,301.2656 Q652.0156,298.1406 653.3281,296.4844 Q654.6563,294.8281 657.1563,294.8281 Q657.8594,294.8281 658.5,294.9844 Q659.1563,295.1406 659.7188,295.4375 L659.7188,298.1563 Q659.0938,297.5781 658.5,297.3125 Q657.9063,297.0313 657.2813,297.0313 Q655.9375,297.0313 655.25,298.1094 Q654.5625,299.1719 654.5625,301.2656 Q654.5625,303.3594 655.25,304.4375 Q655.9375,305.5 657.2813,305.5 Q657.9063,305.5 658.5,305.2344 Q659.0938,304.9531 659.7188,304.375 L659.7188,307.0938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="50" x="677.25" y="306.9922">Client</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="494.5" x2="877.5" y1="317.4531" y2="317.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="494.5" x2="877.5" y1="325.4531" y2="325.4531"/><ellipse cx="504.5" cy="339.6836" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="359" x="513.5" y="343.3765">void update(String operation, String record)</text><!--class DBobserver--><rect fill="#FEFECE" height="170.2266" id="DBobserver" style="stroke: #A80036; stroke-width: 1.5;" width="434" x="469" y="79.9531"/><ellipse cx="629.25" cy="95.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M632.2188,101.5938 Q631.6406,101.8906 631,102.0313 Q630.3594,102.1875 629.6563,102.1875 Q627.1563,102.1875 625.8281,100.5469 Q624.5156,98.8906 624.5156,95.7656 Q624.5156,92.6406 625.8281,90.9844 Q627.1563,89.3281 629.6563,89.3281 Q630.3594,89.3281 631,89.4844 Q631.6563,89.6406 632.2188,89.9375 L632.2188,92.6563 Q631.5938,92.0781 631,91.8125 Q630.4063,91.5313 629.7813,91.5313 Q628.4375,91.5313 627.75,92.6094 Q627.0625,93.6719 627.0625,95.7656 Q627.0625,97.8594 627.75,98.9375 Q628.4375,100 629.7813,100 Q630.4063,100 631,99.7344 Q631.5938,99.4531 632.2188,98.875 L632.2188,101.5938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="105" x="649.75" y="101.4922">DBobserver</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="470" x2="902" y1="111.9531" y2="111.9531"/><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="477" y="123.1836"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="107" x="489" y="129.8765">String record</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="477" y="140.6445"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="132" x="489" y="147.3374">String operation</text><rect fill="none" height="6" style="stroke: #C82930; stroke-width: 1.0;" width="6" x="477" y="158.1055"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="210" x="489" y="164.7983">ArrayList&lt;Observer&gt; obs</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="470" x2="902" y1="172.3359" y2="172.3359"/><ellipse cx="480" cy="186.5664" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="309" x="489" y="190.2593">void addObserver(Observer observer)</text><ellipse cx="480" cy="204.0273" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="184" x="489" y="207.7202">void notifyObservers()</text><ellipse cx="480" cy="221.4883" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="341" x="489" y="225.1812">void removeObserver(Observer observer)</text><ellipse cx="480" cy="238.9492" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="408" x="489" y="242.6421">void editObserver(String operation, String record)</text><!--class Subject--><rect fill="#FEFECE" height="100.3828" id="Subject" style="stroke: #A80036; stroke-width: 1.5;" width="353" x="47" y="148.9531"/><ellipse cx="185.75" cy="164.9531" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M181.6719,160.7188 L181.6719,158.5625 L189.0625,158.5625 L189.0625,160.7188 L186.5938,160.7188 L186.5938,168.7969 L189.0625,168.7969 L189.0625,170.9531 L181.6719,170.9531 L181.6719,168.7969 L184.1406,168.7969 L184.1406,160.7188 L181.6719,160.7188 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="67" x="206.25" y="170.4922">Subject</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="48" x2="399" y1="180.9531" y2="180.9531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="48" x2="399" y1="188.9531" y2="188.9531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="309" x="53" y="206.8765">void addObserver(Observer observer)</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="341" x="53" y="224.3374">void removeObserver(Observer observer)</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="184" x="53" y="241.7983">void notifyObservers()</text><!--link Subject to DBobserver--><path d="M420.43,184.4831 C436.49,183.3031 452.78,182.1031 468.97,180.9031 " fill="none" id="Subject-DBobserver" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="420.7,191.4831,400.24,185.9731,419.67,177.5231,420.7,191.4831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Observer to Subject--><path d="M223.5,346.2331 C223.5,313.8131 223.5,281.4031 223.5,248.9831 " fill="none" id="Observer-Subject" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#0000FF" points="223.5,351.4331,227.5,342.4331,223.5,346.4331,219.5,342.4331,223.5,351.4331" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Observer to Client--><path d="M429.05,354.6331 C450.37,351.5831 471.99,348.4831 493.16,345.4531 " fill="none" id="Observer-Client" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="429.94,361.5831,409.15,357.4931,427.95,347.7231,429.94,361.5831" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Observer to Boss--><path d="M429.38,399.0831 C450.59,400.6431 472.09,402.2331 493.16,403.7931 " fill="none" id="Observer-Boss" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="428.58,406.0431,409.15,397.5831,429.61,392.0731,428.58,406.0431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--link Observer to Archiver--><path d="M331.1,423.2531 C373.68,438.2531 423.35,454.8631 469,467.9531 C490.28,474.0531 512.89,479.9331 535.17,485.3931 " fill="none" id="Observer-Archiver" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="328.58,429.7931,312.07,416.5031,333.26,416.5931,328.58,429.7931" style="stroke: #0000FF; stroke-width: 1.0;"/><!--
+@startuml
+
+title observer class
+
+skinparam BackgroundColor  LightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+
+
+
+
+
+left to right direction 
+package observer_04{
+
+class Archiver {
++void update(String operation, String record)
+}
+ interface Observer  {
+}
+
+class Boss {
++void update(String operation, String record)
+}
+
+
+
+class Client {
+	+void update(String operation, String record)
+}
+
+
+class DBobserver {
+	-String record
+	-String operation
+	-ArrayList<Observer> obs
+	+void addObserver(Observer observer)
+	+void notifyObservers()
+	+void removeObserver(Observer observer)
+	+void editObserver(String operation, String record)
+}
+interface Subject {
+}
+interface Subject {
+	void addObserver(Observer observer)
+	void removeObserver(Observer observer)
+	void notifyObservers()
+}
+
+interface Observer {
+	void update(String operation, String record)
+}
+
+Subject  <|.. DBobserver
+Observer <.  Subject
+Observer <|.. Client
+Observer <|.. Boss
+Observer <|.. Archiver
+
+}
+@enduml
+
+PlantUML version 1.2018.10(Sat Aug 25 13:02:59 EDT 2018)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.8+10-post-Debian-1
+Operating System: Linux
+OS Version: 5.6.0-kali2-amd64
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
