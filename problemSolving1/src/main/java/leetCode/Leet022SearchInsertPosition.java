@@ -59,7 +59,7 @@ public class Leet022SearchInsertPosition {
 		System.out.println("==========");
    		System.out.println(t1.searchInsert3(nums, 11));
 
-		//
+		//              test 1
 		//		System.out.println(searchInsert2(nums, 0));
 		//		System.out.println(searchInsert2(nums, 1));
 		//		System.out.println(searchInsert2(nums, 6));
