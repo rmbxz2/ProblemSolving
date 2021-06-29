@@ -85,12 +85,12 @@ public class Leet022SearchInsertPositionTest {
 	}
 }
 
-// a1
 
 
 
 
 
+// B2
 
 
 
