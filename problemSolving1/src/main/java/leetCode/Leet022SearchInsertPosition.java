@@ -102,3 +102,4 @@ public class Leet022SearchInsertPosition {
 		// command line
 	}
 }
+// T 2
