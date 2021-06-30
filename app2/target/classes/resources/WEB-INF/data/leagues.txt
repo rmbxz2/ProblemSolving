@@ -1,6 +1,0 @@
-2006	league1	spring
-2007	league2	Summer
-2008	league3	winter
-2009	league4	fall
-2007	league5	summer
-2009	league6	winter

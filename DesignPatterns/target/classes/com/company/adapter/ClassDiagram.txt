@@ -1,9 +1,0 @@
-@startuml
-class com.company.adapter.Bicycle
-class com.company.adapter.BicycleAdapter
-class com.company.adapter.Car
-class com.company.adapter.Executor
-interface com.company.adapter.Vehicle
-com.company.adapter.BicycleAdapter --|> com.company.adapter.Vehicle
-com.company.adapter.Car --|> com.company.adapter.Vehicle
-@enduml

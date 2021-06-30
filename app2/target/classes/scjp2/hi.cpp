@@ -1,1 +1,0 @@
-//  *(setq clang-format-style "WebKit") ;; LLVM, Google, Chromium, Mozilla, WebKit.

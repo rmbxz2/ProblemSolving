@@ -1,8 +1,0 @@
-@startuml
-abstract class com.company.template.VehicleTemplate
-class com.company.template.Executor
-class com.company.template.SalonCar
-class com.company.template.Truck
-com.company.template.SalonCar --|> com.company.template.VehicleTemplate
-com.company.template.Truck --|> com.company.template.VehicleTemplate
-@enduml

@@ -1,9 +1,0 @@
-@startuml
-class com.company.state.Executor
-class com.company.state.MobileContext
-class com.company.state.Ringing
-class com.company.state.Silent
-interface com.company.state.MobileAlertState
-com.company.state.Ringing --|> com.company.state.MobileAlertState
-com.company.state.Silent --|> com.company.state.MobileAlertState
-@enduml
