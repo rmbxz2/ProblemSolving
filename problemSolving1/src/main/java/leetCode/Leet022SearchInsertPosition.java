@@ -4,9 +4,10 @@ import java.util.Arrays;
 
 /**
 * Describe class here.
-*
-*
-*
+* https://leetcode.com/problems/search-insert-position/
+* leetcode in mybook number  22
+* leetcode in website number 35
+* see image problemSolving1/src/main/java/images/leetcode_22.ora
 *
 *
 */
@@ -16,13 +17,11 @@ public class Leet022SearchInsertPosition {
 	*
 	*
 	*/
-	public static int searchInsert2(int[] nums, int target) {
-		int result = java.util.Arrays.binarySearch(nums, target);
-		if (result == -1)
-			result = 0;
-		if (result < 0)
-			result = -(result) - 1;
-		return result;
+	public int searchInsert2(int[] nums, int target) {
+		int low = Arrays.binarySearch(nums, target);
+		if (low < 0)
+			low = (-1 * low) - 1;
+		return low;
 	}
 
 	/**
@@ -33,9 +32,9 @@ public class Leet022SearchInsertPosition {
 
 		int low = 0;
 		int high = nums.length - 1;
-
+		int mid = -985558;
 		while (low <= high) {
-			int mid = (low + high) >>> 1; // my divide x / pow(2,1) 
+			mid = (low + high) >>> 1; // my divide x / pow(2,1) 
 			int midVal = nums[mid];
 
 			if (midVal < target)
@@ -45,7 +44,30 @@ public class Leet022SearchInsertPosition {
 			else
 				return mid; // key found
 		}
-		return low; // key not found.
+		System.out.println("low =" + low);
+		System.out.println("high =" + high);
+		System.out.println("mid =" + mid);
+
+		return low;
+
+		//		if (high < mid)
+		//			return mid; // key not found.
+		//		return mid + 1;
+
+		//		return high + 1;
+
+		//		if (low == mid)
+		//			return mid; // key not found.
+		//		if (high == mid)
+		//			return low;
+		//		return 12345;
+
+		//		if (high == -1)
+		//			return mid; // key not found.
+		//		if (low == nums.length)
+		//			return nums.length;
+		//		return 12345;
+
 	}
 
 	/**
@@ -55,18 +77,64 @@ public class Leet022SearchInsertPosition {
 	 * @return
 	*/
 	public int searchInsert4(int[] nums, int target) {
-		int left = 0;
-		int right = nums.length - 1;
-		while (left <= right) {
-			int mid = (left + right) >>> 1; // x/2 must positive
+		int low = 0;
+		int high = nums.length - 1;
+		int mid = -1;
+		while (low <= high) {
+			mid = (low + high) / 2; // x/2 must positive
 			if (target > nums[mid])
-				left = mid + 1;
+				low = mid + 1;
 			else if (target < nums[mid])
-				right = mid - 1;
+				high = mid - 1;
 			else if (target == nums[mid])
 				return mid;
 		}
-		return left;
+		System.out.println("low =" + low);
+		System.out.println("high =" + high);
+		System.out.println("mid =" + mid);
+
+		return low;
+	}
+
+	/**
+	 * 
+	 * @param nums
+	 * @param target
+	 * @return
+	*/
+	public int searchInsert5(int[] nums, int target) {
+
+		return searchByRecursion(nums, target, 0, nums.length - 1, (0 + nums.length - 1) / 2);
+	}
+
+	/**
+	 * cal_3 =          ml h
+	 * cal_2 =       m  l  h
+	 * cal_1 = l     m     h
+	 * array = 3 ,5 ,7 ,9 ,11
+	 * index = 0 ,1 ,2 ,3 ,4
+	 * 
+	 * target = 9
+	 * 
+	*/
+	public int searchByRecursion(int[] nums, int target, int low, int high, int mid) {
+		if (high < low)
+			return low;
+
+		if (target > nums[mid]) {
+			low = mid + 1;
+			mid = (low + high) / 2;
+			mid = searchByRecursion(nums, target, low, high, mid);
+
+		} else if (target < nums[mid]) {
+			high = mid - 1;
+			mid = (low + high) / 2;
+			mid = searchByRecursion(nums, target, low, high, mid);
+
+		} else if (target == nums[mid]) {
+			return mid;
+		}
+		return mid;
 	}
 
 	/**
@@ -74,11 +142,12 @@ public class Leet022SearchInsertPosition {
 	 * @param args
 	*/
 	public static void main(String[] args) {
+		//    index =  0  1  2  3  4 
+		int[] nums = { 3, 5, 7, 9, 11 };
 
-		int[] nums = { 1, 3, 5, 7, 9 };
 		Leet022SearchInsertPosition t1 = new Leet022SearchInsertPosition();
 		System.out.println("==========");
-		System.out.println(t1.searchInsert4(nums, 11));
+		System.out.println("index = " + t1.searchInsert5(nums, 9));
 
 		//              test 1
 		//		System.out.println(searchInsert2(nums, 0));
