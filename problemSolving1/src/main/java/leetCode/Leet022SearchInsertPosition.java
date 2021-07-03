@@ -29,7 +29,6 @@ public class Leet022SearchInsertPosition {
 	*
 	*/
 	public int searchInsert3(int[] nums, int target) {
-
 		int low = 0;
 		int high = nums.length - 1;
 		int mid = -985558;
@@ -44,10 +43,6 @@ public class Leet022SearchInsertPosition {
 			else
 				return mid; // key found
 		}
-		System.out.println("low =" + low);
-		System.out.println("high =" + high);
-		System.out.println("mid =" + mid);
-
 		return low;
 
 		//		if (high < mid)
@@ -89,10 +84,6 @@ public class Leet022SearchInsertPosition {
 			else if (target == nums[mid])
 				return mid;
 		}
-		System.out.println("low =" + low);
-		System.out.println("high =" + high);
-		System.out.println("mid =" + mid);
-
 		return low;
 	}
 
@@ -118,23 +109,25 @@ public class Leet022SearchInsertPosition {
 	 * 
 	*/
 	public int searchByRecursion(int[] nums, int target, int low, int high, int mid) {
-		if (high < low)
+		if (high < low) {
 			return low;
+		}
 
+		int result = -1;
 		if (target > nums[mid]) {
 			low = mid + 1;
 			mid = (low + high) / 2;
-			mid = searchByRecursion(nums, target, low, high, mid);
+			result = searchByRecursion(nums, target, low, high, mid);
 
 		} else if (target < nums[mid]) {
 			high = mid - 1;
 			mid = (low + high) / 2;
-			mid = searchByRecursion(nums, target, low, high, mid);
+			result = searchByRecursion(nums, target, low, high, mid);
 
 		} else if (target == nums[mid]) {
 			return mid;
 		}
-		return mid;
+		return result;
 	}
 
 	/**
@@ -142,33 +135,15 @@ public class Leet022SearchInsertPosition {
 	 * @param args
 	*/
 	public static void main(String[] args) {
-		//    index =  0  1  2  3  4 
-		int[] nums = { 3, 5, 7, 9, 11 };
 
+		//System.out.println(-8 >>> 1); //   -8 * pow(2,1)
 		Leet022SearchInsertPosition t1 = new Leet022SearchInsertPosition();
-		System.out.println("==========");
-		System.out.println("index = " + t1.searchInsert5(nums, 9));
 
-		//              test 1
-		//		System.out.println(searchInsert2(nums, 0));
-		//		System.out.println(searchInsert2(nums, 1));
-		//		System.out.println(searchInsert2(nums, 6));
-
-		//		System.out.println("-1 ==> "+ searchInsert2(nums, -1));
-		//		System.out.println("0 ==> "+ searchInsert2(nums, 0));
-		//		System.out.println("1 ==> "+ searchInsert2(nums, 1));
-		//		System.out.println("2 ==> "+ searchInsert2(nums, 2));
-		//		System.out.println("3 ==> "+ searchInsert2(nums, 3));
-		//		System.out.println("4 ==> "+ searchInsert2(nums, 4));
-		//		System.out.println("5 ==> "+ searchInsert2(nums, 5));
-		//		System.out.println("6 ==> "+ searchInsert2(nums, 6));
-		//		System.out.println("7 ==> "+ searchInsert2(nums, 7));
-		//		System.out.println("8 ==> "+ searchInsert2(nums, 8));
-		//		System.out.println("9 ==> "+ searchInsert2(nums, 9));
-		//		System.out.println("10 ==> "+ searchInsert2(nums, 10));
-		//		System.out.println("11 ==> "+ searchInsert2(nums, 11));
-		//		System.out.println("11 ==> "+ searchInsert2(nums, 12));
-		// command line
+		//    index =  0  1  2  3  4  
+		int[] nums = { 2, 4, 5, 7, 9 };
+		//		int[] nums = { 1, 3, 5, 6, 8 };
+		System.out.println("index = " + t1.searchInsert4(nums, 3));
+		//System.out.println("index = " + t1.searchInsert4(nums, 2));
 	}
 }
 // T 2
