@@ -308,7 +308,7 @@ public class Leet022SearchInsertPositionTest {
 		assertEquals(7, pos);
 	}
 
-	@Test(timeout = 1000)
+    @Test(timeout = 1000) // 1000 ms
 	public void test32() {
 		//    index =  0  1  2  3}
 		int[] nums = { 1, 3, 5, 6 };
@@ -316,10 +316,6 @@ public class Leet022SearchInsertPositionTest {
 		pos = searchInsertPosition.searchInsert4(nums, 2);
 		assertEquals(1, pos);
 	}
-
-
-
-
 }
 
 // B2

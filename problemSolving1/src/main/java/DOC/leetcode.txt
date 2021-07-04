@@ -159,7 +159,8 @@
 068 Intersection of Two Linked Lists 124  ======>  https://www.youtube.com/watch?v=8qi8a2ph71o
 068 Intersection of Two Linked Lists 124  ======>  https://www.youtube.com/watch?v=c7dOI-hDa2Q
 069 Java PriorityQueue Class Example 125  ======>  https://www.youtube.com/watch?v=wptevk0bshY
-070 Solution for Binary Tree Preorder Traversal in Java 127  ======>  https://www.youtube.com/watch?v=367McfIeBDM
+070 Solution for Binary Tree Preorder Traversal in Java 127  ======>  https://www.youtube.com/watch?v=K2ybI-GEHSY
+                                                                      https://www.youtube.com/watch?v=WLvU5EQVZqY
 071 Solution of Binary Tree Inorder Traversal in Java 128  ======>  https://www.youtube.com/watch?v=WLvU5EQVZqY
 071 Solution of Binary Tree Inorder Traversal in Java 128  ======>  https://www.youtube.com/watch?v=5y_j0OqD7v8
 071 Solution of Binary Tree Inorder Traversal in Java 128  ======>  https://www.youtube.com/watch?v=K2ybI-GEHSY

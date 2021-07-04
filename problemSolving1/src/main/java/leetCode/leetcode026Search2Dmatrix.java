@@ -1,5 +1,8 @@
 package leetCode;
 
+import java.util.Iterator;
+import java.util.Stack;
+
 /**
 * Describe class here.
 *
@@ -106,23 +109,50 @@ public class leetcode026Search2Dmatrix {
 		//		int low = 0;
 		//		int high = N * M - 1;
 		//		//	int mid = (low + high) / 2;
-	        //		int mid = 11;
+		//		int mid = 11;
 		//		int midx = mid / N;
 		//		int midy = mid % N;
 		//		System.out.println("mid  =" + mid);
 		//		System.out.println("midx =" + midx);
 		//		System.out.println("midy =" + midy);
 
+		//		int N = 5;
+		//		int mid = 14;
+		//		int midx = mid / N;
+		//		int midy = mid % N;
+		//		System.out.println("mid  =" + mid);
+		//		System.out.println("midx =" + midx); // 2
+		//		System.out.println("midy =" + midy); // 4
 
-		int N = 5;
-		int mid = 14;
-		int midx = mid / N;
-		int midy = mid % N;
-		System.out.println("mid  =" + mid);
-		System.out.println("midx =" + midx); // 2
-		System.out.println("midy =" + midy); // 4
-
-
+		//declare and initialize a stack object
+		//		Stack<String> stack = new Stack<String>();
+		//		stack.push("PUNE");
+		//		stack.push("MUMBAI");
+		//		stack.push("NASHIK");
+		//		System.out.println("Stack elements:");
+		//		//get an iterator for the stack
+		    //		Iterator<String> iterator = stack.iterator();
+		//		Iterator<String> iterator2 = stack.iterator();
+		//		Iterator<String> iterator3 = stack.iterator();
+		//		//traverse the stack using iterator in a loop and print each element
+		    //		while (iterator.hasNext()) {
+		    //			System.out.print(iterator.next() + " ");
+		    //		}
+		//		System.out.println("stack size = " + stack.size());
+		//
+		    //		while (iterator2.hasNext()) {
+		    //			System.out.print(iterator2.next() + " ");
+		    //		}
+		//		System.out.println("stack size = " + stack.size());
+		//		System.out.println("=============");
+		//
+		    //		for (String string : stack) {
+		    //			System.out.println(string);
+		    //		}
+		//		System.out.println("=======2=========");
+		//		iterator3.forEachRemaining(val -> {
+		//			System.out.println(val);
+		//		});
 
 	}
 }

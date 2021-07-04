@@ -108,6 +108,7 @@ public class Leet022SearchInsertPosition {
 	 * target = 9
 	 * 
 	*/
+
 	public int searchByRecursion(int[] nums, int target, int low, int high, int mid) {
 		if (high < low) {
 			return low;
@@ -142,7 +143,7 @@ public class Leet022SearchInsertPosition {
 		//    index =  0  1  2  3  4  
 		int[] nums = { 2, 4, 5, 7, 9 };
 		//		int[] nums = { 1, 3, 5, 6, 8 };
-		System.out.println("index = " + t1.searchInsert4(nums, 3));
+		System.out.println("index = " + t1.searchInsert5(nums, 1));
 		//System.out.println("index = " + t1.searchInsert4(nums, 2));
 	}
 }
