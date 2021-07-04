@@ -101,17 +101,33 @@ public class leetcode70binaryTreePreorderTraversal {
 	}
 
 	/**
-	 * 
-	 * @param root
-	 * @return
+	 * dfs 5
+	 * listM in stack like transporter == talea nazel  == it is almost like an instance variable
+	 * String,Integer,Double(all immutable object) will create new objects if changed, so it is local variable and local objects
+	 * StringBuilder and mutable Object will not create new objects if changed so it is act like instance var in recursion
+	 *
 	*/
-	public List<Integer> dfs5(TreeNode2 root, List<Integer> list) {
+	public List<Integer> dfs5(TreeNode2 root, List<Integer> listM) {
 		if (root == null)
-			return list;
-		list.add(root.val);
-		list = dfs5(root.left, list);
-		list = dfs5(root.right, list);
-		return list;
+			return listM;
+		listM.add(root.val);
+		listM = dfs5(root.left, listM);
+		listM = dfs5(root.right, listM);
+		return listM;
+	}
+
+	/**
+	 * dfs 6
+	 * String,Integer,Double(all immutable object) will create new objects if changed, so it is local variable and local objects
+	 * StringBuilder and mutable Object will not create new objects if changed so it is act like instance var in recursion
+	*/
+	public String dfs6(TreeNode2 root, String string) {
+		if (root == null)
+			return string;
+		string = string + root.val;
+		string = dfs6(root.left , string);
+		string = dfs6(root.right, string);
+		return string;
 	}
 
 	/**
@@ -139,7 +155,8 @@ public class leetcode70binaryTreePreorderTraversal {
 		//		binaryTreeTraversl.dfs4(node1);
 		//		System.out.println("list4 = " + binaryTreeTraversl.list4);
 
-		System.out.println(binaryTreeTraversl.dfs5(node1,new ArrayList<Integer>()));
+		//	System.out.println(binaryTreeTraversl.dfs5(node1, new ArrayList<Integer>()));
+		System.out.println(binaryTreeTraversl.dfs6(node1, " hi "));
 
 	}
 }
