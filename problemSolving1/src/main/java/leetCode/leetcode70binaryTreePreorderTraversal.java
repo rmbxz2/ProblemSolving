@@ -53,24 +53,65 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * @return
 	*/
 	public List<Integer> dfs3(TreeNode2 root) {
-		List<Integer> list2 = new ArrayList<>();
+		List<Integer> list3 = new ArrayList<>();
 
 		if (root == null)
-			return list2;
+			return list3;
 
 		Stack<TreeNode2> stack = new Stack<>();
 		stack.add(root);
 
 		while (!stack.isEmpty()) {
 			TreeNode2 node = stack.pop();
+			list3.add(node.val);
+
 			if (node.right != null)
 				stack.push(node.right);
 			if (node.left != null)
 				stack.push(node.left);
-			list2.add(node.val);
 			//System.out.println(node.val);
 		}
-		return list2;
+		return list3;
+	}
+
+	/**
+	*
+	*
+	*/
+	private List<Integer> list4 = new ArrayList<>();
+
+	public List<Integer> dfs4(TreeNode2 root) {
+		if (root == null)
+			return list4;
+
+		Stack<TreeNode2> stack = new Stack<>();
+		stack.push(root);
+
+		while (!stack.isEmpty()) {
+			TreeNode2 node = stack.pop();
+			list4.add(node.val);
+
+			if (node.right != null)
+				stack.push(node.right);
+
+			if (node.left != null)
+				stack.push(node.left);
+		}
+		return list4;
+	}
+
+	/**
+	 * 
+	 * @param root
+	 * @return
+	*/
+	public List<Integer> dfs5(TreeNode2 root, List<Integer> list) {
+		if (root == null)
+			return list;
+		list.add(root.val);
+		list = dfs5(root.left, list);
+		list = dfs5(root.right, list);
+		return list;
 	}
 
 	/**
@@ -93,7 +134,12 @@ public class leetcode70binaryTreePreorderTraversal {
 		//		binaryTreeTraversl.dfs2(treeNode1);
 		//		System.out.println("list =" + binaryTreeTraversl.list);
 
-		System.out.println(binaryTreeTraversl.dfs3(node1));
+		//System.out.println(binaryTreeTraversl.dfs3(node1));
+
+		//		binaryTreeTraversl.dfs4(node1);
+		//		System.out.println("list4 = " + binaryTreeTraversl.list4);
+
+		System.out.println(binaryTreeTraversl.dfs5(node1,new ArrayList<Integer>()));
 
 	}
 }
