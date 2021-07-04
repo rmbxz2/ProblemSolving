@@ -52,20 +52,25 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * dfs by stack
 	 * @return
 	*/
-	public void dfs3(TreeNode2 root) {
-	       	List<Integer> list2 = new ArrayList<>();
+	public List<Integer> dfs3(TreeNode2 root) {
+		List<Integer> list2 = new ArrayList<>();
+
+		if (root == null)
+			return list2;
+
 		Stack<TreeNode2> stack = new Stack<>();
 		stack.add(root);
 
 		while (!stack.isEmpty()) {
 			TreeNode2 node = stack.pop();
-			if (node.right != null) 
+			if (node.right != null)
 				stack.push(node.right);
-			if (node.left != null) 
+			if (node.left != null)
 				stack.push(node.left);
 			list2.add(node.val);
 			//System.out.println(node.val);
 		}
+		return list2;
 	}
 
 	/**
@@ -88,7 +93,7 @@ public class leetcode70binaryTreePreorderTraversal {
 		//		binaryTreeTraversl.dfs2(treeNode1);
 		//		System.out.println("list =" + binaryTreeTraversl.list);
 
-		binaryTreeTraversl.dfs3(node1);
+		System.out.println(binaryTreeTraversl.dfs3(node1));
 
 	}
 }
@@ -116,4 +121,3 @@ class TreeNode2 {
 		this.right = right;
 	}
 }
-
