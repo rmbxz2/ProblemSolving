@@ -12,7 +12,7 @@ import java.util.Stack;
 *
 *
 */
-public class leetcode70binaryTreePreorderTraversal {
+public class Leetcode70binaryTreePreorderTraversal {
 	List<Integer> list = new ArrayList<>();
 
 	/**
@@ -20,7 +20,7 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * @param root
 	 * @return
 	*/
-	public void preorderTraversal(TreeNode2 root) {
+	public void preorderTraversal(TreeNode root) {
 		dfs(root);
 	}
 
@@ -28,19 +28,31 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * dfs by recursion
 	 * @return
 	*/
-	public void dfs(TreeNode2 root) {
+
+
+
+
+
+
+
+
+	public void dfs(TreeNode root) {
+            
 		if (root == null)
 			return;
-		System.out.println("first " + root.val);
+		System.out.println("second  "+root.val);
 		dfs(root.left);
 		dfs(root.right);
+
+
 	}
+
 
 	/**
 	 * dfs by recursion
 	 * @return
 	*/
-	public void dfs2(TreeNode2 root) {
+	public void dfs2(TreeNode root) {
 		if (root == null)
 			return;
 		list.add(root.val);
@@ -52,17 +64,17 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * dfs by stack
 	 * @return
 	*/
-	public List<Integer> dfs3(TreeNode2 root) {
+	public List<Integer> dfs3(TreeNode root) {
 		List<Integer> list3 = new ArrayList<>();
 
 		if (root == null)
 			return list3;
 
-		Stack<TreeNode2> stack = new Stack<>();
+		Stack<TreeNode> stack = new Stack<>();
 		stack.add(root);
 
 		while (!stack.isEmpty()) {
-			TreeNode2 node = stack.pop();
+			TreeNode node = stack.pop();
 			list3.add(node.val);
 
 			if (node.right != null)
@@ -74,21 +86,26 @@ public class leetcode70binaryTreePreorderTraversal {
 		return list3;
 	}
 
+
+
+
+
+    
 	/**
 	*
 	*
 	*/
 	private List<Integer> list4 = new ArrayList<>();
 
-	public List<Integer> dfs4(TreeNode2 root) {
+	public List<Integer> dfs4(TreeNode root) {
 		if (root == null)
 			return list4;
 
-		Stack<TreeNode2> stack = new Stack<>();
+		Stack<TreeNode> stack = new Stack<>();
 		stack.push(root);
 
 		while (!stack.isEmpty()) {
-			TreeNode2 node = stack.pop();
+			TreeNode node = stack.pop();
 			list4.add(node.val);
 
 			if (node.right != null)
@@ -107,7 +124,7 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * StringBuilder and mutable Object will not create new objects if changed so it is act like instance var in recursion
 	 *
 	*/
-	public List<Integer> dfs5(TreeNode2 root, List<Integer> listM) {
+	public List<Integer> dfs5(TreeNode root, List<Integer> listM) {
 		if (root == null)
 			return listM;
 		listM.add(root.val);
@@ -121,11 +138,11 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * String,Integer,Double(all immutable object) will create new objects if changed, so it is local variable and local objects
 	 * StringBuilder and mutable Object will not create new objects if changed so it is act like instance var in recursion
 	*/
-	public String dfs6(TreeNode2 root, String string) {
+	public StringBuilder dfs6(TreeNode root, StringBuilder string) {
 		if (root == null)
 			return string;
-		string = string + root.val;
-		string = dfs6(root.left , string);
+		string.append(" " +root.val);
+		string = dfs6(root.left, string);
 		string = dfs6(root.right, string);
 		return string;
 	}
@@ -135,17 +152,17 @@ public class leetcode70binaryTreePreorderTraversal {
 	 * @param args
 	*/
 	public static void main(String[] args) {
-		leetcode70binaryTreePreorderTraversal binaryTreeTraversl = new leetcode70binaryTreePreorderTraversal();
+		Leetcode70binaryTreePreorderTraversal binaryTreeTraversl = new Leetcode70binaryTreePreorderTraversal();
 
-		TreeNode2 node7 = new TreeNode2(7);
-		TreeNode2 node6 = new TreeNode2(6);
-		TreeNode2 node3 = new TreeNode2(3);
-		TreeNode2 node4 = new TreeNode2(4);
-		TreeNode2 node5 = new TreeNode2(5, node6, node7);
-		TreeNode2 node2 = new TreeNode2(2, node3, node4);
-		TreeNode2 node1 = new TreeNode2(1, node2, node5);
+		TreeNode node7 = new TreeNode(7);
+		TreeNode node6 = new TreeNode(6);
+		TreeNode node3 = new TreeNode(3);
+		TreeNode node4 = new TreeNode(4);
+		TreeNode node5 = new TreeNode(5, node6, node7);
+		TreeNode node2 = new TreeNode(2, node3, node4);
+		TreeNode node1 = new TreeNode(1, node2, node5);
 
-		//		binaryTreeTraversl.dfs(treeNode1);
+		//				binaryTreeTraversl.dfs(node1);
 
 		//		binaryTreeTraversl.dfs2(treeNode1);
 		//		System.out.println("list =" + binaryTreeTraversl.list);
@@ -156,31 +173,8 @@ public class leetcode70binaryTreePreorderTraversal {
 		//		System.out.println("list4 = " + binaryTreeTraversl.list4);
 
 		//	System.out.println(binaryTreeTraversl.dfs5(node1, new ArrayList<Integer>()));
-		System.out.println(binaryTreeTraversl.dfs6(node1, " hi "));
+		System.out.println(binaryTreeTraversl.dfs6(node1, new StringBuilder(" hi ")));
 
 	}
 }
 
-/**
- * 
- * 
- */
-
-class TreeNode2 {
-	int val;
-	TreeNode2 left;
-	TreeNode2 right;
-
-	TreeNode2() {
-	}
-
-	TreeNode2(int val) {
-		this.val = val;
-	}
-
-	TreeNode2(int val, TreeNode2 left, TreeNode2 right) {
-		this.val = val;
-		this.left = left;
-		this.right = right;
-	}
-}
