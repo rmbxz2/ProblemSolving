@@ -69,10 +69,7 @@ public class Leetcode71binaryTreeInOrderTraversal {
 		List<Integer> list = new ArrayList<Integer>();
 		Stack<TreeNode> stack = new Stack<>();
 		TreeNode current = root;
-
-		if (root == null)
-			return list;
-
+	
 		while (current != null || !stack.isEmpty()) {
 			if (current != null) {
 				stack.push(current);
