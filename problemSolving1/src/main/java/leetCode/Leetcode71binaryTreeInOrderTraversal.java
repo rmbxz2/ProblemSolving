@@ -75,9 +75,9 @@ public class Leetcode71binaryTreeInOrderTraversal {
 				stack.push(current);
 				current = current.left;
 			} else {
-				TreeNode temp = stack.pop();
-				list.add(temp.val);
-				current = temp.right;
+				current  = stack.pop();
+				list.add(current.val);
+				current = current.right;
 			}
 		}
 		return list;

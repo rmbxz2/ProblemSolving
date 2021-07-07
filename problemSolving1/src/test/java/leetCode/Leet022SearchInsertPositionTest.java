@@ -316,6 +316,7 @@ public class Leet022SearchInsertPositionTest {
 		pos = searchInsertPosition.searchInsert4(nums, 2);
 		assertEquals(1, pos);
 	}
+
 }
 
 // B2

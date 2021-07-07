@@ -98,8 +98,6 @@ public class Leetcode70binaryTreePreorderTraversal {
 	private List<Integer> list4 = new ArrayList<>();
 
 	public List<Integer> dfs4(TreeNode root) {
-		if (root == null)
-			return list4;
 
 		Stack<TreeNode> stack = new Stack<>();
 		stack.push(root);
