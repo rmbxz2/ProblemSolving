@@ -1,4 +1,4 @@
-package leetCode; 
+package leetCode;
 
 /**
 * Describe class here.
@@ -29,11 +29,19 @@ public class TreeNode {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
-	
-	@Override
-	public String toString() {
-		return  " "+ val ;
-	}
-    
+	//	
+	// @Override
+	// public String toString() {
+	// 	return " " + val;
+	// }
 
+	/**
+	* 
+	* 
+	*/
+	@Override
+	public int hashCode() {
+		return Integer.parseInt("" + (val), 16); // return class@HashCodeByDecimal
+		//		return val * 10; // hash code by hex  class@HashcodeByHex
+	}
 }

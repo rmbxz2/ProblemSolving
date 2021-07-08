@@ -1,7 +1,5 @@
 package leetCode;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /**
@@ -18,6 +16,8 @@ public class leetcode73ValidateBST {
 	*
 	*
 	*/
+	TreeNode last = null;
+
 	public void dfs(TreeNode root) {
 		if (root == null) {
 			return;
@@ -35,25 +35,20 @@ public class leetcode73ValidateBST {
 
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode current = root;
-		List<Integer> list= new ArrayList<>();
 		TreeNode last = null;
-
-		while (current != null || !stack.isEmpty()) {
+		while (!stack.isEmpty() || current != null) {
 			if (current != null) {
 				stack.push(current);
 				current = current.left;
 			} else {
 				current = stack.pop();
-				
-				//list.add(current.val);
-				if(last !=null  && last.val >= current.val)
+				if (last != null && last.val > current.val)
 					return false;
-				last = current;
 
+				last = current;
 				current = current.right;
 			}
 		}
-		//         System.out.println("list =" + list);
 		return true;
 	}
 
@@ -71,7 +66,15 @@ public class leetcode73ValidateBST {
 		TreeNode node6 = new TreeNode(6, node5, node7);
 		TreeNode node4 = new TreeNode(4, node2, node6);
 		leetcode73ValidateBST bst = new leetcode73ValidateBST();
+
 		bst.dfs(node4);
 		System.out.println(bst.isBST(node4));
+
+		// demorgan's theorem
+		System.out.println(!(false  || true));
+		System.out.println( (true   &&  false));
+
+		// print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
+	        System.out.println("\n node4 = " + node4); 		// print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
 	}
 }
