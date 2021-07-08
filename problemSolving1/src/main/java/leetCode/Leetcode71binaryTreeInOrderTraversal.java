@@ -69,13 +69,13 @@ public class Leetcode71binaryTreeInOrderTraversal {
 		List<Integer> list = new ArrayList<Integer>();
 		Stack<TreeNode> stack = new Stack<>();
 		TreeNode current = root;
-	
-		while (current != null || !stack.isEmpty()) {
+
+		while (!(stack.isEmpty() && current == null)) {
 			if (current != null) {
 				stack.push(current);
 				current = current.left;
 			} else {
-				current  = stack.pop();
+				current = stack.pop();
 				list.add(current.val);
 				current = current.right;
 			}
@@ -98,7 +98,7 @@ public class Leetcode71binaryTreeInOrderTraversal {
 
 		Leetcode71binaryTreeInOrderTraversal inOrder = new Leetcode71binaryTreeInOrderTraversal();
 		//		inOrder.dfs1(node4);
-				System.out.println(inOrder.dfs2(node4));
+		System.out.println(inOrder.dfs2(node4));
 		//		System.out.println(inOrder.dfs2(null));
 		//		System.out.println(inOrder.dfsByRecursion(node4));
 		//	        System.out.println(inOrder.dfs4(node4));

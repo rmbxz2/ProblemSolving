@@ -36,7 +36,7 @@ public class leetcode73ValidateBST {
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode current = root;
 		TreeNode last = null;
-		while (!stack.isEmpty() || current != null) {
+		while (! (stack.isEmpty() && current == null)) {
 			if (current != null) {
 				stack.push(current);
 				current = current.left;
@@ -71,10 +71,14 @@ public class leetcode73ValidateBST {
 		System.out.println(bst.isBST(node4));
 
 		// demorgan's theorem
-		System.out.println(!(false  || true));
-		System.out.println( (true   &&  false));
+		System.out.println("===== demorgan's theorem =====");
+		System.out.println(!(false || true));
+		System.out.println((true && false));
+
 
 		// print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
-	        System.out.println("\n node4 = " + node4); 		// print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
+		System.out.println("===== print hashcode class@HashCodeByHex =====");
+		System.out.println(" node4 = " + node4); // print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
+
 	}
 }
