@@ -84,7 +84,7 @@ public class Leetcode74FalttenBTtoLinkedList {
 	* @param root
 	* @return
 	*/
-	public void BTtoLinkdeListByInOrder(TreeNode root) {
+	public void BTtoLinkdeListByPreOrder(TreeNode root) {
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode ptr1 = root;
 		TreeNode ptr2 = root;
@@ -116,7 +116,7 @@ public class Leetcode74FalttenBTtoLinkedList {
 	* @param root
 	* @return
 	*/
-	public void BTtoLinkdeListByInOrderByOnePtr(TreeNode root) {
+	public void BTtoLinkdeListByPreOrderByOnePtr(TreeNode root) {
 		Stack<TreeNode> stack = new Stack<TreeNode>();
 		TreeNode ptr1 = root;
 		stack.push(root);
@@ -145,7 +145,7 @@ public class Leetcode74FalttenBTtoLinkedList {
 	* @param root
 	* @return
 	*/
-	public void BTtoLinkdeListByInOrderByRecursion(TreeNode root) {
+	public void BTtoLinkdeListByPreOrderByRecursion(TreeNode root) {
 		dfs(root);
 	}
 
@@ -156,15 +156,15 @@ public class Leetcode74FalttenBTtoLinkedList {
 
 	TreeNode prevptr1 = null;
 
-	public void  dfs(TreeNode root) {
+	public void dfs(TreeNode root) {
 		if (root == null)
-			return ;
+			return;
 
-		dfs(root.right);  // negate post-order, first element printed will be 7 6 54321 
+		dfs(root.right); // negate post-order, first element printed will be 7 6 54321 
 		dfs(root.left);
 		root.right = prevptr1;
 		root.left = null;
-	        prevptr1 = root;
+		prevptr1 = root;
 
 	}
 
@@ -184,27 +184,27 @@ public class Leetcode74FalttenBTtoLinkedList {
 		Leetcode74FalttenBTtoLinkedList flatten = new Leetcode74FalttenBTtoLinkedList();
 
 		// System.out.println("\n ======== origin tree reversed pre-order =================");
-		// flatten.dfs(node1);
+		// flatten.dfsPrint(node1);
 		// System.out.println("\n ======== flatten tree reversed pre-order =================");
 		// flatten.BTtoLinkdeListByReversedPostOrder(node1);
-		// flatten.dfs(node1);
+		// flatten.dfsPrint(node1);
 
-		//	System.out.println("\n ======== origin tree pre-order by two pointers=================");
-		//	flatten.dfsPrint(node1);
-		//	System.out.println("\n ======== flatten tree pre-order by two pointers=================");
-		//	flatten.BTtoLinkdeListByInOrder(node1);
-		//	flatten.dfsPrint(node1);
+		// System.out.println("\n ======== origin tree pre-order by two pointers=================");
+		// flatten.dfsPrint(node1);
+		// System.out.println("\n ======== flatten tree pre-order by two pointers=================");
+		// flatten.BTtoLinkdeListByPreOrder(node1);
+		// flatten.dfsPrint(node1);
 
-		//	System.out.println("\n ======== origin tree pre-order by one pointer=================");
-		//	flatten.dfsPrint(node1);
-		//	System.out.println("\n ======== flatten tree pre-order by one pointer=================");
-		//	flatten.BTtoLinkdeListByInOrderByOnePtr(node1);
-		//	flatten.dfsPrint(node1);
+		// System.out.println("\n ======== origin tree pre-order by one pointer=================");
+		// flatten.dfsPrint(node1);
+		// System.out.println("\n ======== flatten tree pre-order by one pointer=================");
+		// flatten.BTtoLinkdeListByPreOrderByOnePtr(node1);
+		// flatten.dfsPrint(node1);
 
 		System.out.println("\n ======== origin tree pre-order by recursion=================");
 		flatten.dfsPrint(node1);
 		System.out.println("\n ======== flatten tree pre-order by recursion =================");
-		flatten.BTtoLinkdeListByInOrderByRecursion(node1);
+		flatten.BTtoLinkdeListByPreOrderByRecursion(node1);
 		flatten.dfsPrint(node1);
 
 	}
