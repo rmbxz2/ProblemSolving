@@ -29,24 +29,15 @@ public class Leetcode70binaryTreePreorderTraversal {
 	 * @return
 	*/
 
-
-
-
-
-
-
-
 	public void dfs(TreeNode root) {
-            
+
 		if (root == null)
 			return;
-		System.out.println("second  "+root.val);
+		System.out.println("second  " + root.val);
 		dfs(root.left);
 		dfs(root.right);
 
-
 	}
-
 
 	/**
 	 * dfs by recursion
@@ -65,8 +56,9 @@ public class Leetcode70binaryTreePreorderTraversal {
 	 * @return
 	*/
 	public List<Integer> dfs3(TreeNode root) {
-		List<Integer> list3 = new ArrayList<>();
+		TreeNode tmp = root;
 
+		List<Integer> list3 = new ArrayList<>();
 		if (root == null)
 			return list3;
 
@@ -74,23 +66,18 @@ public class Leetcode70binaryTreePreorderTraversal {
 		stack.add(root);
 
 		while (!stack.isEmpty()) {
-			TreeNode node = stack.pop();
-			list3.add(node.val);
+			tmp = stack.pop();
+			list3.add(tmp.val);
 
-			if (node.right != null)
-				stack.push(node.right);
-			if (node.left != null)
-				stack.push(node.left);
+			if (tmp.right != null)
+				stack.push(tmp.right);
+			if (tmp.left != null)
+				stack.push(tmp.left);
 			//System.out.println(node.val);
 		}
 		return list3;
 	}
 
-
-
-
-
-    
 	/**
 	*
 	*
@@ -98,26 +85,27 @@ public class Leetcode70binaryTreePreorderTraversal {
 	private List<Integer> list4 = new ArrayList<>();
 
 	public List<Integer> dfs4(TreeNode root) {
+		TreeNode ptr = root;
 
 		Stack<TreeNode> stack = new Stack<>();
 		stack.push(root);
 
 		while (!stack.isEmpty()) {
-			TreeNode node = stack.pop();
-			list4.add(node.val);
+			ptr = stack.pop();
+			list4.add(ptr.val);
 
-			if (node.right != null)
-				stack.push(node.right);
+			if (ptr.right != null)
+				stack.push(ptr.right);
 
-			if (node.left != null)
-				stack.push(node.left);
+			if (ptr.left != null)
+				stack.push(ptr.left);
 		}
 		return list4;
 	}
 
 	/**
 	 * dfs 5
-	 * listM in stack like transporter == talea nazel  == it is almost like an instance variable
+	 * listM in stack like transporter == up down  == it is almost like an instance variable
 	 * String,Integer,Double(all immutable object) will create new objects if changed, so it is local variable and local objects
 	 * StringBuilder and mutable Object will not create new objects if changed so it is act like instance var in recursion
 	 *
@@ -139,7 +127,7 @@ public class Leetcode70binaryTreePreorderTraversal {
 	public StringBuilder dfs6(TreeNode root, StringBuilder string) {
 		if (root == null)
 			return string;
-		string.append(" " +root.val);
+		string.append(" " + root.val);
 		string = dfs6(root.left, string);
 		string = dfs6(root.right, string);
 		return string;
@@ -165,14 +153,13 @@ public class Leetcode70binaryTreePreorderTraversal {
 		//		binaryTreeTraversl.dfs2(treeNode1);
 		//		System.out.println("list =" + binaryTreeTraversl.list);
 
-		//System.out.println(binaryTreeTraversl.dfs3(node1));
+		 System.out.println(binaryTreeTraversl.dfs3(node1));
 
 		//		binaryTreeTraversl.dfs4(node1);
 		//		System.out.println("list4 = " + binaryTreeTraversl.list4);
 
 		//	System.out.println(binaryTreeTraversl.dfs5(node1, new ArrayList<Integer>()));
-		System.out.println(binaryTreeTraversl.dfs6(node1, new StringBuilder(" hi ")));
+		//		System.out.println(binaryTreeTraversl.dfs6(node1, new StringBuilder(" hi ")));
 
 	}
 }
-

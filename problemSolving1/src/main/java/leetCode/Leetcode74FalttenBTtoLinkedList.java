@@ -27,6 +27,8 @@ public class Leetcode74FalttenBTtoLinkedList {
 	}
 
 	/**
+	*   solved by reversed pre-order 7654321 which is equals negate-post
+	*  
 	*      1
 	*    2     5
 	*   3 4   6 7
@@ -73,14 +75,34 @@ public class Leetcode74FalttenBTtoLinkedList {
 	}
 
 	/**
+	*   solved by  pre-order 1234567 which is equals negate-post	
+	*      1
+	*    2     5
+	*   3 4   6 7
 	* 
 	* @param root
 	* @return
 	*/
-	public TreeNode BTtoLinkdeListByInOrder(TreeNode root) {
-		TreeNode ptr = root;
+	public void BTtoLinkdeListByInOrder(TreeNode root) {
+		Stack<TreeNode> stack = new Stack<TreeNode>();
+		TreeNode ptr1 = root;
+		TreeNode ptr2 = root;
+		stack.push(root);
+		while (!stack.isEmpty()) {
+			ptr1 = stack.pop();
+			if (ptr1.right != null)
+				stack.push(ptr1.right);
 
-		return root;
+			if (ptr1.left != null)
+				stack.push(ptr1.left);
+
+			//set right pointers, null left
+			ptr2.right = ptr1;
+			ptr2.left = null;
+
+			// ptr2 refers to last ptr1 
+			ptr2 = ptr1;
+		}
 	}
 
 	/**
@@ -97,10 +119,18 @@ public class Leetcode74FalttenBTtoLinkedList {
 		TreeNode node1 = new TreeNode(1, node2, node5);
 
 		Leetcode74FalttenBTtoLinkedList flatten = new Leetcode74FalttenBTtoLinkedList();
+
+		// System.out.println("\n ======== origin tree reversed pre-order =================");
+		// flatten.dfs(node1);
+		// System.out.println("\n ======== flatten tree reversed pre-order =================");
+		// flatten.BTtoLinkdeListByReversedPostOrder(node1);
+		// flatten.dfs(node1);
+
 		System.out.println("\n ======== origin tree pre-order=================");
 		flatten.dfs(node1);
 		System.out.println("\n ======== flatten tree pre-order=================");
-		flatten.BTtoLinkdeListByReversedPostOrder(node1);
+		flatten.BTtoLinkdeListByInOrder(node1);
 		flatten.dfs(node1);
+
 	}
 }
