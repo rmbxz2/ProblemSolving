@@ -85,7 +85,7 @@ public class leetcode73ValidateBST {
 		TreeNode node5 = new TreeNode(5);
 		TreeNode node1 = new TreeNode(1);
 		TreeNode node2 = new TreeNode(2, node1, node3);
-		TreeNode node6 = new TreeNode(6, node7, node5);
+		TreeNode node6 = new TreeNode(6, node5, node7);
 		TreeNode node4 = new TreeNode(4, node2, node6);
 		leetcode73ValidateBST bst = new leetcode73ValidateBST();
 
