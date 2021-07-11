@@ -56,23 +56,28 @@ public class Leetcode73ValidateBST {
 	 *  in order BST
 	 * @param root
 	*/
-	//private boolean isBST2 = true;
-	private TreeNode prev = new TreeNode(Integer.MIN_VALUE);;
+	private boolean isBST2 = true;
 
 	public boolean isBSTbyRecursion(TreeNode root) {
-		return dfsInorder(root, true);
-	}
-
-	public boolean dfsInorder(TreeNode root, boolean isBST2) {
-		if (root == null)
-			return isBST2;
-		isBST2 = dfsInorder(root.left,isBST2);
-		if (prev.val >= root.val)
-			return false;
-		prev = root;
-		isBST2 = dfsInorder(root.right,isBST2);
+		dfsInorder(root, Long.MIN_VALUE);
 		return isBST2;
 	}
+
+	public long dfsInorder(TreeNode root, long prev) {
+		if (root == null)
+			return prev;
+		prev = dfsInorder(root.left, prev);
+		// in-order
+
+		if (prev >= root.val)
+			isBST2 = false;
+		prev = root.val;
+		// in-order
+
+		prev = dfsInorder(root.right, prev);
+		return prev;
+	}
+
 
 	/**
 	 * 
@@ -89,8 +94,8 @@ public class Leetcode73ValidateBST {
 		TreeNode node4 = new TreeNode(4, node2, node6);
 		Leetcode73ValidateBST bst = new Leetcode73ValidateBST();
 
-		bst.dfs(node4);
-		System.out.println(bst.isBST(node4));
+		// bst.dfs(node4);
+		// System.out.println(bst.isBST(node4));
 
 		// demorgan's theorem
 		//		System.out.println("===== demorgan's theorem =====");
@@ -102,6 +107,9 @@ public class Leetcode73ValidateBST {
 		//		System.out.println(" node4 = " + node4); // print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
 
 		System.out.println("===== print  isBST by Recursion=====");
+		bst.dfs(node4);
 		System.out.println("result = " + bst.isBSTbyRecursion(node4));
+
+
 	}
 }

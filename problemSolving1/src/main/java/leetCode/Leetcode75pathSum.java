@@ -1,5 +1,8 @@
 package leetCode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -10,7 +13,7 @@ import java.util.Stack;
 *
 *
 */
-public class Leetcode74pathSum {
+public class Leetcode75pathSum {
 
 	/**
 	* leetcode 75 in my book
@@ -74,7 +77,7 @@ public class Leetcode74pathSum {
 
 		if (root.left != null) // not leaf, so add  the parent value to children
 			root.left.val += root.val;
-		
+
 		if (root.left == null && root.right == null && root.val == sum) // check leaf's value after summation
 			return true;
 		// end of pre-order
@@ -115,6 +118,43 @@ public class Leetcode74pathSum {
 	}
 
 	/**
+	*
+	*
+	*/
+	public boolean pathSumByBFS(TreeNode root, int sum) {
+		Queue<TreeNode> queue = new ArrayDeque<>();
+		queue.offer(root);
+		while (!queue.isEmpty()) {
+			TreeNode node = queue.poll();
+
+			if (node.left != null) {
+				queue.offer(node.left);
+				node.left.val += node.val;
+			}
+
+			if (node.right != null) {
+				queue.offer(node.right);
+				node.right.val += node.val;
+			}
+
+			if (node.right == null && node.left == null && node.val == sum) {
+				return true;
+			}
+
+		}
+		return false;
+	}
+
+	/**
+	*
+	*
+	*/
+	public boolean pathSumByStackAndFullPath(TreeNode root, int sum) {
+
+		return false;
+	}
+
+	/**
 	 * 
 	 * @param args
 	*/
@@ -126,7 +166,7 @@ public class Leetcode74pathSum {
 		TreeNode node5 = new TreeNode(5, node6, node7);
 		TreeNode node2 = new TreeNode(2, node3, node4);
 		TreeNode node1 = new TreeNode(1, node2, node5);
-		Leetcode74pathSum pathSum = new Leetcode74pathSum();
+		Leetcode75pathSum pathSum = new Leetcode75pathSum();
 		System.out.println("======== print as pre-order ============= ");
 		pathSum.dfsPrint(node1);
 
@@ -142,14 +182,15 @@ public class Leetcode74pathSum {
 		// System.out.println("======== print as pre-order  ============= ");
 		// pathSum.dfsPrint(node1);
 
+		// System.out.println("======== path sum by recursion ============= ");
+		// System.out.println("has path sum = " + sum + " " + pathSum.hasPathSumRecursion2(node1, sum));
+		// System.out.println("======== print as pre-order  ============= ");
+		// pathSum.dfsPrint(node1);
 
-		System.out.println("======== path sum by recursion ============= ");
-		System.out.println("has path sum = " + sum + " " + pathSum.hasPathSumRecursion2(node1, sum));
-		System.out.println("======== print as pre-order  ============= ");
-		pathSum.dfsPrint(node1);
-
-
-
+		// System.out.println("======== path sum by BFS ============= ");
+		// System.out.println("has path sum = " + sum + " " + pathSum.pathSumByBFS(node1, sum));
+		// System.out.println("======== print as pre-order  ============= ");
+		// pathSum.dfsPrint(node1);
 
 	}
 }

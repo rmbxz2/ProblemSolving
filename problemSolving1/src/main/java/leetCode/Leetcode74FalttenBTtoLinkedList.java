@@ -18,11 +18,11 @@ public class Leetcode74FalttenBTtoLinkedList {
 	*/
 	public void dfsPrint(TreeNode root) {
 		if (root == null) {
-			System.out.println(" null ");
+			//			System.out.println(" null ");
 			return;
 		}
-		System.out.println(root);
 		dfsPrint(root.left);
+		System.out.println(root);
 		dfsPrint(root.right);
 	}
 
@@ -151,7 +151,7 @@ public class Leetcode74FalttenBTtoLinkedList {
 
 	/**
 	*  dfs
-	*
+	*  negate post-order, first element printed will be 7 6 54321 
 	*/
 
 	TreeNode prevptr1 = null;
@@ -168,6 +168,9 @@ public class Leetcode74FalttenBTtoLinkedList {
 
 	}
 
+
+
+
 	/**
 	 * 
 	 * @param args
@@ -175,11 +178,11 @@ public class Leetcode74FalttenBTtoLinkedList {
 	public static void main(String[] args) {
 		TreeNode node7 = new TreeNode(7);
 		TreeNode node3 = new TreeNode(3);
-		TreeNode node6 = new TreeNode(6);
-		TreeNode node4 = new TreeNode(4);
-		TreeNode node5 = new TreeNode(5, node6, node7);
-		TreeNode node2 = new TreeNode(2, node3, node4);
-		TreeNode node1 = new TreeNode(1, node2, node5);
+		TreeNode node5 = new TreeNode(5);
+		TreeNode node1 = new TreeNode(1);
+		TreeNode node6 = new TreeNode(6, node5, node7);
+		TreeNode node2 = new TreeNode(2, node1, node3);
+		TreeNode node4 = new TreeNode(4, node2, node6);
 
 		Leetcode74FalttenBTtoLinkedList flatten = new Leetcode74FalttenBTtoLinkedList();
 
@@ -201,11 +204,11 @@ public class Leetcode74FalttenBTtoLinkedList {
 		// flatten.BTtoLinkdeListByPreOrderByOnePtr(node1);
 		// flatten.dfsPrint(node1);
 
-		System.out.println("\n ======== origin tree pre-order by recursion=================");
-		flatten.dfsPrint(node1);
-		System.out.println("\n ======== flatten tree pre-order by recursion =================");
-		flatten.BTtoLinkdeListByPreOrderByRecursion(node1);
-		flatten.dfsPrint(node1);
+		// System.out.println("\n ======== origin tree pre-order by recursion=================");
+		// flatten.dfsPrint(node1);
+		// System.out.println("\n ======== flatten tree pre-order by recursion =================");
+		// flatten.BTtoLinkdeListByPreOrderByRecursion(node1);
+		// flatten.dfsPrint(node1);
 
 	}
 }
