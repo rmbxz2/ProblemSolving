@@ -79,6 +79,58 @@ public class Leetcode73ValidateBST {
 	}
 
 	/**
+	 *  in order BST
+	 * @param root
+	*/
+
+	private long prev33 = Long.MIN_VALUE;
+
+	public boolean isBSTbyRecursion33(TreeNode root) {
+		return dfsInorder33(root, true);
+	}
+
+	public boolean dfsInorder33(TreeNode root,boolean  isBST33) {
+		if (root == null)
+			return isBST33;
+		isBST33 = dfsInorder33(root.left, isBST33);
+		// in-order
+
+		if (prev33 >= root.val)
+			isBST33 = false;
+		prev33 = root.val;
+		// in-order
+
+		isBST33 = dfsInorder33(root.right, isBST33);
+		return isBST33;
+	}
+
+	/**
+	 *  in order BST
+	 * @param root
+	*/
+	private boolean isBST22 = true;
+	private long prev22 = Long.MIN_VALUE;
+
+	public boolean isBSTbyRecursion22(TreeNode root) {
+		dfsInorder22(root);
+		return isBST22;
+	}
+
+	public void dfsInorder22(TreeNode root) {
+		if (root == null)
+			return;
+		dfsInorder22(root.left);
+		// in-order
+
+		if (prev22 >= root.val)
+			isBST22 = false;
+		prev22 = root.val;
+		// in-order
+
+		dfsInorder22(root.right);
+	}
+
+	/**
 	 * 
 	 * @param args
 	*/
@@ -97,17 +149,24 @@ public class Leetcode73ValidateBST {
 		// System.out.println(bst.isBST(node4));
 
 		// demorgan's theorem
-		//		System.out.println("===== demorgan's theorem =====");
+		//		System.out.println("=============== demorgan's theorem ===============");
 		//		System.out.println(!(false || true));
 		//		System.out.println((true && false));
 
 		// print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
-		//		System.out.println("===== print hashcode class@HashCodeByHex =====");
+		//		System.out.println("=============== print hashcode class@HashCodeByHex ===============");
 		//		System.out.println(" node4 = " + node4); // print hashcode as class@hashCodeByHex convert it to class@HashCodeByDecimal by Integer.parse(int,16)
-
-		System.out.println("===== print  isBST by Recursion=====");
+		
+		System.out.println("\n=============== print  isBST by Recursion, isBST is instance variable  ===============\n");
 		bst.dfs(node4);
 		System.out.println("result = " + bst.isBSTbyRecursion(node4));
 
+		System.out.println("\n=============== print  isBST by Recursion, isBST and long prev are instance variables ===============\n");
+		bst.dfs(node4);
+		System.out.println("result = " + bst.isBSTbyRecursion22(node4));
+
+		System.out.println("\n=============== print  isBST by Recursion long prev is instance variable ===============\n");
+		bst.dfs(node4);
+		System.out.println("result = " + bst.isBSTbyRecursion33(node4));
 	}
 }

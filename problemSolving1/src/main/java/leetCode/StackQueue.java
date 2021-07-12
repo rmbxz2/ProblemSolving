@@ -40,7 +40,7 @@ public class StackQueue {
 		// ArrayDeque is faster than queue [linkedList],
 		// ArrayDeque is not not  thread safe
 		//      ===================== 
-                //     first             last
+                //     first(push,pop)      last
 		//      =====================
 		//   
 		//   offerFirst == push

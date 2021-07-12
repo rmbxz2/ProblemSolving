@@ -68,7 +68,7 @@ public class Leetcode75pathSum {
 	* @param root
 	* @param sum
 	*/
-	private boolean dfsSum(TreeNode root, int sum, boolean isFound) {
+	public boolean dfsSum(TreeNode root, int sum, boolean isFound) {
 		if (root == null)
 			return isFound;
 		// start of pre-order
@@ -103,16 +103,17 @@ public class Leetcode75pathSum {
 	* @param root
 	* @param sum
 	*/
-	private boolean dfsSum2(TreeNode root, int sum, boolean isFound) {
+	public  boolean dfsSum2(TreeNode root, int sum, boolean isFound) {
 		if (root == null)
 			return isFound;
 		// start of pre-order
-		if (root.left == null && root.right == null && (sum - root.val == 0))
+		sum -= root.val;
+		if (root.left == null && root.right == null && (sum == 0))
 			return true;
 		// end of pre-order
 
-		isFound = dfsSum2(root.left, sum - root.val, isFound);
-		isFound = dfsSum2(root.right, sum - root.val, isFound);
+		isFound = dfsSum2(root.left, sum , isFound);
+		isFound = dfsSum2(root.right, sum, isFound);
 
 		return isFound;
 	}
@@ -122,22 +123,22 @@ public class Leetcode75pathSum {
 	*
 	*/
 	public boolean pathSumByBFS(TreeNode root, int sum) {
-		Queue<TreeNode> queue = new ArrayDeque<>();
+	    Queue<TreeNode> queue = new ArrayDeque<>(); 
 		queue.offer(root);
 		while (!queue.isEmpty()) {
 			TreeNode node = queue.poll();
 
-			if (node.left != null) {
-				queue.offer(node.left);
+			if (node.left != null) { // 
 				node.left.val += node.val;
+				queue.offer(node.left);
 			}
 
 			if (node.right != null) {
-				queue.offer(node.right);
 				node.right.val += node.val;
+				queue.offer(node.right);
 			}
 
-			if (node.right == null && node.left == null && node.val == sum) {
+			if (node.right == null && node.left == null && node.val == sum) { // leaf
 				return true;
 			}
 
@@ -170,7 +171,7 @@ public class Leetcode75pathSum {
 		System.out.println("======== print as pre-order ============= ");
 		pathSum.dfsPrint(node1);
 
-		int sum = 13;
+		int sum = 10;
 
 		// System.out.println("======== path sum ============= ");
 		// System.out.println("has path sum = " + sum + " " + pathSum.hasPathSum(node1, sum));
@@ -182,10 +183,10 @@ public class Leetcode75pathSum {
 		// System.out.println("======== print as pre-order  ============= ");
 		// pathSum.dfsPrint(node1);
 
-		// System.out.println("======== path sum by recursion ============= ");
-		// System.out.println("has path sum = " + sum + " " + pathSum.hasPathSumRecursion2(node1, sum));
-		// System.out.println("======== print as pre-order  ============= ");
-		// pathSum.dfsPrint(node1);
+		System.out.println("======== path sum by recursion ============= ");
+		System.out.println("has path sum = " + sum + " " + pathSum.hasPathSumRecursion2(node1, sum));
+		System.out.println("======== print as pre-order  ============= ");
+		pathSum.dfsPrint(node1);
 
 		// System.out.println("======== path sum by BFS ============= ");
 		// System.out.println("has path sum = " + sum + " " + pathSum.pathSumByBFS(node1, sum));
