@@ -78,7 +78,6 @@ public class Leetcode73ValidateBST {
 		return prev;
 	}
 
-
 	/**
 	 * 
 	 * @param args
@@ -109,7 +108,6 @@ public class Leetcode73ValidateBST {
 		System.out.println("===== print  isBST by Recursion=====");
 		bst.dfs(node4);
 		System.out.println("result = " + bst.isBSTbyRecursion(node4));
-
 
 	}
 }
