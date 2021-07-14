@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>problemSolvingx</groupId>
 	<artifactId>problemSolving1</artifactId>
-	<packaging>jar</packaging>
+ 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>problemSolving1</name>
 	<url>http://maven.apache.org</url>
