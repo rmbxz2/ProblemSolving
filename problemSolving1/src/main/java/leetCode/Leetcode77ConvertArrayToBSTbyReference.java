@@ -26,10 +26,46 @@ public class Leetcode77ConvertArrayToBSTbyReference {
 	*
 	*
 	*/
+	public TreeNode buildBSTByRecursion(int[] array) {
+		if (array.length == 0)
+			return null;
+
+		int low = 0;
+		int high = array.length - 1;
+		return buildBSTByRecursionDFSpreOrder(array, low, high);
+
+	}
+
+	/**
+	* 
+	* @param root
+	*/
+	public TreeNode buildBSTByRecursionDFSpreOrder(int[] array, int low, int high) {
+		if (low > high) {
+			//System.out.println(" null ");
+			return null;
+		}
+		int mid = (low + high) >>> 1;
+		TreeNode root = new TreeNode(array[mid], null, null);
+
+		TreeNode left = buildBSTByRecursionDFSpreOrder(array, low, mid - 1);
+		TreeNode right = buildBSTByRecursionDFSpreOrder(array, mid + 1, high);
+
+		// connect vertices by post-order
+		root.left = left;
+		root.right = right;
+
+		return root;
+	}
+
+	/**
+	*
+	*
+	*/
 	private MyTreeNode myTreeRoot = null;
 	private TreeNode treeRoot = null;
 
-	public TreeNode buildBST(int[] array) {
+	public TreeNode buildBSTbyStack(int[] array) {
 		int low = 0;
 		int high = array.length - 1;
 		int mid = (low + high) >>> 1;
@@ -60,7 +96,7 @@ public class Leetcode77ConvertArrayToBSTbyReference {
 					stack.push(nodeLeft);
 				}
 			}
-		System.gc(); //  call GC to clean t1 , but before calling it cat finalizer 
+			System.gc(); //  call GC to clean t1 , but before calling it cat finalizer 
 		}
 		return treeRoot;
 	}
@@ -70,16 +106,20 @@ public class Leetcode77ConvertArrayToBSTbyReference {
 	 * @param args
 	*/
 	public static void main(String[] args) {
-		int[] array = { 0, 11, 22, 33, 44, 55, 66 };
+		int[] array = { 0, 1, 2, 3, 4, 5, 6 };
 		Leetcode77ConvertArrayToBSTbyReference converter = new Leetcode77ConvertArrayToBSTbyReference();
-		TreeNode treeRoot = converter.buildBST(array);
-		converter.dfsPrint(treeRoot);
-		converter.myTreeRoot = null; // activate it to make root eligable for GC, so can view the fianalize message about 33
-		System.gc(); //  call GC to clean t1 , but before calling it cat finalizer 
 
-		// test calling finalizer 
-		MyTreeNode t1 = new MyTreeNode(999999, null, null, 0, 0, 0);
-		t1 = null;
-		//System.gc(); //  call GC to clean t1 , but before calling it call finalizer 
+		// TreeNode treeRoot = converter.buildBSTbyStack(array);
+		// converter.dfsPrint(treeRoot);
+		// converter.myTreeRoot = null; // activate it to make root eligable for GC, so can view the fianalize message about 33
+		// System.gc(); //  call GC to clean t1 , but before calling it cat finalizer 
+
+		// // test calling finalizer 
+		// MyTreeNode t1 = new MyTreeNode(999999, null, null, 0, 0, 0);
+		// t1 = null;
+		// System.gc(); //  call GC to clean t1 , but before calling it call finalizer 
+
+		converter.dfsPrint(converter.buildBSTByRecursion(array));
+
 	}
 }
