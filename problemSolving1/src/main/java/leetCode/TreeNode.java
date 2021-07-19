@@ -26,10 +26,6 @@ public class TreeNode {
 		this.right = right;
 	}
 
-
-
-
-
 	/* (non-Javadoc)
 	* @see java.lang.Object#equals(java.lang.Object)
 	*/
@@ -76,41 +72,24 @@ public class TreeNode {
 		this.right = right;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		TreeNode other = (TreeNode) obj;
-		if (left == null) {
-			if (other.left != null)
-				return false;
-		} else if (!left.equals(other.left))
-			return false;
-		if (right == null) {
-			if (other.right != null)
-				return false;
-		} else if (!right.equals(other.right))
-			return false;
-		if (val != other.val)
-			return false;
-		return true;
-	}
 
-	@Override
-	public String toString() {
-		return " " + val;
-	}
+	// @Override
+	// public boolean equals(Object obj) {
+	// 	return (((TreeNode) obj).val == this.val);
+	// }
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
+	// @Override
+	// public String toString() {
+	// 	return " " + val;
+	// }
 
-	@Override
-	public int hashCode() {
-		return val;
-	}
+	// /* (non-Javadoc)
+	//  * @see java.lang.Object#hashCode()
+	//  */
+
+	// @Override
+	// public int hashCode() {
+	// 	return val;
+	// }
+
 }

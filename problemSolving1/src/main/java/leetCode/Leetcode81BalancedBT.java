@@ -11,7 +11,7 @@ import java.util.Queue;
 *  https://leetcode.com/problems/binary-tree-level-order-traversal/
 *  leetcode website  110. Balanced Binary Tree
 */
-public class BalancedBT {
+public class Leetcode81BalancedBT {
 
 	/**
 	* 
@@ -106,7 +106,7 @@ public class BalancedBT {
 		TreeNode node2 = new TreeNode(2, node1, node3);
 		TreeNode node6 = new TreeNode(6, node5, node7);
 		TreeNode node4 = new TreeNode(4, node2, node6);
-		BalancedBT bbt = new BalancedBT();
+		Leetcode81BalancedBT bbt = new Leetcode81BalancedBT();
 		System.out.println("====== print tree levels , level by level ====================");
 		bbt.dfsPrint(node4);
 		System.out.println("\n counter = " + bbt.printBTlevels(node4));
@@ -121,7 +121,7 @@ public class BalancedBT {
 		TreeNode xnode22 = new TreeNode(22, null, xnode33);
 		TreeNode xnode2 = new TreeNode(2, xnode3, null);
 		TreeNode xnode1 = new TreeNode(1, xnode2, xnode22);
-		BalancedBT bt = new BalancedBT();
+		Leetcode81BalancedBT bt = new Leetcode81BalancedBT();
 		boolean result = bt.isBalancedBTbyRecursion(node1);
 		System.out.println("result = " + result);
 

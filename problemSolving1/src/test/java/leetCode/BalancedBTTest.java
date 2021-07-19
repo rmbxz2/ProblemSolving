@@ -26,7 +26,7 @@ public class BalancedBTTest {
 		TreeNode node2 = new TreeNode(2, node1, node3);
 		TreeNode node6 = new TreeNode(6, node5, node7);
 		TreeNode node4 = new TreeNode(4, node2, node6);
-		BalancedBT bt = new BalancedBT();
+		Leetcode81BalancedBT bt = new Leetcode81BalancedBT();
 		int counterLevel = bt.printBTlevels(node4);
 		assertEquals(2, counterLevel);
 		//      4      level = 0
@@ -46,7 +46,7 @@ public class BalancedBTTest {
 		TreeNode node1 = new TreeNode(1, new TreeNode(11), null);
 		TreeNode node2 = new TreeNode(2, node1, node3);
 		TreeNode node4 = new TreeNode(4, node2, node6);
-		BalancedBT bt = new BalancedBT();
+		Leetcode81BalancedBT bt = new Leetcode81BalancedBT();
 		int counterLevel = bt.printBTlevels(node4);
 		assertEquals(3, counterLevel);
 		//       4    level = 0
@@ -70,7 +70,7 @@ public class BalancedBTTest {
 		TreeNode node22 = new TreeNode(22, null, node33);
 		TreeNode node2 = new TreeNode(2, node3, null);
 		TreeNode node1 = new TreeNode(1, node2, node22);
-		BalancedBT bt = new BalancedBT();
+		Leetcode81BalancedBT bt = new Leetcode81BalancedBT();
 		int counterLevel = bt.printBTlevels(node1);
 		assertEquals(3, counterLevel);
 		//        1         level 0
@@ -94,7 +94,7 @@ public class BalancedBTTest {
 		TreeNode node22 = new TreeNode(22, null, node33);
 		TreeNode node2 = new TreeNode(2, node3, null);
 		TreeNode node1 = new TreeNode(1, node2, node22);
-		BalancedBT bt = new BalancedBT();
+		Leetcode81BalancedBT bt = new Leetcode81BalancedBT();
 		boolean result = bt.isBalancedBTbyRecursion(node1);
 		assertEquals(false, result);
 	}
