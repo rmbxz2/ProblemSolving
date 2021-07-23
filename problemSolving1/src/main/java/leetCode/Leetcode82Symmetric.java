@@ -25,7 +25,7 @@ public class Leetcode82Symmetric {
 
 		isSymmetricFromLeft(root);
 		isSymmetricFromRight(root);
-		while ((!stackLeft.isEmpty()) && (!stackRight.isEmpty())) {
+		while ((!stackLeft.isEmpty()) && (!stackRight.isEmpty()) && stackLeft.size() == stackRight.size()) {
 			TreeNode left = stackLeft.pop();
 			TreeNode right = stackRight.pop();
 			if (left == null && right != null)
@@ -45,7 +45,7 @@ public class Leetcode82Symmetric {
 	}
 
 	/**
-	*
+ 	*
 	*
 	*/
 	Stack<TreeNode> stackLeft = new Stack<>();

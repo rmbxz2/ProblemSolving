@@ -15,6 +15,7 @@ public class Thread7 {
 	Consumer consumer = new Consumer(dataC,"consumer");
 	producer.start();
 	consumer.start();
-    }
+        System.out.println("hi");
+   }
 }
  

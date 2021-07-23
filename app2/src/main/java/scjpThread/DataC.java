@@ -12,43 +12,42 @@ package scjpThread;
  */
 public class DataC {
 
-    private int number;
-    private boolean state=false;
+	private int number;
+	private boolean state = false;
 
-    /**
-     * Describe <code>setData</code> method here.
-     *
-     * @param d an <code>int</code> value
-     */
-      public synchronized void setData(int d ) {
-	if (state) {
-	    try {
-		wait();
-	    } catch (InterruptedException  e) {
-		System.out.println("ineterrupted wait in setData");
-	    }
+	/**
+	* 
+	* @param d
+	*/
+	public synchronized void setData(int d) {
+		if (state) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				System.out.println("ineterrupted wait in setData");
+			}
+		}
+		number = d;
+		System.out.println("set :- " + number);
+		state = true;
+		notify();
 	}
-	number= d ;
-	System.out.println("set :- "+ number );
-	state=true;
-	notify();
-    }
 
-    /**
-     * Describe <code>getData</code> method here.
-     *
-     * @return an <code>int</code> value
-     */
-    public synchronized void getData() {
-	if (!state) {
-	    try {
-		wait();
-	    } catch (InterruptedException e) {
-		System.out.println("interrupted wait in getData");
-	    }
+
+	/**
+	* 
+	* 
+	*/
+	public synchronized void getData() {
+		if (!state) {
+			try {
+				wait();
+			} catch (InterruptedException e) {
+				System.out.println("interrupted wait in getData");
+			}
+		}
+		System.out.println("Get:- " + number);
+		state = false;
+		notify();
 	}
-	System.out.println("Get:- "+number );
-	state=false;
-	notify();
-    }
 }

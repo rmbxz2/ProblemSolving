@@ -11,27 +11,28 @@ package scjpThread;
  */
 public class Producer extends Thread {
 
+	private DataC dataC;
+	private int count = 10;
 
-    private DataC dataC;
-    private int count=10;
-    /**
-     * Creates a new <code>Producer</code> instance.
-     *
-     */
-    public Producer(DataC dataC,String name) {
-	super(name);
-	this.dataC=dataC;
-    }
-
-    /**
-     * Describe <code>run</code> method here.
-     *
-     */
-    public final void run() {
-	int i=0;
-	while (count-- >0) {
-	    dataC.setData(i++);
+	/**
+	* 
+	* @param dataC
+	* @param name
+	*/
+	public Producer(DataC dataC, String name) {
+		super(name);
+		this.dataC = dataC;
 	}
-    }
+
+	/**
+	* 
+	* 
+	*/
+	public final void run() {
+		int i = 0;
+		while (count-- > 0) {
+			dataC.setData(i++);
+		}
+	}
 
 }

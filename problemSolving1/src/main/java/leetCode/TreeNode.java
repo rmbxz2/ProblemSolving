@@ -78,10 +78,10 @@ public class TreeNode {
 	// 	return (((TreeNode) obj).val == this.val);
 	// }
 
-	// @Override
-	// public String toString() {
-	// 	return " " + val;
-	// }
+	@Override
+	public String toString() {
+		return " " + val;
+	}
 
 	// /* (non-Javadoc)
 	//  * @see java.lang.Object#hashCode()
