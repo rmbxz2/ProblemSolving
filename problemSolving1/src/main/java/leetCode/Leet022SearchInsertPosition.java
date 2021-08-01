@@ -29,6 +29,7 @@ public class Leet022SearchInsertPosition {
 	*
 	*/
 	public int searchInsert3(int[] nums, int target) {
+
 		int low = 0;
 		int high = nums.length - 1;
 		int mid = -985558;
@@ -72,6 +73,7 @@ public class Leet022SearchInsertPosition {
 	 * @return
 	*/
 	public int searchInsert4(int[] nums, int target) {
+
 		int low = 0;
 		int high = nums.length - 1;
 		int mid = -1;

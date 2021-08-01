@@ -20,7 +20,7 @@ public class Leet022SearchInsertPositionTest {
 	*
 	*
 	*/
-	@Test(timeout = 1000)
+	@Test(timeout = 500)
 	public void test1() {
 		//                    index =  0  1  2  3  4 
 		//	private int[] nums = { 2, 4, 5, 7, 9 };

@@ -40,7 +40,7 @@ public class Leetcode82SymmetricBTbyThreads {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		// must join to print the correct result of isSymmetric()
+		//must join to print the correct result of isSymmetric()
 		System.out.println("from main Final result isSymmetric tree =" + treeData.isSymmetric());
 	}
 }
