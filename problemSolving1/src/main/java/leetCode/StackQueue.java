@@ -34,18 +34,37 @@ public class StackQueue {
 		//  queue by fast array
 		//  ArrayDeque is not not thread safe
 		Queue queue2 = new ArrayDeque<>();
-
+		//
+		//
+		Queue<String> q1 = new ArrayDeque<>();
+		Queue<String> q2 = new LinkedList<>();
+		//
+		//
 		// ArrayDeque can use it as stack, queue or doble queue
 		// as documentation ArrayDeque is faster than Stack [vector],
 		// ArrayDeque is faster than queue [linkedList],
 		// ArrayDeque is not not  thread safe
 		//      ===================== 
-                //     first(push,pop)      last
+		//     first(push,pop)      last
 		//      =====================
 		//   
 		//   offerFirst == push
 		Deque<Integer> stackDoubleQueue = new ArrayDeque<>();
+		System.out.println("=========== test 1 ==============");
+		stackDoubleQueue.offerLast(2);
+		stackDoubleQueue.offerLast(3);
+		stackDoubleQueue.offerLast(5);
+		System.out.println(stackDoubleQueue.pollFirst());
+		System.out.println("=========== test 1 ==============");
 
+		stackDoubleQueue.push(1);
+		stackDoubleQueue.push(2);
+		stackDoubleQueue.push(3);
+		System.out.println(stackDoubleQueue.pollLast()); //1
+		System.out.println(stackDoubleQueue.pollLast()); //2
+		System.out.println(stackDoubleQueue.pollLast()); //3
+		// means push 1 2 3 ===> pop 1 2 3  it is queue
+		//
 		stackDoubleQueue.offer(1);
 		stackDoubleQueue.push(2);
 		stackDoubleQueue.offer(3);

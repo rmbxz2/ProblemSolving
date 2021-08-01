@@ -1,9 +1,11 @@
 package leetCode;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
+import java.util.stream.Collectors;
 
 /**
 * Describe class here.
@@ -34,31 +36,40 @@ public class leetcode043CombinationSumByObjects {
 		TreeSum parent = null;
 		int[] nums = xnums;
 		root = new TreeSum(0, nums, parent, listOfInt);
-		Stack<TreeSum> stack = new Stack<TreeSum>();
+		//Stack<TreeSum> stack = new Stack<TreeSum>();
+		Deque<TreeSum> stack = new ArrayDeque<>(); // faster than stack
 		stack.push(root);
 		while (!stack.isEmpty()) {
-			TreeSum node = stack.pop();
+			TreeSum node = stack.pop(); // DFS by pre-order 
 			while ((node.getSumOfListOfInt() < target) && (node.getFromIndex() <= nums.length - 1)) {
 				TreeSum child = new TreeSum(node.getFromIndex(), nums, node, node.getListOfInt());
 				child.getListOfInt().add(nums[node.getFromIndex()]);
 				if (child.getSumOfListOfInt() <= target) { // works correct  without this condition
 					node.getListOfTree().add(child);
-					stack.push(child);
 				}
 				node.setFromIndex(node.getFromIndex() + 1);
 			}
+			if (!node.getListOfTree().isEmpty()) { // add children to stack reversed without change the children sort
+				node.getListOfTree().stream() // Stream
+						.collect(Collectors.toCollection(LinkedList::new)) // LinkedList
+						.descendingIterator() // Iterator
+						.forEachRemaining(stack::push);
+
+				// for (TreeSum element : node.getListOfTree()) { // above same as below but it is changet the children sort
+				// 	stack.push(element);
+				// }
+			}
 			if (node.getSumOfListOfInt() == target) {
 				result.add(node.getListOfInt());
-				System.out.println(node.getListOfInt().toString());
+				System.out.println("node == target " + node.getListOfInt().toString());
 			}
 			if (node.getSumOfListOfInt() > target) {
 				// remove above condition  (child.getSumOfListOfInt() <= target)
 				// then uncomment these lines
-				// System.out.println("node > target = " + node.getListOfInt().toString());
+				// System.out.println("node >  target " + node.getListOfInt().toString());
 			}
-
 		} // end of if
-		Collections.reverse(result); // result = [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
+			//Collections.reverse(result); // result = [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
 		return result;
 	}
 
@@ -76,7 +87,6 @@ public class leetcode043CombinationSumByObjects {
 		System.out.println("result = " + result.toString());
 		System.out.println("========= print from main ========");
 		combination.printCombinationTree(combination.root);
-
 	}
 
 }
