@@ -2,6 +2,7 @@ package leetCode;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
@@ -70,6 +71,16 @@ public class leetcode043CombinationSumByObjects {
 			}
 		} // end of if
 			//Collections.reverse(result); // result = [[2, 2, 2, 2], [2, 3, 3], [3, 5]]
+
+		//return min list size from list of list 
+
+		System.out.println("min list size from list of list = "
+				   +Collections.min(result, (list1, list2) -> ((Integer.valueOf(list1.size())).compareTo(Integer.valueOf(list2.size())))));
+
+
+
+		// return sorted list of list by size
+		Collections.sort(result, (list1, list2) -> ((Integer.valueOf(list1.size())).compareTo(list2.size())));
 		return result;
 	}
 
@@ -78,8 +89,8 @@ public class leetcode043CombinationSumByObjects {
 	 * @param args
 	*/
 	public static void main(String[] args) {
-		int[] nums = { 2, 3, 5 };
-		int target = 8;
+		int[] nums = { 1, 2, 5 };
+		int target = 11;
 
 		leetcode043CombinationSumByObjects combination = new leetcode043CombinationSumByObjects();
 		List<List<Integer>> result = combination.createCombinationTree(nums, target);
