@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Deque;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -74,13 +75,20 @@ public class leetcode043CombinationSumByObjects {
 
 		//return min list size from list of list 
 
-		System.out.println("min list size from list of list = "
-				   +Collections.min(result, (list1, list2) -> ((Integer.valueOf(list1.size())).compareTo(Integer.valueOf(list2.size())))));
-
-
+		System.out.println("min list size from list of list = " + Collections.min(result,
+				(list1, list2) -> ((Integer.valueOf(list1.size())).compareTo(Integer.valueOf(list2.size())))));
 
 		// return sorted list of list by size
-		Collections.sort(result, (list1, list2) -> ((Integer.valueOf(list1.size())).compareTo(list2.size())));
+		//Collections.sort(result, (list1, list2) -> ((Integer.valueOf(list1.size())).compareTo(list2.size())));
+
+		// return sorted list of list by number of duplicated int in list
+		Collections.sort(result, (list1, list2) -> {
+			int same = -1;
+				same = ((Integer.valueOf(list1.size())).compareTo(list2.size()));
+				if (same == 0)
+				same = (Integer.valueOf(list2.size())).compareTo(Integer.valueOf((new HashSet<Integer>(listOfInt)).size()) );
+			return same;
+		});
 		return result;
 	}
 
@@ -89,8 +97,8 @@ public class leetcode043CombinationSumByObjects {
 	 * @param args
 	*/
 	public static void main(String[] args) {
-		int[] nums = { 1, 2, 5 };
-		int target = 11;
+		int[] nums = { 2, 6, 10, 20, 50 };
+		int target = 88;
 
 		leetcode043CombinationSumByObjects combination = new leetcode043CombinationSumByObjects();
 		List<List<Integer>> result = combination.createCombinationTree(nums, target);
