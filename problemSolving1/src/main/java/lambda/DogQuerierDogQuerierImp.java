@@ -159,8 +159,9 @@ public class DogQuerierDogQuerierImp {
 			System.out.println(" " +d.park());
 		};
 
-		//		listDog.forEach(dogName.andThen(dogPark));
-		listDog.forEach((Dog::getName));
+		listDog.forEach(dogName.andThen(dogPark));
+		// listDog.forEach((Dog::getName));
 
+		
 	} // method end
 }
