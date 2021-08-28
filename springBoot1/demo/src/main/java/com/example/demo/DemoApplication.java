@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 // this is spring boot
+// this is the second spring boot
 @SpringBootApplication
 public class DemoApplication {
 
