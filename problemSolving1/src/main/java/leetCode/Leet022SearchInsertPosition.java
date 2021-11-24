@@ -149,4 +149,4 @@ public class Leet022SearchInsertPosition {
 		//System.out.println("index = " + t1.searchInsert4(nums, 2));
 	}
 }
-// T 4
+// T magit 1
