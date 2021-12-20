@@ -150,3 +150,4 @@ public class Leet022SearchInsertPosition {
 	}
 }
 // T magit 1
+ 
