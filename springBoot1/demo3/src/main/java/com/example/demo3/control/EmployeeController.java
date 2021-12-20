@@ -233,6 +233,7 @@ public class EmployeeController {
 	public String delEmployeeByEmp(@RequestBody Employee emp) {
 		employeeservice.delByEmp(emp);
 		return "delete emp " + emp;
+
 	}
 
 }
