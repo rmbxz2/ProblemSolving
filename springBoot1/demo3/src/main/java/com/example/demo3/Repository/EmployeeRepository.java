@@ -21,7 +21,7 @@ import org.springframework.stereotype.Repository;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 	/**
-	* 
+	* find by Employee.firstName
 	* @param firstName
 	* @return
 	*/
@@ -43,5 +43,18 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 	@Query(value = "SELECT * FROM employees WHERE last_name= :last_name and salary > 100", nativeQuery = true)
 	public List<Employee> findNativeEmpByLastName(@Param("last_name") String lastName);
 
+	/**
+	* 
+	* @param lastName
+	* @return
+	*/
+	@Query(value = "SELECT * FROM employees WHERE departement_id= :id", nativeQuery = true)
+	public List<Employee> findAllEmpOfDeptId(@Param("id") long id);
 
+	/**
+	*  find by Employee.Department.id
+	* @param id
+	* @return
+	*/
+	public List<Employee> findByDepartementId(long id);
 }

@@ -1,10 +1,13 @@
 package com.example.demo3.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -26,8 +29,13 @@ public class Employee {
 	private String firstName;
 	@Column(name = "last_name")
 	private String lastName;
-	private String address;
 	private double salary;
+	private String address;
+	//The value cascade=ALL is equivalent to cascade={PERSIST, MERGE, REMOVE, REFRESH, DETACH}.
+	// Many =>Employees , One=>department(FK)
+	// @JoinColumn(name = "department_id") by default the name in sql table
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Department departement;
 
 	/**
 	 * 
@@ -36,31 +44,35 @@ public class Employee {
 	}
 
 	/**
-	 * @param id
 	 * @param firstName
 	 * @param lastName
-	 * @param address
 	 * @param salary
+	 * @param address
+	 * @param departement
 	 */
-	public Employee(long id, String firstName, String lastName, String address, double salary) {
-		this.id = id;
+	public Employee(String firstName, String lastName, double salary, String address, Department departement) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.address = address;
 		this.salary = salary;
+		this.address = address;
+		this.departement = departement;
 	}
 
 	/**
+	 * @param id
 	 * @param firstName
 	 * @param lastName
-	 * @param address
 	 * @param salary
+	 * @param address
+	 * @param departement
 	 */
-	public Employee(String firstName, String lastName, String address, double salary) {
+	public Employee(long id, String firstName, String lastName, double salary, String address, Department departement) {
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.address = address;
 		this.salary = salary;
+		this.address = address;
+		this.departement = departement;
 	}
 
 	/**
@@ -106,6 +118,20 @@ public class Employee {
 	}
 
 	/**
+	 * @return the salary
+	 */
+	public double getSalary() {
+		return salary;
+	}
+
+	/**
+	 * @param salary the salary to set
+	 */
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	/**
 	 * @return the address
 	 */
 	public String getAddress() {
@@ -120,19 +146,18 @@ public class Employee {
 	}
 
 	/**
-	 * @return the salary
+	 * @return the departement
 	 */
-	public double getSalary() {
-		return salary;
+	public Department getDepartement() {
+		return departement;
 	}
 
 	/**
-	 * @param salary the salary to set
+	 * @param departement the departement to set
 	 */
-	public void setSalary(double salary) {
-		this.salary = salary;
+	public void setDepartement(Department departement) {
+		this.departement = departement;
 	}
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -142,6 +167,7 @@ public class Employee {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((departement == null) ? 0 : departement.hashCode());
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + (int) (id ^ (id >>> 32));
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
@@ -150,7 +176,6 @@ public class Employee {
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		return result;
 	}
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
@@ -169,6 +194,11 @@ public class Employee {
 				return false;
 		} else if (!address.equals(other.address))
 			return false;
+		if (departement == null) {
+			if (other.departement != null)
+				return false;
+		} else if (!departement.equals(other.departement))
+			return false;
 		if (firstName == null) {
 			if (other.firstName != null)
 				return false;
@@ -185,15 +215,14 @@ public class Employee {
 			return false;
 		return true;
 	}
-
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
 
 	@Override
 	public String toString() {
-		return "Employee [address=" + address + ", firstName=" + firstName + ", id=" + id + ", lastName=" + lastName
-				+ ", salary=" + salary + "]";
+		return "Employee [address=" + address + ", departement=" + departement + ", firstName=" + firstName + ", id="
+				+ id + ", lastName=" + lastName + ", salary=" + salary + "]";
 	}
 
 }

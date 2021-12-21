@@ -1,0 +1,85 @@
+@startuml
+left to right direction
+skinparam shadowing false
+
+'skinparam linetype ortho
+skinparam linetype polyline
+
+'hide org.springframework.*
+'hide java.util.*
+hide java.lang.*
+
+annotation java.lang.Override
+annotation javax.persistence.Column
+annotation javax.persistence.Entity
+annotation javax.persistence.GeneratedValue
+annotation javax.persistence.Id
+annotation javax.persistence.Table
+annotation org.junit.jupiter.api.Test
+annotation org.springframework.beans.factory.annotation.Autowired
+annotation org.springframework.boot.autoconfigure.SpringBootApplication
+annotation org.springframework.boot.test.context.SpringBootTest
+annotation org.springframework.data.jpa.repository.Query
+annotation org.springframework.data.repository.query.Param
+annotation org.springframework.stereotype.Repository
+annotation org.springframework.stereotype.Service
+annotation org.springframework.web.bind.annotation.GetMapping
+annotation org.springframework.web.bind.annotation.PathVariable
+annotation org.springframework.web.bind.annotation.PostMapping
+annotation org.springframework.web.bind.annotation.PutMapping
+annotation org.springframework.web.bind.annotation.RequestBody
+annotation org.springframework.web.bind.annotation.RequestParam
+annotation org.springframework.web.bind.annotation.RestController
+class MavenWrapperDownloader
+class com.example.demo3.DemoApplication
+class com.example.demo3.DemoApplicationTests
+class com.example.demo3.control.EmployeeController
+class com.example.demo3.model.Employee
+class com.example.demo3.services.EmployeeService
+class java.util.List
+class java.util.Properties
+class javax.persistence.GenerationType
+class org.springframework.boot.SpringApplication
+interface com.example.demo3.Repository.EmployeeRepository
+interface org.springframework.data.jpa.repository.JpaRepository
+MavenWrapperDownloader ..> java.lang.Override
+MavenWrapperDownloader ..> java.util.Properties
+com.example.demo3.DemoApplication ..> org.springframework.boot.autoconfigure.SpringBootApplication
+com.example.demo3.DemoApplication ..> org.springframework.boot.SpringApplication
+com.example.demo3.DemoApplicationTests ..> org.junit.jupiter.api.Test
+com.example.demo3.DemoApplicationTests ..> org.springframework.boot.test.context.SpringBootTest
+com.example.demo3.control.EmployeeController ..> org.springframework.beans.factory.annotation.Autowired
+com.example.demo3.control.EmployeeController ..> org.springframework.web.bind.annotation.GetMapping
+com.example.demo3.control.EmployeeController ..> org.springframework.web.bind.annotation.PathVariable
+com.example.demo3.control.EmployeeController ..> org.springframework.web.bind.annotation.PostMapping
+com.example.demo3.control.EmployeeController ..> org.springframework.web.bind.annotation.PutMapping
+com.example.demo3.control.EmployeeController ..> org.springframework.web.bind.annotation.RequestBody
+com.example.demo3.control.EmployeeController ..> org.springframework.web.bind.annotation.RequestParam
+com.example.demo3.control.EmployeeController ..> org.springframework.web.bind.annotation.RestController
+com.example.demo3.control.EmployeeController ..> com.example.demo3.model.Employee
+com.example.demo3.control.EmployeeController ..> com.example.demo3.services.EmployeeService
+com.example.demo3.control.EmployeeController ..> java.util.List
+com.example.demo3.model.Employee ..> java.lang.Override
+com.example.demo3.model.Employee ..> javax.persistence.Column
+com.example.demo3.model.Employee ..> javax.persistence.Entity
+com.example.demo3.model.Employee ..> javax.persistence.GeneratedValue
+com.example.demo3.model.Employee ..> javax.persistence.Id
+com.example.demo3.model.Employee ..> javax.persistence.Table
+com.example.demo3.model.Employee ..> javax.persistence.GenerationType
+com.example.demo3.services.EmployeeService ..> org.springframework.beans.factory.annotation.Autowired
+com.example.demo3.services.EmployeeService ..> org.springframework.stereotype.Service
+com.example.demo3.services.EmployeeService ..> com.example.demo3.model.Employee
+com.example.demo3.services.EmployeeService ..> java.util.List
+com.example.demo3.services.EmployeeService ..> com.example.demo3.Repository.EmployeeRepository
+com.example.demo3.Repository.EmployeeRepository ..> org.springframework.data.jpa.repository.Query
+com.example.demo3.Repository.EmployeeRepository ..> org.springframework.data.repository.query.Param
+com.example.demo3.Repository.EmployeeRepository ..> org.springframework.stereotype.Repository
+com.example.demo3.Repository.EmployeeRepository ..> com.example.demo3.model.Employee
+com.example.demo3.Repository.EmployeeRepository ..> java.util.List
+com.example.demo3.Repository.EmployeeRepository --|> org.springframework.data.jpa.repository.JpaRepository
+@enduml
+
+ 
+  
+ 
+

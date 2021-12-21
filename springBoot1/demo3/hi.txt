@@ -1,0 +1,52 @@
+
+(save-excursion
+  (let (buf)
+    (unwind-protect
+      (progn
+        (setq buf (find-file-noselect "filename"))
+        (when buf
+          (goto-char 42)
+          (insert "hello")))
+      (if buf (kill-buffer buf))))
+
+
+
+
+
+
+(write-region "hiii" (point-min) nil "ClassDiagram.txt" 'append)
+
+
+(append-to-file)
+
+
+(defun my-append-string-to-file (s filename)
+  (with-temp-buffer
+    (insert s)
+    (write-region  (point-max) (point-min)  filename t)))
+
+    (forward-line 1)
+
+(my-append-string-to-file  "xxxxxx"  "ClassDiagram.txt")
+
+
+
+
+(defun my-append-string-to-file (string filename)
+  "Appends STRING to FILENAME."
+  (interactive)
+  (goto-char 1)
+  (append-to-file string nil filename))
+
+(my-append-string-to-file  "yyyy" "ClassDiagram.txt")
+
+
+(defun wrap-markup-region ()
+  "Insert a markup <b></b> around a region."
+  (interactive)
+  (let ((p1 (region-beginning))
+        (p2 (region-end)))
+    (goto-char p2)
+    (insert "</b>")
+    (goto-char p1)
+    (insert "<b>")))

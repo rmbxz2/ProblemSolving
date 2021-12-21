@@ -579,51 +579,85 @@ Content-Type: application/json
 POST http://localhost:8080/employeeSaveByPost
 Content-Type: application/json
 {
- "firstName":"ahmad",
- "lastName":"ali",
- "address":"jordan",
- "salary":100
+    "id": 24,
+    "firstName": "ahmad",
+    "lastName": "ali",
+    "salary": 100.0,
+    "address": "jordan",
+    "departement": null
 }
+
+#
 
 #
 POST http://localhost:8080/employeeSaveByPost
 Content-Type: application/json
 {
- "firstName":"moh",
- "lastName":"ali",
- "address":"jordan",
- "salary":200
+    "id": 27,
+    "firstName": "khawlaa",
+    "lastName": "omara",
+    "salary": 400.0,
+    "address": "KSAa",
+    "departement": null
 }
+
+#
 
 #
 POST http://localhost:8080/employeeSaveByPost
 Content-Type: application/json
 {
- "firstName":"saad",
- "lastName":"ali",
- "address":"jordan",
- "salary":333
+    "id": 26,
+    "firstName": "saad",
+    "lastName": "ali",
+    "salary": 3334.0,
+    "address": "jordan",
+    "departement": null
 }
+#
 
 #
 POST http://localhost:8080/employeeSaveByPost
 Content-Type: application/json
 {
- "id": 23,
- "firstName":"khawlaa",
- "lastName":"omara",
- "address":"KSAa",
- "salary":400
+    "id": 25,
+    "firstName": "mohmod",
+    "lastName": "ali",
+    "salary": 222.0,
+    "address": "jordan",
+    "departement": null
 }
 #
 
 
 
 #
+POST http://localhost:8080/employeeSaveByPost
+Content-Type: application/json
+  {
+    "id": 33,
+    "firstName": "ahmad",
+    "lastName": "ali",
+    "salary": 100.0,
+    "address": "jordan",
+    "departement": {
+      "id": 29,
+      "departmentName": "CS"
+    }
+  }
+
+#
+
+
+
+
+
+# list all emp
 
 GET http://localhost:8080/employees
 
 #
+
 
 
 #
@@ -631,5 +665,58 @@ GET http://localhost:8080/employees
 GET http://localhost:8080/emp/api/employees
 
 #
+
+#
+POST http://localhost:8080/emp/api/employeeSaveByPost
+Content-Type: application/json
+{
+ "id": 25,
+ "firstName":"mohmod",
+ "lastName":"ali",
+ "address":"jordan",
+ "salary":222
+}
+
+
+# list all dept 
+
+GET http://localhost:8080/AllDept
+
+#
+
+
+
+# add dept
+POST http://localhost:8080/addDept
+Content-Type: application/json
+{
+ "departmentName":"IT"
+}
+#
+
+
+
+#
+POST http://localhost:8080/addDept
+Content-Type: application/json
+{
+ "departmentName":"CS"
+}
+#
+
+
+
+# list all employees by dept id 
+
+GET http://localhost:8080/employeesByDeptid?id=28
+
+#
+
+# list all employees by dept id 
+
+GET http://localhost:8080/employeesByDeptid2?id=28
+                         
+#
+
 
 

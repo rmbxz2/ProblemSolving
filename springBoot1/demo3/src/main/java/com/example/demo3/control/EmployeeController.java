@@ -2,6 +2,7 @@ package com.example.demo3.control;
 
 import java.util.List;
 
+import com.example.demo3.model.Department;
 import com.example.demo3.model.Employee;
 import com.example.demo3.services.EmployeeService;
 
@@ -23,7 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 *
 */
 
-// @RequestMapping("/emp/api/") 
+// @RequestMapping prefer for class, but  @GetMapping + @PostMapping prefer for method
+// @RequestMapping(method = RequestMethod.GET, value = "/emp/api")
 @RestController
 public class EmployeeController {
 
@@ -39,6 +41,7 @@ public class EmployeeController {
 	* http://localhost:8080/employees
 	* @return
 	*/
+	//@RequestMapping(method = RequestMethod.GET , value = "/employees")
 	@GetMapping(value = "/employees")
 	public List<Employee> getAllEmployees() {
 
@@ -147,12 +150,13 @@ public class EmployeeController {
 	*/
 	@GetMapping(value = "/employeeSave")
 	public Employee saveEmployee(@RequestParam String firstName, @RequestParam String lastName,
-			@RequestParam String address, @RequestParam double salary) {
-		Employee emp = new Employee(firstName, lastName, address, salary);
+			@RequestParam String address, @RequestParam double salary, @RequestParam Department department) {
+		Employee emp = new Employee(firstName, lastName, salary, address, department);
 		return employeeservice.saveEmp(emp);
 	}
 
 	/**
+	 *
 	 *
 	update == send id 
 	create == dont send id
@@ -169,7 +173,8 @@ public class EmployeeController {
 	}
 	#	
 	* 
-	* 
+	*  json ==>>  employee object  directly
+	*
 	*/
 	@PostMapping(value = "/employeeSaveByPost")
 	public Employee saveEmployeeByPost(@RequestBody Employee employee) {
@@ -204,7 +209,7 @@ public class EmployeeController {
 	/**
 	
 	#
-	GET http://localhost:8080/employeeDelByid?id=9
+	GET http://localhost:8080/employeeDelByid?id=19
 	#
 	
 	 * 
@@ -235,5 +240,31 @@ public class EmployeeController {
 		return "delete emp " + emp;
 
 	}
+
+	/**
+	* GET http://localhost:8080/employeesByDeptid?id=28
+	* @param id
+	* @return
+	*/
+	@GetMapping(value = "/employeesByDeptid")
+	public List<Employee> getAllEmployeesByDeptId(@RequestParam long id) {
+		return employeeservice.getAllEmployeesOfDeptId(id);
+
+	}
+
+
+	/**
+	* find by Employee.Department.id
+	* GET http://localhost:8080/employeesByDeptid2?id=28
+	* @param id
+	* @return
+	*/
+	@GetMapping(value = "/employeesByDeptid2")
+	public List<Employee> getAllEmployeesByDeptId2(@RequestParam long id) {
+		return employeeservice.getAllEmployeesOfDeptId2(id);
+
+	}
+
+
 
 }

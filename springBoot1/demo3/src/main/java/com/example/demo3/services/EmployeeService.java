@@ -109,4 +109,21 @@ public class EmployeeService {
 		employeeRepository.delete(emp);
 	}
 
+	/**
+	* 
+	* @return
+	*/
+	public List<Employee> getAllEmployeesOfDeptId(long id) {
+		return employeeRepository.findAllEmpOfDeptId(id);
+	}
+
+	/**
+	* 
+	* @return
+	*/
+	public List<Employee> getAllEmployeesOfDeptId2(long id) {
+		return employeeRepository.findByDepartementId(id);
+
+	}
+
 }
