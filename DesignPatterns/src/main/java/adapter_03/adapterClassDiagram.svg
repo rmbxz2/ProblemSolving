@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="578px" preserveAspectRatio="none" style="width:982px;height:578px;background:#87CEFA;" version="1.1" viewBox="0 0 982 578" width="982px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacingAndGlyphs" textLength="131" x="419" y="16.708">Design pattern</text><!--MD5=[a0bb257923b4feabbc8c8a837db65c88]
+cluster adapter--><polygon fill="#87CEFA" points="44,26.9531,111,26.9531,118,49.25,965,49.25,965,571.9531,44,571.9531,44,26.9531" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="44" x2="118" y1="49.25" y2="49.25"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="61" x="48" y="41.9482">adapter</text><!--MD5=[f38a85e47f7d4f812523dd9b6d7d2c16]
+class Adapter--><rect codeLine="41" fill="#FEFECE" height="257.5313" id="Adapter" style="stroke: #A80036; stroke-width: 1.5;" width="465" x="60" y="61.9531"/><ellipse cx="252.75" cy="77.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M255.7188,83.5938 Q255.1406,83.8906 254.5,84.0313 Q253.8594,84.1875 253.1563,84.1875 Q250.6563,84.1875 249.3281,82.5469 Q248.0156,80.8906 248.0156,77.7656 Q248.0156,74.6406 249.3281,72.9844 Q250.6563,71.3281 253.1563,71.3281 Q253.8594,71.3281 254.5,71.4844 Q255.1563,71.6406 255.7188,71.9375 L255.7188,74.6563 Q255.0938,74.0781 254.5,73.8125 Q253.9063,73.5313 253.2813,73.5313 Q251.9375,73.5313 251.25,74.6094 Q250.5625,75.6719 250.5625,77.7656 Q250.5625,79.8594 251.25,80.9375 Q251.9375,82 253.2813,82 Q253.9063,82 254.5,81.7344 Q255.0938,81.4531 255.7188,80.875 L255.7188,83.5938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="71" x="273.25" y="83.4922">Adapter</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="61" x2="524" y1="93.9531" y2="93.9531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="241" x="66" y="111.8765">private SeperatedNameIF sp;</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="204" x="66" y="129.3374">private String firstName;</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="228" x="66" y="146.7983">private String secondName;</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="208" x="66" y="164.2593">private String thirdName;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="61" x2="524" y1="171.7969" y2="171.7969"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="237" x="66" y="189.7202">public Adapter(String name);</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="453" x="66" y="207.1812">public void convertFullToSeperatedName(String name);</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="232" x="66" y="224.6421">public String getFirstName()</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="255" x="66" y="242.103">public String getSecondName()</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="236" x="66" y="259.564">public String getThirdName()</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="215" x="66" y="277.0249">public void setFirstName()</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="238" x="66" y="294.4858">public void setSecondName()</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="219" x="66" y="311.9468">public void setThirdName()</text><!--MD5=[7571079f89e51a1c3d7c97a7f4aab50c]
+class SeperatedName--><rect codeLine="70" fill="#FEFECE" height="100.3828" id="SeperatedName" style="stroke: #A80036; stroke-width: 1.5;" width="240" x="172.5" y="455.9531"/><ellipse cx="217.25" cy="471.9531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M220.2188,477.5938 Q219.6406,477.8906 219,478.0313 Q218.3594,478.1875 217.6563,478.1875 Q215.1563,478.1875 213.8281,476.5469 Q212.5156,474.8906 212.5156,471.7656 Q212.5156,468.6406 213.8281,466.9844 Q215.1563,465.3281 217.6563,465.3281 Q218.3594,465.3281 219,465.4844 Q219.6563,465.6406 220.2188,465.9375 L220.2188,468.6563 Q219.5938,468.0781 219,467.8125 Q218.4063,467.5313 217.7813,467.5313 Q216.4375,467.5313 215.75,468.6094 Q215.0625,469.6719 215.0625,471.7656 Q215.0625,473.8594 215.75,474.9375 Q216.4375,476 217.7813,476 Q218.4063,476 219,475.7344 Q219.5938,475.4531 220.2188,474.875 L220.2188,477.5938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="142" x="237.75" y="477.4922">SeperatedName</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="173.5" x2="411.5" y1="487.9531" y2="487.9531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="204" x="178.5" y="505.8765">private String firstName;</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="228" x="178.5" y="523.3374">private String secondName;</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="208" x="178.5" y="540.7983">private String thirdName;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="173.5" x2="411.5" y1="548.3359" y2="548.3359"/><!--MD5=[408b9c9c88a9d0440e4d92064a74eb8c]
+class FullNameIF--><rect codeLine="29" fill="#FEFECE" height="82.9219" id="FullNameIF" style="stroke: #A80036; stroke-width: 1.5;" width="259" x="637.5" y="217.4531"/><ellipse cx="712.25" cy="233.4531" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M708.1719,229.2188 L708.1719,227.0625 L715.5625,227.0625 L715.5625,229.2188 L713.0938,229.2188 L713.0938,237.2969 L715.5625,237.2969 L715.5625,239.4531 L708.1719,239.4531 L708.1719,237.2969 L710.6406,237.2969 L710.6406,229.2188 L708.1719,229.2188 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="101" x="732.75" y="238.9922">FullNameIF</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="638.5" x2="895.5" y1="249.4531" y2="249.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="638.5" x2="895.5" y1="257.4531" y2="257.4531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="154" x="643.5" y="275.3765">String  getName();</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="247" x="643.5" y="292.8374">void    setName(String name);</text><!--MD5=[4b65abf92d76189a7cbd6fb48ff28c23]
+class SeperatedNameIF--><rect codeLine="59" fill="#FEFECE" height="152.7656" id="SeperatedNameIF" style="stroke: #A80036; stroke-width: 1.5;" width="364" x="585" y="402.4531"/><ellipse cx="681.25" cy="418.4531" fill="#B4A7E5" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M677.1719,414.2188 L677.1719,412.0625 L684.5625,412.0625 L684.5625,414.2188 L682.0938,414.2188 L682.0938,422.2969 L684.5625,422.2969 L684.5625,424.4531 L677.1719,424.4531 L677.1719,422.2969 L679.6406,422.2969 L679.6406,414.2188 L677.1719,414.2188 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-style="italic" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="163" x="701.75" y="423.9922">SeperatedNameIF</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="586" x2="948" y1="434.4531" y2="434.4531"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="586" x2="948" y1="442.4531" y2="442.4531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="305" x="591" y="460.3765">void setFirstName(String firstName);</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="352" x="591" y="477.8374">void setSecondName(String secondName);</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="332" x="591" y="495.2983">void setSecondName(String thirdName);</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="186" x="591" y="512.7593">String getFirstName();</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="209" x="591" y="530.2202">String getSecondName();</text><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="190" x="591" y="547.6812">String getThirdName();</text><!--MD5=[ba7731d2bbdb81fc0704c700614d70af]
+class FullName--><rect codeLine="36" fill="#FEFECE" height="65.4609" id="FullName" style="stroke: #A80036; stroke-width: 1.5;" width="182" x="201.5" y="355.4531"/><ellipse cx="248.75" cy="371.4531" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M251.7188,377.0938 Q251.1406,377.3906 250.5,377.5313 Q249.8594,377.6875 249.1563,377.6875 Q246.6563,377.6875 245.3281,376.0469 Q244.0156,374.3906 244.0156,371.2656 Q244.0156,368.1406 245.3281,366.4844 Q246.6563,364.8281 249.1563,364.8281 Q249.8594,364.8281 250.5,364.9844 Q251.1563,365.1406 251.7188,365.4375 L251.7188,368.1563 Q251.0938,367.5781 250.5,367.3125 Q249.9063,367.0313 249.2813,367.0313 Q247.9375,367.0313 247.25,368.1094 Q246.5625,369.1719 246.5625,371.2656 Q246.5625,373.3594 247.25,374.4375 Q247.9375,375.5 249.2813,375.5 Q249.9063,375.5 250.5,375.2344 Q251.0938,374.9531 251.7188,374.375 L251.7188,377.0938 Z "/><text fill="#FF0000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="79" x="269.25" y="376.9922">FullName</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="202.5" x2="382.5" y1="387.4531" y2="387.4531"/><text fill="#000000" font-family="sans-serif" font-size="15" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="170" x="207.5" y="405.3765">private String Name;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="202.5" x2="382.5" y1="412.9141" y2="412.9141"/><!--MD5=[c4e1d1848a85e4de7599584308f5ff7b]
+reverse link SeperatedName to Adapter--><path codeLine="22" d="M167.06,472.6931 C102.01,455.4531 36,437.9531 36,437.9531 C36,437.9531 6,420.4531 6,420.4531 C6,420.4531 6,355.4531 6,355.4531 C6,355.4531 36,337.9531 36,337.9531 C36,337.9531 48.16,330.9831 67.2,320.0731 " fill="none" id="SeperatedName-backto-Adapter" style="stroke: #0000FF; stroke-width: 1.0;"/><polygon fill="#0000FF" points="172.14,474.0431,164.4723,467.862,167.3084,472.7566,162.4138,475.5927,172.14,474.0431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[4713ae5a47db558b5bae4f7510174a2a]
+link Adapter to FullNameIF--><path codeLine="23" d="M525.25,224.3031 C556.57,228.8131 587.99,233.3331 617.32,237.5531 " fill="none" id="Adapter-to-FullNameIF" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="618.46,230.6431,637.26,240.4231,616.47,244.5031,618.46,230.6431" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[5d9c73e10f63605b96fa33409b3e084f]
+link SeperatedName to SeperatedNameIF--><path codeLine="24" d="M412.73,499.1431 C458.81,496.5031 512.83,493.4231 564.58,490.4631 " fill="none" id="SeperatedName-to-SeperatedNameIF" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="564.29,483.4631,584.66,489.3131,565.09,497.4431,564.29,483.4631" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[1c407437834a8b6363aa18b2a6e14aec]
+link FullName to FullNameIF--><path codeLine="25" d="M383.67,368.0931 C448.67,353.7731 525,336.9531 525,336.9531 C525,336.9531 568.58,322.8531 618.68,306.6331 " fill="none" id="FullName-to-FullNameIF" style="stroke: #0000FF; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="none" points="616.55,299.9631,637.74,300.4631,620.87,313.2831,616.55,299.9631" style="stroke: #0000FF; stroke-width: 1.0;"/><!--MD5=[49b8fc14406f1a95414422374a35311d]
+@startuml
+'scale 3.0
+
+title Design pattern
+
+skinparam backgroundColor lightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+skinparam linetype polyline
+
+left to right direction
+' hide members
+' show MallaredDuck members
+
+package adapter{
+
+
+Adapter -left-> SeperatedName
+Adapter .down.|> FullNameIF
+SeperatedName .down.|> SeperatedNameIF
+FullName .down.|> FullNameIF
+
+
+
+interface FullNameIF {
+String  getName();
+void    setName(String name); 
+}
+' end of FullNameIF
+
+
+class  FullName {
+private String Name;
+} 
+' end of FullName
+
+class  Adapter {
+private SeperatedNameIF sp;
+private String firstName;
+private String secondName;
+private String thirdName;
+public Adapter(String name);
+public void convertFullToSeperatedName(String name);
+public String getFirstName()
+public String getSecondName()
+public String getThirdName()
+public void setFirstName()
+public void setSecondName()
+public void setThirdName()
+
+
+}
+' end of Adapter
+
+interface SeperatedNameIF {
+void setFirstName(String firstName);
+void setSecondName(String secondName);
+void setSecondName(String thirdName);
+String getFirstName();
+String getSecondName();
+String getThirdName();
+}
+' end of SeperatedNameIF
+
+
+class  SeperatedName {
+private String firstName;
+private String secondName;
+private String thirdName;
+} 
+' end of SeperatedName
+
+
+}
+' ========= end of adapter package ==============
+
+@enduml
+
+@startuml
+
+title Design pattern
+
+skinparam backgroundColor lightSkyBlue
+skinparam classFontColor red
+skinparam classFontStyle bold
+skinparam classFontSize 16
+skinparam classAttributeFontSize 15
+skinparam classAttributeFontStyle bold
+skinparam classArrowColor blue
+skinparam shadowing false
+skinparam linetype polyline
+
+left to right direction
+
+package adapter{
+
+
+Adapter -left-> SeperatedName
+Adapter .down.|> FullNameIF
+SeperatedName .down.|> SeperatedNameIF
+FullName .down.|> FullNameIF
+
+
+
+interface FullNameIF {
+String  getName();
+void    setName(String name); 
+}
+
+
+class  FullName {
+private String Name;
+} 
+
+class  Adapter {
+private SeperatedNameIF sp;
+private String firstName;
+private String secondName;
+private String thirdName;
+public Adapter(String name);
+public void convertFullToSeperatedName(String name);
+public String getFirstName()
+public String getSecondName()
+public String getThirdName()
+public void setFirstName()
+public void setSecondName()
+public void setThirdName()
+
+
+}
+
+interface SeperatedNameIF {
+void setFirstName(String firstName);
+void setSecondName(String secondName);
+void setSecondName(String thirdName);
+String getFirstName();
+String getSecondName();
+String getThirdName();
+}
+
+
+class  SeperatedName {
+private String firstName;
+private String secondName;
+private String thirdName;
+} 
+
+
+}
+
+@enduml
+
+PlantUML version 1.2020.18(Wed Sep 30 22:40:44 EEST 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

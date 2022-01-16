@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.example.demo3.Repository.DepartmentRepository;
 import com.example.demo3.model.Department;
-import com.example.demo3.model.Employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

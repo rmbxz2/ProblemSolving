@@ -1,3 +1,4 @@
+@startuml
 'scale 3.0
 
 title Design pattern
@@ -10,8 +11,9 @@ skinparam classAttributeFontSize 15
 skinparam classAttributeFontStyle bold
 skinparam classArrowColor blue
 skinparam shadowing false
+skinparam linetype polyline
 
-' left to right direction
+left to right direction
 ' hide members
 ' show MallaredDuck members
 
@@ -44,6 +46,14 @@ private String secondName;
 private String thirdName;
 public Adapter(String name);
 public void convertFullToSeperatedName(String name);
+public String getFirstName()
+public String getSecondName()
+public String getThirdName()
+public void setFirstName()
+public void setSecondName()
+public void setThirdName()
+
+
 }
 ' end of Adapter
 
@@ -68,5 +78,6 @@ private String thirdName;
 
 }
 ' ========= end of adapter package ==============
+
 @enduml
 

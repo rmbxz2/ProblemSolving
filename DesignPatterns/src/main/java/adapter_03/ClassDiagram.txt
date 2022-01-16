@@ -1,0 +1,13 @@
+@startuml
+class adapter_03.AdapterFullToSeparated
+class adapter_03.FullName
+class adapter_03.MainAdapter
+class adapter_03.SeparatedName
+class java.util.StringTokenizer
+interface adapter_03.FullNameIF
+interface adapter_03.SeparatedNameIF
+adapter_03.AdapterFullToSeparated ..> java.util.StringTokenizer
+adapter_03.AdapterFullToSeparated --|> adapter_03.FullNameIF
+adapter_03.FullName --|> adapter_03.FullNameIF
+adapter_03.SeparatedName --|> adapter_03.SeparatedNameIF
+@enduml

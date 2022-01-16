@@ -1,0 +1,12 @@
+@startuml
+class builder.Director
+class builder.FirstBuilder
+class builder.MainBuilder
+class builder.SimpleHome
+interface builder.Builder
+interface builder.Home
+builder.FirstBuilder --|> builder.Builder
+builder.SimpleHome --|> builder.Home
+builder.Director --> builder.Builder
+builder.FirstBuilder --> builder.Home
+@enduml
