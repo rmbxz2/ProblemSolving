@@ -1,0 +1,46 @@
+<HTML>
+  <HEAD>
+    <TITLE>Attribute-a-rama</TITLE>
+  </HEAD>
+<BODY>
+  <H1>Attribute Tool</H1>
+  <FORM METHOD="GET" ACTION="attributeTool">
+    <TABLE BORDER=1>
+      <TR>
+        <TD VALIGN="TOP" ALIGN="RIGHT">Scope:</TD>
+        <TD VALIGN="TOP" ALIGN="LEFT">
+          <INPUT TYPE="radio" NAME="scope" VALUE="request" CHECKED> request<BR>
+          <INPUT TYPE="radio" NAME="scope" VALUE="session"> session<BR>
+          <INPUT TYPE="radio" NAME="scope" VALUE="application"> application<BR>
+        </TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" ALIGN="RIGHT">Attribute Name:</TD>
+        <TD VALIGN="TOP" ALIGN="LEFT">
+          <INPUT TYPE="text" NAME="attributeName">
+        </TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" ALIGN="RIGHT">Attribute Value:</TD>
+        <TD VALIGN="TOP" ALIGN="LEFT">
+          <INPUT TYPE="text" NAME="value">
+        </TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" ALIGN="RIGHT">Operation:</TD>
+        <TD VALIGN="TOP" ALIGN="LEFT">
+          <SELECT NAME="operation" SIZE="1">
+          <OPTION>create</OPTION>
+          <OPTION>modify</OPTION>
+          <OPTION>remove</OPTION>
+          </SELECT>
+        </TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" ALIGN="RIGHT" COLSPAN="2">
+          <INPUT TYPE="submit" VALUE="go">
+        </TD>
+      </TR>
+    </TABLE>
+  </FORM>
+</BODY>

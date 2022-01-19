@@ -1,0 +1,14 @@
+HTTP/1.0 200 OK
+Content-Type: text/html
+Date: Tue, 10 Apr 2001 23:36:58 GMT
+Server: Apache Tomcat/4.0-b1 (HTTP/1.1 Connector)
+Connection: close
+
+<HTML>
+<HEAD>
+<TITLE>Hello Servlet</TITLE>
+</HEAD>
+<BODY BGCOLOR='white'>
+<B>Hello, World</B>
+</BODY>
+</HTML>

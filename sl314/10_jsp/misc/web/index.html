@@ -1,0 +1,67 @@
+<HTML>
+
+<HEAD>
+<TITLE>JavaServer Page Examples</TITLE>
+</HEAD>
+
+<BODY BGCOLOR='white'>
+
+<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='600'>
+<TR>
+  <TD COLSPAN='2' BGCOLOR='#CCCCFF' ALIGN='center'>
+    <H3>JavaServer Page Examples</H3>
+  </TD>
+</TR>
+</TABLE>
+
+<H3>JavaServer Pages Examples</H3>
+<UL>
+  <LI><A HREF='date.jsp'>Click here</A> to see a simple JSP in action <BR>
+      <A HREF='date.txt'>Click here</A> to see the text of the date.jsp page <BR> <BR>
+  <LI><FORM ACTION='hello.jsp' METHOD='GET'>
+      Say hello to: <INPUT TYPE='text' NAME='name'>
+      <INPUT TYPE='submit' VALUE='Go!'>
+      </FORM>
+      <A HREF='hello.txt'>Click here</A> to see the text of the hello.jsp page <BR> <BR>
+  <LI><A HREF='throws_error.jsp'>Click here</A> to get an <TT>ArithmeticException</TT> error <BR>
+      <A HREF='throws_error.txt'>Click here</A> to see the text of the throws_error.jsp page <BR>
+      <A HREF='error/ExceptionPage.txt'>Click here</A> to see the text of the ExceptionPage.jsp page <BR> <BR>
+</UL>
+
+<H3>JavaServer Pages Buggy Examples</H3>
+<UL>
+  <LI><A HREF='hello_broken1.jsp?name=Bryan'>Click here</A> to see a translation error <BR>
+      <A HREF='hello_broken1.txt'>Click here</A> to see the text of the JSP page <BR> <BR>
+  <LI><A HREF='hello_broken2.jsp?name=Bryan'>Click here</A> to see a compilation error <BR>
+      <A HREF='hello_broken2.txt'>Click here</A> to see the text of the JSP page <BR> <BR>
+  <LI><A HREF='hello_broken3.jsp?name=Bryan'>Click here</A> to see a runtime error <BR>
+      <A HREF='hello_broken3.txt'>Click here</A> to see the text of the JSP page <BR> <BR>
+</UL>
+
+<H3>JavaServer Pages EL Examples</H3>
+<UL>
+  <LI><A HREF='arithmetic_page1.jsp'>Arithmetic Operations</A></LI>
+  <LI><A HREF='comparison_page1.jsp'>Comparison and Logical Operations</A></LI>
+  <LI><A HREF='functions.jsp?name=BillyBob'>Functions</A></LI>
+</UL>
+
+<H3>JavaServer Pages Standard Tag Examples</H3>
+<UL>
+  <LI><A HREF='beans/CustomerForm.html'>Customer bean example</A></LI>
+  <LI><A HREF='beans/page'>A page-scoped bean example</A></LI>
+  <LI><A HREF='beans/request'>A request-scoped bean example</A></LI>
+  <LI><A HREF='beans/session'>A session-scoped bean example</A></LI>
+  <LI><A HREF='beans/application'>An application-scoped bean example</A></LI>
+</UL>
+
+<H3>JavaServer Pages Deployment Descriptor Configuration</H3>
+<UL>
+  <LI><A HREF='web_xml.txt'>The deployment descriptor</A></LI>
+  <LI><A HREF='scripting_off/index.jsp'>Scripting turned off example</A></LI>
+  <LI><A HREF='EL_off/index.jsp'>EL turned off example</A></LI>
+  <LI><A HREF='prelude_coda/index.jsp'>Prelude and coda example</A></LI>
+</UL>
+
+</BODY>
+
+</HTML>

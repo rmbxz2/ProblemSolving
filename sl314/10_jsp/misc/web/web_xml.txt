@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-app_2_4.xsd"
+  version="2.4">
+
+  <display-name>SL-314 Mod11 JavaServer Page Examples</display-name>
+  <description>
+      This Web Application demonstrates several simple JavaServer Pages.
+  </description>
+
+  <jsp-config>
+    <jsp-property-group>
+      <url-pattern>/scripting_off/*</url-pattern>
+      <scripting-invalid>true</scripting-invalid>
+    </jsp-property-group>
+
+    <jsp-property-group>
+      <url-pattern>/EL_off/*</url-pattern>
+      <el-ignored>true</el-ignored>
+    </jsp-property-group>
+
+    <jsp-property-group>
+      <url-pattern>/prelude_coda/*</url-pattern>
+      <include-prelude>/prelude_coda/prelude.jspf</include-prelude>
+      <include-coda>/prelude_coda/coda.jspf</include-coda>
+    </jsp-property-group>
+  </jsp-config> 
+
+</web-app>

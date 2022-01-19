@@ -1,11 +1,12 @@
 package lambda;
 
+//import static java.util.Comparator.comparing;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
-import static java.util.Comparator.comparing;
 
 /**
 * Describe class here.
@@ -46,7 +47,7 @@ public class MainMethoRef {
 		System.out.println("==========sort==================");
 
 		//listDogs.sort((dog1,dog2) -> (dog1.getName()).compareTo(dog2.getName()));
-		listDogs.sort(comparing(Dog::getAge));
+		listDogs.sort(Comparator.comparing(Dog::getAge));
 		listDogs.forEach(System.out::println);
 
 		System.out.println("==========/sort==================");

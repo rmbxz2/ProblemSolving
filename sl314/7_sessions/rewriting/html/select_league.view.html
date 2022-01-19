@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>Duke's Soccer League: Registration</title>
+</head>
+
+<body bgcolor='white'>
+
+<!-- Page Heading -->
+<table border='1' cellpadding='5' cellspacing='0' width='400'>
+<tr bgcolor='#CCCCFF' align='center' valign='center' height='20'>
+  <td><h3>Duke's Soccer League: Registration</h3></td>
+</tr>
+</table>
+<br/>
+
+<table border='1' cellspacing='0' cellpadding='0' width='400'>
+<tr height='20'>
+  <td bgcolor='#CCCCFF' align='center' valign='center' height='20'>
+    <b>1) Select League</b>
+  </td>
+  <td bgcolor='#CCCCCC' align='center' valign='center' height='20'>
+    <b>2) Enter Player Info</b>
+ </td>
+  <td bgcolor='#CCCCCC' align='center' valign='center' height='20'>
+    <b>3) Select Division</b>
+  </td>
+</tr>
+</table>
+<br/>
+
+<form action='select_league.do' method='POST'>
+Year: <input type='text' name='year' value='' /> <br/><br/>
+Season: <select name='season'>
+          <option value='UNKNOWN'>select...</option>
+          <option value='Spring'>Spring</option>
+          <option value='Summer'>Summer</option>
+          <option value='Autumn'>Autumn</option>
+          <option value='Winter'>Winter</option>
+        </select> <br/><br/>
+<input type='Submit' value='Continue...' />
+</form>
+
+</body>
+</html>

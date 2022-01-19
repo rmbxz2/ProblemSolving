@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Duke's Soccer League: Registration</title>
+</head>
+
+<body bgcolor='white'>
+
+<!-- Page Heading -->
+<table border='1' cellpadding='5' cellspacing='0' width='400'>
+<tr bgcolor='#CCCCFF' align='center' valign='center' height='20'>
+  <td><h3>Duke's Soccer League: Registration</h3></td>
+</tr>
+</table>
+<br/>
+
+<table border='1' cellspacing='0' cellpadding='0' width='400'>
+<tr height='20'>
+  <td bgcolor='#CCCCCC' align='center' valign='center' height='20'>
+    <b>1) Select League</b>
+  </td>
+  <td bgcolor='#CCCCCC' align='center' valign='center' height='20'>
+    <b>2) Enter Player Info</b>
+ </td>
+  <td bgcolor='#CCCCFF' align='center' valign='center' height='20'>
+    <b>3) Select Division</b>
+  </td>
+</tr>
+</table>
+<br/>
+
+<form action='select_division.do;jsessionid=8C281FD242AFE72E89D084F3CB401D20' method='POST'>
+Division: <select name='division'>
+          <option value='UNKNOWN'>select...</option>
+          <option value='Coed A'>Coed A</option>
+          <option value='Coed B'>Coed B</option>
+          <option value='Mens'>Mens</option>
+          <option value='Womens'>Womens</option>
+        </select> <br/><br/>
+<input type='Submit' value='Register' />
+</form>
+
+</body>
+</html>

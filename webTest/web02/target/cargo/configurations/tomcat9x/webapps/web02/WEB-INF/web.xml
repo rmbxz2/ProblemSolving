@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+
+	<display-name>web02</display-name>
+	<description>
+        This is a simple web application with a source code organization
+        based on the recommendations of the Application Developer's Guide.
+    </description>
+
+	<servlet>
+		<servlet-name>add_League</servlet-name>
+		<servlet-class>controller.AddLeagueServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>add_League</servlet-name>
+		<url-pattern>/admin/add_league.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>errors</servlet-name>
+		<servlet-class>view.ErrorPageServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>errors</servlet-name>
+		<url-pattern>/admin/error_page.view</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>contextForPorject</param-name>
+		<param-value>context value for all </param-value>
+	</context-param>
+
+
+	<servlet>
+		<servlet-name>succedLeague</servlet-name>
+		<servlet-class>view.SuccessServlet</servlet-class>
+		<init-param>
+			<param-name>leagueServletConfig</param-name>
+			<param-value>congratulation succeed league</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>succedLeague</servlet-name>
+		<url-pattern>/admin/succes.view</url-pattern>
+	</servlet-mapping>
+</web-app>

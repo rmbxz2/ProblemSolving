@@ -1,0 +1,122 @@
+<HTML>
+
+<HEAD>
+<TITLE>Registration Form</TITLE>
+</HEAD>
+
+<BODY BGCOLOR='white'>
+
+<FORM ACTION='http://localhost:8088/register' METHOD='POST'>
+
+<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='5'>
+
+<TR>
+  <TD COLSPAN='2' ALIGN='center'>
+    <H3>Soccer League Registration Form</H3>
+  </TD>
+</TR>
+
+<TR>
+  <TD COLSPAN='2' BGCOLOR='#CCCCFF' ALIGN='center'>
+    <B>Select League</B>
+  </TD>
+</TR>
+
+<TR HEIGHT='10'><TD HEIGHT='10' COLSPAN='2'><!-- vertical space --></TD></TR>
+
+<TR>
+  <TD ALIGN='right'>League</TD>
+  <TD>
+    <TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='100%'>
+    <TR>
+      <TD ALIGN='right'>Season:</TD>
+      <TD>
+        <SELECT NAME='season'>
+          <OPTION VALUE='UNKNOWN'>select...</OPTION>
+          <OPTION VALUE='Spring'>Spring</OPTION>
+          <OPTION VALUE='Summer'>Summer</OPTION>
+          <OPTION VALUE='Fall'>Fall</OPTION>
+          <OPTION VALUE='Winter'>Winter</OPTION>
+        </SELECT>
+      </TD>
+      <TD ALIGN='right'>Year:</TD>
+      <TD>
+        <SELECT NAME='year'>
+          <OPTION VALUE='UNKNOWN'>select...</OPTION>
+          <OPTION VALUE='2001'>2001</OPTION>
+          <OPTION VALUE='2002'>2002</OPTION>
+          <OPTION VALUE='2003'>2003</OPTION>
+        </SELECT>
+      </TD>
+    </TR>
+    </TABLE>
+  </TD>
+</TR>
+
+<TR HEIGHT='15'><TD HEIGHT='15' COLSPAN='2'><!-- vertical space --></TD></TR>
+
+<TR>
+  <TD COLSPAN='2' BGCOLOR='#CCCCFF' ALIGN='center'>
+    <B>Enter Player Information</B>
+  </TD>
+</TR>
+
+<TR HEIGHT='10'><TD HEIGHT='10' COLSPAN='2'><!-- vertical space --></TD></TR>
+
+<TR>
+  <TD ALIGN='right'>Name:</TD>
+  <TD><INPUT TYPE='text' NAME='name' SIZE='50'></TD>
+</TR>
+<TR>
+  <TD ALIGN='right'>Address:</TD>
+  <TD><INPUT TYPE='text' NAME='address' SIZE='50'></TD>
+</TR>
+<TR>
+  <TD ALIGN='right'>City:</TD>
+  <TD>
+    <TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='100%'>
+    <TR>
+      <TD WIDTH='50%'><INPUT TYPE='text' NAME='city' SIZE='20'></TD>
+      <TD WIDTH='25%' ALIGN='right'>Province: <INPUT TYPE='text' NAME='province' SIZE='10'></TD>
+      <TD WIDTH='25%' ALIGN='right'>Postal code: <INPUT TYPE='text' NAME='postalCode' SIZE='5'></TD>
+    </TR>
+    </TABLE>
+  </TD>
+</TR>
+
+<TR HEIGHT='15'><TD HEIGHT='15' COLSPAN='2'><!-- vertical space --></TD></TR>
+
+<TR>
+  <TD COLSPAN='2' BGCOLOR='#CCCCFF' ALIGN='center'>
+    <B>Select Division</B>
+  </TD>
+</TR>
+
+<TR HEIGHT='10'><TD HEIGHT='10' COLSPAN='2'><!-- vertical space --></TD></TR>
+
+<TR>
+  <TD ALIGN='right'>Division:</TD>
+  <TD>
+    <SELECT NAME='division'>
+      <OPTION VALUE='UNKNOWN'>select...</OPTION>
+      <OPTION VALUE='Amateur'>Amateur</OPTION>
+      <OPTION VALUE='Semi-Pro'>Semi-Pro</OPTION>
+      <OPTION VALUE='Professional'>Professional</OPTION>
+    </SELECT>
+  </TD>
+</TR>
+
+<TR HEIGHT='10'><TD HEIGHT='10' COLSPAN='2'><!-- vertical space --></TD></TR>
+
+<TR>
+  <TD></TD>
+  <TD><INPUT TYPE='submit' VALUE='Register'></TD>
+</TR>
+
+</TABLE>
+
+</FORM>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,8 @@
+GET /servlet/sl314.web.HelloServlet HTTP/1.0
+Connection: Keep-Alive
+User-Agent: Mozilla/4.76 [en] (X11; U; SunOS 5.8 sun4u)
+Host: localhost:8088
+Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, image/png, */*
+Accept-Encoding: gzip
+Accept-Language: en
+Accept-Charset: ISO-8859-1,*,utf-8

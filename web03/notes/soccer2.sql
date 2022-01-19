@@ -260,3 +260,113 @@ SHOW CREATE TABLE employee;
 
 
 
+============== fedora postgresql ==============
+sudo -u postgres psql
+CREATE DATABASE  soccer;
+
+
+use soccer ;
+
+
+CREATE TABLE IF NOT EXISTS objectIDs
+(
+table_name VARCHAR(30) ,
+ID_number INTEGER  NOT NULL ,
+PRIMARY KEY (table_name)
+);
+
+\d objectIDs
+
+
+CREATE TABLE IF NOT EXISTS League
+(
+LID   SERIAL PRIMARY KEY, 
+year INTEGER NOT NULL,
+season VARCHAR(10) NOT NULL,
+title VARCHAR(30) NOT NULL
+);
+
+
+\d League
+
+
+
+CREATE TABLE IF NOT EXISTS player
+(
+PID  SERIAL PRIMARY KEY, 
+name VARCHAR(30) NOT NULL,
+address VARCHAR(30) NOT NULL,
+city VARCHAR(30) NOT NULL,
+province VARCHAR(30)   NOT NULL,
+postal_code VARCHAR(20) NOT NULL
+);
+
+\d  player
+
+
+CREATE TABLE IF NOT EXISTS Registration
+(
+LID  INTEGER  , 
+PID  INTEGER  , 
+division VARCHAR(20) NOT NULL
+);
+
+ALTER TABLE ONLY Registration  ADD CONSTRAINT "ID_PKEY" PRIMARY KEY (LID,PID);
+
+
+\d Registration
+
+
+-- insert league
+
+INSERT INTO League (year, season,title)
+   VALUES (2008,'Spring','league 01');
+
+INSERT INTO League (year, season,title)
+   VALUES (2007,'Winter','league 02');
+
+INSERT INTO League (year, season,title)
+   VALUES (2008,'Summer','league 03');
+
+INSERT INTO League (year, season,title)
+   VALUES (2009,'Fall','league 04');
+
+
+SELECT * FROM League;
+
+
+-- insert  objectIDs
+
+INSERT INTO objectIDs (table_name, ID_number)
+VALUES ('League',  7);           
+
+INSERT INTO objectIDs (table_name, ID_number)
+VALUES ('player',  1);           
+
+SELECT * FROM objectIDs;
+
+--  insert player
+
+INSERT INTO player (name, address, city, province, postal_code)
+VALUES ('ali', 'jordan', 'zarka' ,'what', '962');
+
+INSERT INTO player (name, address, city, province, postal_code)
+VALUES ('ahmad', 'jordan', 'zarka' ,'hi', '962');
+
+INSERT INTO player (name, address, city, province, postal_code)
+VALUES ('omar', 'jordan', 'amman' ,'ok', '962');
+
+SELECT * FROM player;
+
+-- insert registration
+
+
+
+INSERT INTO Registration (LID, PID, division)
+VALUES (2,2, 'ahmad in the winter');
+
+INSERT INTO Registration (LID, PID, division)
+VALUES (1,3, 'omar in the spring');
+
+SELECT * FROM Registration;
+

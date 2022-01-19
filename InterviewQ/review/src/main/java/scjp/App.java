@@ -1,5 +1,9 @@
 package scjp;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
 /**
  * Hello world!
  *
@@ -21,7 +25,6 @@ public class App {
 		stringBuffer.append("Name ");
 		System.out.println("stringBuffer = " + stringBuffer);
 
-
 		// not thread safe , but faster
 		// mutable,
 		StringBuilder stringBuilder = new StringBuilder();
@@ -37,7 +40,8 @@ public class App {
 		string.concat("ok..");
 		string.concat("ok2..");
 		string.concat("ok3..");
-		System.out.println("string = " + string);  
+		System.out.println("string = " + string);
+
 
 	}
 }

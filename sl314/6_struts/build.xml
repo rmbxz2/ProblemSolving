@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<project name="SL314 WebApp Examples" default="webapp" basedir=".">
+
+  <!-- =================== Initialize Property Values ===================== -->
+  <property name="webapp.name" value="struts" />
+  <property file="../../build.properties" />
+
+  <!-- =================== Convenient Synonyms ============================ -->
+  <target name="clean" depends="cleanWebapp" />
+  <target name="all" depends="clean,webapp" />
+  <target name="help">
+    <echo>
+Build structure of the Web Application
+Toplevel targets:
+   help     -- this message
+   all      -- cleans and then builds/deploys this Web app.
+   webapp   -- (re)builds and deploys this Web app. to Tomcat
+   clean    -- cleans the deployment environment for this Web app.
+   cleanTomcat -- removes all Tomcat Web apps (except ROOT and tomcat-docs)
+    </echo>
+  </target>
+
+  <!-- =================== CLEAN: Webapp ================================== -->
+  <target name="cleanWebapp">
+    <delete dir="${webapp.dir}" />
+  </target>
+  
+  <!-- =================== CLEAN: Tomcat ================================== -->
+  <target name="cleanTomcat">
+    <delete includeEmptyDirs="true">
+      <fileset dir="${build.dir}" excludes="${tomcat.webapps.toSave}" />
+    </delete>
+  </target>
+  <!-- =================== CLEAN: Backup Files ============================ -->
+  <target name="cleanTmpFiles">
+    <delete>
+      <fileset dir="." defaultExcludes="no" includes="**/*~"/>
+    </delete>
+  </target>
+
+
+  <!-- =================== WEBAPP: All ==================================== -->
+  <target name="webapp" depends="cleanWebapp,compileWebapp" />
+
+
+  <!-- =================== WEBAPP: Compile Web Components ================= -->
+  <target name="compileWebapp" depends="staticWebapp">
+    <javac   srcdir="src"
+             destdir="${webapp.dir}/WEB-INF/classes/"
+             deprecation="off" debug="on" optimize="off">
+      <classpath>
+        <!-- Include all JAR files in my local library -->
+        <fileset dir="lib">
+          <include name="*.jar"/>
+        </fileset>
+        <!-- Include all common libraries in Tomcat -->
+        <fileset dir="${tomcat.home}/common/lib">
+          <include name="*.jar"/>
+        </fileset>
+      </classpath>
+    </javac>
+  </target>
+
+  <!-- =================== WEBAPP: Copy Static Web Files ================== -->
+  <target name="staticWebapp" depends="prepareWebapp">
+    <!-- Copy web files -->
+    <copy todir="${webapp.dir}/">
+      <fileset dir="web" />
+    </copy>
+    <!-- Copy webapp configuration files -->
+    <copy todir="${webapp.dir}/WEB-INF/">
+      <fileset dir="etc" />
+    </copy>
+    <!-- Copy library files files -->
+    <copy todir="${webapp.dir}/WEB-INF/lib/">
+      <fileset dir="lib" />
+    </copy>
+  </target>
+
+  <!-- =================== WEBAPP: Create WebApp Directories ============== -->
+  <target name="prepareWebapp">
+    <mkdir dir="${webapp.dir}" />
+    <mkdir dir="${webapp.dir}/WEB-INF" />
+    <mkdir dir="${webapp.dir}/WEB-INF/lib" />
+    <mkdir dir="${webapp.dir}/WEB-INF/classes" />
+  </target>
+
+  <!-- =================== WEBAPP: Copy Tomcat Config/Lib Files =========== -->
+  <target name="configTomcat">
+    <copy todir="${tomcat.home}">
+      <fileset dir="tomcat" />
+    </copy>
+  </target>
+
+</project>

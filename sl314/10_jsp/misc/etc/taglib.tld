@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+
+  <tlib-version>1.0</tlib-version>
+  <short-name>Taglib</short-name>
+  <uri>sl314/taglibs</uri>
+
+  <function>
+    <name>lowercase</name>
+    <function-class>sl314.tags.TextFunctions</function-class>
+    <function-signature>
+      java.lang.String lowercase(java.lang.String)
+    </function-signature>
+  </function>
+
+  <function>
+    <name>uppercase</name>
+    <function-class>sl314.tags.TextFunctions</function-class>
+    <function-signature>
+      java.lang.String uppercase(java.lang.String)
+    </function-signature>
+  </function>
+  
+  <function>
+    <name>randomize</name>
+    <function-class>sl314.tags.TextFunctions</function-class>
+    <function-signature>
+      java.lang.String randomize(java.lang.String)
+    </function-signature>
+  </function>
+
+  <function>
+    <name>reverse</name>
+    <function-class>sl314.tags.TextFunctions</function-class>
+    <function-signature>
+      java.lang.String reverse(java.lang.String)
+    </function-signature>
+  </function>
+
+</taglib>

@@ -1,0 +1,43 @@
+<HTML>
+
+<HEAD>
+<TITLE>Example HTML Form</TITLE>
+</HEAD>
+
+<BODY BGCOLOR='white'>
+
+<B>Enter Customer Information:</B>
+
+<FORM ACTION='/cgi-bin/addCustomer' METHOD='POST'>
+
+<TABLE BORDER='0' CELLSPACING='0' CELLPADDING='5'>
+<TR>
+  <TD>Name:</TD>
+  <TD><INPUT TYPE='text' NAME='customerName' SIZE='50'></TD>
+</TR>
+<TR>
+  <TD>Address:</TD>
+  <TD><INPUT TYPE='text' NAME='Address' SIZE='50'></TD>
+</TR>
+<TR>
+  <TD>City:</TD>
+  <TD><TABLE BORDER='0' CELLSPACING='0' CELLPADDING='0' WIDTH='100%'>
+      <TR>
+        <TD WIDTH='50%'><INPUT TYPE='text' NAME='city' SIZE='20'></TD>
+        <TD WIDTH='25%' ALIGN='right'>State: <INPUT TYPE='text' NAME='state' SIZE='2' MAXLENGTH='2'></TD>
+        <TD WIDTH='25%' ALIGN='right'>Zip: <INPUT TYPE='text' NAME='zip' SIZE='5' MAXLENGTH='10'></TD>
+      </TR>
+      </TABLE>
+  </TD>
+</TR>
+<TR>
+  <TD></TD>
+  <TD><INPUT TYPE='submit' VALUE='Enter Customer'></TD>
+</TR>
+</TABLE>
+
+</FORM>
+
+</BODY>
+
+</HTML>
