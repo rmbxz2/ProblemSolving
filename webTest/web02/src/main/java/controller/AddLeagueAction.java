@@ -70,8 +70,6 @@ public class AddLeagueAction extends HttpServlet {
 			RequestDispatcher requestDispatcher = req.getRequestDispatcher("League_succes.view");
 			requestDispatcher.forward(req, resp);
 			return;
-
-
 		} catch (Exception e) {
 			leagueErrors.add(e.getMessage());
 			RequestDispatcher requestDispatcher = req.getRequestDispatcher("League_error.view");
