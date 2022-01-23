@@ -32,3 +32,4 @@ public class LeagueError extends HttpServlet {
 		out.println("</html>");
 	}
 }
+
