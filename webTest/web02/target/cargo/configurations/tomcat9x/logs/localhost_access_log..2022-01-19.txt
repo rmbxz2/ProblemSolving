@@ -1,3 +1,0 @@
-127.0.0.1 - - [19/Jan/2022:23:19:53 +0200] "GET /cargocpc/index.html HTTP/1.1" 200 124
-127.0.0.1 - - [19/Jan/2022:23:19:55 +0200] "GET /web02/admin/add_league.do?year=2003&title=hi&season=fall HTTP/1.1" 200 172
-127.0.0.1 - - [19/Jan/2022:23:20:00 +0200] "GET /web02/admin/add_league.do?year=2003&title=hi&season=fall HTTP/1.1" 200 172

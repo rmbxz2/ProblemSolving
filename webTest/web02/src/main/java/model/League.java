@@ -9,9 +9,22 @@ package model;
 *
 */
 public class League {
-	private int  year;
+	private int id;
+	private int year;
 	private String season;
 	private String title;
+
+
+
+
+	/**
+	 * 
+	 */
+	public League() {
+	}
+
+
+
 	/**
 	 * @param year
 	 * @param season
@@ -22,6 +35,22 @@ public class League {
 		this.season = season;
 		this.title = title;
 	}
+
+
+
+	/**
+	 * @param id
+	 * @param year
+	 * @param season
+	 * @param title
+	 */
+	public League(int id, int year, String season, String title) {
+		this.id = id;
+		this.year = year;
+		this.season = season;
+		this.title = title;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
@@ -30,11 +59,69 @@ public class League {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + id;
 		result = prime * result + ((season == null) ? 0 : season.hashCode());
 		result = prime * result + ((title == null) ? 0 : title.hashCode());
 		result = prime * result + year;
 		return result;
 	}
+
+	/**
+	 * @return the year
+	 */
+	public int getYear() {
+		return year;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @param year the year to set
+	 */
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	/**
+	 * @return the season
+	 */
+	public String getSeason() {
+		return season;
+	}
+
+	/**
+	 * @param season the season to set
+	 */
+	public void setSeason(String season) {
+		this.season = season;
+	}
+
+	/**
+	 * @return the title
+	 */
+	public String getTitle() {
+		return title;
+	}
+
+	/**
+	 * @param title the title to set
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
@@ -48,6 +135,8 @@ public class League {
 		if (getClass() != obj.getClass())
 			return false;
 		League other = (League) obj;
+		if (id != other.id)
+			return false;
 		if (season == null) {
 			if (other.season != null)
 				return false;
@@ -66,11 +155,14 @@ public class League {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	
 	@Override
 	public String toString() {
-		return "League [season=" + season + ", title=" + title + ", year=" + year + "]";
+		return "League [id=" + id + ", season=" + season + ", title=" + title + ", year=" + year + "]";
 	}
-
 
 }

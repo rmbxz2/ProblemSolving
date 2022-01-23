@@ -9,7 +9,7 @@
 
 	<servlet>
 		<servlet-name>add_League</servlet-name>
-		<servlet-class>controller.AddLeagueServlet</servlet-class>
+		<servlet-class>controller.AddLeagueAction</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -18,13 +18,13 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>errors</servlet-name>
-		<servlet-class>view.ErrorPageServlet</servlet-class>
+		<servlet-name>LeagueErrors</servlet-name>
+		<servlet-class>view.LeagueError</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>errors</servlet-name>
-		<url-pattern>/admin/error_page.view</url-pattern>
+		<servlet-name>LeagueErrors</servlet-name>
+		<url-pattern>/admin/League_error.view</url-pattern>
 	</servlet-mapping>
 
 	<context-param>
@@ -34,8 +34,8 @@
 
 
 	<servlet>
-		<servlet-name>succedLeague</servlet-name>
-		<servlet-class>view.SuccessServlet</servlet-class>
+		<servlet-name>succeedLeague</servlet-name>
+		<servlet-class>view.LeagueSuccess</servlet-class>
 		<init-param>
 			<param-name>leagueServletConfig</param-name>
 			<param-value>congratulation succeed league</param-value>
@@ -43,7 +43,42 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>succedLeague</servlet-name>
-		<url-pattern>/admin/succes.view</url-pattern>
+		<servlet-name>succeedLeague</servlet-name>
+		<url-pattern>/admin/League_succes.view</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>addPlayer</servlet-name>
+		<servlet-class>controller.AddPlayerAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>addPlayer</servlet-name>
+		<url-pattern>/admin/add_player.do</url-pattern>
+	</servlet-mapping>
+
+
+    <servlet>
+      <servlet-name>paleyerFail</servlet-name>
+        <servlet-class>view.PlayerError</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>paleyerFail</servlet-name>
+        <url-pattern>/admin/player_error.view</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+      <servlet-name>playerSuccess</servlet-name>
+        <servlet-class>view.PlayerSuccess</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>playerSuccess</servlet-name>
+        <url-pattern>/admin/player_success.view </url-pattern>
+    </servlet-mapping>
+    
+
+
+
 </web-app>

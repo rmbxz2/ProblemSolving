@@ -1,4 +1,14 @@
-/home/myLSP/lspWorkspace/webTest/web02/src/main/java/view/SuccessServlet.java
-/home/myLSP/lspWorkspace/webTest/web02/src/main/java/controller/AddLeagueServlet.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/service/LeagueService.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/view/LeagueError.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/exception/RecordNotFoundException.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/model/Player.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/view/PlayerSuccess.java
 /home/myLSP/lspWorkspace/webTest/web02/src/main/java/model/League.java
-/home/myLSP/lspWorkspace/webTest/web02/src/main/java/view/ErrorPageServlet.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/controller/AddLeagueAction.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/view/PlayerError.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/service/PlayerService.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/view/LeagueSuccess.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/controller/AddPlayerAction.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/Dao/PlayerDao.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/Dao/LeagueDao.java
+/home/myLSP/lspWorkspace/webTest/web02/src/main/java/exception/DaoException.java
