@@ -1,5 +1,5 @@
 package controller;
-
+ 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +53,7 @@ public class AddLeagueAction extends HttpServlet {
 				leagueErrors.add("please enter the title of league");
 			}
 
-			if (!leagueErrors.isEmpty()) {
+			if (! leagueErrors.isEmpty()) {
 				RequestDispatcher requestDispatcher = req.getRequestDispatcher("League_error.view");
 				requestDispatcher.forward(req, resp);
 				return;

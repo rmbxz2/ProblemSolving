@@ -1,11 +1,11 @@
-<%--  http://localhost:8080/web8/html/addJsp.jsp --%>
-<%--  http://localhost:8080/web8/html/FirstJsp.jsp --%>
+<%--  http://localhost:8080/web02/pages/addJsp.jsp --%>
+<%--  http://localhost:8080/web02/pages/FirstJsp.jsp --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 <jsp:useBean id= "cust"
 	     scope="session" 
-	     class="webServlet.test.CustomerBean"  />
+	     class="test.CustomerBean"/>
 
 
 <% 
@@ -23,16 +23,16 @@ cust.setPhone(request.getParameter("phone"));
 <jsp:setProperty name="cust" property="phone" />
 
 --%>
- 
+
 name::: => <jsp:getProperty name="cust" property="name" /> <br/>
 email::: => <jsp:getProperty name="cust" property="email" /> <br/>
 phone::: => <jsp:getProperty name="cust" property="phone" /> <br/>
 
 
 <br/> ====same phone======<br/>
-      ${cust.phone}                  <br/>   
-      ${sessionScope.cust.phone}     <br/>
-      <jsp:getProperty name="cust" property="phone" /> <br/>
+${cust.phone}                  <br/>   
+${sessionScope.cust.phone}     <br/>
+<jsp:getProperty name="cust" property="phone" /> <br/>
 <br/> ====same phone======<br/>
 
 
@@ -43,7 +43,7 @@ ${param.email}  <br/>
 ${param.phone}  <br/>
 
 
-<br/> ====================<br/>
+<br/> =========EL scope===========<br/>
 
 <%-- attribute scope order   --%>
 <%-- search order for  attribute page,request,session,application attribute   --%>
@@ -59,7 +59,7 @@ ${myScope} <br/>
 ${myScope} <br/>
 
 
-<br/> ====================<br/>
+<br/> ===========EL scope 2=========<br/>
 
 
 <br/>
@@ -74,12 +74,12 @@ name = ${pageScope.name} <br/>
 age = ${requestScope.age} <br/>
 gender = ${sessionScope.gender} <br/>
 address = ${applicationScope.address} <br/>
-<br/> ====================<br/>
+<br/> ===========EL scope 3=========<br/>
 <c:out value= "${pageScope.name}"  /> <br/>
 <c:out value= "${requestScope.age}"  /> <br/>
 <c:out value= "${sessionScope.gender}"  /> <br/>
 <c:out value= "${applicationScope.address}"  /> <br/>
-<br/> ====================<br/>
+<br/> ========== encode url==========<br/>
 
 <%=  
 "<a href="+ response.encodeURL("SecondJsp.jsp")  + ">second jsp</a>"

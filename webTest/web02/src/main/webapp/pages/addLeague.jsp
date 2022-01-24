@@ -8,13 +8,13 @@
         <title>Document</title>
     </head>
     <body>
-	<c:forEach var="error"  items="${requestScope.errors}">
+	<c:forEach var="error"  items="${requestScope.leagueErrors}">
 	    ${error} <br/>
 	</c:forEach>
 	<br/>
 
 	<!-- <form action="Welcome" method="post"> -->
-	<form action="addLeague" method="post">
+	<form action="add_league.do" method="get">
 	    year	    <input name="year" type="text" value="${param.year}"/> <br/>
 	    title	    <input name="title" type="text" value="${param.title}"/> <br/>
 	    season	    <select name="season" id="">

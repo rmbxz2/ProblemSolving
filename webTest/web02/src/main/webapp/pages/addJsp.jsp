@@ -1,4 +1,4 @@
-<!--  http://localhost:8080/web8/html/addJsp.jsp  -->
+<!--  http://localhost:8080/web02/pages/addJsp.jsp  -->
 
 <!doctype html>
 <html lang="en">

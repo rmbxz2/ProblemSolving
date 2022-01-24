@@ -6,7 +6,7 @@
 
 <jsp:useBean id= "cust"
 	     scope="session" 
-	     class="webServlet.test.CustomerBean"  />
+	     class="test.CustomerBean"  />
 <%--  
 
 <% 
@@ -32,7 +32,7 @@ ${name}   <br/> no
 ${email}  <br/> no 
 ${phone}  <br/> no 
 
-<br/> ======================== <br/>
+<br/> =======El 1================= <br/>
 
 second page <br/>
 
@@ -40,14 +40,14 @@ name = ${pageScope.name} <br/>
 age = ${requestScope.age} <br/>
 gender = ${sessionScope.gender} <br/>
 address = ${applicationScope.address} <br/>
-<br/> ====================<br/>
+<br/> =======EL 2=============<br/>
 name=  <c:out value= "${pageScope.name}"  /> <br/>
 age=  <c:out value= "${requestScope.age}"  /> <br/>
 gender=  <c:out value= "${sessionScope.gender}"  /> <br/>
 address=  <c:out value= "${applicationScope.address}"  /> <br/>
 <br/> ====================<br/>
 
-<br/> ======================== <br/>
+<br/> ========EL 3================ <br/>
 
 wow second page <br/>
 
@@ -58,7 +58,7 @@ address = ${address} <br/>
 
 
 
-<br/> ======================== <br/>
+<br/> =========EL 4=============== <br/>
 
 ${myScope} <br/>
 ${myScope} <br/>

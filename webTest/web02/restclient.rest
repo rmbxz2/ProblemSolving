@@ -1,3 +1,51 @@
+#
+http://localhost:8080/web02/admin/League_error.view
+
+
+
+#
+GET http://localhost:8080/web02/admin/add_league.do
+
+#
+GET http://localhost:8080/web02/admin/League_error.view
+
+#
+GET http://localhost:8080/web02/admin/League_succes.view
+
+#
+
+GET http://localhost:8080/web02/admin/add_player.do
+
+#
+GET http://localhost:8080/web02/admin/player_error.view
+
+#
+GET http://localhost:8080/web02/admin/player_success.view 
+
+#
+
+GET http://localhost:8080/web02/cookieDisable.view
+
+#
+GET http://localhost:8080/web02/CookieTest.view
+
+#
+GET http://localhost:8080/web02/Config
+
+#
+GET http://localhost:8080/web02/Context
+
+#
+GET http://localhost:8080/web02/SessionTest
+
+# after session test by class
+GET http://localhost:8080/web02/SessionTestAtrribute
+
+# after session test by jsp
+GET http://localhost:8080/web02/SessionTestAtrribute2
+
+
+
 
 # http://localhost:8080/web03/User/pages/addLeague?year=2008&title=hi&season=Spring
 # http://localhost:8080/web03/User/pages/Login.action

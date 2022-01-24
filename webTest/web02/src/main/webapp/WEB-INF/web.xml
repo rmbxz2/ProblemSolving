@@ -7,6 +7,15 @@
         based on the recommendations of the Application Developer's Guide.
     </description>
 
+	<context-param>
+		<param-name>leagueFile</param-name>
+		<param-value>/WEB-INF/data/leagues.txt</param-value>
+	</context-param>
+
+	<!-- <listener> -->
+	<!-- 	<listener-class>webServlet.util.InitializeLeagues</listener-class> -->
+	<!-- </listener> -->
+
 	<servlet>
 		<servlet-name>add_League</servlet-name>
 		<servlet-class>controller.AddLeagueAction</servlet-class>
@@ -19,7 +28,8 @@
 
 	<servlet>
 		<servlet-name>LeagueErrors</servlet-name>
-		<servlet-class>view.LeagueError</servlet-class>
+		<!-- <servlet-class>view.LeagueError</servlet-class> -->
+		<jsp-file>/pages/addLeague.jsp</jsp-file>
 	</servlet>
 
 	<servlet-mapping>
@@ -35,7 +45,8 @@
 
 	<servlet>
 		<servlet-name>succeedLeague</servlet-name>
-		<servlet-class>view.LeagueSuccess</servlet-class>
+		<!-- <servlet-class>view.LeagueSuccess</servlet-class> -->
+		<jsp-file>/pages/succeedLeague.jsp</jsp-file>
 		<init-param>
 			<param-name>leagueServletConfig</param-name>
 			<param-value>congratulation succeed league</param-value>
@@ -58,27 +69,105 @@
 	</servlet-mapping>
 
 
-    <servlet>
-      <servlet-name>paleyerFail</servlet-name>
-        <servlet-class>view.PlayerError</servlet-class>
-    </servlet>
+	<servlet>
+		<servlet-name>paleyerFail</servlet-name>
+		<servlet-class>view.PlayerError</servlet-class>
+	</servlet>
 
-    <servlet-mapping>
-        <servlet-name>paleyerFail</servlet-name>
-        <url-pattern>/admin/player_error.view</url-pattern>
-    </servlet-mapping>
-    
-    <servlet>
-      <servlet-name>playerSuccess</servlet-name>
-        <servlet-class>view.PlayerSuccess</servlet-class>
-    </servlet>
+	<servlet-mapping>
+		<servlet-name>paleyerFail</servlet-name>
+		<url-pattern>/admin/player_error.view</url-pattern>
+	</servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>playerSuccess</servlet-name>
-        <url-pattern>/admin/player_success.view </url-pattern>
-    </servlet-mapping>
-    
+	<servlet>
+		<servlet-name>playerSuccess</servlet-name>
+		<servlet-class>view.PlayerSuccess</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>playerSuccess</servlet-name>
+		<url-pattern>/admin/player_success.view </url-pattern>
+	</servlet-mapping>
 
 
+	<servlet>
+		<servlet-name>cookieDisable</servlet-name>
+		<servlet-class>test.CookieDisabled</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cookieDisable</servlet-name>
+		<url-pattern>/cookieDisable.view</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CookieTest</servlet-name>
+		<servlet-class>test.CookieTest</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CookieTest</servlet-name>
+		<url-pattern>/CookieTest.view</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ConfigTest</servlet-name>
+		<servlet-class>test.MyConfig</servlet-class>
+		<init-param>
+			<param-name>initConfig1</param-name>
+			<param-value>first init value 1</param-value>
+		</init-param>
+		<init-param>
+			<param-name>initConfig2</param-name>
+			<param-value>second init value 2</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ConfigTest</servlet-name>
+		<url-pattern>/Config</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ContextTest</servlet-name>
+		<servlet-class>test.MyContext</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ContextTest</servlet-name>
+		<url-pattern>/Context</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>SessionTest</servlet-name>
+		<servlet-class>test.SessionTest</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SessionTest</servlet-name>
+		<url-pattern>/SessionTest</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SessionTestAtrribute</servlet-name>
+		<servlet-class>test.SessionTestAtrribute</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SessionTestAtrribute</servlet-name>
+		<url-pattern>/SessionTestAtrribute</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>sessionAttributeTest</servlet-name>
+		<jsp-file>/pages/sessionAttributeTest.jsp</jsp-file>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>sessionAttributeTest</servlet-name>
+		<url-pattern>/SessionTestAtrribute2</url-pattern>
+	</servlet-mapping>
 
 </web-app>
