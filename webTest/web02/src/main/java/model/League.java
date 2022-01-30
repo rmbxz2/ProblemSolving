@@ -14,16 +14,11 @@ public class League {
 	private String season;
 	private String title;
 
-
-
-
 	/**
 	 * 
 	 */
 	public League() {
 	}
-
-
 
 	/**
 	 * @param year
@@ -35,8 +30,6 @@ public class League {
 		this.season = season;
 		this.title = title;
 	}
-
-
 
 	/**
 	 * @param id
@@ -54,7 +47,7 @@ public class League {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -125,7 +118,7 @@ public class League {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -159,7 +152,7 @@ public class League {
 	/* (non-Javadoc)
 	 * @see java.lang.Object#toString()
 	 */
-	
+
 	@Override
 	public String toString() {
 		return "League [id=" + id + ", season=" + season + ", title=" + title + ", year=" + year + "]";

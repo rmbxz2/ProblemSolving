@@ -6,7 +6,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
-import static java.util.Comparator.comparing;
+import java.util.Comparator;
 
 /**
 * Describe class here.
@@ -73,7 +73,7 @@ public class MainLambda {
 		System.out.println("==========sort==================");
 
 		//listDogs.sort((dog1,dog2) -> (dog1.getName()).compareTo(dog2.getName()));
-		listDogs.sort(comparing(Dog::getAge));
+		listDogs.sort(Comparator.comparing(Dog::getAge));
 		listDogs.forEach(System.out::println);
 
 		System.out.println("==========/sort==================");

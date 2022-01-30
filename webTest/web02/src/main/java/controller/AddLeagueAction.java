@@ -35,7 +35,7 @@ public class AddLeagueAction extends HttpServlet {
 
 			int year = -1;
 
-			try {
+ 			try {
 				year = Integer.parseInt(yearStr);
 			} catch (NumberFormatException e) {
 				leagueErrors.add("year field must be a number ");
@@ -71,7 +71,7 @@ public class AddLeagueAction extends HttpServlet {
 			requestDispatcher.forward(req, resp);
 			return;
 		} catch (Exception e) {
-			leagueErrors.add(e.getMessage());
+		    leagueErrors.add(e.getMessage()); 
 			RequestDispatcher requestDispatcher = req.getRequestDispatcher("League_error.view");
 			requestDispatcher.forward(req, resp);
 		}
