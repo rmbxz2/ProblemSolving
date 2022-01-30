@@ -54,7 +54,7 @@ public class AddLeagueAction extends HttpServlet {
 			}
 
 			if (! leagueErrors.isEmpty()) {
-				RequestDispatcher requestDispatcher = req.getRequestDispatcher("League_error.view");
+				RequestDispatcher requestDispatcher = req.getRequestDispatcher("/League_error.view");
 				requestDispatcher.forward(req, resp);
 				return;
 			}
@@ -67,12 +67,14 @@ public class AddLeagueAction extends HttpServlet {
 				throw new DaoException(e);
 			}
 			req.setAttribute("league", league);
-			RequestDispatcher requestDispatcher = req.getRequestDispatcher("League_succes.view");
+			//  /League_succes.view => relative to web app   ==>		<url-pattern>/League_succes.view</url-pattern>
+			//   League_succes.view => relative to url request ==>  	<url-pattern>/admin/League_succes.view</url-pattern>
+			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/League_succes.view");
 			requestDispatcher.forward(req, resp);
 			return;
 		} catch (Exception e) {
 		    leagueErrors.add(e.getMessage()); 
-			RequestDispatcher requestDispatcher = req.getRequestDispatcher("League_error.view");
+			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/League_error.view");
 			requestDispatcher.forward(req, resp);
 		}
 	}

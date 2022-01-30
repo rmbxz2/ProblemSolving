@@ -34,7 +34,7 @@
 
 	<servlet-mapping>
 		<servlet-name>LeagueErrors</servlet-name>
-		<url-pattern>/admin/League_error.view</url-pattern>
+		<url-pattern>/League_error.view</url-pattern>
 	</servlet-mapping>
 
 	<context-param>
@@ -55,7 +55,7 @@
 
 	<servlet-mapping>
 		<servlet-name>succeedLeague</servlet-name>
-		<url-pattern>/admin/League_succes.view</url-pattern>
+		<url-pattern>/League_succes.view</url-pattern>
 	</servlet-mapping>
 
 	<servlet>
