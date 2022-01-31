@@ -67,7 +67,7 @@ public class AddLeagueAction extends HttpServlet {
 				throw new DaoException(e);
 			}
 			req.setAttribute("league", league);
-			// notes 
+ 			// notes 
 			//  /League_succes.view => relative to web app   ==>		<url-pattern>/League_succes.view</url-pattern>
 			//   League_succes.view => relative to url request ==>  	<url-pattern>/admin/League_succes.view</url-pattern>
 			RequestDispatcher requestDispatcher = req.getRequestDispatcher("/League_succes.view");
