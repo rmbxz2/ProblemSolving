@@ -21,6 +21,30 @@ hi مرحبا
 what ماذا
 =============
 *** git ****
+------------------------------one git command ----------------------
+git is just one command like this ((wow)) 
+g $ zz Fu (open modified files for stash) s cc Pu , in Erorr Xh(hard reset)
+
+Q:- how to use git github ? stash->pull->myfiles-->push
+g for refresh magit
+$ for view git command 
+zk (delete all previos stashed)
+zz (stach my modified files)
+
+Fu (pull from master) ==>  git pull origin master  ;; default merge  (local Master <----Master in github)
+ 
+# stash copy paste for my modified files, then Push origin master 
+# 1- git add .               // working to staged [magit s]
+# 2- git commit -m "hi" .    // staged to local master  [magit cc comment C-cC-c]
+# 3- git push -u origin master  --force // local master to origin/master to remote origin [magit Pu]
+s cc Pu
+
+# in Error merge pull push
+# git reset --hard  hash // undo from local master to working  [magit Xh] (out<--W<----LM)
+  Xh(reset hard): in Error merge pull push
+------------------------------one git command ----------------------
+
+
 https://github.com/rmbxz2/ProblemSolving/commits/master
 (working)-->(stage)-->(localMaster)-->(Origin/Master)-->(Master in github)
 (w)--1-->(s)-2--->(LM)--3-->(OM)--3-->(Master in github)
