@@ -1,4 +1,4 @@
-======================= lsp zobda  =============================1
+======================= lsp zobda  ========================== 
 lsp doc ==> vs code https://github.com/microsoft/vscode-java-debug/blob/main/Configuration.md
 lsp doc ==> vs code https://github.com/microsoft/vscode-java-debug/blob/main/Configuration.md
 
@@ -332,15 +332,16 @@ change the port to 9090
 
 ------------------------------one git command ----------------------
 git is just one command like this ((wow)) 
-g $ zz Fu (open modified files for stash) s cc Pu , in Erorr Xh(hard reset)
+g $ zz (szz) Fu (open modified files for stash) s cc Pu , in Erorr Xh(hard reset)
 
 Q:- how to use git github ? stash->pull->myfiles-->push
 g for refresh magit
 $ for view git command 
 zk (delete all previos stashed)
 zz (stach my modified files)
+[szz] new files, untracked files, must staged then stash, only once not file by file stashed
 
- Fu (pull from master) ==>  git pull origin master  ;; default merge  (local Master <----Master in github)
+Fu (pull from master) ==>  git pull origin master  ;; default merge  (local Master <----Master in github)
  
 # stash copy paste for my modified files, then Push origin master 
 # 1- git add .               // working to staged [magit s]
