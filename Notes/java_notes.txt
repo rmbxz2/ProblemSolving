@@ -1,0 +1,774 @@
+======================= spring boot =========================================
+spring boot notes :-
+amigoscore at youtube
+https://www.youtube.com/watch?v=9SGDpanrc8U
+----
+api layer ==> service layer ==> DAO ==> DB 
+
+(( spring initializer ))
+dependencies are
+spring web
+spring data jpa
+postgresql Driver
+
+
+
+====================== ending of spring boot ==========================================
+
+
+threads in java 
+http://www.javatpoint.com/static-synchronization-example
+
+
+--java desktop books from indonisia with other books 
+http://code.google.com/p/project-template/
+
+
+-----------------------crud DAO jpa  java website
+http://www.databaseskill.com/4722791/
+http://www.databaseskill.com/1416723/
+http://www.databaseskill.com/940308/
+
+
+http://www.onlineexpert.com/elearning/user/pdf/APPLICATIONDEVELOPMENT/J2SE/Ch16.pdf
+
+http://www.journaldev.com/2593/spring-jdbc-and-jdbctemplate-crud-with-datasource-example-tutorial
+download the above project 
+
+http://www.journaldev.com/2509/jdbc-datasource-example-oracle-mysql-and-apache-dbcp-tutorial
+http://www.roseindia.net/answers/viewqa/Java-Beginners/22995-CRUD-DAO.html
+
+http://solutionbto.wordpress.com/2013/07/06/criando-classe-de-conexao-java-parte-2-mvcjdbccrud/
+http://solutionbto.wordpress.com/category/jtable/
+http://solutionbto.wordpress.com/category/jdbc/
+http://solutionbto.wordpress.com/category/programacao-basico/
+http://solutionbto.wordpress.com/category/swing/
+http://solutionbto.wordpress.com/2013/11/16/criando-seu-modelo-de-tabela-abstracttablemodel/
+http://solutionbto.wordpress.com/2013/12/03/interface-grafica-swing-calculo-i-m-c/
+download the project
+https://github.com/SolutionBTO/SampleTableModel/archive/master.zip
+https://github.com/SolutionBTO/ConexaoJDBC/archive/master.zip
+http://lazicbrano.wordpress.com/category/java/
+
+ ---([hibernate])-----
+http://biancama.wordpress.com/2011/05/11/spring-3-implement-crud-pattern-using-hibernate-dao-support/
+http://dimitrisli.wordpress.com/2011/05/07/spring-mysql-jdbctemplate-demonstration/
+http://dimitrisli.wordpress.com/category/mysql/
+
+-------------------
+--what is the differance between 2 jar files
+apt-get install jardiff
+jardiff 
+jardiff -f ecj-4.4.2.jar -t ecj-4.7.3a-from-tomcat9.jar -o html -O output.html
+jardiff -f ecj-4.4.2.jar -t ecj-4.7.3a-from-tomcat9.jar -o xml -O output.xml
+
+====================================final tutorial======
+
+java desktop applications real tutorial with code 
+http://www.youtube.com/playlist?list=PLEAQNNR8IlB4R7NfqBY1frapYo97L6fOQ
+http://www.luv2code.com/
+
+I downloaded code with youtube and i put it in /root/Desktop/REFERENCES/desktop/Link to workspace/DESKTOP/Desktop Doc/java_that_is_it jdbc/jdbc video 1
+
+and this one is great for jdbc
+https://www.youtube.com/playlist?list=PLmCsXDGbJHdhs1dWrgeT1ZoitLGp90I6D
+
+========================================================
+== daoEmployee example is full here :-
+http://theopentutorials.com/tutorials/java/jdbc/how-to-retrieve-a-row-from-mysql-using-jdbc/
+http://zetcode.com/db/mysqljava/
+
+========================================================
+
+package com.theopentutorials.jdbc.to;
+import java.util.Date;
+ 
+public class Employee {
+    private int empId;
+    private String empName;
+    private Date dob;
+    private double salary;
+    private int deptId;
+     
+    public int getEmpId() {
+        return empId;
+    }
+    public void setEmpId(int empId) {
+        this.empId = empId;
+    }
+    public String getEmpName() {
+        return empName;
+    }
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+    public Date getDob() {
+        return dob;
+    }
+    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+    public double getSalary() {
+        return salary;
+    }
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+    public void setDeptId(int deptId) {
+        this.deptId = deptId;
+    }
+    public int getDeptId() {
+        return deptId;
+    }  
+ 
+    //toString()
+}
+
+
+=======
+
+
+package com.theopentutorials.jdbc.db;
+ 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+ 
+public class ConnectionFactory {
+    //static reference to itself
+    private static ConnectionFactory instance = new ConnectionFactory();
+    public static final String URL = "jdbc:mysql://localhost/jdbcdb";
+    public static final String USER = "YOUR_DATABASE_USERNAME";
+    public static final String PASSWORD = "YOUR_DATABASE_PASSWORD";
+    public static final String DRIVER_CLASS = "com.mysql.jdbc.Driver";
+     
+    //private constructor
+    private ConnectionFactory() {
+        try {
+            Class.forName(DRIVER_CLASS);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+     
+    private Connection createConnection() {
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+        } catch (SQLException e) {
+            System.out.println("ERROR: Unable to Connect to Database.");
+        }
+        return connection;
+    }  
+     
+    public static Connection getConnection() {
+        return instance.createConnection();
+    }
+}
+
+=========
+
+
+package com.theopentutorials.jdbc.db;
+ 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+ 
+public class DbUtil {
+ 
+    public static void close(Connection connection) {
+        if (connection != null) {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                /*Ignore*/
+            }
+        }
+    }
+ 
+    public static void close(Statement statement) {
+        if (statement != null) {
+            try {
+                statement.close();
+            } catch (SQLException e) {
+                /*Ignore*/
+            }
+        }
+    }
+ 
+    public static void close(ResultSet resultSet) {
+        if (resultSet != null) {
+            try {
+                resultSet.close();
+            } catch (SQLException e) {
+                /*Ignore*/
+            }
+        }
+    }
+}
+
+
+==============================
+
+
+package com.theopentutorials.jdbc.dao;
+ 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import com.theopentutorials.jdbc.db.ConnectionFactory;
+import com.theopentutorials.jdbc.db.DbUtil;
+import com.theopentutorials.jdbc.to.Employee;
+ 
+public class EmployeeDAO {
+    private Connection connection;
+    private Statement statement;
+ 
+    public EmployeeDAO() { }
+ 
+    public Employee getEmployee(int employeeId) throws SQLException {
+        String query = "SELECT * FROM employee WHERE emp_id=" + employeeId;
+        ResultSet rs = null;
+        Employee employee = null;
+        try {
+            connection = ConnectionFactory.getConnection();
+            statement = connection.createStatement();
+            rs = statement.executeQuery(query);
+            if (rs.next()) {
+                employee = new Employee();
+                employee.setEmpId(rs.getInt("emp_id"));
+                employee.setEmpName(rs.getString("emp_name"));
+                employee.setDob(rs.getDate("dob"));
+                employee.setSalary(rs.getDouble("salary"));
+                employee.setDeptId((rs.getInt("dept_id")));
+            }
+        } finally {
+            DbUtil.close(rs);
+            DbUtil.close(statement);
+            DbUtil.close(connection);
+        }
+        return employee;
+    }
+}
+
+=========
+package com.theopentutorials.jdbc.main;
+ 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import com.theopentutorials.jdbc.dao.EmployeeDAO;
+import com.theopentutorials.jdbc.to.Employee;
+ 
+public class SelectDemo {
+    public static void main(String[] args) {
+        //1. Get Employee
+        getEmployee();
+    }
+ 
+    private static void getEmployee() {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter the EmployeeID:");
+         
+        try {
+            int employeeId = Integer.parseInt(br.readLine());
+            EmployeeDAO empDao = new EmployeeDAO();
+            Employee employee = empDao.getEmployee(employeeId);
+            if(employee != null)
+                displayEmployee(employee);
+            else
+                System.out.println("No Employee with Id: " + employeeId);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+ 
+    private static void displayEmployee(Employee employee) {
+        System.out.println("Employee ID:" + employee.getEmpId());
+        System.out.println("Employee Name:" + employee.getEmpName());
+ 
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        String dob = format.format(employee.getDob());
+ 
+        System.out.println("DOB:" + dob);
+        System.out.println("Salary:" + employee.getSalary());
+        System.out.println("Department ID:" + employee.getDeptId());
+        System.out.println();
+    }
+}
+
+==============================================================
+
+arabic hibernate:-
+
+https://www.youtube.com/playlist?list=PL420F8E91848E39EF
+http://arabhardware.net/forum/showthread.php?t=249618
+http://sourceforge.net/projects/hibernate/files/
+
+==============================================================
+--good hibernate example
+http://www.tutorialspoint.com/hibernate/hibernate_annotations.htm
+==============================================================
+
+ flush automatically
+
+===========
+--spring wow
+https://www.youtube.com/playlist?list=PLC97BDEFDCDD169D7
+==========
+--jsf wow
+https://www.youtube.com/watch?v=VedCo7uoKBE&index=3&list=PLA3A46FD852A4AAA6
+=========
+--jsp debug
+put break point for every jsp code line
+https://docs.oracle.com/cd/E11035_01/workshop102/webapplications/workshopJSP/tutorialJSP/TutorialJSPDebug.html
+========
+java jdk is here, enter it will find jre
+(jdee-jdk-registry (quote (("1.7" . "/usr/lib/jvm/java-7-openjdk-i386"))))
+
+========
+how to avoid deadlocks ??
+by releasing locks in reverse
+================================================================
+advanced dao by ibm
+https://www.ibm.com/developerworks/library/j-dao/index.html#N1022D
+or as pdf in scjp/ibm-dao-transaction.pdf
+===========maven=====================
+in linux note file
+================================
+
+Q:- how can add resources in file.jar -cp
+java -cp ./file.jar
+
+Q:- how can add all jars in folder to -cp
+java -cp /lib/*
+
+Q:- how can run jar without manifest Main-Class : package.MainClass
+java -cp ./file.jar:/lib/*  package.MainClass
+
+so they will be add all jars and resources 
+java -cp ./file.jar:/lib/*
+
+java -cp must be the file.jar(which has resources) + lib/*( star means all jars) like this 
+java  -cp ./app2-1.0-SNAPSHOT.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/mariadb-java-client-2.3.0.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/*   mySpring.UserDao
+================================
+default hashcode() ?
+https://srvaroa.github.io/jvm/java/openjdk/biased-locking/2017/01/30/hashCode.html
+
+hashcode()
+The default hashCode() implementation (identity hash code) has nothing to do with the object’s memory address because obj may transform from jvm to another
+at least in OpenJDK. In versions 6 and 7 it is a randomly generated number
+In 8 and, for now, 9, it is a number based on the thread state. 
+Here is a test that yields the same conclusion.
+
+================================
+int compareTo() is not recusrion in comparable interface, but it is overloading 
+================================
+
+
+;; merge jars into one jar
+
+ mkdir tmp
+ cd tmp
+ unzip  ../aa1.jar
+ unzip  ../aa2.jar
+ unzip  ../aa3.jar
+ cd ..
+ jar -cvf combined.jar -C tmp .
+
+================================================================
+# seach jar files by zipgrep
+# search zip files by zipgrep
+# zipgrep search inside *.zip but cant visit file
+{} the matching file
+-execdir run command in the same file dir
+-exec    run command here
+apt-get install xz-utils - XZ-format compression utilities; for zgrep 
+find . -iname '*.zip'  -exec zipgrep  -nHi -e  "exit" {} +
+# wow search inside jar files by zipgrep 
+find . -iname '*.jar'  -exec zipgrep  -nHi  -e "exit" {} +
+     
+================================================================
+
+# convert all jar to java 
+in dired ==> !unzip
+find . -iname '*.class' -execdir jad   {} \;
+# replace .jad to .java
+find . -iname '*.class' -execdir jad -s java  {} +
+
+================================================================
+wow wow wow
+i put it under /opt/java all jdk from oracle and openjdk 8,9,10,11
+java jvm as alone by => oracle or openjdk
+when extract it, you will see the java folder and jre and src,  all in one seperated folder
+jdk-11.0.2_linux-x64_bin.tar.gz
+jdk-8-_linux-x64_bin.tar.gz
+
+https://jdk.java.net/java-se-ri/8
+http://download.oracle.com/otn-pub/java/jdk/11.0.2+9/f51449fcd52f4d52b93a989c5c56ed3c/jdk-11.0.2_linux-x64_bin.tar.gz
+
+# check tomcat apache connected port 
+# check mysql  port 
+ss -tupln
+
+# check maria mysql process 
+ps aux | grep mysql
+
+# view all process with full argument every 1 second and record it in hi8.txt file
+# in terminal not in emacs 
+while [ 1 ] ; do ps -aux >> hi8.txt ;sleep 1 ; done
+
+
+# you can see that httpd (Apache) listens on port 80
+lsof -i tcp:80
+
+# List programs with open ports and connections
+lsof -i
+
+# list opend files by java command
+lsof -c java
+
+# List files opened by a PID
+lsof -p 15857
+
+
+
+
+================================================================
+where is rt.jar ?
+now it is named by *.jmod
+jmod is a zip file, 
+
+================================================================              
+# java heap
+-Xms              set initial Java heap size
+-Xmx              set maximum Java heap size
+
+-Xms64m or -Xms64M    
+-Xmx1g or -Xmx1G
+
+root     19444  342 37.6 5250032 2252140 ?     Ssl  01:08   2:51 /home/jdee_workspace/sourcePathx/openJDK/jdk-10/bin/java -classpath /home/jdee_workspace/app2/build/:/home/jdee_workspace/app2/src/resources/:/home/jdee_workspace/sourcePathx/jars/public_JAR/mariadb-java-client-2.3.0.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-aop-5.1.0.RELEASE.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-beans-5.1.0.RELEASE.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-context-5.1.0.RELEASE.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-core-5.1.0.RELEASE.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-expression-5.1.0.RELEASE.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-jcl-5.1.0.RELEASE.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-jdbc-5.1.0.RELEASE.jar:/home/jdee_workspace/sourcePathx/jars/public_JAR/spring/spring-framework-5.1.0.RELEASE/libs/spring-tx-5.1.0.RELEASE.jar  -Xms250m -Xmx2g  algo.HK_Paths
+
+ '(jdee-run-option-heap-profile (quote (nil "./java.hprof" 500 2000 "Allocation objects")))
+ '(jdee-run-option-heap-size (quote ((250 . "megabytes") (2 . "gigabytes"))))
+
+
+
+================================================================              
+# the fastest way to detect illeagal downcast ?
+/home/jdee_workspace/app2/src/upDownCast/MainA.java
+	// final rule to detect the illegal downcast is , compiles fine but fail at runTime
+	// A1 a1 = new A3();
+        // A4 d4 =(A4)a1
+	//        (A4)obj 
+	//        (A4)A3 if it is Tree down from A3 to A4 then it is illegal downcast
+
+
+================================================================              
+note:- no javac, just java -jar ecj.jar (java compiler)
+
+[very important]
+What to learn and what not to learn in java
+
+To learn:
+1. Spring(Boot) MVC and Tomcat
+2. Web Services
+3. Thymeleaf (Templating Engine)
+4. Security (OAuth2)
+5. JPA (Hibernate)
+6. MySQL, H2
+7. No SQL(MongoDB)
+8. WebSockets
+9. AWS Core, JDBC
+10. Mockito, JUnit
+11. Spark
+
+Not to learn(Outdated)
+1. Applets
+2. AWT
+3. Java Swing(Use JavaFX instead or Electron)
+
+================================================================
+;; how to run jar file by command
+java -jar YOUR_JAR.jar
+java -cp MyJar.jar com.mycomp.myproj.AnotherClassWithMainMethod
+================================================================
+
+;; how can i debug java by command line?
+1- jdb command
+2- java command ==>> java
+   ex:-  java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=1044 ;;(all java version)  
+   ex:-  java    -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=1044 ;;(java 5 and above) 
+
+================================================================
+no difference result  between i++; ++i; if they are alone without assign or sum or compare,the will have the same result,
+for(int i=0 ; i< 5 ; i++) 
+for(int i=0 ; i< 5 ; ++i)
+but they will be difference in result if they assign  compare or sum or multiply to another variable like this 
+int i =3 ;
+int aa=i++ ==> a=3, i=4
+
+int ii =33 ;
+int aa=++ii ==> a=34, ii=34
+
+
+int x =3 ;
+if(3 == x++)// true
+
+int y =3 ;
+if(3 == ++y)// false
+
+================================================================              
+when use ecj to generate class put -g so i can debug the class in the future with jdb
+  -g so the class can use the debugger jdb in the future to view the locals 
+it is the same argument in the c++ aslo 
+
+================================================================              
+# sort DVD by  dvd.name then if dvd.name are equals then resort it by dvd.first then resort it by dvd.second then resort it by dvdthird
+    public final int compareTo(DVD dvd) {
+        int comp = name.compareTo(dvd.getName());
+        if (comp == 0) comp = (new Integer(first)).compareTo(dvd.getFirst());
+        if (comp == 0) comp = (new Integer(second)).compareTo(dvd.getSecond());
+        if (comp == 0) comp = (new Integer(third)).compareTo(dvd.getThird());
+        return comp;
+    }
+
+
+================================================================              
+;; foreach for nested for loop
+for (int[] u: xx) {
+    for (int element: u) {
+        // print element
+    }
+}
+
+
+
+
+================================================================              
+;; swap array or list 
+
+public static final <T> void swap (T[] a, int i, int j) {
+  T t = a[i];
+  a[i] = a[j];
+  a[j] = t;
+}
+
+public static final <T> void swap (List<T> l, int i, int j) {
+  Collections.<T>swap(l, i, j);
+}
+
+private void test() {
+  String [] a = {"Hello", "Goodbye"};
+  swap(a, 0, 1);
+  System.out.println("a:"+Arrays.toString(a));
+  List<String> l = new ArrayList<String>(Arrays.asList(a));
+  swap(l, 0, 1);
+  System.out.println("l:"+l);
+}
+
+
+
+
+================================================================              
+java regex online
+https://github.com/mcekiera/JRegEx
+https://regex101.com/
+with debugger
+================================================================              
+(line-number-at-pos) 424 389  360
+================================================================
+
+@startuml
+'left to right direction
+skinparam shadowing false
+
+'skinparam linetype ortho
+'skinparam linetype polyline
+
+
+(0) --> (R) : .75
+(0) --> (R') : .25
+R ---> (B) : 0.4
+R ---> (B') :0.6
+(R')---> (B ) : 0.9
+(R')---> (B' ) : 0.1
+
+@enduml
+
+
+
+@startuml
+left to right direction
+skinparam shadowing false
+
+'skinparam linetype ortho
+skinparam linetype polyline
+
+
+object adjust0{
+Node  head
+}
+
+
+object adjust1{
+Node  head
+}
+
+
+object adjust2{
+Node  head
+}
+
+
+object adjust3{
+Node  head
+}
+
+
+object adjust4{
+Node  head
+}
+
+
+object adjust5{
+Node  head 
+}
+
+
+object Node0{
+int  value = 0;
+Node next
+}
+
+
+object Node00{
+int  value = 0;
+Node next
+}
+
+
+object Node1{
+int  value = 1;
+Node next
+}
+
+
+object Node11{
+int  value = 1;
+Node next = null
+}
+
+object Node111{
+int  value = 1;
+Node next = null
+}
+
+
+object Node2{
+int  value = 2;
+Node next = null
+}
+
+object Node22{
+int  value = 2;
+Node next = null 
+}
+
+
+object Node3{
+int  value = 3;
+Node next 
+}
+
+
+object Node4{
+int  value = 4;
+Node next = null
+}
+
+
+object Node5{
+int  value = 5;
+Node next = null
+}
+
+
+
+adjust0 --|> Node1
+             Node1 --|> Node2
+           
+
+adjust1 --|> Node0 
+	     Node0 --|> Node3 
+	                Node3 --|> Node4
+
+adjust2 --|> Node00
+	     Node00 --|> Node5 
+
+adjust3 --|> Node11
+
+adjust4 --|> Node111
+adjust5 --|> Node22
+
+@enduml
+
+@startuml
+'left to right direction
+skinparam shadowing false
+
+'skinparam linetype ortho
+'skinparam linetype polyline
+
+(0) --> (1) 
+(0) --> (2) 
+(1) --> (3) 
+(1) --> (4)
+(2) --> (5)
+
+
+   (adjList[0])-->(Node head0) 
+                  (Node head0)-->(int value=1 \n  Node next) 
+                                 (int value=1 \n  Node next)-->(int value=2 \n  Node next)
+                                              		       (int value=2 \n  Node next)-->(NUll)
+
+   (adjList[1])-->(Node head1) 
+                  (Node head1)-->(int value=0 \n  Node next) 
+                                 (int value=0 \n  Node next)-->(int value=3 \n  Node next)
+                                               		       (int value=3 \n  Node next)-->(int value=4 \n  Node next)
+                                                                         		     (int value=4 \n  Node next)-->(Null)
+
+
+   (adjList[2])-->(Node head2) 
+                  (Node head2)-->(int value=0 \n Node next) 
+                                 (int value=0 \n Node next)-->(int value=5 \n  Node next)
+                                            		      (int value=5 \n  Node next)-->( NUll)
+
+
+   (adjList[3])-->(Node head3) 
+                  (Node head3)-->(int value=1 \n Node next ) 
+                                 (int value=1 \n Node next )-->(  NULL)
+
+   (adjList[4])-->(Node head4) 
+                  (Node head4)-->(int value=1 \n  Node next ) 
+                                 (int value=1 \n  Node next )-->(  NULL  )
+   (adjList[5])-->(Node head5) 
+                  (Node head5)-->( int value=2 \n  Node next  ) 
+                                 ( int value=2 \n  Node next  )-->(  NULL )
+
+
+@enduml
+
+
+
+
+

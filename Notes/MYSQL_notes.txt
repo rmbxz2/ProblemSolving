@@ -1,0 +1,557 @@
+============ mariadb ==================
+
+systemctl list-unit-files | grep enabled   ==> will list all enabled ones.
+systemctl | grep running                   ==> If you want which ones are currently running, you need 
+
+;; systemd
+systemctl status mariadb
+systemctl start mariadb
+systemctl stop mariadb
+
+
+;; start mysql mariadb
+mysql -u root -p
+
+
+# you can see that mysqld localhost:mysql (LISTEN)
+lsof -i tcp:3306
+
+# List programs with open ports and connections
+lsof -i -P
+
+
+;; check ports 3306
+ss -l 
+ss -tupln (l for listening)
+ss -tupln (l for listening)
+
+ss -tupr (l for listening, remove it, then can see established )
+ss or use only ss -p  or ss -pr (r means resolove domain name)
+
+;; first setup command for mysql mariadb
+mysql_install_db 
+
+;; change passwod mysql mariadb
+mysql_secure_installation 
+
+;; log file
+/var/log/mysql
+/var/log/mariadb
+
+;; mariadb.service location
+/lib/systemd/system/mariadb/mariadb.service
+
+;; change port mysql mariadb config
+/etc/mysql/mariadb.cnf
+/etc/mysql/mariadb.conf.d/50-server.cnf
+
+;; [work]
+;; change mariadb mysql 
+use mysql;
+SELECT user, plugin FROM user;
+UPDATE user SET plugin="";
+UPDATE user SET password=PASSWORD("ahmadjar") WHERE user="root";
+FLUSH PRIVILEGES;
+
+
+;; [not wrok]
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'ahmadjar';
+
+================================================================
+
+;; then new one  add it to .emacs
+(defun sql-diagram ( user password db )
+  (interactive 
+   (list
+   (read-string "User: "     )
+   (read-passwd "Password: " )
+   (read-string "Data Base: ")
+   ) current-prefix-arg )      ;;  current prefix arg ==> when press M-n M-p will display the old arguments for these fields only 
+  (shell-command
+     (concat "java -jar ~/.emacs.d/schemaSpy/schemaspy-6.0.0.jar  -t mariadb  -dp ~/.emacs.d/schemaSpy/mariadb-java-client-2.3.0.jar    -db " db " -all  -host localhost -port 3306 -u " user  " -p " password "  -o ~/Ediagram  -charset=UTF-8 " )
+;;     (concat "java -jar ~/.emacs.d/schemaSpy/schemaSpy.jar -dp ~/.emacs.d/schemaSpy/mysql-connector-java-5.0.4-bin.jar -t mysql -db " db " -all  -host localhost -port 3306 -u " user  " -p " password "  -o ~/Ediagram  -ahic  -hq " )
+     )
+
+    (w3m-find-file "~/Ediagram/performance_schema/index.html")  ;; open with w3m
+;;  (dired "~/Ediagram/root/diagrams/summary/")  ;; open dired with this path 
+;;  (dired-filter-by-regexp "relationships.*.png")
+;;  (dired-find-file) ;; means press enter at the current file 
+;;  (delete-other-windows)
+)
+
+
+
+
+============================
+mysql -u root -pahmadjar
+
+note :- no need to write the name of sql database,it will show the
+        current database 
+sql-list-all-tables     c-c s  
+ 
+
+-- start the service mysql 
+(win)    net start mysql  
+(kali)   service mysql start 
+         mysql -u root -pahmadjar 
+
+-- start the mysql command but change the path first m
+mysql -u root -p -h 127.0.0.1 
+
+-- emacs cygwin mysql 
+net start mysql  as adim
+i can connect mysql client from cygwin with mysqld server from c:/program files /mysql server/ from windows by cygwin 
+
+emacs 
+m-x sql-mysql
+user:- root
+pass:- ahmadjar
+data:- test
+server:- 127.0.0.1
+port	= 3306
+
+then open hi.sql 
+M-x sql-set-product Mysql
+M-x sql-set-sqli-buffer-generally *SQL*
+
+;; important note
+;; always when open new file.sql 
+M-x ssp 
+M-x ssb
+
+M-x sql-save-connection ;; save it in .emacs as alist
+M-x sql-connect         ;; connect to old  connections which saved as list in .emacs
+
+
+;; emacs mysql to fix error [[ No prompt found or ‘comint-prompt-regexp’ not set properly ]]
+put this in .emacs
+(sql-set-product-feature 'mysql :prompt-regexp "^\\(MariaDB\\|MySQL\\) \\[[_a-zA-Z]*\\]> ")
+
+
+then type sql command then precss
+send pragraph    C-c C-c 
+send buffer      C-c C-b
+send string      C-c C-s
+sql-list-table          c-tab
+sql-list-all-tables     c-c s 
+
+[important ]note :- no need to write the name of sql database,it will show the
+                   the  current database 
+sql-list-all-tables     c-c s  
+
+
+---mysql data stored in the 
+c:\programData\data
+not into c:\program files 
+
+in linux
+mysql configuration file = etc/mysql/my.cnf 
+Usually /var/lib/mysql or /var/db/mysql
+datadir	= /var/lib/mysql
+update user set password=PASSWORD("ahmadjar") where User='root';	
+flush privileges;
+
+
+--yasnippet 
+put it in the /root/.emacs.d/sql-mode
+from menu yasnipeet prompting method -> ido or systemx
+from menu yasnipeet reload every thing
+
+-----------sql statement---------------
+update user set password=PASSWORD("ahmadjar") where User='root';
+flush privileges;
+
+
+show database;
+use mysql;
+show tables;
+show create table user;
+show create database mysql;
+
+show columns from user;  // same as describe user
+describe user
+
+
+---------------------------------------
+
+CREATE DATABASE IF NOT EXISTS emp;
+
+CREATE DATABASE IF NOT EXISTS hibernate;
+
+USE hibernate;
+
+SHOW DATABASES;                            
+
+
+USE emp;
+
+SHOW TABLES;
+
+SHOW CREATE TABLE Employee;
+
+SHOW CREATE TABLE employeeDaitels ;
+
+SHOW CREATE TABLE empTablePk;
+
+
+SHOW CREATE TABLE User;
+
+select * from empTablePk;
+
+select * from UserInfo;
+
+select * from User;
+
+CREATE TABLE IF NOT EXISTS employee
+(
+id INT  NOT NULL AUTO_INCREMENT,
+name VARCHAR(20) NOT NULL,
+salary int   NOT NULL  DEFAULT 0,
+PRIMARY KEY (id)
+);
+
+SHOW DATABASES;                            
+
+SHOW CREATE TABLE employee;
+
+
+INSERT INTO employee (name, salary)
+VALUES ("sara",  999);
+
+INSERT INTO employee (name, salary)
+VALUES ("khawla",  66);           
+
+SELECT  name AS name, salary AS salary 
+FROM employee;
+
+INSERT INTO employee (name, salary)
+VALUES ("ahmad",  333);
+
+SELECT  name AS name, salary AS salary 
+FROM employee;
+
+INSERT INTO employee (name, salary)
+VALUES ("quran",  2828);           
+
+
+INSERT INTO employee (name, salary)
+VALUES ("omar",  888);           
+
+
+INSERT INTO employee (name, salary)
+VALUES ("ali",  666);           
+
+SELECT  name AS employee_name, salary AS employee_salary 
+FROM employee;
+
+DELETE FROM emp.employee WHERE salary >= 333;
+
+DELETE FROM employee WHERE name='sara';
+
+ALTER TABLE EMPLOYEE MODIFY salary INT NOT NULL DEFAULT '0';
+
+SHOW CREATE TABLE employee;
+
+SELECT  *
+FROM employee;
+WHERE id='3';
+
+select * from employee;
+
+UPDATE employee SET name = "koko" , salary=9    WHERE id =6;
+
+UPDATE employee SET name = "ahmed" , salary=9    WHERE id =1;
+
+
+select * from employee;
+DELETE FROM employee WHERE id=7;
+
+INSERT INTO employee (id,name,salary)
+VALUES (5,"soso",88);           
+
+SHOW CREATE TABLE employee;
+
+SELECT * 
+FROM employee;
+
+DELETE FROM employee WHERE name='soso';
+
+
+INSERT INTO employee (id,name,salary)
+VALUES (35,"khawla",999);           
+
+UPDATE employee SET name ='khawla', salary=66   WHERE id=2;
+
+SHOW CREATE TABLE UserInfo;
+
+DROP TABLE IF EXISTS employeeDaitels;
+DROP TABLE IF EXISTS Employee;
+DROP TABLE IF EXISTS User;
+
+SHOW CREATE TABLE Employee2;
+
+.;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files\Java\jre7\bin;C:\emacs\bin;C:\Program Files\Windows Resource Kits\Tools\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\Shield;C:\Program Files\Windows Resource Kits\Tools;
+
+========================
+this is the snippet choose from menu 
+${4:momo$$(yas-choose-value '("soso" "fofo" "koko"))} 
+========================
+datatype
+
+BIGINT(${1:length})   UNSIGNED   ZEROFILL 
+BINARY(${1:length}) 
+BIT(${1:length})  
+BLOB 
+CHAR(${1:length}) 
+DATE 
+DATETIME 
+DECIMAL(${1:length} ,${2:decimals})   UNSIGNED   ZEROFILL 
+DOUBLE(${1:length},${2:decimals})   UNSIGNED   ZEROFILL 
+ENUM(value1,value2,value3) 
+FLOAT(${1:length},${2:decimals})   UNSIGNED   ZEROFILL 
+INT(${1:length})   UNSIGNED   ZEROFILL 
+INTEGER(${1:length})   UNSIGNED   ZEROFILL 
+LONGBLOB 
+LONGTEXT BINARY 
+MEDIUMBLOB 
+MEDIUMINT(${1:length})   UNSIGNED   ZEROFILL 
+MEDIUMTEXT BINARY  
+NUMERIC(${1:length} ,${2:decimals})   UNSIGNED   ZEROFILL 
+REAL(${1:length},${2:decimals})   UNSIGNED   ZEROFILL 
+SET(value1,value2,value3) 
+SMALLINT(${1:length})   UNSIGNED   ZEROFILL 
+TEXT BINARY 
+TIME 
+TIMESTAMP 
+TINYBLOB 
+TINYINT(${1:length})   UNSIGNED   ZEROFILL 
+TINYTEXT  BINARY 
+VARBINARY(${1:length}) 
+VARCHAR(${1:length}) 
+YEAR 
+
+==================================================
+colDef
+
+NOT NULL
+NULL
+DEFAULT ${1:defaultValue}
+AUTO_INCREMENT  UNIQUE  KEY
+PRIMARY KEY
+COMMENT 'string'
+COLUMN_FORMAT {FIXED|DYNAMIC|DEFAULT}
+STORAGE {DISK|MEMORY|DEFAULT}
+
+==================================================
+
+create table
+to delete the colDef or dataType press
+c-g c-d only 
+==================================================
+== mysql configuration
+
+http://www.adviesenzo.nl/examples/php_mysql_charset_fix/
+
+mysqld --help --verbose > temp_file_path
+
+SHOW VARIABLES LIKE 'c%';
+
+
+==================================================
+== solve  arabic mysql problem
+to work must be like this 
+
+SHOW VARIABLES LIKE 'c%';
+
+set  character_set_client      =  utf8 ;                    
+set  character_set_connection  =  utf8 ;                   
+set  character_set_database    =  utf8 ;                   
+set  character_set_results     =  utf8 ;                   
+set  character_set_server      =  utf8 ;                   
+set  character_set_system      =  utf8 ;                    
+set   collation_connection     =  utf8_general_ci;
+set   collation_database       =  utf8_general_ci;
+set   collation_server         =  utf8_general_ci;
+
+
+
+look at this video and copy the setting from below
+https://www.youtube.com/watch?v=2Lrb9N9POgY
+
+http://stackoverflow.com/questions/3513773/change-mysql-default-character-set-to-utf-8-in-my-cnf
+so edit this file 
+emacs /etc/mysql/my.cnf
+
+# [client] directly put
+default-character-set=utf8
+
+# [mysql] directly put 
+default-character-set=utf8
+
+
+# [mysqld] directly put 
+
+collation-server = utf8_unicode_ci
+init-connect='SET NAMES utf8'
+character-set-server = utf8
+
+# then restart mysql service
+==================================================
+
+SHOW INDEXES from students;
+
+/* show created, update, engine type of this table */
+show table status like 'students'
+
+/*show where DB stored in directory location  */
+mysql -uroot -pahmadjar -e 'SHOW VARIABLES WHERE Variable_Name LIKE "%dir"'  ;
+or
+SHOW VARIABLES WHERE Variable_Name LIKE "%dir";
+
++---------------------------+----------------------------+
+| Variable_name             | Value                      |
++---------------------------+----------------------------+
+| basedir                   | /usr                       |
+| character_sets_dir        | /usr/share/mysql/charsets/ |
+| datadir                   | /var/lib/mysql/            |
+| innodb_data_home_dir      |                            |
+| innodb_log_group_home_dir | ./                         |
+| lc_messages_dir           | /usr/share/mysql/          |
+| plugin_dir                | /usr/lib/mysql/plugin/     |
+| slave_load_tmpdir         | /tmp                       |
+| tmpdir                    | /tmp                       |
++---------------------------+----------------------------+
+
+
+[ mysql is  WORKing ]
+netstat -top | grep mysql
+M-xp
+
+ss -nuple
+
+
+
+CREATE TABLE table_time (
+time_stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+SELECT date(time_stamp);
+
+================
+this is the revision  notes :-
+============================
+
+
+==================================================
+ [ relation between tables ]
+
+ONE TO ONE
+pk     fk
+country capital
+
+
+ONE TO MANY  (owner)
+fk     pk
+entity diagram ER convert to relational diagram  
+father have kids and no one can have any kids just father (owner) 
+note :-  father is FK in sons' table, 
+
+
+https://www.youtube.com/watch?v=R2zxPAoRm_8
+
+
+
+sons' table
+|PK  | FK|
+sons | father 
+----   ----  
+ 111   1     
+ 222   1     
+ 333   1     
+ 444   2     
+ 555   3     
+
+
+[ many to many ]
+
+M:N كل عمليات الشراء والبيع هي  M:N
+
+PK(fk,fk,fk)
+or
+(fk,fk, PK )
+or
+PK(fk,fk)
+
+FK     | FK     |  FK   
+father | mother |  sons
+1      |  55    |  333
+1      |  55    |  444
+1      |  55    |  555
+2      |  66    |  666
+
+wrong
+3      | 77     |  333 
+
+==================================================
+[ foreign key ]
+
+MyISAM  does not support  transactions support and referential integrity constraints [delete cascade, update cascade ]
+ENGINE=InnoDB  support transaction and integrity 
+
+left join , select all all student in the left with null 
+right join  select all all all courses in the righ with null 
+inner join  select the intercept between students and course without null without null without null 
+
+from the web 
+In MySQL 5.7, it is normally necessary to use ENGINE to specify the MyISAM storage engine because InnoDB is the default engine.
+The major deficiency of MyISAM is the absence of transactions support
+MySQL 5.5 and greater have switched to the InnoDB  engine to ensure referential integrity constraints, and higher concurrency
+
+
+my mysql is 5.5.49
+use mysql;
+select version();
+
+==================================================
+
+
+
+/* table  table created on Mon Jun 27 17:59:15 2016 */ 
+CREATE TABLE IF NOT EXISTS table
+(
+index myindex_1(col_1,col_2,col_3);
+/*
+note that col_1,col_2,col_3 are not primary, because the
+primary key is indexed by default 
+*/
+
+) ENGINE=InnoDB ;
+
+
+note:- in the create table for automaticall TIMESTAMP 
+column_name   TIMESTAMP DEFAULT CURRENT_TIMESTAMP);         
+
+or or or 
+/* insert timestamp by this function now() */
+INSERT INTO emp ( name, job, salary, bouns,date)
+VALUES ('omar','manager',1500, 300, now());
+
+
+
+================
+
+The SQL LIKE Operator
+
+   %  The percent sign represents zero, one, or multiple characters
+   _  The underscore represents a single character
+
+
+        LIKE Operator                                       Description                              
+WHERE CustomerName LIKE 'a%'    Finds any values that start with "a"                                   
+WHERE CustomerName LIKE '%a'    Finds any values that end with "a"                                     
+WHERE CustomerName LIKE '%or%'  Finds any values that have "or" in any position                                                                       
+WHERE CustomerName LIKE '_r%'   Finds any values that have "r" in the second position                  
+WHERE CustomerName LIKE 'a_%_%' Finds any values that start with "a" and are at least 3 characters in length                                                                 
+WHERE ContactName  LIKE 'a%o'   Finds any values that start with "a" and ends with "o"                 
+
+================

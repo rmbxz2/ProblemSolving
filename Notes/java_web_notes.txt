@@ -1,0 +1,337 @@
+arabic hibernate:-
+
+https://www.youtube.com/playlist?list=PL420F8E91848E39EF
+http://arabhardware.net/forum/showthread.php?t=249618
+http://sourceforge.net/projects/hibernate/files/
+
+==============================================================
+--good hibernate example
+http://www.tutorialspoint.com/hibernate/hibernate_annotations.htm
+
+
+================================================================
+
+apache-tomacat7 config
+1- apt-get install tomcat7 tomacat7-doc example alll
+2- create new procjet called hello  /var/lib/tomcat7/webapps/hello/WEB-INF/classes/
+3- put classees in in /var/lib/tomcat7/webapps/hello/WEB-INF/classes/
+4- make tomcat auto reload refresh by replacing the tag <Context>  by <Context allowLinking="true" reloadable="true">
+5- service tomcat7 start
+6- visit http://localhost:8080/hello/Servlet1
+
+/usr/share/tomcat7/lib
+/etc/tomcat7
+/var/lib/tomcat7
+
+
+================================================================
+;; net cat ncat as proxy (it is work convert 8080 to 4444  )
+http://localhost:4444/first/first.html
+cd /tmp 
+mknod backpipe p
+nc -lk -p 4444 < backpipe | tee -i -a  my_request.txt | nc -k   localhost 8080 | tee  -i -a my_response.txt > backpipe
+break the a bove command then w3m will work 
+================================================================
+web.xml deplymet descriptor for java j2ee is here
+https://docs.oracle.com/cd/E13222_01/wls/docs92/webapp/web_xml.html#SummaryNotReq1
+================================================================
+emmet notes :-
+$ => number
+. => class
+# => id
+* => repeat
++ => beside
+> => inside
+^ => outside
+[] => attribue
+{} => value
+() => grouping 
+
+!
+select+
+select>opt*4
+select>opt[value=$]{$}*3
+table+
+table>tr*2>td*3
+btn:s
+btn:r
+btn:b
+btn:b
+doc
+form:post
+form:get
+form:post>input*3+btn:s
+form:post>input#$*3+btn:s
+aa[bb=1 cc=2 dd=3]{eee}
+form:post>input[name=$]*3+btn:s
+form:post>input[name=one]+input[name=two]+input[name=three]+btn:s
+form:post>input[name=$]{$}*3+btn:s
+
+form:post>input*2+input:s+select>opt*5
+
+================================================================
+in emacs can find the cookies  here
+/root/.w3m/.cookie
+M-k	Display cookies and enable you to manage them.
+================================================================
+command proxy
+;; net cat ncat as proxy (it is work convert 8080 to 4444  )
+http://localhost:4444/first/first.html
+cd /tmp 
+mknod backpipe p
+nc -lk -p 4444 < backpipe | tee -i -a  my_request.txt | nc -k   localhost 8080 | tee  -i -a my_response.txt > backpipe
+break the a bove command then w3m will work 
+================================================================
+
+where  context.log apache server puts comments ?
+ /var/lib/tomcat7/logs/
+
+where System.out.prinln Servlet puts output ?
+tomcat7/logs/catalina.out
+
+================================================================
+# apache tomcat auto relaod  reloadable
+replace
+<Context>
+by 
+<Context allowLinking="true" reloadable="true">
+in
+/home/jdee_workspace/sourcePathx/servers/tomcat7/conf/context.xml
+
+================================================================
+how to debug servlet ?
+by add comments in System.out.print and context.log
+
+where  context.log apache server puts comments ?
+ /var/lib/tomcat7/logs/
+
+where System.out.prinln Servlet puts output ?
+tomcat7/logs/catalina.out
+================================================================
+# session notes
+session by :-
+cookies or url-encoding
+cookie is default
+url-encoding if cookie is disabled in browser
+
+================================================================
+where is jsp files which converted to Servlet class in apache tomacat
+in the work folder
+/home/jdee_workspace/sourcePathx/servers/tomcat7/work/Catalina/localhost/web8
+================================================================
+can download all version of jstl 
+https://tomcat.apache.org/taglibs/standard/
+to run jstl 1.1 version
+copy from jars  jstl1.1.jar and standard_jstl_1.1.jar to tomcat7/lib
+
+copy two jars form 
+/home/jdee_workspace/sourcePathx/jars/standard_jstl_1.1.jar
+/home/jdee_workspace/sourcePathx/jars/jstl1.1.jar
+to tomcat
+/home/jdee_workspace/sourcePathx/servers/tomcat7/lib/
+then put in jsp file this commen directive
+working with me jstl1.1
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
+this not work with jstl-1
+ <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+
+
+================================================================
+# bean (implements ) serialzable
+when shutdown the server tomcat, the current sessions and session attribute and beans instance variables  will saved as SESSION.ser at /tomcat/work/SESSION.ser
+but when start the server tomcat, the SESSION.ser will disapper
+this case at jsp 
+
+but but if beans not implements serialzable
+when shutdown the server tomcat, the current sessions and session attribute  will saved as SESSION.ser at /tomcat/work/SESSION.ser
+will not save the bean variables 
+================================================================
+i copied all jars files in /home/jdee_workspace/sourcePathx/jars/ and put it in the /tomcat/lib
+because every time run ant will copy these files to /WEB-INF/lib/, so this is crazy, 
+================================================================
+# getServletContext in struts by
+ServletContext context = request.getSession().getServletContext();
+
+================================================================
+<!-- /html/addLeague.do  *.do actions -->
+must be only *.do    not /htm/*.do  like this   <url-pattern>*.do</url-pattern> -->
+
+all pages must begin with /html
+<url-pattern>/html/page1.view
+<url-pattern>/html/page2.view
+<url-pattern>/html/page3.view
+<url-pattern>/html/page4.view
+but but but *.do must be without  /html/
+<url-pattern>*.do
+
+================================================================
+;; [important note]
+;; no errors in server apache, but i have 404 Not Found error
+so the errors will be in web.xml or struts-config.xml
+so search for fail \| error \| Caused    in log files (localhost.2018-09-13.log) 
+Caused by: java.lang.IllegalArgumentException: JSP file addLeague.jsp must start with a '/'
+================================================================
+when jstl not work, the solution is must import
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+================================================================
+<input name="" type="submit" value="add League"/><br/>
+must with no name in form, beacuse it will send it in url as query string 
+================================================================
+how get context in struts ? 
+	ServletContext context = request.getServletContext();
+==============================================================
+null or empty in EL example
+<c:when test="${(param.season eq 'Unknown') or (empty param.season)  }">
+<c:when test="${(param.season eq 'Unknown') or (!empty param.season  }">
+================================================================
+
+this error when mariadb-java-connector not found :- 45
+java.sql.SQLException: Unknown initial character set index '45' received from server. Initial client
+character set can be forced via the 'characterEncoding' property.
+
+================================================================
+
+
+;; this  apache service for linux, /var/www/
+systemctl list-unit-files | grep enabled   ==> will list all enabled ones.
+systemctl | grep running                   ==> If you want which ones are currently running, you need 
+
+
+;; [use this one]
+;; my apache tomcat
+;; the server will be seperated from the system
+;;in emacs M-x tomcat-start
+;;M-x ps will be 
+root 7179 45.6  2.1  22:43 00:09 /usr/bin/java -Djava.util.logging.config.file=/home/jdee_workspace/sourcePathx/servers/tomcat9/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /home/jdee_workspace/sourcePathx/servers/tomcat9/bin/bootstrap.jar:/home/jdee_workspace/sourcePathx/servers/tomcat9/bin/tomcat-juli.jar -Dcatalina.base=/home/jdee_workspace/sourcePathx/servers/tomcat9 -Dcatalina.home=/home/jdee_workspace/sourcePathx/servers/tomcat9 -Djava.io.tmpdir=/home/jdee_workspace/sourcePathx/servers/tomcat9/temp org.apache.catalina.startup.Bootstrap start
+
+
+# you can see that httpd (Apache) listens on port 80
+# list the process which opened the (files or port 80)
+lsof -i tcp:80
+lsof -i tcp:8080
+
+================================================================              
+the difference between struts 1 and struts 2 
+https://www.javaworld.com/article/2077771/adopting-struts-2-0.html?page=5
+
+https://www.infoq.com/articles/converting-struts-2-part1/
+https://www.infoq.com/articles/migrating-struts-2-part2/
+https://www.infoq.com/articles/migrating-struts-2-part3/
+
+
+;; location of struts.xml
+You can either just put the struts.xml at the root of your source directory or set up an additional
+resources source directory and put it there.
+Eclipse quite happily copies it to WEB-INF/classes for you when it does a compilation.
+================================================================              
+# apache tomcat ignore (classpth) environment varialbe
+WEB-INF/lib        ==>> only visible to the web application that loads them
+$CATALINA_HOME/lib ==>> These resources are visible to all applications and to Tomcat.
+;;
+;;
+;;  in the classpath only bootstrap.jar and tomcat-juli.jar
+;; tomcat apache server 
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java
+-Dcatalina.base=/home/myLSP/lspWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0
+-Dcatalina.home=/home/myLSP/myPath/apache-tomcat-9.0.12 -Dwtp.deploy=/home/myLSP/lspWorkspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps
+-Dfile.encoding=UTF-8
+-classpath
+/home/myLSP/myPath/apache-tomcat-9.0.12/bin/bootstrap.jar
+:/home/myLSP/myPath/apache-tomcat-9.0.12/bin/tomcat-juli.jar
+org.apache.catalina.startup.Bootstrap start
+
+
+
+;; mvn
+Q:- update repository after adding dependency to POM.xml
+mvn install (or mvn package)
+
+
+;; mvn
+;; convert pom.xml (maven) to ===>>> .classpath in eclipse , and generate .project file also
+mvn eclipse:eclipse -Dwtpversion=2.0       ;; for web project 
+mvn eclipse:eclipse                        ;; for desktop project and web also
+mvn eclipse:eclipse -DdownloadSources=true ;; download source code with jars
+https://www.mkyong.com/struts2/struts-2-hello-world-example/
+https://docs.geotools.org/latest/userguide/build/maven/eclipse.html
+https://www.mkyong.com/maven/no-more-mvn-eclipseeclipse-whats-next/ (plugin mvn is retired, not mvn command)
+
+
+;; mvn
+# apache tomcat ignore (classpth) environment varialbe
+WEB-INF/lib        ==>> only visible to the web application that loads them
+$CATALINA_HOME/lib ==>> These resources are visible to all applications and to Tomcat.
+;; so the fast solution is to copy maven dependencies to WebContent/WEB-INF/lib
+;; How to use maven just to copy dependencies 
+mvn dependency:copy-dependencies -DoutputDirectory=WebContent/WEB-INF/lib
+mvn dependency:copy-dependencies -DoverWriteReleases=false -DoverWriteSnapshots=false  -DoverWriteIfNewer=true   -DoutputDirectory=WebContent/WEB-INF/lib
+// i can convert from pom.xml to mvn command line by adding -D properties as above
+// above commands are same because overWriteReleases=false(default), so no need to put it here.
+// or can add it to the pom.xml by :-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>WebContent/WEB-INF/lib</outputDirectory>
+						 	<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+================================================================              
+Q:- How to access HttpServletRequest and HttpServletResponse within Struts2 action class ?
+https://www.codejava.net/frameworks/struts/how-to-access-httpservletrequest-and-httpservletresponse-within-struts2-action-class
+https://www.codejava.net/frameworks/struts/how-to-configure-struts-framework-in-webxml
+
+Q:- How to access HttpServletRequest and HttpServletResponse within Struts2 action class ?
+https://www.mkyong.com/struts2/how-to-get-the-httpservletrequest-in-struts-2/
+by two ways
+1- implements ServletRequestAware then implements setServletResponse(HttpServletResponse response) and setServletRequest(HttpServletRequest request)
+2- HttpServletRequest request = ServletActionContext.getRequest();
+
+================================================================              
+spring boot full stack
+Nelson  Amigoscode   Spring Boot Tutorial | Full Course
+youtube https://www.youtube.com/watch?v=9SGDpanrc8U
+github  https://github.com/amigoscode/spring-boot-react-fullstack
+
+================================================================              
+cargo to run web jee project by maven
+      <plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <version>1.7.9</version>
+        <configuration>
+          <container>
+            <containerId>tomcat9x</containerId>
+            <type>embedded</type>
+          </container>
+        </configuration>
+      </plugin>
+
+
+================================================================              
+
+================================================================              
+# spring boot debug 
+# add this line to application.properties for debug spring boot
+logging.level.org.springframework.web=DEBUG
+
+
+
+
+================================================================              
+(line-number-at-pos) 314  198  
+================================================================
