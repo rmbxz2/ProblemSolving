@@ -1,10 +1,9 @@
-first note
-second note
-third note
-fourth note 4
-fourth note 44
-fifth 55
-note 66
-ok sir
-then what
-note 4
+Q: what is the size of my github repository ?
+Syntax: GET /repos/:user/:repo
+https://api.github.com/repos/rmbxz2/ProblemSolving
+size	389037 kb ==>  389
+
+by command line
+git count-objects -vH
+size-pack: 379.23 MiB
+-----------------------------------
