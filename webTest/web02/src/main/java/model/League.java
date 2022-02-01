@@ -1,5 +1,12 @@
 package model;
 
+import java.io.Serializable;
+
+import javax.servlet.http.HttpSessionActivationListener;
+import javax.servlet.http.HttpSessionBindingEvent;
+import javax.servlet.http.HttpSessionBindingListener;
+import javax.servlet.http.HttpSessionEvent;
+
 /**
 * Describe class here.
 *
@@ -8,7 +15,7 @@ package model;
 *
 *
 */
-public class League {
+public class League implements HttpSessionBindingListener, HttpSessionActivationListener, Serializable {
 	private int id;
 	private int year;
 	private String season;
@@ -156,6 +163,26 @@ public class League {
 	@Override
 	public String toString() {
 		return "League [id=" + id + ", season=" + season + ", title=" + title + ", year=" + year + "]";
+	}
+
+	@Override
+	public void valueBound(HttpSessionBindingEvent event) {
+		System.out.println("listen , league  is bound to the session");
+	}
+
+	@Override
+	public void valueUnbound(HttpSessionBindingEvent event) {
+		System.out.println("listen , league  is un-bound to the session");
+	}
+
+	@Override
+	public void sessionDidActivate(HttpSessionEvent se) {
+		System.out.println("listen , league attribute  is activate  to the jvm");
+	}
+
+	@Override
+	public void sessionWillPassivate(HttpSessionEvent se) {
+		System.out.println("listen , league attribute  is passivate  from jvm");
 	}
 
 }

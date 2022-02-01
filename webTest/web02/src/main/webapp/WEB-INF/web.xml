@@ -7,6 +7,33 @@
         based on the recommendations of the Application Developer's Guide.
     </description>
 
+	<listener>
+		<listener-class>util.LeagueSevrvletContextListener</listener-class>
+	</listener>
+
+
+	<listener>
+		<listener-class>util.LeagueRequestAttributeListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>util.LeagueRequestListener</listener-class>
+
+	</listener>
+
+	<listener>
+		<listener-class>util.LeagueServletContextAttributeListener</listener-class>
+
+	</listener>
+
+	<listener>
+		<listener-class>util.LeagueSessionLister</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>util.SessionListenerAttribueListener</listener-class>
+	</listener>
+
 	<context-param>
 		<param-name>leagueFile</param-name>
 		<param-value>/WEB-INF/data/leagues.txt</param-value>
